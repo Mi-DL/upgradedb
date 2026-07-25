@@ -18,9 +18,9 @@
           "sha256": "5f2b013be98e128472dbcc67067e0c0c38578ebb4e8e1c0d414c787c8e00a557"
         },
         {
-          "bytes": 7276,
+          "bytes": 7567,
           "path": "DATA_LICENSE.md",
-          "sha256": "d9bdec003ae958fde8e200002a3e222d040fb20ed64d87b0f20ccd645032dc7c"
+          "sha256": "a9a4f060d124f28a08a254b21bb7988d344a2237d8cfc85ef3daa181572194fa"
         },
         {
           "bytes": 22072,
@@ -94,8 +94,8 @@
         }
       ],
       "id": "v2-standalone",
-      "payload_sha256": "2d4582c12b9ed429f431208ac889cd89dcaabf448eb947620ba5be0f9b60b218",
-      "uncompressed_bytes": 186883
+      "payload_sha256": "05a7855b381f5bdacd2f242719c66cd5e579ac31df1e91e98e8cf85aae1f5ddc",
+      "uncompressed_bytes": 187174
     },
     {
       "archive": "upgrade-bench-v2-main-window.zip",
@@ -113,9 +113,9 @@
           "sha256": "5f2b013be98e128472dbcc67067e0c0c38578ebb4e8e1c0d414c787c8e00a557"
         },
         {
-          "bytes": 7276,
+          "bytes": 7567,
           "path": "DATA_LICENSE.md",
-          "sha256": "d9bdec003ae958fde8e200002a3e222d040fb20ed64d87b0f20ccd645032dc7c"
+          "sha256": "a9a4f060d124f28a08a254b21bb7988d344a2237d8cfc85ef3daa181572194fa"
         },
         {
           "bytes": 23129357,
@@ -264,8 +264,8 @@
         }
       ],
       "id": "v2-main",
-      "payload_sha256": "ba94bcaece35c6669df16452d00e28d0afbe91efa5c6535efb33b973c3fd119e",
-      "uncompressed_bytes": 165739337
+      "payload_sha256": "e6cf50b54bd365c9f72c162bae378b6cd9b80e072447dfd38f05395385e37b7a",
+      "uncompressed_bytes": 165739628
     },
     {
       "archive": "upgrade-bench-v2-historical-fold.zip",
@@ -283,9 +283,9 @@
           "sha256": "5f2b013be98e128472dbcc67067e0c0c38578ebb4e8e1c0d414c787c8e00a557"
         },
         {
-          "bytes": 7276,
+          "bytes": 7567,
           "path": "DATA_LICENSE.md",
-          "sha256": "d9bdec003ae958fde8e200002a3e222d040fb20ed64d87b0f20ccd645032dc7c"
+          "sha256": "a9a4f060d124f28a08a254b21bb7988d344a2237d8cfc85ef3daa181572194fa"
         },
         {
           "bytes": 16441257,
@@ -434,8 +434,8 @@
         }
       ],
       "id": "v2-history",
-      "payload_sha256": "db124b913a72fbcad84cadcc88fa423bafc377b759c556dcf80166d785b9608e",
-      "uncompressed_bytes": 130664752
+      "payload_sha256": "d01ed0b9b9f07eb1b1b628c4c69c36adc899b6a83d20b2c95b3f243b37f76c7a",
+      "uncompressed_bytes": 130665043
     },
     {
       "archive": "upgrade-bench-v2-results-and-audits.zip",
@@ -453,9 +453,9 @@
           "sha256": "5f2b013be98e128472dbcc67067e0c0c38578ebb4e8e1c0d414c787c8e00a557"
         },
         {
-          "bytes": 7276,
+          "bytes": 7567,
           "path": "DATA_LICENSE.md",
-          "sha256": "d9bdec003ae958fde8e200002a3e222d040fb20ed64d87b0f20ccd645032dc7c"
+          "sha256": "a9a4f060d124f28a08a254b21bb7988d344a2237d8cfc85ef3daa181572194fa"
         },
         {
           "bytes": 18360,
@@ -639,8 +639,8 @@
         }
       ],
       "id": "v2-results",
-      "payload_sha256": "4a13e280752e58d6791de9a5024e39525c32c1da514dfa7710177dad2bdacc60",
-      "uncompressed_bytes": 7398186
+      "payload_sha256": "f10b5bfc0f8c9c14ee3f8d363022ae52f8bca0688d2accb6d97a3e427eeb2229",
+      "uncompressed_bytes": 7398477
     }
   ],
   "github_release_asset_limit_bytes": 2147483648,

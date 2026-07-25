@@ -23,7 +23,7 @@ preserve source attribution and this notice.
 
 | Source | Frozen input used here | Project outputs that depend on it | Official terms and redistribution note |
 |---|---|---|---|
-| CEPII BACI | HS92, release `V202401b`; annual bilateral flows through 2022. The benchmark windows use 1998–2002, 2008–2012, and 2018–2022. Recorded raw-archive SHA-256: `1dafcfd5b26b2b2c88a69ca11ed67b7067f5c38c5a12c2e1766cf28df159909a`. | audited HS6/stage provenance, candidate keys and labels, `size`, `lateval`, graph facts, coverage/label audits, and downstream scores/metrics | CEPII identifies BACI as licensed under [Etalab Open Licence 2.0](https://www.etalab.gouv.fr/wp-content/uploads/2018/11/open-licence.pdf). That license permits copying, adapting, and redistribution, including commercially, with attribution to the grantor and the date/version of the reused information. Cite CEPII and Gaulier & Zignago (2010). [Official BACI page](https://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele_item.asp?id=37). |
+| CEPII BACI | HS92, release `V202401b` (minor update documented 8 April 2024); official BACI page and `V202401b` release notes accessed 26 July 2026; annual bilateral flows through 2022. The benchmark windows use 1998–2002, 2008–2012, and 2018–2022. Recorded raw-archive SHA-256: `1dafcfd5b26b2b2c88a69ca11ed67b7067f5c38c5a12c2e1766cf28df159909a`. | audited HS6/stage provenance, candidate lane tables and labels, `size`, `lateval`, graph facts, coverage/label audits, and downstream scores/metrics | CEPII identifies BACI as licensed under [Etalab Open Licence 2.0](https://www.etalab.gouv.fr/wp-content/uploads/2018/11/open-licence.pdf). That license permits copying, adapting, and redistribution, including commercially, with attribution to CEPII/BACI and the most recent update date of the reused information. Cite CEPII and Gaulier & Zignago (2010). [Official BACI page](https://www.cepii.fr/DATA_DOWNLOAD/baci/doc/baci_webpage.html); [`V202401b` release notes](https://cepii.fr/DATA_DOWNLOAD/baci/doc/release_notes_202401.pdf). |
 | CEPII Gravity | release `V202211`; year-2010 covariates for the main fold | the PPML-gravity feature `grav` and analyses using it | CEPII identifies Gravity as licensed under Etalab Open Licence 2.0. Preserve CEPII attribution and the dataset version. Cite Conte, Cotterlaz & Mayer (2022). [Official Gravity page](https://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele_item.asp?id=8). |
 | FAOSTAT QCL | `Production_Crops_Livestock` normalized bulk archive documented in `requirements/DATA.md` | optional production/stocks graph edges and audits | FAO statistical databases are generally CC BY 4.0, supplemented by FAO's database terms and possible third-party exceptions. Redistribution requires FAO attribution and compliance with those additional terms. The raw archive is not shipped. [FAO database terms](https://www.fao.org/contact-us/terms/db-terms-of-use/en). |
 
@@ -78,9 +78,10 @@ Publications or redistributed artifacts should, at minimum:
 4. avoid implying endorsement by CEPII, FAO, the World Bank, UNCTAD, the WTO,
    the United Nations, or any source institution.
 
-The repository currently records source versions but not a reliable download
-date for every raw archive. The archival release metadata must add those access
-dates rather than inventing them retroactively.
+For BACI `V202401b`, the official update date and the documentation access date
+are recorded above. A raw-archive download date is not inferred from local file
+timestamps; source update dates, documentation access dates, and archive
+download dates are distinct provenance fields.
 
 ## Privacy, attestations, and use boundary
 
