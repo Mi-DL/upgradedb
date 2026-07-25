@@ -34,8 +34,9 @@ the public manifest inventory. A direct push from an unrestricted maintainer
 staging checkout is not a supported public-release path because it may carry
 files or reachable history outside that inventory. `tools/release_clean_clone.py`
 builds and tests the candidate public tree without pushing or rewriting its
-source; selecting the final public owner/name and publishing the verified tree
-remain explicit maintainer actions.
+source; selecting the public owner/name and publishing a verified tree are
+explicit maintainer actions. For the current reviewer release candidate, those
+actions were completed after the clean-export gate.
 
 ## Scheduler scripts
 
@@ -134,7 +135,8 @@ oracles, not deployable or causal results. The public LOCO role contains only sa
 tier-abstracted, export-edge-deduplicated NBFNet aggregates. Only `in_domain - loco` under
 that exact graph contract is a valid matched comparison; stage-relation graph
 results are not a cross-subtraction baseline. Its public verifier recomputes the
-paired summaries without access to private provenance. No current pair is present during the hold.
+paired summaries without access to private provenance. If a future active hold is opened, no such
+pair is claimable through that hold.
 
 The ULTRA-ZS pair is the only public surface for the formal external-pretrained reference. Its
 public-only verifier must enforce the six-of-six chain score seal, all 18 chain--task records, the
@@ -171,14 +173,16 @@ public merely by being copied into the staging checkout.
 `results_v2/metrics/INVALIDATED.json` is a fail-closed release receipt. Whenever
 any claim-bearing source or generated artifact changes, the final bundle remains
 blocked until the receipt is regenerated with an exact SHA-256 proof inventory.
-The current development snapshot has verified current-registry LOCO, ULTRA, and GBDT result pairs,
-a receipt-bound paper-number interface, and a public `RESOLVED` transition. The sampled human-review
+The current public reviewer release candidate has verified current-registry LOCO, ULTRA, and GBDT
+result pairs, a receipt-bound paper-number interface, and a public `RESOLVED` transition. The sampled human-review
 receipt is a sampled-validation receipt: it covers a frozen stratified sample of
 212 of 610 machine decisions plus a census of all 53 stage definitions, not the
 398 unsampled decisions. Two reviewers completed the sampled validation and final adjudication
 accepted no construct change. The receipt and invalidation resolution are co-bound without implying
-an execution order. Current clean-clone and remote-CI verification, publication, DOI, authorship, venue/cycle metadata, and other administrative metadata
-remain pending.
+an execution order. The fresh-history clean clone, repository/full smoke, deterministic bundle
+builds, remote CI, GitHub prerelease publication, and anonymous asset redownload verification have
+completed for this reviewer snapshot. DOI registration and the final archival mirror remain
+separate publication obligations.
 
 A public receipt is accepted only as canonical strict JSON with the exact frozen
 field inventory, `RESOLVED` status transition, original status/reason/date,
@@ -296,7 +300,8 @@ default. This is a preflight, not authorization to publish: final authors/order,
 venue/cycle metadata, repository owner/name, artifact hosting, archival DOI, and release timing
 remain maintainer decisions.
 
-Current repository/full smoke, clean-clone verification, and remote CI remain release gates.
+Repository/full smoke, clean-clone verification, and remote CI remain gates for every future
+claim-bearing release. They passed for the current public reviewer release candidate.
 
 ## CI boundary
 
@@ -313,7 +318,8 @@ payloads. If the input is true while the invalidation hold is active, or if
 `data/processed_v2/dataset_summary.json` is absent, the job fails instead of falling back to the
 repository profile. When the payload marker is present, the existing full validator and full-profile
 checks remain responsible for rejecting an incomplete or inconsistent payload. Local Windows
-evidence does not substitute for the pending remote-CI run.
+evidence does not substitute for remote CI; both local and remote checks passed for the current
+reviewer release candidate and must be rerun after future governed changes.
 
 LaTeX compilation is not a mandatory GitHub-hosted CI step because the minimal
 runner intentionally does not install a TeX distribution. Paper-number drift is

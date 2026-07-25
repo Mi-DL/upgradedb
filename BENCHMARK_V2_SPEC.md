@@ -8,12 +8,12 @@ Public release co-seals two independent branches: the complete
 current-registry computation/result evidence and a canonical hash-bound outcome-blind sampled human-validation
 receipt. Their presentation does not assert an execution order. A receipt that accepts no construct
 change leaves the bound computations applicable; an accepted construct change requires a new
-registry/benchmark version and full registry-dependent rebuild before resealing. Claim-bearing
-result and packaging artifacts are intentionally absent from this active-hold snapshot. The fixed review instrument
-contains no trade values, labels, cohort impacts, model scores, or downstream result summaries.
-Linux and remote-CI verification, publication, DOI, authorship, venue/cycle metadata, and other
-administrative metadata are separate release gates. This contract does not alter the normative
-definitions below.
+registry/benchmark version and full registry-dependent rebuild before resealing. The current public
+reviewer release candidate includes the receipt-bound sanitized result interfaces, packaging
+metadata, and bundle index. Its remote CI and anonymous asset-download checksum checks have passed.
+The fixed review instrument contains no trade values, labels, cohort impacts, model scores, or
+downstream result summaries. Final archival publication, DOI, and manuscript/venue metadata remain
+separate administrative steps. This contract does not alter the normative definitions below.
 
 ## 1. Window aggregation
 
@@ -166,9 +166,10 @@ evidence hash. LLM assistance was used to develop supporting code, the frozen le
 decision proposals, and partitioned rechecks of the generated ledger. Those rechecks corrected six
 boundary records but were neither human review nor independent replication. Release-valid
 human-validation status comes only from the canonical hash-bound receipt and its retained sampled
-row-level records. The planned validation uses one curator and therefore provides no
-inter-annotator agreement; it is pending in this development snapshot. Automated source, relation,
-and semantic-regression checks detect drift; they do
+row-level records. Two reviewers completed the sampled validation and final adjudication, and the
+canonical receipt records no accepted construct change. This remains sampled validation rather than
+a census of the other 398 decision records or an independent replication. Automated source,
+relation, and semantic-regression checks detect drift; they do
 not convert a curatorial judgment into independently replicated ground truth. The same sidecar
 records the purposive chain criteria and confirms that formal main-cohort model performance was not
 a chain inclusion signal.
@@ -182,8 +183,8 @@ excluded, and 99 out of stage. The 228 excluded figure counts chain--HS6 decisio
 deduplication across chains, 207 globally unique HS6 codes have at least one excluded decision. The
 audit records 19 retained-code stage
 reassignments. These are generated construct-audit counts, not completed human
-reviews and not evidence that the benchmark result-release hold has been
-resolved.
+reviews and not by themselves evidence of release resolution; completed-review and resolution
+status come from the canonical sampled-validation and `RESOLVED` receipts.
 
 ## 3. Ex-ante size baselines
 
@@ -313,9 +314,8 @@ local public-label evaluation is a reproducibility benchmark, not a leakage cert
   CSV is a deterministic projection.
 - `results_v2/metrics/v2_benchmark_profile.json` and
   `paper/generated/v2_benchmark_profile.tex` are a separate, post-resolution aggregate interface,
-  not additional members of the governed paper-number result map. The current map has not yet been
-  regenerated. Profile
-  artifacts may expose graph-scale,
+  not additional members of the governed paper-number result map. The current profile and
+  paper-number interfaces are receipt-bound and verified independently. Profile artifacts may expose graph-scale,
   effective-sample, and compute aggregates plus public-source and private-evidence hashes, but no
   private claims, inventory, receipts, paths, logs, or raw/formal contents. Public repository
   verification is `python tools/generate_v2_benchmark_profile.py --verify --profile repository`;

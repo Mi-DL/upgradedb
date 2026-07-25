@@ -10,9 +10,10 @@ comparison between repository generations.
 > presentation here does not assert an execution order. The canonical review accepted no construct
 > change, and `metrics/INVALIDATED.json` now records the verified `RESOLVED` transition that co-binds
 > both branches and the current manuscript interface. A future accepted construct change starts a
-> new registry/benchmark version and the full registry-dependent rebuild. Linux/remote-CI
-> verification, packaging, publication, DOI, and author/venue metadata are separate
-> release obligations.
+> new registry/benchmark version and the full registry-dependent rebuild. For the current public
+> reviewer release candidate, packaging, remote CI, and anonymous asset-download checksum checks
+> have passed. Final archival publication, DOI, and manuscript/venue metadata remain separate
+> administrative steps.
 
 A file is not a paper claim merely because it exists. Only artifacts named by `CLAIM_LEDGER.md`,
 covered by the appropriate verifier, and included in the final paper-number interface are claimable.

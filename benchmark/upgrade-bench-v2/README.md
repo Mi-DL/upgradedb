@@ -3,14 +3,18 @@
 This is the dependency-light loader and official scorer for UPGRADE-BENCH. The
 `2.1-dev` string and version-tagged directory/API names are retained as artifact
 compatibility identifiers; they do not define a separate scientific story. The
-large candidate tables are kept outside this directory and are intended for separate release
-assets, so this directory contains no duplicate data payload.
+large candidate tables are deliberately not tracked in Git and are distributed
+as separate GitHub prerelease assets, so this directory contains no duplicate
+data payload.
 
-> **Replacement status (2026-07-23).** The current registry contains 283 included HS6 codes.
+> **Public reviewer-release status (2026-07-26).** The current registry contains 283 included HS6 codes.
 > Replacement cohorts, formal references, the benchmark profile, the paper-number interface, and
 > the sampled-validation receipt have been verified. The canonical
-> `results_v2/metrics/INVALIDATED.json` receipt records the `RESOLVED` transition; packaging,
-> remote CI, and publication remain separate obligations.
+> `results_v2/metrics/INVALIDATED.json` receipt records the `RESOLVED` transition. Repository
+> packaging, release-asset checksum verification, anonymous download checks, and remote CI have
+> been completed for the public GitHub prerelease. This distribution is a reviewer release
+> candidate, not the final archival release; its archival DOI and final release version remain
+> pending.
 
 The three evaluation objects are deliberately separate:
 
@@ -43,8 +47,8 @@ On Windows, use `.venv\Scripts\python` in place of `.venv/bin/python`.
 
 ## Put the data where the loader can find it
 
-Once the replacement data assets are published, download and extract both UPGRADE-BENCH artifacts
-when running the full forward protocol:
+For the public reviewer release candidate, download and extract both UPGRADE-BENCH data assets
+from the GitHub prerelease when running the full forward protocol:
 
 - `upgrade-bench-v2-historical-fold.zip` for `fold2`; and
 - `upgrade-bench-v2-main-window.zip` for `main`.
@@ -279,6 +283,9 @@ co-seals the complete 283-code computation/result branch and the canonical outco
 sampled human-validation receipt as independent gates; their presentation does not assert an execution order.
 A no-construct-change receipt leaves the bound computations applicable, while an accepted construct
 change requires a new registry/benchmark version and full registry-dependent rebuild. Current
-claim-bearing outputs enter the package only after those gates pass. Linux/remote-CI verification, publication,
-final authors, repository URL, archival DOI, venue/cycle metadata, and release version are separate
-release obligations and must not be inferred from this package.
+claim-bearing outputs enter the package only after those gates pass. This package is currently
+distributed as a public reviewer release candidate through a GitHub prerelease, for which
+repository packaging, release-asset verification, public download checks, and remote CI have
+passed. It is not the final archival release. The archival DOI and final artifact version remain
+pending, and the retained `2.1-dev` identifier must be interpreted only as the package's
+artifact/API compatibility version.

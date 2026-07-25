@@ -56,8 +56,8 @@ benchmark data archive. Consult `DATA_LICENSE.md` before redistribution.
 
 ## What can run without raw archives?
 
-The canonical v2 tables will be distributed in the main and historical release bundles, not as
-ordinary Git objects. After extraction they are mounted under `data/processed_v2/` and are
+The canonical v2 tables are distributed in the main and historical release bundles, not as ordinary
+Git objects. After extraction they are mounted under `data/processed_v2/` and are
 sufficient for:
 
 - `tools/validate_v2.py`;
@@ -65,8 +65,9 @@ sufficient for:
 - the standalone `benchmark/upgrade-bench-v2/` loader and scorer; and
 - unit and exporter-stage diagnostic-split invariants.
 
-During the active hold, `results_v2/` contains the invalidation marker and documentation only.
-Authorized lightweight metrics and audit reports enter that surface after resolution.
+The public `results_v2/` surface contains the authorized lightweight metrics and audit reports
+bound by the canonical `RESOLVED` receipt. Private formal score/run trees and exploratory outputs
+remain outside the public selection.
 
 Raw BACI/Gravity are required for candidate rebuilds, KGE/path-GNN feature
 construction, and the independent raw-label audit

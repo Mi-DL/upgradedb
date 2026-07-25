@@ -41,9 +41,8 @@ pins are necessary environment evidence, but they do not guarantee
 byte-identical numerical output across operating systems, CPU/BLAS/OpenMP
 implementations, or different wheel builds.
 
-This lock verifies the rolling-CPU artifact after its governed result file is installed. The
-code-only active-hold snapshot does not contain that result. The lock intentionally omits torch and
-PyG, which are imported by part of the repository test
+This lock verifies the rolling-CPU artifact included in the public repository. It intentionally
+omits torch and PyG, which are imported by part of the repository test
 collection. Use a separate test environment for complete repository checks:
 
 ```bash
@@ -58,9 +57,8 @@ python -m unittest discover -s tests -p "test_*.py" -v
 
 ## Reproduce v2 artifacts
 
-The canonical v2 tables will be distributed as release assets and appear under
-`data/processed_v2/` after extraction. Authorized lightweight rolling/audit outputs appear under
-`results_v2/` after the active hold is resolved:
+The canonical v2 tables are distributed as release assets and appear under `data/processed_v2/`
+after extraction. Authorized lightweight rolling/audit outputs are included under `results_v2/`:
 
 ```bash
 python tools/validate_v2.py
@@ -115,8 +113,8 @@ the prescribed same-process repeat. External pretraining resources are not match
 and the single checkpoint has no training-seed interval; this is a descriptive zero-shot reference,
 not graph-free cold start, a fair-compute champion, or a significance claim.
 
-After private evaluation verification, the public result pair is produced and checked as documented
-in `ultra-formal.md`:
+The public result pair was produced after private evaluation verification and is checked as
+documented in `ultra-formal.md`:
 
 ```bash
 python tools/summarize_v2_ultra_results.py --check-only
@@ -125,9 +123,8 @@ python tools/summarize_v2_ultra_results.py --verify-output
 ```
 
 Only the last command is needed by public consumers. It does not open the checkpoint, score files,
-raw BACI archive, or `results_v2/ultra_formal/`. The current aggregate pair is intentionally absent
-from this active-hold snapshot and becomes public only through the governed promotion and receipt
-sequence.
+raw BACI archive, or `results_v2/ultra_formal/`. The current sanitized aggregate pair is included
+under `results_v2/metrics/` and is bound by the governed promotion and resolution receipts.
 
 ## Maintainer workspace boundary
 
