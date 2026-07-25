@@ -1,10 +1,11 @@
 # Running UPGRADE-BENCH locally
 
-> **Active-hold snapshot.** This checkout contains the current registry, evaluator code, tests,
-> configurations, release policy, and audit evidence. It intentionally does not contain the external
-> `data/processed_v2/` payload, claim-bearing result pairs, benchmark profile, paper-number map,
-> human-review receipt, or final data-artifact index. Repository-only checks validate this boundary;
-> they do not establish final scientific or publication readiness.
+> **Public reviewer release candidate.** This checkout contains the current registry, evaluator
+> code, tests, configurations, release policy, audit evidence, authorized sanitized result pairs,
+> benchmark profile, paper-number map, sampled human-validation receipt, `RESOLVED` receipt, and
+> data-artifact index. The external `data/processed_v2/` tables are distributed as versioned GitHub
+> Release assets rather than Git objects. Repository-only checks validate the checked-in surface;
+> checks that traverse the processed tables require the mounted release bundles.
 
 The repository is path-agnostic. Scripts resolve the repository from their own
 location and accept machine-specific paths through `VCU_RAW`, `NBFNET_PATH`,
@@ -43,9 +44,8 @@ On Windows PowerShell, activate with `.venv\Scripts\Activate.ps1`.
 The verifier checks the Python implementation/version, every minimal package
 pin, the runtime metadata inside
 `results_v2/metrics/rolling_cpu_baselines.json`, and the recorded rolling-script
-hash. That result file is supplied with the governed external payload and is absent from this
-code-only snapshot, so this verifier is run only after the payload is installed. Use
-`--strict-platform` to require the original Windows platform.
+hash. That result file is included in the current public repository. Use `--strict-platform` to
+require the original Windows platform.
 
 Exact pins do **not** imply byte-identical results across operating systems,
 CPU instruction sets, BLAS/OpenMP implementations, or wheel builds. A different
@@ -69,7 +69,7 @@ python -m pip install torch-geometric==2.7.0
 
 On Windows PowerShell, activate with `.venv-tests\Scripts\Activate.ps1`.
 
-## Verify the active-hold code-only snapshot
+## Verify the repository-only release candidate
 
 ```bash
 python -m unittest \
@@ -170,11 +170,13 @@ During development, run the non-mutating selector/privacy check:
 python tools/public_release_audit.py --planned-only
 ```
 
-The planned-only audit and repository-profile clean clone prove that the code-only snapshot obeys
-the public selection, privacy, manifest, and size boundaries. They do not validate absent result or
-data bytes. A final release additionally requires the resolved review/result receipts, frozen data
-index and assets, full-payload verification, version metadata, hosting, and archival identifier.
-Then test a fresh-history clone instead of pushing any maintainer staging history:
+The planned-only audit and repository-profile clean clone prove that the checked-in surface obeys
+the public selection, privacy, manifest, and size boundaries. They do not validate external
+processed-data bytes; run the full-payload profile with the mounted release bundles for that scope.
+The current reviewer release candidate includes the resolved review/result receipts, frozen data
+index and assets, and has passed remote CI and anonymous asset-download checksum checks. Final
+archival publication and its DOI remain separate. Test a fresh-history clone instead of pushing any
+maintainer staging history:
 
 ```bash
 python tools/release_clean_clone.py --profile repository

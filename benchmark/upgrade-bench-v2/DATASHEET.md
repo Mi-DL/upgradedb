@@ -10,8 +10,11 @@ The `2.1-dev` string and version-tagged paths are artifact/API compatibility
 identifiers, not separate scientific stories.
 
 This standalone package supplies validation and evaluation code. The large CSV
-tables are separate immutable artifacts, so installing the code does not imply
-acceptance of or access to third-party source-data terms.
+tables are deliberately not tracked in Git and are distributed as separate
+GitHub prerelease assets, so installing the code does not imply acceptance of
+or access to third-party source-data terms. The current distribution is a
+public reviewer release candidate, not the final archival release; its archival
+DOI and final artifact version remain pending.
 
 The current registry is defined by the strict audit and evidence artifacts. The
 frozen chain lexicons were applied automatically to all 5,022 rows of the
@@ -52,7 +55,10 @@ accepted construct change requires a new registry/benchmark version and full reg
 rebuild before resealing. The current sampled-validation and resolution receipts record no accepted
 construct change and bind the governed result interface. The fixed review instrument excludes trade values, labels, cohort impacts,
 model scores, and downstream result summaries. Publication, DOI, authorship, venue/cycle metadata,
-and other administrative metadata are separate release gates.
+and other administrative metadata do not alter the scientific eligibility gates. Repository
+packaging, release-asset verification, anonymous download checks, and remote CI have been completed
+for the public reviewer release candidate distributed as a GitHub prerelease. Archival DOI
+registration and the final archival release remain pending.
 
 ## Instances
 
@@ -85,8 +91,9 @@ These replacement counts and values come from `dataset_summary.json` and
 `dataset_summary_fold2.json` in the processed-v2 payload. The repository
 validator has checked 48 rebuilt tables/views: 24 base lane tables (A and pre-view B for six
 chains and two snapshots) and 24 derived B1/B2 views. The 36 A/B1/B2 views are
-the evaluation objects exposed by the standalone loader. Their local verification does not by
-itself unblock result claims or public release.
+the evaluation objects exposed by the standalone loader. Their local verification establishes
+artifact consistency but is not independent replication and does not elevate the public GitHub
+prerelease to a final archival release.
 
 ## Unit and label definitions
 
@@ -344,8 +351,10 @@ legal assertions.
 - Export emergence is not proof of domestic production or transformation.
 - Rankings must not be used as automated eligibility, sanctions, credit, or
   investment decisions. Domain review and current external evidence are needed.
-- `2.1-dev` is not the final signed release; author names, archival DOI, and
-  final artifact version must be resolved before publication.
+- `2.1-dev` remains the artifact/API compatibility identifier for the public
+  reviewer release candidate distributed as a GitHub prerelease. It is not the
+  final archival release; the archival DOI and final artifact version remain
+  pending.
 
 Report results by chain and task, preserve the snapshot/protocol distinction,
 state the benchmark version, and disclose all diagnostics or overrides.

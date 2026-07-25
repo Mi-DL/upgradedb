@@ -6,16 +6,16 @@ prediction tasks, leakage-audited temporal evaluation, reference CPU and graph b
 observed-value diagnostics, and hash-bound artifact verification. The contribution is the benchmark
 and its audited evaluation contract, not a proposed model.
 
-> **Verified development snapshot.** This repository state is not yet the final published bundle. The
-> observable-attribution revision defines a registry with 283 included
-> HS6 codes. A public release must co-seal two independent branches: the complete current-registry
-> computation/result branch and a hash-bound sampled human-validation receipt. Listing these gates
-> does not assert an execution order. The canonical receipt records no accepted construct change,
-> and `results_v2/metrics/INVALIDATED.json` now carries the verified `RESOLVED` transition that
-> co-binds both branches and the current paper-number interface. A future accepted construct change
-> requires a new registry/benchmark version and a full registry-dependent rebuild.
-> Publication, remote CI, authorship/order, venue/cycle metadata, hosting, DOI, and final release
-> metadata are separate release obligations.
+> **Verified public reviewer release candidate.** The Git repository and its versioned prerelease
+> assets co-seal the complete current-registry computation/result branch and the hash-bound sampled
+> human-validation branch for a registry with 283 included HS6 codes. The canonical receipt records
+> no accepted construct change, and `results_v2/metrics/INVALIDATED.json` preserves the historical
+> invalidation together with the verified `RESOLVED` transition that binds both branches and the
+> current paper-number interface. A future accepted construct change requires a new
+> registry/benchmark version and a full registry-dependent rebuild. The package compatibility
+> identifier remains `2.1-dev`; the GitHub prerelease tag identifies this reviewer snapshot.
+> Authorship, venue metadata, DOI registration, and a final archival release remain separate
+> publication obligations.
 
 The machine-readable claim boundary is documented in
 [`results_v2/CLAIM_LEDGER.md`](results_v2/CLAIM_LEDGER.md). Some machine-interface paths retain
@@ -88,20 +88,21 @@ realizable policy ceiling. Track B2 value is nested within Track B1 entry value 
 to Track A/B1 totals.
 
 The current `results_v2/metrics/v2_benchmark_profile.json` and
-`paper/generated/v2_benchmark_profile.tex` are intentionally absent from this development snapshot.
-No graph scale, sample-unit, or compute claim should be inferred from their absence. The current
-profile may be promoted only after the
-active hold is resolved and its repository and private-provenance checks pass.
+`paper/generated/v2_benchmark_profile.tex` are included in this reviewer release candidate and pass
+the public repository-profile verifier. They report only sanitized aggregate graph scale, B1/B2
+effective sample units, compute, and evidence hashes. Rebuilding the pair or running the full
+private-provenance check still requires explicitly supplied formal evidence that is not published.
 
 The canonical product-space density remains a B1-only, reviewer-motivated domain reference. For
 each early window it constructs country--product RCA membership over the complete HS92 dictionary,
 computes symmetric product proximity, excludes each target product's self-relation, and averages
 density over the registered products in the candidate stage. The replacement artifact and exact
-keyed-score CSV have been rebuilt for the 283-code cohorts and pass their local verifier. Likewise,
-the replacement paired graph-score artifact uses identical candidate sets, fixed seeds, and cluster
-multiplicities for PyKEEN and NBFNet and passes its local verifier. Their numerical results are
-deliberately not promoted here until the complete replacement paper interface and release receipt
-exist.
+keyed-score CSV have been rebuilt for the 283-code cohorts; the public verifier recomputes their
+metrics from the released keyed scores. The receipt-bound paired graph-robustness summary uses
+identical candidate sets, fixed seeds, and cluster multiplicities for PyKEEN and NBFNet. The
+product-space result remains a B1-only, reviewer-motivated descriptive association over the six
+fixed chains. The paired graph result is published only as a score-free sanitized summary; full
+score-level recomputation and private verification evidence remain maintainer-only.
 
 A separate raw-derived cohort-geometry audit rebuilds eligibility and labels at 50, 100, and
 250 kUSD. Its 100-kUSD reconstruction exactly matches every canonical A/B1/B2 key and label. The
@@ -111,16 +112,20 @@ performance sensitivity. The 100-kUSD benchmark definition remains unchanged.
 
 The GBDT reference uses `HistGradientBoostingClassifier` with the same task-aligned early features
 as the logistic references. Its replacement 18-model artifact was selected and refit under the
-frozen historical protocol, rebuilt for the 283-code cohorts, and passes its local verifier. It
+frozen historical protocol, rebuilt for the 283-code cohorts, and passes its public release
+verification contract. It
 remains a reviewer-motivated reference outside the original prespecified set, not a post-hoc model
-champion, and its values await promotion through the replacement paper interface.
+champion. Its current JSON/CSV values are included in the receipt-bound public interface.
 
-Matched LOCO and ULTRA-ZS remain release gates. The LOCO design remains a tier-abstracted
+Matched LOCO and ULTRA-ZS are published as receipt-authorized sanitized JSON/CSV summaries. The LOCO
+design remains a tier-abstracted
 NBFNet parameter-transport diagnostic over six held-out chains, two modes, and five seeds; ULTRA-ZS
 remains a fixed external-pretrained, no-benchmark-label-adaptation reference with unmatched external
-training data and compute. No current LOCO or ULTRA aggregate is promoted in this development
-snapshot. Only receipt-bound current-registry summaries may support a result, direction, or model
-comparison in this README or the paper.
+training data and compute. Both LOCO modes and ULTRA-ZS use the target chain's early graph at
+inference, so neither is a graph-free cold-start comparison. LOCO training-edge volume is not
+equalized, so its gap jointly reflects source set and volume. Only the receipt-bound summaries
+support results in this README or the paper. Component scores, checkpoints, logs, host state, and
+private formal receipts remain excluded.
 
 ## Repository map
 
@@ -188,9 +193,9 @@ Edit the manuscript sources directly; do not edit `paper/generated/*.tex`:
 - figures: `paper/figures/`.
 
 Create or refresh the sealed review-number snapshot when a release audit must bind the paper to the
-current data, metrics, paper-number sources, and verification code. While the invalidation hold is
-active, the snapshot comes from the verified non-canonical preview; after resolution, it copies the
-receipt-verified canonical JSON/TeX bytes:
+current data, metrics, paper-number sources, and verification code. The current invalidation is
+resolved, so the refresh path copies the receipt-verified canonical JSON/TeX bytes. A future active
+hold would instead require a verified non-canonical preview:
 
 ```powershell
 & .\.venv\Scripts\python.exe tools\build_paper_review.py --refresh-numbers
@@ -243,9 +248,10 @@ python -m pip install torch-geometric==2.7.0
 
 On Windows PowerShell, activate that environment with `.venv-tests\Scripts\Activate.ps1`.
 
-The repository is a verified development snapshot with a resolved scientific claim interface.
-Release-smoke, clean-clone, remote-CI, packaging, and publication gates remain separate. After
-installing the main and historical bundles as documented in
+The repository is a verified public reviewer release candidate with a resolved scientific claim
+interface. Repository-only and full-payload verification remain separate because the large
+processed tables are distributed as versioned release assets rather than ordinary Git objects.
+After installing the main and historical bundles as documented in
 [docs/DATA_DISTRIBUTION.md](docs/DATA_DISTRIBUTION.md), run the currently applicable scientific
 checks:
 
@@ -278,8 +284,8 @@ a maintainer-provenance check, not a code-only public-clone command:
 python tools/v2_score_robustness_r5.py --verify-output
 ```
 
-The eventual public release will carry only its score-free JSON/CSV analysis pair, public config and runner;
-formal graph scores, selection artifacts, logs, and machine state remain excluded.
+The public reviewer release carries only its score-free JSON/CSV analysis pair, public config, and
+runner; formal graph scores, selection artifacts, logs, and machine state remain excluded.
 
 The robustness verifier also binds the private raw BACI archive and is intended for a private
 provenance checkout:

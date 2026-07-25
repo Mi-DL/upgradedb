@@ -11,7 +11,9 @@ Use a normal GitHub repository for current code, documentation, tests,
 portable scientific configuration, lightweight sanitized results, and
 `release/DATA_ARTIFACT_INDEX.json`. Publish the large processed main/history
 archives as versioned GitHub Release assets and mirror the final release in a
-DOI-bearing research archive such as Zenodo when the benchmark becomes public.
+DOI-bearing research archive such as Zenodo when the final archival release is
+prepared. The current public reviewer release candidate uses a versioned GitHub
+prerelease; its DOI-bearing archival mirror is not yet complete.
 
 This is preferable to adding the processed benchmark CSVs to ordinary Git history:
 
@@ -33,11 +35,11 @@ The current main/history payload under
 path and bundle identifiers are stable implementation names, not separate
 scientific stories.
 
-## Planned bundle layout
+## Versioned bundle layout
 
-`python tools/artifact_bundles.py list` prints the counts and sizes for the currently staged plan.
-After claim-bearing changes, regenerate the index before treating those values or archive hashes as
-final. The deterministic plan contains:
+`python tools/artifact_bundles.py list` prints the counts and sizes for the current indexed bundle
+set. After claim-bearing changes, regenerate the index before treating those values or archive
+hashes as final. The deterministic layout contains:
 
 | Bundle ID | Intended contents |
 |---|---|
@@ -46,7 +48,7 @@ final. The deterministic plan contains:
 | `v2-history` | six-chain historical selection-fold equivalents |
 | `v2-results` | exact-name allowlisted metrics/audits and sanitized public summaries; never raw GPU trees |
 
-Every data bundle carries `DATA_LICENSE.md`, `ARTIFACT.md`, and this runbook;
+Every bundle carries `DATA_LICENSE.md`, `ARTIFACT.md`, and this runbook;
 the internal `PROJECT_CHECKLIST.md` is deliberately excluded. V2 bundles also carry
 `BENCHMARK_V2_SPEC.md`. The v2-results bundle carries the paper-facing generated
 macro file as well. ZIP members use repository-relative paths, so the archives
@@ -67,8 +69,7 @@ The v2-results selector is an explicit allowlist. `results_v2/gpu_smoke/` and
 all raw `results_v2/gpu_rolling/` selections, caches, scores, logs, run
 registries, status, and pilot records are internal. All of
 `results_v2/loco_formal/` and `results_v2/ultra_formal/` are likewise private formal provenance.
-After hold resolution, reviewed public results are limited to exact-name sanitized pairs,
-including:
+The current reviewed public results are limited to exact-name sanitized pairs, including:
 
 - `results_v2/metrics/v2_gpu_rolling_summary.{json,csv}`;
 - `results_v2/metrics/v2_value_diagnostics.{json,csv}`;
@@ -107,7 +108,7 @@ seals, receipts, logs, raw BACI provenance, vendored source, and host state rema
 Both sanitized pairs are present in the governed result surface and are bound by the canonical
 resolution receipt; private checkpoints, scores, and run trees remain excluded.
 
-When authorized, the formal GBDT result is an atomic JSON/CSV pair governed by
+The authorized formal GBDT result is an atomic JSON/CSV pair governed by
 `configs/v2_gbdt_baselines.json`. The public configuration fixes the four estimator choices,
 task-aligned features, grouped historical objectives, all-18-models-before-main read gate, budgets,
 200-draw cluster bootstrap, and seed. Its verifier checks historical traces, main metrics,
@@ -118,11 +119,12 @@ pretending absent external candidate tables were hashed; full mode checks every 
 `results_v2/metrics/INVALIDATED.json` is fail-closed. Any change to a
 claim-bearing source or generated artifact blocks final bundle freezing until an
 exact replacement SHA-256 inventory is written through the supported resolution
-transaction. During the active hold, no current-registry result pair, paper-number interface,
-replacement receipt, bundle index, or clean-clone record is promoted by this runbook. The
+transaction. If a future active hold is opened, no current-registry result pair, paper-number
+interface, replacement receipt, bundle index, or clean-clone record is promoted through that hold. The
 outcome-blind sampled human-validation receipt and invalidation resolution remain required gates without implying an
-execution order. Publication, DOI, authorship, venue/cycle metadata, and release metadata remain
-pending.
+execution order. The current receipt is `RESOLVED`; the fresh-history repository, deterministic
+bundles, remote CI, GitHub prerelease, and anonymous asset verification are complete for the public
+reviewer release candidate. DOI registration and the final archival mirror remain pending.
 
 ## Repository gates
 
@@ -160,7 +162,8 @@ install a TeX distribution.
 ## Freeze and pre-upload procedure
 
 Run these commands from a staging checkout that contains all frozen benchmark
-payloads. Do not change a payload after the index is written.
+payloads. Do not change a payload after the index is written. These gates were completed for the
+current reviewer release candidate and must be repeated after any governed change.
 
 ```bash
 # 0. Promote/verify sanitized formal summaries and GBDT, then verify the schema-8 public
@@ -220,11 +223,15 @@ sidecar, the release tag/commit, and the full-smoke log.
 These commands do not authorize a direct push from an unrestricted maintainer
 staging checkout, which may contain files or reachable history outside the
 public inventory. The clean-clone tool proves that a manifest-only,
-fresh-history export can pass, but it does not push it. Choosing the repository
-owner/name, artifact host, final authors/order, archival DOI, and publication
-timing remains mandatory before any public push.
+fresh-history export can pass, but it does not push it. The current repository and GitHub
+prerelease were published separately after this gate. Final archival metadata, DOI registration,
+and archival-mirror timing remain explicit maintainer decisions.
 
 ## Upload procedure (manual, not run by the tooling)
+
+For the current reviewer release candidate, the versioned GitHub prerelease and all indexed assets
+were published, anonymously redownloaded, and checksum-verified. The reusable procedure below still
+applies to a final archival release; the DOI-bearing mirror has not yet been completed.
 
 1. Create a signed or protected release tag from the commit that contains the
    matching artifact index and repository manifest.
@@ -291,7 +298,7 @@ the private provenance checkout may additionally run `--verify-resolved`, which
 layers the private raw/formal scientific verifiers on top of the full public
 receipt check; public consumers should not need that private command.
 
-## Release checklist and development-snapshot status
+## Release checklist — public reviewer candidate status
 
 - [x] Software and project-authored data licenses are separated.
 - [x] Third-party source and redistribution conditions are recorded.
@@ -300,20 +307,21 @@ receipt check; public consumers should not need that private command.
 - [x] Public selection uses exact allowlists and excludes raw data, private score/run trees,
   checkpoints, host state, permission-gated inputs, and maintainer-only controllers.
 - [x] The CI branch validates the selected code and artifact boundary.
-- [x] Resolve the current-registry hold with a release-eligible sampled human-validation
+- [x] Resolved the current-registry hold with a release-eligible sampled human-validation
   receipt (212 of 610 decision records plus all 53 stage definitions) and a public resolution
   receipt. The 398 unsampled decision records are not claimed as individually human-verified.
-- [x] Generate and verify the current result and paper-number interfaces under the resolved
+- [x] Generated and verified the current result and paper-number interfaces under the resolved
   release contract.
-- [ ] Regenerate and verify final manifests, archives, and clean clones.
-- [ ] Run full-payload and cross-platform release QA.
-- [ ] Confirm contributor names, release version, protected release tag, repository/host metadata,
-  archival DOI, and verified raw-source access dates.
-- [ ] Upload assets to a draft GitHub Release, mirror identical bytes to the archival host, and
-  publish only after archive hashes, index hashes, release notes, licenses, and source versions agree.
+- [x] Regenerated and verified the reviewer-snapshot manifests, deterministic archives, and clean
+  clones.
+- [x] Ran full-payload and cross-platform release QA, including remote CI.
+- [x] Published a versioned GitHub prerelease and anonymously redownloaded and verified its indexed
+  assets.
+- [ ] Confirm final archival metadata and mirror the byte-identical final assets to a DOI-bearing
+  archival host.
 
-The remaining unchecked items cover cross-platform/remote QA plus authorship, legal/provenance, hosting, or
-explicit external-publication decisions; none should be silently inferred by automation.
+The remaining unchecked item is the final archival mirror and DOI registration. Manuscript
+authorship and venue submission metadata remain outside this artifact-distribution checklist.
 
 Maintainer-only exploratory outputs remain outside both current public surfaces
 even when retained in staging for provenance.

@@ -8,14 +8,14 @@
       "file_count": 17,
       "files": [
         {
-          "bytes": 19238,
+          "bytes": 19132,
           "path": "ARTIFACT.md",
-          "sha256": "f02be9ec454bb2e14d6966a9e9097c615bb5d0022ce713c4468d8115e82d650d"
+          "sha256": "d5d54e3a23c2d848e118576d2fb92591c46d815d311ce51772e79fd8d659d969"
         },
         {
-          "bytes": 22056,
+          "bytes": 22367,
           "path": "BENCHMARK_V2_SPEC.md",
-          "sha256": "5260663965fbb66b26199bd3b4a687b5125b948f8dca7100b7708290bd82961f"
+          "sha256": "5f2b013be98e128472dbcc67067e0c0c38578ebb4e8e1c0d414c787c8e00a557"
         },
         {
           "bytes": 7276,
@@ -23,9 +23,9 @@
           "sha256": "d9bdec003ae958fde8e200002a3e222d040fb20ed64d87b0f20ccd645032dc7c"
         },
         {
-          "bytes": 21382,
+          "bytes": 22072,
           "path": "benchmark/upgrade-bench-v2/DATASHEET.md",
-          "sha256": "746f7e0ed2fa6c1b27ec9272ddf66862952c5099d3b37b48f9aebf2c3a2b4d65"
+          "sha256": "b8ba3fcd2db27f5fef97ba9cfac0316a56f0513fa64d320e1d6ad9a183b9a540"
         },
         {
           "bytes": 1285,
@@ -35,12 +35,12 @@
         {
           "bytes": 855,
           "path": "benchmark/upgrade-bench-v2/MANIFEST.sha256",
-          "sha256": "a94e5ebc3d137693819db440f4a36555f027be24fdfe2c64c070a43a9b1ae03d"
+          "sha256": "3d56bd8a614e62f1d5131660f271458b2030c8e8266acd73bcaa2d0ca938ae4c"
         },
         {
-          "bytes": 14185,
+          "bytes": 14696,
           "path": "benchmark/upgrade-bench-v2/README.md",
-          "sha256": "0ca811fce9050a5428a8daf25ed3dbcd37124a6563e85447485b30e4414011dd"
+          "sha256": "b25fc42b6e54e488691fb5ee9a3334021e96996f2df7172e412ea0b27fd41ef1"
         },
         {
           "bytes": 8,
@@ -78,14 +78,14 @@
           "sha256": "a08c53daadb0be28b3968c036a12b6a5d394a9680611c459a311194ccf854cde"
         },
         {
-          "bytes": 17657,
+          "bytes": 18360,
           "path": "docs/DATA_DISTRIBUTION.md",
-          "sha256": "3b005a7469f188ea2fe5b7d9a774131fc8fc57a55e51af60d32e5187c992e8ea"
+          "sha256": "a30bcaaf78bbad5582b410fc728c9e2cf30285e39ee9a81a84d6ea9a9d708248"
         },
         {
-          "bytes": 20173,
+          "bytes": 20661,
           "path": "docs/PUBLIC_RELEASE_POLICY.md",
-          "sha256": "87f1ef9a562f16dbed80df64af6724b82d7b2799f8c3555d53f9bbc70051f050"
+          "sha256": "de4fbc0a18e7ab2590257d368c12eeb3313958ad089859f0261c433b91279394"
         },
         {
           "bytes": 12734,
@@ -94,8 +94,8 @@
         }
       ],
       "id": "v2-standalone",
-      "payload_sha256": "0cd406c2097c9d4c8bea962d1af0eabfef82879ae23aba13b6eb26fa5f95215b",
-      "uncompressed_bytes": 184286
+      "payload_sha256": "2d4582c12b9ed429f431208ac889cd89dcaabf448eb947620ba5be0f9b60b218",
+      "uncompressed_bytes": 186883
     },
     {
       "archive": "upgrade-bench-v2-main-window.zip",
@@ -103,14 +103,14 @@
       "file_count": 32,
       "files": [
         {
-          "bytes": 19238,
+          "bytes": 19132,
           "path": "ARTIFACT.md",
-          "sha256": "f02be9ec454bb2e14d6966a9e9097c615bb5d0022ce713c4468d8115e82d650d"
+          "sha256": "d5d54e3a23c2d848e118576d2fb92591c46d815d311ce51772e79fd8d659d969"
         },
         {
-          "bytes": 22056,
+          "bytes": 22367,
           "path": "BENCHMARK_V2_SPEC.md",
-          "sha256": "5260663965fbb66b26199bd3b4a687b5125b948f8dca7100b7708290bd82961f"
+          "sha256": "5f2b013be98e128472dbcc67067e0c0c38578ebb4e8e1c0d414c787c8e00a557"
         },
         {
           "bytes": 7276,
@@ -248,14 +248,14 @@
           "sha256": "a430d1146a28593840e544b8b2301891e4ed531d7fd5e36b46c531b2d83dcc06"
         },
         {
-          "bytes": 17657,
+          "bytes": 18360,
           "path": "docs/DATA_DISTRIBUTION.md",
-          "sha256": "3b005a7469f188ea2fe5b7d9a774131fc8fc57a55e51af60d32e5187c992e8ea"
+          "sha256": "a30bcaaf78bbad5582b410fc728c9e2cf30285e39ee9a81a84d6ea9a9d708248"
         },
         {
-          "bytes": 20173,
+          "bytes": 20661,
           "path": "docs/PUBLIC_RELEASE_POLICY.md",
-          "sha256": "87f1ef9a562f16dbed80df64af6724b82d7b2799f8c3555d53f9bbc70051f050"
+          "sha256": "de4fbc0a18e7ab2590257d368c12eeb3313958ad089859f0261c433b91279394"
         },
         {
           "bytes": 12734,
@@ -264,8 +264,8 @@
         }
       ],
       "id": "v2-main",
-      "payload_sha256": "38e982def72b8f969dacfc10ae1cd835aedd3c45a719994d47924af092db32a5",
-      "uncompressed_bytes": 165737941
+      "payload_sha256": "ba94bcaece35c6669df16452d00e28d0afbe91efa5c6535efb33b973c3fd119e",
+      "uncompressed_bytes": 165739337
     },
     {
       "archive": "upgrade-bench-v2-historical-fold.zip",
@@ -273,14 +273,14 @@
       "file_count": 32,
       "files": [
         {
-          "bytes": 19238,
+          "bytes": 19132,
           "path": "ARTIFACT.md",
-          "sha256": "f02be9ec454bb2e14d6966a9e9097c615bb5d0022ce713c4468d8115e82d650d"
+          "sha256": "d5d54e3a23c2d848e118576d2fb92591c46d815d311ce51772e79fd8d659d969"
         },
         {
-          "bytes": 22056,
+          "bytes": 22367,
           "path": "BENCHMARK_V2_SPEC.md",
-          "sha256": "5260663965fbb66b26199bd3b4a687b5125b948f8dca7100b7708290bd82961f"
+          "sha256": "5f2b013be98e128472dbcc67067e0c0c38578ebb4e8e1c0d414c787c8e00a557"
         },
         {
           "bytes": 7276,
@@ -418,14 +418,14 @@
           "sha256": "ee9bd4b03de3358a4b7747c65724cbb67e9b345c7a0bd93d96f868168385ddd6"
         },
         {
-          "bytes": 17657,
+          "bytes": 18360,
           "path": "docs/DATA_DISTRIBUTION.md",
-          "sha256": "3b005a7469f188ea2fe5b7d9a774131fc8fc57a55e51af60d32e5187c992e8ea"
+          "sha256": "a30bcaaf78bbad5582b410fc728c9e2cf30285e39ee9a81a84d6ea9a9d708248"
         },
         {
-          "bytes": 20173,
+          "bytes": 20661,
           "path": "docs/PUBLIC_RELEASE_POLICY.md",
-          "sha256": "87f1ef9a562f16dbed80df64af6724b82d7b2799f8c3555d53f9bbc70051f050"
+          "sha256": "de4fbc0a18e7ab2590257d368c12eeb3313958ad089859f0261c433b91279394"
         },
         {
           "bytes": 12734,
@@ -434,8 +434,8 @@
         }
       ],
       "id": "v2-history",
-      "payload_sha256": "4df67659d36d48778a1278456aaff2683126276cd2a2266750f104a4705ff588",
-      "uncompressed_bytes": 130663356
+      "payload_sha256": "db124b913a72fbcad84cadcc88fa423bafc377b759c556dcf80166d785b9608e",
+      "uncompressed_bytes": 130664752
     },
     {
       "archive": "upgrade-bench-v2-results-and-audits.zip",
@@ -443,14 +443,14 @@
       "file_count": 39,
       "files": [
         {
-          "bytes": 19238,
+          "bytes": 19132,
           "path": "ARTIFACT.md",
-          "sha256": "f02be9ec454bb2e14d6966a9e9097c615bb5d0022ce713c4468d8115e82d650d"
+          "sha256": "d5d54e3a23c2d848e118576d2fb92591c46d815d311ce51772e79fd8d659d969"
         },
         {
-          "bytes": 22056,
+          "bytes": 22367,
           "path": "BENCHMARK_V2_SPEC.md",
-          "sha256": "5260663965fbb66b26199bd3b4a687b5125b948f8dca7100b7708290bd82961f"
+          "sha256": "5f2b013be98e128472dbcc67067e0c0c38578ebb4e8e1c0d414c787c8e00a557"
         },
         {
           "bytes": 7276,
@@ -458,14 +458,14 @@
           "sha256": "d9bdec003ae958fde8e200002a3e222d040fb20ed64d87b0f20ccd645032dc7c"
         },
         {
-          "bytes": 17657,
+          "bytes": 18360,
           "path": "docs/DATA_DISTRIBUTION.md",
-          "sha256": "3b005a7469f188ea2fe5b7d9a774131fc8fc57a55e51af60d32e5187c992e8ea"
+          "sha256": "a30bcaaf78bbad5582b410fc728c9e2cf30285e39ee9a81a84d6ea9a9d708248"
         },
         {
-          "bytes": 20173,
+          "bytes": 20661,
           "path": "docs/PUBLIC_RELEASE_POLICY.md",
-          "sha256": "87f1ef9a562f16dbed80df64af6724b82d7b2799f8c3555d53f9bbc70051f050"
+          "sha256": "de4fbc0a18e7ab2590257d368c12eeb3313958ad089859f0261c433b91279394"
         },
         {
           "bytes": 12734,
@@ -493,9 +493,9 @@
           "sha256": "911c4d894ea7e51f49eb868867ef1046ebb2e10e4774ec974e26390e50538233"
         },
         {
-          "bytes": 12665,
+          "bytes": 12780,
           "path": "results_v2/README.md",
-          "sha256": "9d06e98073226874ab787758a64a69753de2f1a7c4d93121afdcee7230f40f4c"
+          "sha256": "2856b03a879741e9ce2b68093038a5013bfc87569943f7cd7f7b576fe75f34eb"
         },
         {
           "bytes": 9477,
@@ -639,8 +639,8 @@
         }
       ],
       "id": "v2-results",
-      "payload_sha256": "f34b30ee8f565d255041d6c5d54e6c43ed30dbba7f5a7e341fbfb89aea841a78",
-      "uncompressed_bytes": 7396675
+      "payload_sha256": "4a13e280752e58d6791de9a5024e39525c32c1da514dfa7710177dad2bdacc60",
+      "uncompressed_bytes": 7398186
     }
   ],
   "github_release_asset_limit_bytes": 2147483648,

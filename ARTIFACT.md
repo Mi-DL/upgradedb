@@ -3,14 +3,14 @@
 This is the release-facing verification entry point. It verifies derived benchmark artifacts; it
 does not rebuild the benchmark from restricted-size raw archives and does not require a GPU.
 
-> **Development state.** This checkout is an active-hold, code-only snapshot for the current
-> 283-code registry. No claim-bearing LOCO or ULTRA summary, benchmark profile, paper-number map,
-> six-role replacement receipt, final bundle index, or processed-data payload is promoted here.
-> Invalidation resolution and the outcome-blind sampled human-validation receipt remain separate pending gates and are
-> joined for release without asserting an execution order. Current scientific components may be
-> verified in a maintainer/full-payload checkout, but no isolated component makes the paper or release
-> interface complete. Publication, authorship, venue/cycle metadata, hosting, DOI, and other
-> administrative metadata remain separate gates.
+> **Reviewer release state.** This checkout is the public source snapshot for the current 283-code
+> registry. It includes receipt-authorized sanitized LOCO and ULTRA summaries, the benchmark
+> profile, the paper-number map, the verified resolution and sampled human-validation receipts, and
+> the current bundle index. Four immutable benchmark bundles, including the main and historical
+> processed-data bundles, are versioned release assets rather than ordinary Git objects. Private
+> formal scores, checkpoints, logs, host state, and
+> restricted-size raw archives are not public payloads. Authorship, venue metadata, DOI registration,
+> and a final archival release remain separate publication obligations.
 
 ## Minimal setup
 
@@ -24,9 +24,10 @@ On Windows PowerShell, activate with `.venv\Scripts\Activate.ps1`.
 
 ## Verify current scientific components
 
-The commands below define the component-verification contract. Claim-bearing outputs are
-intentionally absent from this development snapshot; run these commands only in a maintainer or
-full-payload checkout in which the governed inputs have been installed. From that repository root:
+The commands below define the component-verification contract. Lightweight receipt-authorized
+outputs are present in the Git checkout. Checks that inspect the main or historical processed tables
+require the corresponding release bundles to be installed; private-provenance modes additionally
+require inputs that are deliberately not published. From the repository root:
 
 ```bash
 python tools/verify_registry_curation_protocol.py
@@ -45,19 +46,17 @@ These checks bind the strict registry and both temporal snapshots, candidate key
 support, forward CPU choices, the independent raw-label and B1 coverage audits, the existing graph
 forward summary, and fixed-budget value diagnostics to their recorded inputs.
 
-After the current LOCO and ULTRA replacements have been verified and promoted in the six-role
-transaction, verify the regenerated sanitized benchmark profile and its TeX companion with:
+Verify the sanitized benchmark profile and its TeX companion with:
 
 ```bash
 python tools/generate_v2_benchmark_profile.py --verify --profile repository
 ```
 
-The profile pair is absent from this active-hold checkout, so this command is expected to fail until
-the governed current pair is installed. That pair reports only aggregate graph scale, B1/B2
-effective sample units, compute, and
-evidence hashes. It is independent of the paper-number interface and contains no private claims or
-host inventory. Rebuilding it and performing the maintainer-only full-provenance check require
-explicitly supplied private formal evidence; those inputs are not copied into either public output.
+The included pair passes the repository-profile verifier and reports only aggregate graph scale,
+B1/B2 effective sample units, compute, and evidence hashes. It is independent of the paper-number
+interface and contains no private claims or host inventory. Rebuilding it and performing the
+maintainer-only full-provenance check require explicitly supplied private formal evidence; those
+inputs are not copied into either public output.
 
 The GBDT command verifies `results_v2/metrics/v2_gbdt_baselines.{json,csv}` against
 `configs/v2_gbdt_baselines.json`, the runner and shared feature/metric code, and all 24 historical
@@ -66,7 +65,7 @@ historical objectives; all 18 selected models are refit before any main table is
 scores all lanes before evaluation conditioning. The artifact records 200-draw exporter/entry
 cluster intervals. It is an additional reviewer-motivated tabular reference rather than an original
 prespecified baseline or target-selected champion. Numerical values must come from a receipt-bound
-current interface and are not reproduced in this development snapshot.
+current interface; the included JSON/CSV pair is that verified public interface.
 
 ## Product-space, paired-score, and threshold-geometry evidence
 
@@ -83,7 +82,7 @@ keys, bindings, metrics, 200-draw exporter intervals, and deterministic JSON/CSV
 opening raw BACI. In a private provenance checkout, add `--verify-raw` to hash the attested archive
 and rebuild full-economy RCA membership, product proximity, and every keyed score. Any promoted
 values are descriptive over the six fixed chains and do not define a causal capability measure;
-current numerical values are not reproduced in this development snapshot.
+the current numerical metrics and keyed scores are included in the receipt-bound public interface.
 
 `results_v2/metrics/v2_score_robustness_r5.{json,csv}` contains no formal model scores. It reports
 same-candidate, same-seed, paired PyKEEN-minus-NBFNet cluster intervals; all declared B1 pooling and
@@ -147,14 +146,15 @@ consumers verify only a receipt-authorized sanitized JSON/CSV pair with:
 python tools/summarize_v2_ultra_results.py --verify-output
 ```
 
-Neither current pair is promoted in this active-hold snapshot. No partial formal output,
-intermediate aggregate, or private verification receipt is a paper number.
+Both current sanitized pairs are included in the receipt-bound public interface. No component score,
+partial formal output, intermediate aggregate, or private verification receipt is a paper number.
 
 ## Verify a frozen public candidate
 
-The following is the target gate sequence for a complete frozen public candidate. In the current
-active-hold state, the sequence is expected to stop at an absent current interface or unresolved
-review/receipt gate; that refusal is not a reason to weaken or bypass a check.
+The following is the gate sequence for a complete frozen public candidate. Repository-profile checks
+operate on the Git checkout; full-payload checks additionally require the versioned release bundles.
+Private-provenance checks remain separate and are never bypassed by copying private inputs into a
+public bundle.
 
 ```bash
 python tools/release_manifest.py --verify --scope all
@@ -187,8 +187,8 @@ bash run_artifact_smoke.sh
 .\run_artifact_smoke.ps1
 ```
 
-Once the current six-role replacement transaction and sampled human-validation receipt exist, the full profile checks,
-among other invariants:
+With the current six-role replacement transaction and sampled human-validation receipt present, the
+full profile checks, among other invariants:
 
 - standalone-package and repository manifests plus the external bundle index;
 - the public/private boundary, including permission-gated extracts and host-specific run state;
@@ -230,9 +230,9 @@ signatures: simultaneous edits to verifier code, constants, and receipts require
 an independently protected release tag, cryptographic signature, or DOI-backed
 archival record and digest to detect.
 
-A complete release-candidate code-only clone, before external processed-data bundles are installed,
-uses the repository profile below. The present fail-closed checkout is expected to refuse this
-sequence until the current replacement interfaces and sampled human-validation receipt exist.
+A release-candidate code-only clone, before external processed-data bundles are installed, uses the
+repository profile below. This sequence passes for the current reviewer release candidate and
+intentionally does not claim to verify the external payload bytes.
 
 ```bash
 python tools/artifact_bundles.py verify-index --allow-missing
@@ -256,7 +256,7 @@ check first runs the full public receipt verifier and then reruns the private sc
 
 ## Release scopes
 
-`RELEASE_MANIFEST.sha256` covers the intended public Git repository: code, documentation, tests,
+`RELEASE_MANIFEST.sha256` covers this public Git repository: code, documentation, tests,
 portable jobs, environment declarations, bundle catalog, lightweight sanitized result summaries,
 paper-facing generated macros, and the current benchmark package. It excludes raw third-party
 archives, permission-gated institutional extracts, private formal score/run trees, logs, caches,
@@ -275,10 +275,10 @@ Release assets rather than ordinary Git objects. The exact split is documented i
 
 ## Freeze or update a release
 
-Do not regenerate hashes merely because an intermediate packaging check is red. Complete and verify
-the current six-role replacement transaction, sampled human-validation receipt, invalidation resolution, manifests,
-bundles, and clean-clone profiles before treating the candidate as release-ready.
-For any subsequent claim-bearing change, complete the marker-last release transaction below:
+The current reviewer release candidate was sealed only after the six-role replacement transaction,
+sampled human-validation receipt, invalidation resolution, manifests, bundles, clean-clone profiles,
+and remote CI passed. For any subsequent claim-bearing change, complete the marker-last release
+transaction below:
 
 ```bash
 # 1. Promote/verify sanitized formal summaries and the formal GBDT reference.
@@ -333,8 +333,10 @@ python tools/release_clean_clone.py --profile full --artifacts-dir dist/final-re
 
 Never push unrestricted maintainer staging history. The clean-clone tool copies only the public
 manifest inventory into a neutral, one-commit history and runs the privacy, history-size, manifest,
-and smoke gates. It does not upload or alter the source checkout. Current manifests, bundle indexes,
-clean-clone checks, and remote CI must pass under the active release contract before publication.
+and smoke gates. It does not upload or alter the source checkout. For every release update, current
+manifests, bundle indexes, clean-clone checks, and remote CI must pass under the active release
+contract before publishing a new tag.
 
-Final author names/order, target cycle, repository owner/name, artifact host, archival DOI, raw-data
-access dates, and release version remain unresolved metadata. Artifact tooling must not infer them.
+Repository owner/name, artifact host, and release version are supplied explicitly as release
+metadata. Archival DOI and manuscript/venue metadata remain outside artifact verification; the
+tooling must not infer them.
