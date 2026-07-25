@@ -1,0 +1,66 @@
+{
+  "schema_version": "upgrade-bench-v2/loco-formal-config/1",
+  "protocol": "upgrade-bench-v2/loco-tier-matched/1",
+  "run_id": "loco-tier-matched-oa-full-20260717-r2",
+  "execution_status": "FORMAL_DESCRIPTIVE_RUN_AUTHORIZED",
+  "chains": [
+    "sheep",
+    "cotton",
+    "aluminium",
+    "nickel",
+    "cocoa",
+    "oilseed-soy"
+  ],
+  "modes": [
+    "loco",
+    "in_domain"
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "fold": "main",
+  "aggregation": "calendar_mean",
+  "profile_name": "formal-fixed-v1",
+  "profile": {
+    "formal_component_eligible": true,
+    "purpose": "source-locked fixed configuration; no target-label selection",
+    "layers": 6,
+    "learning_rate": 0.005,
+    "epochs": 25,
+    "batch_size": 64,
+    "negatives": 32,
+    "max_supervised_train_edges": null,
+    "query_batch_size": 8
+  },
+  "claim_scope": "matched_tier_abstracted_descriptive_transfer_diagnostic",
+  "selection_policy": {
+    "kind": "source_locked_fixed_profile",
+    "historical_or_main_outcomes_used": false,
+    "command_line_hp_overrides": false
+  },
+  "graph_contract": {
+    "relation_resolution": "chain stages mapped to shared processing tiers exp_tier0..exp_tier5 using directional derived_from, derived_from_hs, and form_of stage edges",
+    "export_edge_multiplicity": "deduplicated after stage-to-tier mapping",
+    "background_graph": "same registered HS hierarchy/form_of/derived_from/supplies/demands semantics",
+    "country_vocabulary": "stage-level early graph countries, matching benchmark._build_labeled_triples",
+    "target_graph_visibility": "target early graph visible as inference context in both modes",
+    "matched_modes": {
+      "loco": "parameters trained on other five chains only",
+      "in_domain": "parameters trained on target chain early edges"
+    },
+    "permitted_transfer_drop": "loco versus in_domain under this exact tier/dedup graph contract",
+    "forbidden_transfer_drop": "never compare directly with the formal stage-relation graph; that mixes relation resolution, edge multiplicity, and vocabulary",
+    "independent_protocol": true
+  },
+  "comparison_policy": {
+    "only_contrast": "in_domain_minus_loco",
+    "old_stage_graph_comparison": "forbidden",
+    "mode_or_seed_selection": "forbidden"
+  },
+  "component_runner": "tools/v2_loco_transfer.py",
+  "output_root": "results_v2/loco_formal"
+}

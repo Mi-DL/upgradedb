@@ -1,0 +1,58 @@
+{
+  "id": "oilseed-soy",
+  "description": "Soybeans -> extraction oil-cake/meal, crude or non-crude soybean oil, and soybean flour/meal (agri-food)",
+  "stages": {
+    "exp_soybean": [
+      "120100"
+    ],
+    "exp_soymeal": [
+      "230400"
+    ],
+    "exp_soyoil_crude": [
+      "150710"
+    ],
+    "exp_soyoil_noncrude": [
+      "150790"
+    ],
+    "exp_soyflour_meal": [
+      "120810"
+    ]
+  },
+  "upstream": [
+    "exp_soybean"
+  ],
+  "upstream_map": {
+    "exp_soymeal": [
+      "exp_soybean"
+    ],
+    "exp_soyoil_crude": [
+      "exp_soybean"
+    ],
+    "exp_soyoil_noncrude": [
+      "exp_soybean",
+      "exp_soyoil_crude"
+    ],
+    "exp_soyflour_meal": [
+      "exp_soybean"
+    ]
+  },
+  "derived_from": {
+    "exp_soymeal": [
+      "120100"
+    ],
+    "exp_soyoil_crude": [
+      "120100"
+    ],
+    "exp_soyoil_noncrude": [
+      "120100",
+      "150710"
+    ],
+    "exp_soyflour_meal": [
+      "120100"
+    ]
+  },
+  "derived_from_hs": {},
+  "produces": {},
+  "form_of": [],
+  "named_sources": {}
+}

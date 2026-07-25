@@ -1,0 +1,267 @@
+{
+  "schema_version": "upgrade-bench-v2/contemporary-reference-public-config/2",
+  "run_id": "contemporary-multiseed-20260722-r1",
+  "status": "fixed_configuration_five_seed_references",
+  "benchmark_version": "2.1-dev",
+  "benchmark": {
+    "chains": [
+      "sheep",
+      "cotton",
+      "aluminium",
+      "nickel",
+      "cocoa",
+      "oilseed-soy"
+    ],
+    "tasks": [
+      "A",
+      "B1",
+      "B2"
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "expected_method_chain_seed_bundles": 150,
+    "expected_seed_task_metric_records": 450,
+    "expected_method_chain_task_records": 90,
+    "expected_six_chain_aggregates": 15,
+    "aggregation_contract": {
+      "score_averaging_before_metric_evaluation": false,
+      "seed_first": "compute each task metric independently for every method-chain-seed bundle",
+      "per_chain": "arithmetic mean and population standard deviation across seeds 0-4",
+      "six_chain": "for each seed take the unweighted mean of six chain metrics, then report the arithmetic mean and population standard deviation across the five seed macros",
+      "partial_success_means": "forbidden",
+      "population_standard_deviation_ddof": 0
+    }
+  },
+  "claim_scope": {
+    "classification": "contemporary fixed-configuration references",
+    "main_window_target_outcomes_used_for_training_or_configuration_selection": false,
+    "historical_labels_used_for_model_fitting": true,
+    "historical_outcome_metrics_used_for_configuration_selection": false,
+    "evaluation_ordering": "configurations and seeds were fixed, and scores were sealed, before these systems' scores were evaluated against target outcomes",
+    "graph_zero_shot_scope": "no benchmark-label adaptation; both graph references use the target-chain early graph",
+    "five_seed_design": "five fixed replicate seeds were evaluated separately for every method-chain bundle before metric aggregation",
+    "seed_dispersion_scope": "reported SD is the population SD across the five replicate seeds; its source is method-specific and is not a common estimate of from-scratch training uncertainty",
+    "training_uncertainty_comparable_across_methods": false,
+    "zero_dispersion_interpretation": "zero SD can arise from deterministic fixed-checkpoint inference or a non-splitting fitted configuration",
+    "valid_uses": [
+      "predictive comparison on the six fixed Upgrade-Bench chains",
+      "reproducibility checks for the five fixed reference configurations"
+    ],
+    "not_valid_for": [
+      "fair-compute claims across model families",
+      "equating seed dispersion with the same uncertainty source across methods",
+      "causal industrial-upgrading interpretation",
+      "population inference beyond the six fixed chains"
+    ]
+  },
+  "metric_contract": {
+    "A": {
+      "headline_metric": "average_precision",
+      "value_metric": "value_capture_at_500"
+    },
+    "B1": {
+      "headline_metric": "average_precision",
+      "value_metric": "value_capture_at_50"
+    },
+    "B2": {
+      "headline_metric": "macro_recall_at_3",
+      "value_metric": "macro_value_capture_at_3"
+    }
+  },
+  "feature_and_scoring_contract": {
+    "tabular_features": {
+      "A": [
+        "size",
+        "log_gravity"
+      ],
+      "B1": [
+        "log_upstream_capacity",
+        "log_candidate_destinations",
+        "max_log_importer_demand",
+        "mean_log_importer_demand",
+        "max_log_gravity",
+        "mean_log_gravity",
+        "logsum_gravity",
+        "gravity_coverage"
+      ],
+      "B2": [
+        "log_importer_demand",
+        "log_gravity"
+      ]
+    },
+    "graph_scoring": {
+      "A": "direct scores on complete destination-extension lanes",
+      "B1": "maximum of the frozen B lane scores per exporter-stage entry",
+      "B2": "the same frozen B lane scores, restricted after seal to realized entries",
+      "shared_B_scores": true
+    }
+  },
+  "methods": [
+    {
+      "method": "motif",
+      "display_name": "MOTIF",
+      "family": "graph",
+      "version": "MOTIF_inference at pinned upstream commit",
+      "package_version": null,
+      "upstream_commit": "aab688025e5b1e62368d7c9a81a91569bffd680e",
+      "checkpoint_sha256": "0f2e4f7d21e01dc7c54d10b0db1a5de55c467a76f4ea2708f3ce6556a7654f8c",
+      "checkpoint_name": "motif_3g",
+      "configuration_id": "MOTIF_inference_transductive",
+      "upstream_configuration": "config/transductive/MOTIF_inference.yaml",
+      "seeds": [0, 1, 2, 3, 4],
+      "fit_or_inference": "external-pretrained inference without benchmark-label adaptation; uses the target-chain early graph",
+      "reported_estimate": "five replicate-seed metrics summarized by their mean and population SD; fixed-checkpoint deterministic inference can yield zero dispersion"
+    },
+    {
+      "method": "flock",
+      "display_name": "Flock",
+      "family": "graph",
+      "version": "flock_entity checkpoint at pinned upstream commit",
+      "package_version": null,
+      "upstream_commit": "f35103d25a78bdf4075de5c673a51de4979aa4d7",
+      "checkpoint_sha256": "d32ae78c0b0b5731ce183fd7e05f6443c03bbb4dd795481d0077818b8ba67850",
+      "checkpoint_name": "flock_entity",
+      "compatibility_patch_sha256": "e274cb3e1eaedeea9be3622cc6a6dd1ba0f1917e169ae791e2867ca7f3c1100a",
+      "configuration_id": "zeroshot_transductive_n16_ensemble16",
+      "upstream_configuration": "src_entity/config/zeroshot_transductive/n16_ensemble16.yaml",
+      "seeds": [0, 1, 2, 3, 4],
+      "fit_or_inference": "external-pretrained inference without benchmark-label adaptation; uses the target-chain early graph",
+      "reported_estimate": "five replicate-seed metrics summarized by their mean and population SD; the seed controls stochastic inference sampling",
+      "configuration": {
+        "walk_num": 16,
+        "test_samples": 16,
+        "walk_len": 128,
+        "patch_scope": "reserve-to-resize memory-safety only"
+      }
+    },
+    {
+      "method": "tabm",
+      "display_name": "TabM",
+      "family": "tabular",
+      "version": "0.0.3",
+      "package_version": "0.0.3",
+      "upstream_commit": null,
+      "checkpoint_sha256": null,
+      "configuration_id": "tabm_k8_d64_b2_e32",
+      "seeds": [0, 1, 2, 3, 4],
+      "fit_or_inference": "one complete historical task-cohort fit per replicate seed",
+      "reported_estimate": "mean and population SD of five separately fitted replicate-seed metrics",
+      "configuration": {
+        "k": 8,
+        "d_block": 64,
+        "n_blocks": 2,
+        "dropout": 0.0,
+        "epochs": 32,
+        "batch_size": 4096,
+        "learning_rate": 0.002,
+        "weight_decay": 0.0003,
+        "class_balance": "historical_train_pos_weight",
+        "fit_row_cap": null
+      }
+    },
+    {
+      "method": "xrfm",
+      "display_name": "xRFM",
+      "family": "tabular",
+      "version": "0.4.5",
+      "package_version": "0.4.5",
+      "upstream_commit": null,
+      "checkpoint_sha256": null,
+      "configuration_id": "xrfm_gpu_leaf60000_l2_bw5_reg1e-3_i1",
+      "seeds": [0, 1, 2, 3, 4],
+      "fit_or_inference": "one complete historical task-cohort fit per replicate seed",
+      "reported_estimate": "mean and population SD of five separately fitted replicate-seed metrics; a non-splitting fit can yield zero dispersion",
+      "configuration": {
+        "kernel": "l2",
+        "bandwidth": 5.0,
+        "exponent": 1.0,
+        "regularization": 0.001,
+        "rfm_iterations": 1,
+        "max_leaf_size": 60000,
+        "n_trees": 1,
+        "n_tree_iterations": 0,
+        "n_threads": 1,
+        "temperature_tuning": false,
+        "early_stop_rfm": false,
+        "fit_row_cap": null
+      }
+    },
+    {
+      "method": "tabiclv2",
+      "display_name": "TabICLv2",
+      "family": "tabular",
+      "version": "2.1.1",
+      "package_version": "2.1.1",
+      "upstream_commit": null,
+      "checkpoint_sha256": "bdc7dbd5e4ff21f8f0456fcf90c6b7cdf72dbea960f2d05b19bec19f9b3d4ed0",
+      "configuration_id": "tabiclv2_e2_amp0",
+      "seeds": [0, 1, 2, 3, 4],
+      "fit_or_inference": "fixed pretrained tabular checkpoint inference with complete historical context",
+      "reported_estimate": "mean and population SD of five replicate-seed metrics around one fixed pretrained checkpoint; not five from-scratch checkpoint trainings",
+      "configuration": {
+        "n_estimators": 2,
+        "batch_size": 1,
+        "kv_cache": true,
+        "use_amp": false,
+        "use_fa3": false,
+        "offload_mode": false,
+        "prediction_chunk_rows": 2048,
+        "fit_row_cap": null
+      }
+    }
+  ],
+  "formal_evidence": {
+    "final_reporting_receipt": {
+      "schema_version": "upgrade-bench-v2/contemporary-multiseed-final-reporting-receipt/1",
+      "status": "all_reporting_outputs_exactly_recomputed_and_provenance_bound",
+      "sha256": "e9f6b09897974c12b08baac00cf07ad59ae74756e824b5480514ca4ebb0c4e04"
+    },
+    "multiseed_summary": {
+      "schema_version": "upgrade-bench-v2/contemporary-multiseed-summary/1",
+      "status": "complete_all_150_bundles_all_450_task_rows",
+      "sha256": "a59a79abc12271868e8b0653aa0fd0c1ff8fbfaa393f083a3504bf1f9352d56d"
+    },
+    "collection_receipt": {
+      "schema_version": "upgrade-bench-v2/contemporary-multiseed-collection-receipt/1",
+      "status": "complete_verified_180_graph_plus_270_tabular_rows",
+      "sha256": "bd3538fab9bb9be2260e2319ca69d7852f6df04da1e04cac8715fff5629f24e9"
+    },
+    "collected_task_metrics_jsonl": {
+      "row_count": 450,
+      "sha256": "579efad28a899a838ae7a65a497c44571ab1f3eb4429c6f4b96747134410f272"
+    },
+    "summary_outputs": {
+      "multiseed_task_rows_csv_sha256": "16a23b51c161e643f5b1687a3156ccca017f8dce4e3a79cbd58ff9f596368d89",
+      "multiseed_aggregates_csv_sha256": "cd065fdab5c36ee24247fc26719accb87a0e193a073f87e290003da56412f207"
+    },
+    "source_artifacts": {
+      "graph_evaluation_sha256": "05bb9ea28b10c2ba26e7c798525ea3d4af08adc0db3ce44b4be37bc320dcd089",
+      "graph_score_seal_sha256": "61b78b1ad6a0dc5891f9dfbf4357124e196fe3c98e98572f870191fc79810d85",
+      "tabular_evaluation_sha256": "e9c6ca40ce3006e7dddac89101c54dbb089fca46cc82380d5388b80ea3c79419",
+      "tabular_evaluation_by_seed_csv_sha256": "abcc64066114564c1c45f20904a668154b3830244caccbfbfe94579a2fbaa03e",
+      "tabular_per_chain_summary_csv_sha256": "ad215fe161d211bfcda29f007c07ffe5d264597394c0f40531653b70af792eba",
+      "tabular_evaluation_receipt_sha256": "9d5571def7b8b46a810990a6cc2af6dd38f404789a57c9023daa9550946f0859",
+      "tabular_score_seal_sha256": "efac05bcdd8122a49d3cd4fa756132b0632ba3af17419d85c30a910353e4c88f",
+      "global_score_seal_sha256": "a0f56753c8b75ee525d781b62bebba454004de535114268b0d3fb10770f7d608",
+      "global_seal_contract_sha256": "e29b59b02f421af41684efecb3f217354c7960d31eab212e5f69bc84aecf75ef",
+      "main_outcome_access_marker_sha256": "5a6e11e03f6fcb2f0764e45408a070d64dd84c897a2cd3b2faace6dfc4fb06b0",
+      "gate_transfer_manifest_sha256": "cb7afcb9c7744c81cae38b0a4657dd96722940ef911879d059d5bf158cefe702",
+      "gate_materialization_receipt_sha256": "7b674b0c31ab64de45a88f39052488cbd602ff8055ec14630362e6ec22028928"
+    },
+    "implementation_sha256": {
+      "collector": "8585499de2b2b48b7b6486638e45887978440ca83b52a08f604f8c8180f5b7a7",
+      "summarizer": "8ba2b7ecb4c3806d2b83a1ff6abb0203f71d01dd8ed5a129a9e2523b63cc21fd",
+      "global_controller": "e32b2c22e28d74c871bd7ab48410b547404eecfdbf0038e83234eebe73500ba1",
+      "final_reporting_receipt_tool": "bf0f7fd416a8dc58ef52775a9a1909507fca269d27e15acb2a589401bac6ccff"
+    },
+    "multiseed_config_sha256": "a5456b16cb09799d3c5faa1742745e67d2f16d7005fd8124066986871e125ef2",
+    "static_task_manifest_sha256": "6c853e0b7262cc9e6cfb9416a005eb797f25532030508b1ffc5390e0a35c80d6",
+    "sanitized_record_matrix_sha256": "eab0b15bd1b2ece8347ce578d02ceae78a5eb424f4459a35c365254d3d0af541",
+    "sanitized_aggregate_matrix_sha256": "192b272953fdd7b0f9f7b030ba370382edaa2627e7e867945bd01f183fc38af0"
+  }
+}

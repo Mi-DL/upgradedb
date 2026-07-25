@@ -1,0 +1,199 @@
+{
+  "schema_version": "upgrade-bench-v2/ultra-formal-config/2",
+  "protocol": "upgrade-bench-v2/ultra-4g-zero-shot/2",
+  "run_id": "ultra-4g-zero-shot-fixed-20260717-r4",
+  "execution_status": "FORMAL_ZERO_SHOT_RUN_AUTHORIZED",
+  "chains": [
+    "sheep",
+    "cotton",
+    "aluminium",
+    "nickel",
+    "cocoa",
+    "oilseed-soy"
+  ],
+  "fold": "main",
+  "aggregation": "calendar_mean",
+  "candidate_root": "data/processed_v2",
+  "checkpoint": {
+    "name": "ultra_4g",
+    "path": "third_party/ULTRA/ckpts/ultra_4g.pth",
+    "sha256": "48a046e708adf5632d87c30eacae01f5f51466b2301effdc2cb42358d22854e0",
+    "bytes": 2127350
+  },
+  "provenance": {
+    "upstream_repository": "https://github.com/DeepGraphLearning/ULTRA",
+    "upstream_commit": "427966ad8ed60420eef034063d44f3153addff90",
+    "checkpoint_release_commit": "68433c19a465735ae59f7f947e6dd062bab7b445",
+    "checkpoint_git_blob_sha1": "b10ca4f3a26c5084a6ec72e77dfc756b04acef4c",
+    "checkpoint_training_config_commit": "68433c19a465735ae59f7f947e6dd062bab7b445",
+    "checkpoint_training_config_git_blob": "073ce8a72c20474006a0adc861b1f80bda42f7c7",
+    "vendored_source_root": "third_party/ULTRA",
+    "selection_basis": "provenance completeness only; no current-protocol ULTRA outcome was computed or used for checkpoint selection",
+    "source_tree_receipt": {
+      "status": "PASS",
+      "comparison": "the listed formal inference source files match upstream commit 427966ad8ed60420eef034063d44f3153addff90 after LF normalization",
+      "normalization": "listed formal inference files only; __pycache__ excluded",
+      "normalized_lf_sha256": {
+        "ultra/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "ultra/base_nbfnet.py": "a327f9912308be70629c10af1307b3e7c20adbc353b65c9ab641fa6dbfa23fc4",
+        "ultra/datasets.py": "a7d5584a2b1825651f9b311e96f0c6ef6dde049754dfcc7cd2988c57017e2322",
+        "ultra/datasets_query.py": "c82a04f477724cf3b6d69ef9e2bcdc2c03b7da0b856c47c915d8b3608168a510",
+        "ultra/layers.py": "ae455da48d74f18a5cd6c4f5190669c7a688602ff134f8c0bdbb7579af13b5f6",
+        "ultra/models.py": "65b0015bf31b036ca7c5e9a2e0aa0c1f5a95f4c844d7219d73c0d8b8af3aa7bd",
+        "ultra/query_utils.py": "9b41775a5b54a0e40b9bd3acc24e0f20e54ecf0150f30beae382aa95c36191a0",
+        "ultra/rspmm/__init__.py": "bfc17ff9a568eaa11f62ae31d4bf6d1ecda7f119ed9b7300316a85f05f420498",
+        "ultra/rspmm/rspmm.py": "c9c3e8a78c6b69ed62fc142839239a2d50bce7b795dd78a5149d412059e51167",
+        "ultra/rspmm/source/operator.cuh": "5a4255123a2c9fd62f18e8663eb531bdada06cd98b11e553a52cb7d052e3f118",
+        "ultra/rspmm/source/rspmm.cpp": "e944e01f619804b667dfa5e9c2dff013469ae75f818ebfd20a1c68039bb4ccb9",
+        "ultra/rspmm/source/rspmm.cu": "ba5ca65bfe4969cc945ea50e5eb533d04ad9ac1585d6d667fea9875db670c224",
+        "ultra/rspmm/source/rspmm.h": "1fa726c7db45655d09f2bd2e67907a7bb298d847533fb93afb92e809beb08a92",
+        "ultra/rspmm/source/util.cuh": "eb6f48c7f40955a608d461c9bfb2cc9362a830cae5162fc1c360235eed963a98",
+        "ultra/tasks.py": "d3697fd038c9f9fc5072444416a870ba6eb3717e65766eae39dbc0773525a07c",
+        "ultra/ultraquery.py": "0cb132099b208ab8961a479395c15ab6d2b1cf3847c1b3c9e12ccc3fdec41c8a",
+        "ultra/util.py": "d10cd4ff0e06e25e31222f876393bd85fb8fbce3af727708432908a39a150822",
+        "ultra/variadic.py": "ab4152e3f32d931b78e28a675fa4fde3a62a68074765a4fa78e17147cfe37f6d"
+      }
+    }
+  },
+  "license": {
+    "spdx": "MIT",
+    "path": "third_party/ULTRA/LICENSE",
+    "sha256": "91776f870b5502e85931e2856e2367423da25d6883269f2f3c655cb7fc450a0e"
+  },
+  "training_disclosure": {
+    "pretraining_graphs": [
+      "FB15k237",
+      "WN18RR",
+      "CoDExMedium",
+      "NELL995"
+    ],
+    "training_steps": 400000,
+    "checkpoint_training_seed_disclosed": false,
+    "reference_cli_default_seed": 1024,
+    "reference_cli_default_seed_scope": "upstream CLI default only; not evidence of the checkpoint training seed",
+    "readme_path": "third_party/ULTRA/README.md",
+    "readme_sha256": "6ff54381b4da55c25d84553db66b185c6bc2bd3b0736ebe0d834a22540042029",
+    "vendored_reference_config_path": "third_party/ULTRA/config/transductive/pretrain_4g.yaml",
+    "vendored_reference_config_sha256": "23257430dd594a3a4535eb135c866c4d56ad217c394fce2dee27db8a8d005fe3",
+    "vendored_reference_config_status": "semantic reference only; local class/path renames mean its bytes are not asserted identical to the checkpoint training config"
+  },
+  "overlap_policy": {
+    "benchmark_sources": [
+      "CEPII BACI",
+      "CEPII Gravity"
+    ],
+    "disclosed_pretraining_list_contains_benchmark_sources": false,
+    "dataset_level_assessment": "the disclosed four-graph pretraining mixture does not list BACI or CEPII Gravity",
+    "scope_limit": "dataset provenance excludes direct listed-dataset overlap, not every possible shared public fact",
+    "ultra_50g_formal_use": "forbidden because its 50-graph training list is not publicly disclosed"
+  },
+  "raw_source_policy": {
+    "attestation_path": "requirements/raw_source_attestation.json",
+    "attestation_sha256": "99a241cb9aff4ef9d0ab702e288b0341c43207bb5462dbb891fd9769f29f8471",
+    "archive_name": "BACI_HS92_V202401b.zip",
+    "archive_bytes": 2450783074,
+    "archive_sha256": "1dafcfd5b26b2b2c88a69ca11ed67b7067f5c38c5a12c2e1766cf28df159909a",
+    "runtime_path_resolution": "temporal_backtest.BACI_ZIP; host path is not serialized",
+    "gravity_is_formal_runtime_dependency": false
+  },
+  "data_precommit_policy": {
+    "full_candidate_csv_bytes_hashed_before_scoring": true,
+    "byte_hashing_is_semantic_target_access": false,
+    "target_columns_parsed_before_global_score_seal": false,
+    "candidate_bytes_reverified_at_score_seal_and_evaluation": true
+  },
+  "model_policy": {
+    "mode": "external_pretrained_zero_shot",
+    "checkpoint_count": 1,
+    "checkpoint_selection": "fixed_before_target_scoring",
+    "historical_or_target_label_selection": false,
+    "fine_tuning": false,
+    "training": false,
+    "checkpoint_search": false,
+    "seed_or_hyperparameter_search": false
+  },
+  "task_contract": {
+    "score_sources": [
+      "A_destination_extension_lanes",
+      "B_entry_candidate_lanes"
+    ],
+    "A": "direct lane scores; headline lane average precision",
+    "B1": "exporter-stage label and score are max over B candidate lanes, observed value is summed; headlines are entry average precision and value capture@50",
+    "B2": "same B lane scores, ranked only within realized positive exporter-stage entries; headline macro recall@3",
+    "shared_B_scores": true
+  },
+  "phase_order": [
+    "freeze config, checkpoint, raw BACI, source, early graphs, full candidate-file byte hashes, and A/B identity cohorts without semantically parsing outcomes",
+    "score complete A and B lane cohorts for each of all six chains, including the predeclared same-process sheep repeat",
+    "verify and hash-seal all six score components",
+    "only after the global score seal, read target labels once and evaluate A, B1, and B2"
+  ],
+  "runtime_contract": {
+    "device": "cuda_required",
+    "backend": "official_ULTRA_native_rspmm_and_native_torch_scatter",
+    "torch_scatter_compat_shim": false,
+    "message_passing_fallback": false,
+    "batch_query_groups": 8
+  },
+  "repeatability_contract": {
+    "sentinel_chain": "sheep",
+    "runs": 2,
+    "scope": "complete de-duplicated combined A+B lane union",
+    "same_process": true,
+    "same_device": true,
+    "same_model_instance": true,
+    "inference_seed": 1024,
+    "inference_seed_scope": "inference control only; not the undisclosed checkpoint training seed",
+    "numeric_policy": {
+      "cuda_matmul_allow_tf32": false,
+      "cudnn_allow_tf32": false,
+      "cudnn_benchmark": false,
+      "global_deterministic_algorithms": false
+    },
+    "primary_run": "run1 fixed before scoring; repeat cannot select or replace it",
+    "score_acceptance_rtol": 1e-06,
+    "score_acceptance_atol": 1e-07,
+    "metric_absolute_delta_max": 1e-10,
+    "metric_gate": [
+      "A.lane_average_precision",
+      "A.value_capture_at_500",
+      "B1.entry_average_precision",
+      "B1.entry_value_capture_at_50",
+      "B2.conditional_recall_at_3",
+      "B2.conditional_value_capture_at_3"
+    ],
+    "persist_repeat_A_B_scores": true,
+    "model_or_result_selection": false
+  },
+  "reporting_contract": {
+    "model_label": "external pretrained zero-shot",
+    "trained_reference_artifact": "results_v2/metrics/v2_gpu_rolling_summary.json",
+    "trained_reference_artifact_sha256": "5978ca62462f68ffc93054fd1c448ee768646ec82a8b61b5d843d56559193acd",
+    "trained_reference_families": [
+      "kge",
+      "nbfnet"
+    ],
+    "headline_metric_by_task": {
+      "A": "lane_average_precision",
+      "B1": "entry_average_precision",
+      "B2": "conditional_recall_at_3"
+    },
+    "value_metric_by_task": {
+      "A": "value_capture_at_500",
+      "B1": "entry_value_capture_at_50",
+      "B2": "conditional_value_capture_at_3"
+    },
+    "report_all_chain_task_headlines": 18,
+    "aggregate": "unweighted mean of six unrounded chain values for each task",
+    "chain_comparison": "higher/equal/lower counts versus each trained family using unrounded values and exact equality",
+    "partial_success_mean": "forbidden",
+    "abstract_mention_rule": "task mean strictly outside the closed interval of kge and nbfnet task means, and ULTRA is on that same side of both references in at least five of six chains",
+    "abstract_if_no_task_passes": "omit ULTRA from abstract",
+    "forbidden_claims": [
+      "fair-compute comparison",
+      "champion claim",
+      "statistical significance claim"
+    ]
+  },
+  "output_root": "results_v2/ultra_formal"
+}

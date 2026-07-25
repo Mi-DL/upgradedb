@@ -1,0 +1,1114 @@
+{
+  "archive_format": "zip",
+  "archive_member_paths": "repository-relative",
+  "bundles": [
+    {
+      "archive": "upgrade-bench-v2-standalone.zip",
+      "description": "Dependency-light UpgradeBench loader, evaluator, protocol examples, and package manifest.",
+      "file_count": 17,
+      "files": [
+        {
+          "bytes": 19238,
+          "path": "ARTIFACT.md",
+          "sha256": "f02be9ec454bb2e14d6966a9e9097c615bb5d0022ce713c4468d8115e82d650d"
+        },
+        {
+          "bytes": 22056,
+          "path": "BENCHMARK_V2_SPEC.md",
+          "sha256": "5260663965fbb66b26199bd3b4a687b5125b948f8dca7100b7708290bd82961f"
+        },
+        {
+          "bytes": 7276,
+          "path": "DATA_LICENSE.md",
+          "sha256": "d9bdec003ae958fde8e200002a3e222d040fb20ed64d87b0f20ccd645032dc7c"
+        },
+        {
+          "bytes": 21382,
+          "path": "benchmark/upgrade-bench-v2/DATASHEET.md",
+          "sha256": "746f7e0ed2fa6c1b27ec9272ddf66862952c5099d3b37b48f9aebf2c3a2b4d65"
+        },
+        {
+          "bytes": 1285,
+          "path": "benchmark/upgrade-bench-v2/LICENSE.md",
+          "sha256": "02cd3f68135b8f0b0ca904df06e3e79448b7f8a5d59350563055e23fbed98d00"
+        },
+        {
+          "bytes": 855,
+          "path": "benchmark/upgrade-bench-v2/MANIFEST.sha256",
+          "sha256": "a94e5ebc3d137693819db440f4a36555f027be24fdfe2c64c070a43a9b1ae03d"
+        },
+        {
+          "bytes": 14185,
+          "path": "benchmark/upgrade-bench-v2/README.md",
+          "sha256": "0ca811fce9050a5428a8daf25ed3dbcd37124a6563e85447485b30e4414011dd"
+        },
+        {
+          "bytes": 8,
+          "path": "benchmark/upgrade-bench-v2/VERSION",
+          "sha256": "da7de7509b3bea4edbf626bbf5fe46b8a117dfc211193c74298e42098cb4b3fa"
+        },
+        {
+          "bytes": 28887,
+          "path": "benchmark/upgrade-bench-v2/eval.py",
+          "sha256": "c1cd2705841aba2e6873eba9e175020ded0d18228e918b4281294ef34df3c321"
+        },
+        {
+          "bytes": 2455,
+          "path": "benchmark/upgrade-bench-v2/generate_manifest.py",
+          "sha256": "c4bd73070fe3f921fe305a0c2ddf144e52448e36e540278fb67710fece0acca8"
+        },
+        {
+          "bytes": 14873,
+          "path": "benchmark/upgrade-bench-v2/loader.py",
+          "sha256": "2530ca9dc924b9c696c2603b6c2253bb944433bde01c234cd9f5e49d1ebf31f4"
+        },
+        {
+          "bytes": 880,
+          "path": "benchmark/upgrade-bench-v2/protocol_attestation.example.json",
+          "sha256": "0a5d6452df56ef332e16191d6e3e5494bb9b9a902447dd2e01f8f10ede556bd2"
+        },
+        {
+          "bytes": 30,
+          "path": "benchmark/upgrade-bench-v2/requirements.txt",
+          "sha256": "78a3edd5dc322caab9449d89f43ae1908beb47bcc020d245c71524b7583c4916"
+        },
+        {
+          "bytes": 312,
+          "path": "benchmark/upgrade-bench-v2/selection_config.example.json",
+          "sha256": "a08c53daadb0be28b3968c036a12b6a5d394a9680611c459a311194ccf854cde"
+        },
+        {
+          "bytes": 17657,
+          "path": "docs/DATA_DISTRIBUTION.md",
+          "sha256": "3b005a7469f188ea2fe5b7d9a774131fc8fc57a55e51af60d32e5187c992e8ea"
+        },
+        {
+          "bytes": 20173,
+          "path": "docs/PUBLIC_RELEASE_POLICY.md",
+          "sha256": "87f1ef9a562f16dbed80df64af6724b82d7b2799f8c3555d53f9bbc70051f050"
+        },
+        {
+          "bytes": 12734,
+          "path": "docs/REGISTRY_REVIEW_CODEBOOK.md",
+          "sha256": "bedf60655823b24f917df77ba35086567cb87baa961bcd11f610be9e8d76618b"
+        }
+      ],
+      "id": "v2-standalone",
+      "payload_sha256": "0cd406c2097c9d4c8bea962d1af0eabfef82879ae23aba13b6eb26fa5f95215b",
+      "uncompressed_bytes": 184286
+    },
+    {
+      "archive": "upgrade-bench-v2-main-window.zip",
+      "description": "Six-chain main-window lane, entry, destination, and summary tables.",
+      "file_count": 32,
+      "files": [
+        {
+          "bytes": 19238,
+          "path": "ARTIFACT.md",
+          "sha256": "f02be9ec454bb2e14d6966a9e9097c615bb5d0022ce713c4468d8115e82d650d"
+        },
+        {
+          "bytes": 22056,
+          "path": "BENCHMARK_V2_SPEC.md",
+          "sha256": "5260663965fbb66b26199bd3b4a687b5125b948f8dca7100b7708290bd82961f"
+        },
+        {
+          "bytes": 7276,
+          "path": "DATA_LICENSE.md",
+          "sha256": "d9bdec003ae958fde8e200002a3e222d040fb20ed64d87b0f20ccd645032dc7c"
+        },
+        {
+          "bytes": 23129357,
+          "path": "data/processed_v2/candidates_aluminium.csv",
+          "sha256": "9c1f76f8e19f792f6bcc6d3b7f25a184236cd025aac238cfbe2f7fd17d0972df"
+        },
+        {
+          "bytes": 15966678,
+          "path": "data/processed_v2/candidates_cocoa.csv",
+          "sha256": "bc888a0e93a5e6720361d2250960c198e4ccccbe302a7f3409df708304dec2ad"
+        },
+        {
+          "bytes": 31644201,
+          "path": "data/processed_v2/candidates_cotton.csv",
+          "sha256": "4e7b9724d34ab830a06cc356feaecb24db8f5fa9081401fe46c1cfbfe9a22373"
+        },
+        {
+          "bytes": 16433191,
+          "path": "data/processed_v2/candidates_firsttime_aluminium.csv",
+          "sha256": "3022bd78b4f689c4235632cb3974fb22ca1021a48df94f8ecb00c433d2b4d5ed"
+        },
+        {
+          "bytes": 12765606,
+          "path": "data/processed_v2/candidates_firsttime_cocoa.csv",
+          "sha256": "d876f6646165dc4895f7cf27f370426c608e80b53c7b6ac46427e0969a1073e5"
+        },
+        {
+          "bytes": 17482295,
+          "path": "data/processed_v2/candidates_firsttime_cotton.csv",
+          "sha256": "09cf7fb3d24e0b8a5241ed92d19c0531f3d1560d39e72ee64100d4a4fe70fa9d"
+        },
+        {
+          "bytes": 8103852,
+          "path": "data/processed_v2/candidates_firsttime_nickel.csv",
+          "sha256": "77b0e4a0aeb8e7839e6aee399c32137ac8d4f568f1afc27532efab8f9737e5a2"
+        },
+        {
+          "bytes": 4099828,
+          "path": "data/processed_v2/candidates_firsttime_oilseed-soy.csv",
+          "sha256": "acdccd4555c30b334ac731344ed7138995015b6cebc0f144776000eaf28a1dd7"
+        },
+        {
+          "bytes": 3560677,
+          "path": "data/processed_v2/candidates_firsttime_sheep.csv",
+          "sha256": "766ee136a8529a39b9302ee0fec75f5839884b920c5ae926c8b2134077a31bca"
+        },
+        {
+          "bytes": 6896337,
+          "path": "data/processed_v2/candidates_nickel.csv",
+          "sha256": "0ebad7822622a459de3367181b93c9c65ba6daa87e51743b107134e5003c516f"
+        },
+        {
+          "bytes": 9893873,
+          "path": "data/processed_v2/candidates_oilseed-soy.csv",
+          "sha256": "98ee13bb3538e1ef97e6d42df7b11297c0cf7a6fd52acc32e3a8f48b9e24d944"
+        },
+        {
+          "bytes": 4168889,
+          "path": "data/processed_v2/candidates_sheep.csv",
+          "sha256": "84a1b20792abdea98fc601d01c080d4e0f44743b97fabf5307b86d4182bf6674"
+        },
+        {
+          "bytes": 1564,
+          "path": "data/processed_v2/dataset_summary.csv",
+          "sha256": "3593ee48ebbb462c2ad50104c04f93125dc08bc75c9912874e69375d029cf8ea"
+        },
+        {
+          "bytes": 5303,
+          "path": "data/processed_v2/dataset_summary.json",
+          "sha256": "a5cdb9cf3868a340cf3135bba0ab6168b39bbe3aa2e610f3da5c24feacfd434f"
+        },
+        {
+          "bytes": 3488142,
+          "path": "data/processed_v2/destinations_given_entry_aluminium.csv",
+          "sha256": "a79b2a946127663ee623ed018c8d2483f865db637a2212c133e060bcf5cb5aea"
+        },
+        {
+          "bytes": 2032812,
+          "path": "data/processed_v2/destinations_given_entry_cocoa.csv",
+          "sha256": "97c40ddba761a35938015958a34a13cde6ff16cd12171d08c5df331a1794215d"
+        },
+        {
+          "bytes": 1904241,
+          "path": "data/processed_v2/destinations_given_entry_cotton.csv",
+          "sha256": "802ea60204cf1be5a2eddd7fa95470df09d22e268088a26004a33fa7d9b3afc4"
+        },
+        {
+          "bytes": 1521032,
+          "path": "data/processed_v2/destinations_given_entry_nickel.csv",
+          "sha256": "43bc5cb7ca03ce33dae85df2479ba7074f4754cfb607a1010e9e2026f826039d"
+        },
+        {
+          "bytes": 1596869,
+          "path": "data/processed_v2/destinations_given_entry_oilseed-soy.csv",
+          "sha256": "99b1188e2d3aebca76f4e59d9dc191d0abc251393effc91c94a33021dae924df"
+        },
+        {
+          "bytes": 632421,
+          "path": "data/processed_v2/destinations_given_entry_sheep.csv",
+          "sha256": "7c4c0280e6bd07689fb0a3680af802fa9d65b04f3bc0389e72db6c65006d401d"
+        },
+        {
+          "bytes": 72730,
+          "path": "data/processed_v2/entries_firsttime_aluminium.csv",
+          "sha256": "13d858d19a0b7ba67369b7bf2346fa425e379e835b4ea6e83703340c719aa547"
+        },
+        {
+          "bytes": 58339,
+          "path": "data/processed_v2/entries_firsttime_cocoa.csv",
+          "sha256": "4512f9e666db960df7cc75fb30eed882435d67645b4c4b6ace72b88e0d3db3f1"
+        },
+        {
+          "bytes": 67802,
+          "path": "data/processed_v2/entries_firsttime_cotton.csv",
+          "sha256": "a3fb8b89d0359bb60bf452519ea865bfd177f8098de9f5595ded51b18d3cbe52"
+        },
+        {
+          "bytes": 68269,
+          "path": "data/processed_v2/entries_firsttime_nickel.csv",
+          "sha256": "89f5b937f9b0a20fe79834a1bd1c98425b83db549a1f4059d1e147dfa5bdad2d"
+        },
+        {
+          "bytes": 18059,
+          "path": "data/processed_v2/entries_firsttime_oilseed-soy.csv",
+          "sha256": "5c02bd2ec03d831793091f9227bf7d35860f183d89ef70c9c37bb36ae606b4c9"
+        },
+        {
+          "bytes": 26440,
+          "path": "data/processed_v2/entries_firsttime_sheep.csv",
+          "sha256": "a430d1146a28593840e544b8b2301891e4ed531d7fd5e36b46c531b2d83dcc06"
+        },
+        {
+          "bytes": 17657,
+          "path": "docs/DATA_DISTRIBUTION.md",
+          "sha256": "3b005a7469f188ea2fe5b7d9a774131fc8fc57a55e51af60d32e5187c992e8ea"
+        },
+        {
+          "bytes": 20173,
+          "path": "docs/PUBLIC_RELEASE_POLICY.md",
+          "sha256": "87f1ef9a562f16dbed80df64af6724b82d7b2799f8c3555d53f9bbc70051f050"
+        },
+        {
+          "bytes": 12734,
+          "path": "docs/REGISTRY_REVIEW_CODEBOOK.md",
+          "sha256": "bedf60655823b24f917df77ba35086567cb87baa961bcd11f610be9e8d76618b"
+        }
+      ],
+      "id": "v2-main",
+      "payload_sha256": "38e982def72b8f969dacfc10ae1cd835aedd3c45a719994d47924af092db32a5",
+      "uncompressed_bytes": 165737941
+    },
+    {
+      "archive": "upgrade-bench-v2-historical-fold.zip",
+      "description": "Six-chain historical selection-fold lane, entry, destination, and summary tables.",
+      "file_count": 32,
+      "files": [
+        {
+          "bytes": 19238,
+          "path": "ARTIFACT.md",
+          "sha256": "f02be9ec454bb2e14d6966a9e9097c615bb5d0022ce713c4468d8115e82d650d"
+        },
+        {
+          "bytes": 22056,
+          "path": "BENCHMARK_V2_SPEC.md",
+          "sha256": "5260663965fbb66b26199bd3b4a687b5125b948f8dca7100b7708290bd82961f"
+        },
+        {
+          "bytes": 7276,
+          "path": "DATA_LICENSE.md",
+          "sha256": "d9bdec003ae958fde8e200002a3e222d040fb20ed64d87b0f20ccd645032dc7c"
+        },
+        {
+          "bytes": 16441257,
+          "path": "data/processed_v2/candidates_aluminium_fold2.csv",
+          "sha256": "6f8eb34a81e8f509a1126cc60c8a18b077b6f3920a32f383e591513cd2f9f649"
+        },
+        {
+          "bytes": 9025987,
+          "path": "data/processed_v2/candidates_cocoa_fold2.csv",
+          "sha256": "3242df52635d1857d3cdabd0284ea16c75bcef21f88823752e35704e7319c834"
+        },
+        {
+          "bytes": 29721209,
+          "path": "data/processed_v2/candidates_cotton_fold2.csv",
+          "sha256": "3334b9bd03803cae1b05c37f74380e97be46309a899a65a8ad9ce20f2afbbabe"
+        },
+        {
+          "bytes": 14370776,
+          "path": "data/processed_v2/candidates_firsttime_aluminium_fold2.csv",
+          "sha256": "475b561b7c0eada0d4c60b38a60f1a4566979350b100c88035a3b55f591b5422"
+        },
+        {
+          "bytes": 9117669,
+          "path": "data/processed_v2/candidates_firsttime_cocoa_fold2.csv",
+          "sha256": "1afd4735b8e880b80d8f732cd3a3963cb776e6022f6cb60ebe558a1267fe9e3d"
+        },
+        {
+          "bytes": 15364040,
+          "path": "data/processed_v2/candidates_firsttime_cotton_fold2.csv",
+          "sha256": "3396df9922af8447cacdcd3994e5053fdee0fe2ee870c4ab8aba532ad5767a71"
+        },
+        {
+          "bytes": 4381763,
+          "path": "data/processed_v2/candidates_firsttime_nickel_fold2.csv",
+          "sha256": "182d002e10bfd4bb20d8ff0f552aed2eef65163f399540b2e0b2b3b3ad53a1ec"
+        },
+        {
+          "bytes": 4067790,
+          "path": "data/processed_v2/candidates_firsttime_oilseed-soy_fold2.csv",
+          "sha256": "c4d387c765d37cdf989719d99460a2433eac18f3b297c34bcc03344d5c770908"
+        },
+        {
+          "bytes": 2423933,
+          "path": "data/processed_v2/candidates_firsttime_sheep_fold2.csv",
+          "sha256": "a8c29cad8557a74e796201edcc6c2c24490fe07a0fd79dd6572474e1dd386ffe"
+        },
+        {
+          "bytes": 3629788,
+          "path": "data/processed_v2/candidates_nickel_fold2.csv",
+          "sha256": "16cf742cfd226819684cc2b9895a70ac8c449a1ff55ea27904fe0a534425d62f"
+        },
+        {
+          "bytes": 7286680,
+          "path": "data/processed_v2/candidates_oilseed-soy_fold2.csv",
+          "sha256": "6870445537ca404c4500e01efe5a3a68fcaeeb93821cee2058d741d51b81743a"
+        },
+        {
+          "bytes": 3088178,
+          "path": "data/processed_v2/candidates_sheep_fold2.csv",
+          "sha256": "b10bba638f60fbac6f2b35992a13122affbb50fe785060ba1f20be96d00e540c"
+        },
+        {
+          "bytes": 1561,
+          "path": "data/processed_v2/dataset_summary_fold2.csv",
+          "sha256": "347dc858e51515ec88b63908c1244e5a6b8f9242a640f1c23698387e24b42be1"
+        },
+        {
+          "bytes": 5307,
+          "path": "data/processed_v2/dataset_summary_fold2.json",
+          "sha256": "640d22c7f22ac54f7e0dd6f4bcae97ca442b28c10a3b5e962cb5363367e1302e"
+        },
+        {
+          "bytes": 3408056,
+          "path": "data/processed_v2/destinations_given_entry_aluminium_fold2.csv",
+          "sha256": "e4f7445a19db349bd14e654480275dffae59715ba0175b1ea970ef4b9338b344"
+        },
+        {
+          "bytes": 1625842,
+          "path": "data/processed_v2/destinations_given_entry_cocoa_fold2.csv",
+          "sha256": "cabbe7095662ce3380142a7431181c255c5f88936eb360e135324e0862d095be"
+        },
+        {
+          "bytes": 3385127,
+          "path": "data/processed_v2/destinations_given_entry_cotton_fold2.csv",
+          "sha256": "c9c89fbff7f2882a2b54c9db02256d3fc0fcb0ba59b5be4106470c127203f786"
+        },
+        {
+          "bytes": 852934,
+          "path": "data/processed_v2/destinations_given_entry_nickel_fold2.csv",
+          "sha256": "782d041d262e5241200568a0c774b0ccf056cda47b20662619ffd8f0ec5c0b9f"
+        },
+        {
+          "bytes": 1673738,
+          "path": "data/processed_v2/destinations_given_entry_oilseed-soy_fold2.csv",
+          "sha256": "5e5119161069e341a385ad7788f96a619037f82975dc5b94bc183288455b9fa1"
+        },
+        {
+          "bytes": 404846,
+          "path": "data/processed_v2/destinations_given_entry_sheep_fold2.csv",
+          "sha256": "4c3123aee66e47eebbfd380c47a805bd155c13533f3359fd268d748447b80faf"
+        },
+        {
+          "bytes": 73953,
+          "path": "data/processed_v2/entries_firsttime_aluminium_fold2.csv",
+          "sha256": "3c14742d58fa78d297379c294d528f891b10343161deb8128938d6cd30faead8"
+        },
+        {
+          "bytes": 54978,
+          "path": "data/processed_v2/entries_firsttime_cocoa_fold2.csv",
+          "sha256": "077d3324f64ddf5aa952be7a879834ba58adfd24c1bcb2754df481c129156f13"
+        },
+        {
+          "bytes": 65943,
+          "path": "data/processed_v2/entries_firsttime_cotton_fold2.csv",
+          "sha256": "5b9205cf38a28fe9094dc2a33d9942a79befcdf8d7150a77c88818bcb3a4eb5c"
+        },
+        {
+          "bytes": 48171,
+          "path": "data/processed_v2/entries_firsttime_nickel_fold2.csv",
+          "sha256": "334877b3c1176a94f9a4cb2897edaec6ac6ad88d3fd9b74ca8283d2108191639"
+        },
+        {
+          "bytes": 20961,
+          "path": "data/processed_v2/entries_firsttime_oilseed-soy_fold2.csv",
+          "sha256": "4fc8cc326ebc4cf887aa391fb5bb42f0c790a673b5ece11fb98463297c8f6ae3"
+        },
+        {
+          "bytes": 23735,
+          "path": "data/processed_v2/entries_firsttime_sheep_fold2.csv",
+          "sha256": "ee9bd4b03de3358a4b7747c65724cbb67e9b345c7a0bd93d96f868168385ddd6"
+        },
+        {
+          "bytes": 17657,
+          "path": "docs/DATA_DISTRIBUTION.md",
+          "sha256": "3b005a7469f188ea2fe5b7d9a774131fc8fc57a55e51af60d32e5187c992e8ea"
+        },
+        {
+          "bytes": 20173,
+          "path": "docs/PUBLIC_RELEASE_POLICY.md",
+          "sha256": "87f1ef9a562f16dbed80df64af6724b82d7b2799f8c3555d53f9bbc70051f050"
+        },
+        {
+          "bytes": 12734,
+          "path": "docs/REGISTRY_REVIEW_CODEBOOK.md",
+          "sha256": "bedf60655823b24f917df77ba35086567cb87baa961bcd11f610be9e8d76618b"
+        }
+      ],
+      "id": "v2-history",
+      "payload_sha256": "4df67659d36d48778a1278456aaff2683126276cd2a2266750f104a4705ff588",
+      "uncompressed_bytes": 130663356
+    },
+    {
+      "archive": "upgrade-bench-v2-results-and-audits.zip",
+      "description": "Allowlisted metrics, audits, sanitized summaries, and benchmark specification.",
+      "file_count": 39,
+      "files": [
+        {
+          "bytes": 19238,
+          "path": "ARTIFACT.md",
+          "sha256": "f02be9ec454bb2e14d6966a9e9097c615bb5d0022ce713c4468d8115e82d650d"
+        },
+        {
+          "bytes": 22056,
+          "path": "BENCHMARK_V2_SPEC.md",
+          "sha256": "5260663965fbb66b26199bd3b4a687b5125b948f8dca7100b7708290bd82961f"
+        },
+        {
+          "bytes": 7276,
+          "path": "DATA_LICENSE.md",
+          "sha256": "d9bdec003ae958fde8e200002a3e222d040fb20ed64d87b0f20ccd645032dc7c"
+        },
+        {
+          "bytes": 17657,
+          "path": "docs/DATA_DISTRIBUTION.md",
+          "sha256": "3b005a7469f188ea2fe5b7d9a774131fc8fc57a55e51af60d32e5187c992e8ea"
+        },
+        {
+          "bytes": 20173,
+          "path": "docs/PUBLIC_RELEASE_POLICY.md",
+          "sha256": "87f1ef9a562f16dbed80df64af6724b82d7b2799f8c3555d53f9bbc70051f050"
+        },
+        {
+          "bytes": 12734,
+          "path": "docs/REGISTRY_REVIEW_CODEBOOK.md",
+          "sha256": "bedf60655823b24f917df77ba35086567cb87baa961bcd11f610be9e8d76618b"
+        },
+        {
+          "bytes": 4719,
+          "path": "paper/generated/v2_benchmark_profile.tex",
+          "sha256": "ef8fff6e9ebb3d0d3e567d442623ba02968b8cd1864f321a6e7d9ac73415004f"
+        },
+        {
+          "bytes": 4102,
+          "path": "paper/generated/v2_contemporary_references.tex",
+          "sha256": "128685c04f807757de4f9764fb762241df2d3e2da1c59a3645df8e8bd1cc2471"
+        },
+        {
+          "bytes": 58214,
+          "path": "paper/generated/v2_numbers.tex",
+          "sha256": "47dc08c78e9cb2d4b9aaec2272d21b54abdbe1ae84c05f8e1950abcfe8508238"
+        },
+        {
+          "bytes": 10526,
+          "path": "results_v2/CLAIM_LEDGER.md",
+          "sha256": "911c4d894ea7e51f49eb868867ef1046ebb2e10e4774ec974e26390e50538233"
+        },
+        {
+          "bytes": 12665,
+          "path": "results_v2/README.md",
+          "sha256": "9d06e98073226874ab787758a64a69753de2f1a7c4d93121afdcee7230f40f4c"
+        },
+        {
+          "bytes": 9477,
+          "path": "results_v2/metrics/INVALIDATED.json",
+          "sha256": "6615441b07d78c412d7f8119ab0e1c2985fcfb0eec14145cf4ea670a60b34242"
+        },
+        {
+          "bytes": 139499,
+          "path": "results_v2/metrics/b1_candidate_coverage.json",
+          "sha256": "260e0c4e64d9640810b7b0cb45cf8a3b38cd91e914647e28fe7bafddc8e19733"
+        },
+        {
+          "bytes": 49549,
+          "path": "results_v2/metrics/raw_label_audit.json",
+          "sha256": "9bb93976254589eeeda46633e599114316676bba3d830c3e6bd1ab619f705854"
+        },
+        {
+          "bytes": 37199,
+          "path": "results_v2/metrics/rolling_cpu_baselines.csv",
+          "sha256": "67aa37f65c137cbf7a1d22fe1376970b2afce7a021a60df0a6068fac744d4cec"
+        },
+        {
+          "bytes": 247570,
+          "path": "results_v2/metrics/rolling_cpu_baselines.json",
+          "sha256": "1123bd2496fd6aefec6c697ffab82886da50fa09d4cbd566cb9c3307442fcb18"
+        },
+        {
+          "bytes": 8667,
+          "path": "results_v2/metrics/v2_benchmark_profile.json",
+          "sha256": "5f8357503c303bb8bfd9525ee040305a8a4caabed47a8c5980351599f62b6f3d"
+        },
+        {
+          "bytes": 12870,
+          "path": "results_v2/metrics/v2_contemporary_references.csv",
+          "sha256": "727ddcaf23a139ba88c62d0e8bfc931187996056c23e9d73a5ecc8995b62c790"
+        },
+        {
+          "bytes": 60852,
+          "path": "results_v2/metrics/v2_contemporary_references.json",
+          "sha256": "1ac323e5d0f99647ea2c07631bcc20c92ed7ab385b7f74c05e49aebb6687b61d"
+        },
+        {
+          "bytes": 14418,
+          "path": "results_v2/metrics/v2_eligibility_threshold_geometry.csv",
+          "sha256": "d74a50a252cecb201a658712fa56d8b8479ad1e92ef7f400230d5d5cd1da3b2f"
+        },
+        {
+          "bytes": 65658,
+          "path": "results_v2/metrics/v2_eligibility_threshold_geometry.json",
+          "sha256": "040c07107c503a0f804e348a8e4e71128580fc41baa55af3250c1840dfe150ce"
+        },
+        {
+          "bytes": 4798,
+          "path": "results_v2/metrics/v2_gbdt_baselines.csv",
+          "sha256": "ddd4fe9bfd3ee1644bb83d18180d7ebe416300f068f619abcc7ab1436fe9f390"
+        },
+        {
+          "bytes": 168453,
+          "path": "results_v2/metrics/v2_gbdt_baselines.json",
+          "sha256": "9f505d5dbb42769bfbecddea9646d43932fcaebad4c683031d7219e0a6e170d6"
+        },
+        {
+          "bytes": 39660,
+          "path": "results_v2/metrics/v2_gpu_rolling_summary.csv",
+          "sha256": "cbac9aa964f46bab14f65ee75aaf8beaab8aff8732f1f0a1653a7c02123a4b38"
+        },
+        {
+          "bytes": 352792,
+          "path": "results_v2/metrics/v2_gpu_rolling_summary.json",
+          "sha256": "940174a8f06f0d33b29efc949f385730f8d4d9380990e4556bfab8ac41c12aee"
+        },
+        {
+          "bytes": 22552,
+          "path": "results_v2/metrics/v2_loco_transfer_summary.csv",
+          "sha256": "9c29e1e2271251ad89a58a65b35244c1b4859bb6a38df40fec152979ba8d1e6d"
+        },
+        {
+          "bytes": 27899,
+          "path": "results_v2/metrics/v2_loco_transfer_summary.json",
+          "sha256": "f7c47eb3d07df6d5b07b2d7bd129fb281e0b332e0bd805698aaa2a20eef3a583"
+        },
+        {
+          "bytes": 3084,
+          "path": "results_v2/metrics/v2_product_space_density.csv",
+          "sha256": "f4a1359afef079e9dbdd1d28faa97d49d67de093d0c2d499dd48fd31536811e1"
+        },
+        {
+          "bytes": 38796,
+          "path": "results_v2/metrics/v2_product_space_density.json",
+          "sha256": "22df0a5688aaec074eaa633e2f2f3948e386bdd6a76e82c89d1b75d1169ed0dd"
+        },
+        {
+          "bytes": 88726,
+          "path": "results_v2/metrics/v2_robustness.csv",
+          "sha256": "14f08cd4efca869dc79a5653baf9aaf867fd1543a3c576961bbb17814546625e"
+        },
+        {
+          "bytes": 1026291,
+          "path": "results_v2/metrics/v2_robustness.json",
+          "sha256": "86291f381700b01ed9f24cf27b96902593f9e724f5058f5eb8a2bbdb65b85d5b"
+        },
+        {
+          "bytes": 642737,
+          "path": "results_v2/metrics/v2_score_robustness_r5.csv",
+          "sha256": "12548cf34e28668c5f9de083d5a6c3b1b3e370b20a640f742ac19cad55520f7c"
+        },
+        {
+          "bytes": 1863706,
+          "path": "results_v2/metrics/v2_score_robustness_r5.json",
+          "sha256": "40da4391d5bf16e7e730f52a05270746b66c96ce7381203e602ef1c8c56fe80b"
+        },
+        {
+          "bytes": 15783,
+          "path": "results_v2/metrics/v2_ultra_zero_shot_summary.csv",
+          "sha256": "3cc0216456f71cd2bfacc51a924b089c925ec2146f6eb342eede248d3159820f"
+        },
+        {
+          "bytes": 11986,
+          "path": "results_v2/metrics/v2_ultra_zero_shot_summary.json",
+          "sha256": "4c7f7d8a55d92fcbf8adae21ed4a58eba259acbe0767c2874001389fc4656cdc"
+        },
+        {
+          "bytes": 48417,
+          "path": "results_v2/metrics/v2_value_diagnostics.csv",
+          "sha256": "7ac1c0db6b9da5eefa7c5c0e61d6bfa42f8f7e5e28622481015d849247a7d58d"
+        },
+        {
+          "bytes": 1278319,
+          "path": "results_v2/metrics/v2_value_diagnostics.json",
+          "sha256": "49a101ce6f0cd7d83cda5024549e02e793e605f8ae08c986cf8e7980bb734325"
+        },
+        {
+          "bytes": 54448,
+          "path": "results_v2/paper_numbers.json",
+          "sha256": "d0cd417537ebad08da82bb984375810b4b4045887b62567bb8773a3e61403e5f"
+        },
+        {
+          "bytes": 873109,
+          "path": "results_v2/scores/v2_product_space_density_scores.csv",
+          "sha256": "a32f68c30d415c9af05dfaeec8a3ac214ed4fa28baf79a4e0e4f85c89dbdda16"
+        }
+      ],
+      "id": "v2-results",
+      "payload_sha256": "f34b30ee8f565d255041d6c5d54e6c43ed30dbba7f5a7e341fbfb89aea841a78",
+      "uncompressed_bytes": 7396675
+    }
+  ],
+  "github_release_asset_limit_bytes": 2147483648,
+  "hash_algorithm": "sha256",
+  "planned_uncompressed_limit_bytes": 1887436800,
+  "public_distribution_policy": {
+    "internal_artifact_path_components_excluded": [
+      "checkpoints",
+      "claims",
+      "gpu-smoke",
+      "gpu_rolling",
+      "gpu_smoke",
+      "job_claims",
+      "logs",
+      "score-cache",
+      "score_artifacts",
+      "score_cache",
+      "scores",
+      "selection-artifacts",
+      "selection_artifacts"
+    ],
+    "internal_artifact_suffixes_excluded": [
+      ".ckpt",
+      ".log",
+      ".pt",
+      ".pth"
+    ],
+    "internal_nested_manifests_excluded": [],
+    "internal_paths_excluded": [
+      "PROJECT_CHECKLIST.md",
+      "RUN_ON_IHPC.md",
+      "configs/v2_gpu_hosts.json",
+      "requirements/ultra-smoke.md",
+      "requirements/v2-gpu-local-plan.md",
+      "results/README.md",
+      "results/metrics/taxonomy_coder2_raw.json",
+      "tests/test_summarize_v2_loco_results.py",
+      "tests/test_v2_loco_formal.py",
+      "tools/v2_loco_formal.py"
+    ],
+    "internal_prefixes_excluded": [
+      ".private/",
+      "private/",
+      "output/",
+      "outputs/",
+      "benchmark/upgrade-bench-v1/",
+      "data/processed/",
+      "results/",
+      "results/logs/",
+      "results_v2/gpu_rolling/",
+      "results_v2/gpu_smoke/",
+      "results_v2/loco_formal/",
+      "results_v2/ultra_formal/",
+      "third_party/ULTRA/"
+    ],
+    "permission_gated_paths_excluded": [],
+    "post_resolution_v2_result_paths": [
+      "results_v2/metrics/v2_benchmark_profile.json",
+      "results_v2/metrics/v2_contemporary_references.csv",
+      "results_v2/metrics/v2_contemporary_references.json",
+      "results_v2/metrics/v2_eligibility_threshold_geometry.csv",
+      "results_v2/metrics/v2_eligibility_threshold_geometry.json",
+      "results_v2/metrics/v2_gbdt_baselines.csv",
+      "results_v2/metrics/v2_gbdt_baselines.json",
+      "results_v2/metrics/v2_loco_transfer_summary.csv",
+      "results_v2/metrics/v2_loco_transfer_summary.json",
+      "results_v2/metrics/v2_product_space_density.csv",
+      "results_v2/metrics/v2_product_space_density.json",
+      "results_v2/metrics/v2_score_robustness_r5.csv",
+      "results_v2/metrics/v2_score_robustness_r5.json",
+      "results_v2/metrics/v2_ultra_zero_shot_summary.csv",
+      "results_v2/metrics/v2_ultra_zero_shot_summary.json",
+      "results_v2/metrics/v2_value_diagnostics.csv",
+      "results_v2/metrics/v2_value_diagnostics.json",
+      "results_v2/scores/v2_product_space_density_scores.csv"
+    ],
+    "private_cache_path_components_excluded": [
+      ".cache",
+      ".private",
+      "cache",
+      "caches",
+      "private",
+      "raw",
+      "temp",
+      "tmp"
+    ],
+    "public_current_source_allowlist": [
+      "src/baci_filtered_cache.py",
+      "src/benchmark.py",
+      "src/gap_discovery.py",
+      "src/split.py",
+      "src/task_features.py",
+      "src/temporal_backtest.py",
+      "src/universe.py",
+      "src/v2_gpu_protocol.py",
+      "src/v2_gpu_rolling.py",
+      "src/v2_ultra.py",
+      "src/window_aggregation.py"
+    ],
+    "public_current_test_allowlist": [
+      "tests/test_baci_filtered_cache.py",
+      "tests/test_build_paper_review.py",
+      "tests/test_build_v2_views.py",
+      "tests/test_chain_registry_audit.py",
+      "tests/test_generate_v2_paper_numbers.py",
+      "tests/test_gpu_step3_postfreeze_attestation.py",
+      "tests/test_nbfnet_source_attestation.py",
+      "tests/test_prepare_registry_human_review_receipt.py",
+      "tests/test_promote_v2_canonical_replacements.py",
+      "tests/test_registry_curation_protocol.py",
+      "tests/test_registry_human_review_receipt.py",
+      "tests/test_registry_human_validation_sample.py",
+      "tests/test_registry_lexicon_negative_control.py",
+      "tests/test_registry_revision.py",
+      "tests/test_release_distribution.py",
+      "tests/test_resolve_v2_invalidation.py",
+      "tests/test_step3_sync_manifest.py",
+      "tests/test_summarize_v2_contemporary_references.py",
+      "tests/test_summarize_v2_gpu_results.py",
+      "tests/test_summarize_v2_ultra_results.py",
+      "tests/test_task_features.py",
+      "tests/test_upgrade_bench_v2_package.py",
+      "tests/test_v2_b1_coverage.py",
+      "tests/test_v2_benchmark_profile.py",
+      "tests/test_v2_cpu_results_env.py",
+      "tests/test_v2_eligibility_threshold_geometry.py",
+      "tests/test_v2_gbdt_baselines.py",
+      "tests/test_v2_gpu_main_worker.py",
+      "tests/test_v2_gpu_metrics.py",
+      "tests/test_v2_gpu_protocol.py",
+      "tests/test_v2_loco_transfer.py",
+      "tests/test_v2_product_space_density.py",
+      "tests/test_v2_robustness.py",
+      "tests/test_v2_rolling_cpu_baselines.py",
+      "tests/test_v2_score_robustness_r5.py",
+      "tests/test_v2_ultra_formal.py",
+      "tests/test_v2_ultra_protocol.py",
+      "tests/test_v2_value_diagnostics.py",
+      "tests/test_validate_v2.py",
+      "tests/test_verify_v2_number_alignment.py",
+      "tests/test_window_aggregation.py"
+    ],
+    "public_current_tool_allowlist": [
+      "tools/artifact_bundles.py",
+      "tools/audit_chain_registry.py",
+      "tools/audit_v2.py",
+      "tools/build_baci_filtered_cache.py",
+      "tools/build_gpu_step3_postfreeze_attestation.py",
+      "tools/build_nbfnet_source_attestation.py",
+      "tools/build_paper_review.py",
+      "tools/build_registry_evidence.py",
+      "tools/build_registry_human_validation_sample.py",
+      "tools/build_registry_lexicon_negative_control.py",
+      "tools/build_registry_revision.py",
+      "tools/build_v2_views.py",
+      "tools/generate_v2_benchmark_profile.py",
+      "tools/generate_v2_paper_numbers.py",
+      "tools/prepare_registry_human_review_receipt.py",
+      "tools/promote_v2_canonical_replacements.py",
+      "tools/public_release_audit.py",
+      "tools/public_release_policy.py",
+      "tools/registry_human_review_receipt.py",
+      "tools/release_clean_clone.py",
+      "tools/release_manifest.py",
+      "tools/release_smoke.py",
+      "tools/repository_size_gate.py",
+      "tools/resolve_v2_invalidation.py",
+      "tools/step3_sync_manifest.py",
+      "tools/summarize_v2_contemporary_references.py",
+      "tools/summarize_v2_gpu_results.py",
+      "tools/summarize_v2_loco_results.py",
+      "tools/summarize_v2_ultra_results.py",
+      "tools/test_split.py",
+      "tools/v2_b1_coverage.py",
+      "tools/v2_eligibility_threshold_geometry.py",
+      "tools/v2_gbdt_baselines.py",
+      "tools/v2_gpu_env_check.py",
+      "tools/v2_loco_transfer.py",
+      "tools/v2_product_space_density.py",
+      "tools/v2_robustness.py",
+      "tools/v2_rolling_cpu_baselines.py",
+      "tools/v2_score_robustness_r5.py",
+      "tools/v2_ultra_formal.py",
+      "tools/v2_value_diagnostics.py",
+      "tools/validate_v2.py",
+      "tools/verify_baci_filtered_cache.py",
+      "tools/verify_registry_curation_protocol.py",
+      "tools/verify_v2_number_alignment.py"
+    ],
+    "public_portable_jobs": [
+      "jobs/v2_gpu_evaluate.pbs",
+      "jobs/v2_gpu_main_worker.sh",
+      "jobs/v2_gpu_nohup_worker.sh",
+      "jobs/v2_gpu_select.pbs"
+    ],
+    "public_v2_derived_score_allowlist": [
+      "results_v2/scores/v2_product_space_density_scores.csv"
+    ],
+    "public_v2_result_allowlist": [
+      "results_v2/CLAIM_LEDGER.md",
+      "results_v2/README.md",
+      "results_v2/metrics/INVALIDATED.json",
+      "results_v2/metrics/b1_candidate_coverage.json",
+      "results_v2/metrics/raw_label_audit.json",
+      "results_v2/metrics/rolling_cpu_baselines.csv",
+      "results_v2/metrics/rolling_cpu_baselines.json",
+      "results_v2/metrics/v2_benchmark_profile.json",
+      "results_v2/metrics/v2_contemporary_references.csv",
+      "results_v2/metrics/v2_contemporary_references.json",
+      "results_v2/metrics/v2_eligibility_threshold_geometry.csv",
+      "results_v2/metrics/v2_eligibility_threshold_geometry.json",
+      "results_v2/metrics/v2_gbdt_baselines.csv",
+      "results_v2/metrics/v2_gbdt_baselines.json",
+      "results_v2/metrics/v2_gpu_rolling_summary.csv",
+      "results_v2/metrics/v2_gpu_rolling_summary.json",
+      "results_v2/metrics/v2_loco_transfer_summary.csv",
+      "results_v2/metrics/v2_loco_transfer_summary.json",
+      "results_v2/metrics/v2_product_space_density.csv",
+      "results_v2/metrics/v2_product_space_density.json",
+      "results_v2/metrics/v2_robustness.csv",
+      "results_v2/metrics/v2_robustness.json",
+      "results_v2/metrics/v2_score_robustness_r5.csv",
+      "results_v2/metrics/v2_score_robustness_r5.json",
+      "results_v2/metrics/v2_ultra_zero_shot_summary.csv",
+      "results_v2/metrics/v2_ultra_zero_shot_summary.json",
+      "results_v2/metrics/v2_value_diagnostics.csv",
+      "results_v2/metrics/v2_value_diagnostics.json",
+      "results_v2/paper_numbers.json",
+      "results_v2/scores/v2_product_space_density_scores.csv"
+    ],
+    "raw_baci_data_prefixes_excluded": [
+      "baci_hs92_",
+      "baci-filtered-cache",
+      "baci_filtered_cache"
+    ],
+    "registry_human_review_freeze_path": "chains/evidence/registry_human_review_freeze.json",
+    "registry_human_review_protocol_path": "chains/evidence/registry_curation_protocol.json",
+    "registry_human_review_receipt_path": "chains/evidence/registry_human_review_receipt.json",
+    "registry_human_review_receipt_schema": "upgrade-bench/registry-human-review-receipt/3",
+    "registry_human_review_required_for_release": true,
+    "registry_human_review_resolution_binding_field": "registry_human_review",
+    "repository_relative_paths_required": true,
+    "selection_model": "exact-current-code-and-result-allowlists-plus-shared-exclusions",
+    "symbolic_links_allowed": false,
+    "unresolved_v2_invalidation_blocks_final_index": true,
+    "v2_invalidation_derived_paths": [
+      "paper/generated/v2_numbers.tex",
+      "results_v2/metrics/b1_candidate_coverage.json",
+      "results_v2/metrics/raw_label_audit.json",
+      "results_v2/metrics/rolling_cpu_baselines.csv",
+      "results_v2/metrics/rolling_cpu_baselines.json",
+      "results_v2/metrics/v2_gpu_rolling_summary.csv",
+      "results_v2/metrics/v2_gpu_rolling_summary.json",
+      "results_v2/metrics/v2_robustness.csv",
+      "results_v2/metrics/v2_robustness.json",
+      "results_v2/paper_numbers.json"
+    ],
+    "v2_invalidation_hold_paths": [
+      "paper/generated/v2_benchmark_profile.tex",
+      "paper/generated/v2_contemporary_references.tex",
+      "paper/generated/v2_numbers.tex",
+      "results_v2/metrics/b1_candidate_coverage.json",
+      "results_v2/metrics/raw_label_audit.json",
+      "results_v2/metrics/rolling_cpu_baselines.csv",
+      "results_v2/metrics/rolling_cpu_baselines.json",
+      "results_v2/metrics/v2_benchmark_profile.json",
+      "results_v2/metrics/v2_contemporary_references.csv",
+      "results_v2/metrics/v2_contemporary_references.json",
+      "results_v2/metrics/v2_eligibility_threshold_geometry.csv",
+      "results_v2/metrics/v2_eligibility_threshold_geometry.json",
+      "results_v2/metrics/v2_gbdt_baselines.csv",
+      "results_v2/metrics/v2_gbdt_baselines.json",
+      "results_v2/metrics/v2_gpu_rolling_summary.csv",
+      "results_v2/metrics/v2_gpu_rolling_summary.json",
+      "results_v2/metrics/v2_loco_transfer_summary.csv",
+      "results_v2/metrics/v2_loco_transfer_summary.json",
+      "results_v2/metrics/v2_product_space_density.csv",
+      "results_v2/metrics/v2_product_space_density.json",
+      "results_v2/metrics/v2_robustness.csv",
+      "results_v2/metrics/v2_robustness.json",
+      "results_v2/metrics/v2_score_robustness_r5.csv",
+      "results_v2/metrics/v2_score_robustness_r5.json",
+      "results_v2/metrics/v2_ultra_zero_shot_summary.csv",
+      "results_v2/metrics/v2_ultra_zero_shot_summary.json",
+      "results_v2/metrics/v2_value_diagnostics.csv",
+      "results_v2/metrics/v2_value_diagnostics.json",
+      "results_v2/paper_numbers.json",
+      "results_v2/scores/v2_product_space_density_scores.csv"
+    ],
+    "v2_invalidation_notice_governed_paths": [
+      "RELEASE_MANIFEST.sha256",
+      "paper/generated/v2_benchmark_profile.tex",
+      "paper/generated/v2_contemporary_references.tex",
+      "paper/generated/v2_numbers.tex",
+      "release/DATA_ARTIFACT_INDEX.json",
+      "results_v2/metrics/b1_candidate_coverage.json",
+      "results_v2/metrics/raw_label_audit.json",
+      "results_v2/metrics/rolling_cpu_baselines.csv",
+      "results_v2/metrics/rolling_cpu_baselines.json",
+      "results_v2/metrics/v2_benchmark_profile.json",
+      "results_v2/metrics/v2_contemporary_references.csv",
+      "results_v2/metrics/v2_contemporary_references.json",
+      "results_v2/metrics/v2_eligibility_threshold_geometry.csv",
+      "results_v2/metrics/v2_eligibility_threshold_geometry.json",
+      "results_v2/metrics/v2_gbdt_baselines.csv",
+      "results_v2/metrics/v2_gbdt_baselines.json",
+      "results_v2/metrics/v2_gpu_rolling_summary.csv",
+      "results_v2/metrics/v2_gpu_rolling_summary.json",
+      "results_v2/metrics/v2_loco_transfer_summary.csv",
+      "results_v2/metrics/v2_loco_transfer_summary.json",
+      "results_v2/metrics/v2_product_space_density.csv",
+      "results_v2/metrics/v2_product_space_density.json",
+      "results_v2/metrics/v2_robustness.csv",
+      "results_v2/metrics/v2_robustness.json",
+      "results_v2/metrics/v2_score_robustness_r5.csv",
+      "results_v2/metrics/v2_score_robustness_r5.json",
+      "results_v2/metrics/v2_ultra_zero_shot_summary.csv",
+      "results_v2/metrics/v2_ultra_zero_shot_summary.json",
+      "results_v2/metrics/v2_value_diagnostics.csv",
+      "results_v2/metrics/v2_value_diagnostics.json",
+      "results_v2/paper_numbers.json",
+      "results_v2/scores/v2_product_space_density_scores.csv"
+    ],
+    "v2_paper_current_number_key_count": 857,
+    "v2_paper_current_number_keys_sha256": "bcd64e94804bea64fb66d5e73e8d463597d68a8d88a46b7d7230c42a2dfd4dda",
+    "v2_paper_current_number_values_sha256": "152048039fd1482e069139f113745c2987796fd15b74fa4822e65f4dd357ef04",
+    "v2_paper_current_numbers_schema": "upgrade-bench-v2-paper-numbers-8",
+    "v2_paper_current_source_paths": [
+      "chains/evidence/registry_evidence.json",
+      "configs/v2_eligibility_threshold_geometry.json",
+      "configs/v2_gbdt_baselines.json",
+      "configs/v2_loco_formal.json",
+      "configs/v2_product_space_density.json",
+      "configs/v2_score_robustness_r5.json",
+      "configs/v2_ultra_formal.json",
+      "data/processed_v2/dataset_summary.json",
+      "docs/registry_audit.json",
+      "results_v2/metrics/b1_candidate_coverage.json",
+      "results_v2/metrics/raw_label_audit.json",
+      "results_v2/metrics/rolling_cpu_baselines.json",
+      "results_v2/metrics/v2_eligibility_threshold_geometry.csv",
+      "results_v2/metrics/v2_eligibility_threshold_geometry.json",
+      "results_v2/metrics/v2_gbdt_baselines.csv",
+      "results_v2/metrics/v2_gbdt_baselines.json",
+      "results_v2/metrics/v2_gpu_rolling_summary.json",
+      "results_v2/metrics/v2_loco_transfer_summary.csv",
+      "results_v2/metrics/v2_loco_transfer_summary.json",
+      "results_v2/metrics/v2_product_space_density.csv",
+      "results_v2/metrics/v2_product_space_density.json",
+      "results_v2/metrics/v2_robustness.json",
+      "results_v2/metrics/v2_score_robustness_r5.csv",
+      "results_v2/metrics/v2_score_robustness_r5.json",
+      "results_v2/metrics/v2_ultra_zero_shot_summary.csv",
+      "results_v2/metrics/v2_ultra_zero_shot_summary.json",
+      "results_v2/metrics/v2_value_diagnostics.csv",
+      "results_v2/metrics/v2_value_diagnostics.json",
+      "results_v2/scores/v2_product_space_density_scores.csv",
+      "tools/summarize_v2_loco_results.py",
+      "tools/summarize_v2_ultra_results.py",
+      "tools/v2_eligibility_threshold_geometry.py",
+      "tools/v2_gbdt_baselines.py",
+      "tools/v2_product_space_density.py",
+      "tools/v2_score_robustness_r5.py",
+      "tools/v2_ultra_formal.py",
+      "tools/v2_value_diagnostics.py"
+    ],
+    "v2_paper_final_numbers_schema": "upgrade-bench-v2-paper-numbers-8",
+    "v2_paper_legacy_schema5_source_paths": [
+      "chains/evidence/registry_evidence.json",
+      "configs/v2_loco_formal.json",
+      "data/processed_v2/dataset_summary.json",
+      "docs/registry_audit.json",
+      "results_v2/metrics/b1_candidate_coverage.json",
+      "results_v2/metrics/raw_label_audit.json",
+      "results_v2/metrics/rolling_cpu_baselines.json",
+      "results_v2/metrics/v2_gpu_rolling_summary.json",
+      "results_v2/metrics/v2_loco_transfer_summary.csv",
+      "results_v2/metrics/v2_loco_transfer_summary.json",
+      "results_v2/metrics/v2_robustness.json",
+      "results_v2/metrics/v2_value_diagnostics.csv",
+      "results_v2/metrics/v2_value_diagnostics.json",
+      "tools/summarize_v2_loco_results.py",
+      "tools/v2_value_diagnostics.py"
+    ],
+    "v2_paper_legacy_schema6_source_paths": [
+      "chains/evidence/registry_evidence.json",
+      "configs/v2_loco_formal.json",
+      "configs/v2_ultra_formal.json",
+      "data/processed_v2/dataset_summary.json",
+      "docs/registry_audit.json",
+      "results_v2/metrics/b1_candidate_coverage.json",
+      "results_v2/metrics/raw_label_audit.json",
+      "results_v2/metrics/rolling_cpu_baselines.json",
+      "results_v2/metrics/v2_gpu_rolling_summary.json",
+      "results_v2/metrics/v2_loco_transfer_summary.csv",
+      "results_v2/metrics/v2_loco_transfer_summary.json",
+      "results_v2/metrics/v2_robustness.json",
+      "results_v2/metrics/v2_ultra_zero_shot_summary.csv",
+      "results_v2/metrics/v2_ultra_zero_shot_summary.json",
+      "results_v2/metrics/v2_value_diagnostics.csv",
+      "results_v2/metrics/v2_value_diagnostics.json",
+      "tools/summarize_v2_loco_results.py",
+      "tools/summarize_v2_ultra_results.py",
+      "tools/v2_ultra_formal.py",
+      "tools/v2_value_diagnostics.py"
+    ],
+    "v2_paper_legacy_schema7_source_paths": [
+      "chains/evidence/registry_evidence.json",
+      "configs/v2_gbdt_baselines.json",
+      "configs/v2_loco_formal.json",
+      "configs/v2_ultra_formal.json",
+      "data/processed_v2/dataset_summary.json",
+      "docs/registry_audit.json",
+      "results_v2/metrics/b1_candidate_coverage.json",
+      "results_v2/metrics/raw_label_audit.json",
+      "results_v2/metrics/rolling_cpu_baselines.json",
+      "results_v2/metrics/v2_gbdt_baselines.csv",
+      "results_v2/metrics/v2_gbdt_baselines.json",
+      "results_v2/metrics/v2_gpu_rolling_summary.json",
+      "results_v2/metrics/v2_loco_transfer_summary.csv",
+      "results_v2/metrics/v2_loco_transfer_summary.json",
+      "results_v2/metrics/v2_robustness.json",
+      "results_v2/metrics/v2_ultra_zero_shot_summary.csv",
+      "results_v2/metrics/v2_ultra_zero_shot_summary.json",
+      "results_v2/metrics/v2_value_diagnostics.csv",
+      "results_v2/metrics/v2_value_diagnostics.json",
+      "tools/summarize_v2_loco_results.py",
+      "tools/summarize_v2_ultra_results.py",
+      "tools/v2_gbdt_baselines.py",
+      "tools/v2_ultra_formal.py",
+      "tools/v2_value_diagnostics.py"
+    ],
+    "v2_paper_schema6_final_number_key_count": 625,
+    "v2_paper_schema6_final_number_keys_sha256": "b672a934bceb01e8cedaa0cc81ad54037b1bdfb8f44d79967ac0ac26577fcd6b",
+    "v2_paper_schema6_final_number_values_sha256": "6c833f296b101049a9a1ea28247fbae77b9fa6ee2e32f7427ed7be2ccf12fe9b",
+    "v2_paper_schema7_final_number_key_count": 694,
+    "v2_paper_schema7_final_number_keys_sha256": "fdbd7453ac32c2719d62f6de3594b52810dd7b54b49ad3dd1c8aee3555a3d84c",
+    "v2_paper_schema7_final_number_values_sha256": "d618c970e9caa547563879cbec64fc9ee259f50a36931e8d3d741941692aab43",
+    "v2_paper_schema8_final_number_key_count": 857,
+    "v2_paper_schema8_final_number_keys_sha256": "bcd64e94804bea64fb66d5e73e8d463597d68a8d88a46b7d7230c42a2dfd4dda",
+    "v2_paper_schema8_final_number_values_sha256": "152048039fd1482e069139f113745c2987796fd15b74fa4822e65f4dd357ef04",
+    "v2_public_receipt_profiles": {
+      "full": "verify-all-public-git-and-external-source-bytes",
+      "repository": "verify-public-git-bytes-without-opening-external-processed-v2-sources"
+    },
+    "v2_resolution_verifier_source_paths": [
+      "tools/resolve_v2_invalidation.py",
+      "tools/public_release_policy.py",
+      "tools/generate_v2_paper_numbers.py",
+      "tools/audit_chain_registry.py",
+      "tools/audit_v2.py",
+      "tools/v2_b1_coverage.py",
+      "tools/v2_rolling_cpu_baselines.py",
+      "tools/v2_robustness.py",
+      "tools/summarize_v2_gpu_results.py",
+      "tools/summarize_v2_loco_results.py",
+      "src/v2_gpu_protocol.py",
+      "tools/summarize_v2_ultra_results.py",
+      "tools/v2_gbdt_baselines.py",
+      "tools/build_gpu_step3_postfreeze_attestation.py",
+      "tools/build_nbfnet_source_attestation.py",
+      "tools/v2_product_space_density.py",
+      "tools/v2_score_robustness_r5.py",
+      "tools/v2_eligibility_threshold_geometry.py",
+      "tools/registry_human_review_receipt.py",
+      "tools/verify_registry_curation_protocol.py"
+    ],
+    "visibility": "public"
+  },
+  "schema_version": 3
+}

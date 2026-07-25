@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "attestation_type": "schema_checked_self_attestation",
+  "benchmark_version": "2.1-dev",
+  "protocol": "historical-fold-selection-frozen-main-evaluation",
+  "submission_name": "replace-with-method-name",
+  "run_id": "replace-with-stable-run-id",
+  "exact_seed_list": [0, 1, 2],
+  "selected_on_snapshot": "fold2",
+  "choices_frozen_before_main_evaluation": true,
+  "main_labels_used_for_selection": false,
+  "main_labels_used_for_feature_fitting": false,
+  "main_labels_used_for_imputation_or_calibration": false,
+  "benchmark_data_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "score_csv_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "selection_config_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "attested_by": "replace-with-name-or-team-identifier"
+}

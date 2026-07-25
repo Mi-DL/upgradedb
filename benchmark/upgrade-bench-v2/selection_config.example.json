@@ -1,0 +1,9 @@
+{
+  "run_id": "replace-with-stable-run-id",
+  "exact_seed_list": [0, 1, 2],
+  "selected_on_snapshot": "fold2",
+  "model_family": "replace-with-frozen-model-family",
+  "hyperparameters": {},
+  "feature_and_imputation_config": {},
+  "software_environment_id": "replace-with-lockfile-container-or-environment-id"
+}

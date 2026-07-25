@@ -1,0 +1,1699 @@
+{
+  "canonical_100kusd_gate": {
+    "chains": {
+      "aluminium": {
+        "a": {
+          "candidate_count": 81212,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/candidates_aluminium.csv",
+          "positive_count": 3487,
+          "positive_keys_exact": true,
+          "sha256": "9c1f76f8e19f792f6bcc6d3b7f25a184236cd025aac238cfbe2f7fd17d0972df"
+        },
+        "b1": {
+          "candidate_count": 358,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/entries_firsttime_aluminium.csv",
+          "positive_count": 72,
+          "positive_keys_exact": true,
+          "sha256": "13d858d19a0b7ba67369b7bf2346fa425e379e835b4ea6e83703340c719aa547"
+        },
+        "b2": {
+          "candidate_count": 10561,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/destinations_given_entry_aluminium.csv",
+          "positive_count": 181,
+          "positive_keys_exact": true,
+          "sha256": "a79b2a946127663ee623ed018c8d2483f865db637a2212c133e060bcf5cb5aea"
+        },
+        "b_lanes": {
+          "candidate_count": 49559,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/candidates_firsttime_aluminium.csv",
+          "positive_count": 181,
+          "positive_keys_exact": true,
+          "sha256": "3022bd78b4f689c4235632cb3974fb22ca1021a48df94f8ecb00c433d2b4d5ed"
+        }
+      },
+      "cocoa": {
+        "a": {
+          "candidate_count": 54026,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/candidates_cocoa.csv",
+          "positive_count": 2552,
+          "positive_keys_exact": true,
+          "sha256": "bc888a0e93a5e6720361d2250960c198e4ccccbe302a7f3409df708304dec2ad"
+        },
+        "b1": {
+          "candidate_count": 277,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/entries_firsttime_cocoa.csv",
+          "positive_count": 42,
+          "positive_keys_exact": true,
+          "sha256": "4512f9e666db960df7cc75fb30eed882435d67645b4c4b6ace72b88e0d3db3f1"
+        },
+        "b2": {
+          "candidate_count": 5855,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/destinations_given_entry_cocoa.csv",
+          "positive_count": 72,
+          "positive_keys_exact": true,
+          "sha256": "97c40ddba761a35938015958a34a13cde6ff16cd12171d08c5df331a1794215d"
+        },
+        "b_lanes": {
+          "candidate_count": 36885,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/candidates_firsttime_cocoa.csv",
+          "positive_count": 72,
+          "positive_keys_exact": true,
+          "sha256": "d876f6646165dc4895f7cf27f370426c608e80b53c7b6ac46427e0969a1073e5"
+        }
+      },
+      "cotton": {
+        "a": {
+          "candidate_count": 108040,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/candidates_cotton.csv",
+          "positive_count": 3084,
+          "positive_keys_exact": true,
+          "sha256": "4e7b9724d34ab830a06cc356feaecb24db8f5fa9081401fe46c1cfbfe9a22373"
+        },
+        "b1": {
+          "candidate_count": 320,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/entries_firsttime_cotton.csv",
+          "positive_count": 36,
+          "positive_keys_exact": true,
+          "sha256": "a3fb8b89d0359bb60bf452519ea865bfd177f8098de9f5595ded51b18d3cbe52"
+        },
+        "b2": {
+          "candidate_count": 5549,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/destinations_given_entry_cotton.csv",
+          "positive_count": 44,
+          "positive_keys_exact": true,
+          "sha256": "802ea60204cf1be5a2eddd7fa95470df09d22e268088a26004a33fa7d9b3afc4"
+        },
+        "b_lanes": {
+          "candidate_count": 50725,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/candidates_firsttime_cotton.csv",
+          "positive_count": 44,
+          "positive_keys_exact": true,
+          "sha256": "09cf7fb3d24e0b8a5241ed92d19c0531f3d1560d39e72ee64100d4a4fe70fa9d"
+        }
+      },
+      "nickel": {
+        "a": {
+          "candidate_count": 24645,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/candidates_nickel.csv",
+          "positive_count": 1564,
+          "positive_keys_exact": true,
+          "sha256": "0ebad7822622a459de3367181b93c9c65ba6daa87e51743b107134e5003c516f"
+        },
+        "b1": {
+          "candidate_count": 343,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/entries_firsttime_nickel.csv",
+          "positive_count": 66,
+          "positive_keys_exact": true,
+          "sha256": "89f5b937f9b0a20fe79834a1bd1c98425b83db549a1f4059d1e147dfa5bdad2d"
+        },
+        "b2": {
+          "candidate_count": 4693,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/destinations_given_entry_nickel.csv",
+          "positive_count": 139,
+          "positive_keys_exact": true,
+          "sha256": "43bc5cb7ca03ce33dae85df2479ba7074f4754cfb607a1010e9e2026f826039d"
+        },
+        "b_lanes": {
+          "candidate_count": 25003,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/candidates_firsttime_nickel.csv",
+          "positive_count": 139,
+          "positive_keys_exact": true,
+          "sha256": "77b0e4a0aeb8e7839e6aee399c32137ac8d4f568f1afc27532efab8f9737e5a2"
+        }
+      },
+      "oilseed-soy": {
+        "a": {
+          "candidate_count": 34548,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/candidates_oilseed-soy.csv",
+          "positive_count": 1034,
+          "positive_keys_exact": true,
+          "sha256": "98ee13bb3538e1ef97e6d42df7b11297c0cf7a6fd52acc32e3a8f48b9e24d944"
+        },
+        "b1": {
+          "candidate_count": 86,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/entries_firsttime_oilseed-soy.csv",
+          "positive_count": 34,
+          "positive_keys_exact": true,
+          "sha256": "5c02bd2ec03d831793091f9227bf7d35860f183d89ef70c9c37bb36ae606b4c9"
+        },
+        "b2": {
+          "candidate_count": 4776,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/destinations_given_entry_oilseed-soy.csv",
+          "positive_count": 74,
+          "positive_keys_exact": true,
+          "sha256": "99b1188e2d3aebca76f4e59d9dc191d0abc251393effc91c94a33021dae924df"
+        },
+        "b_lanes": {
+          "candidate_count": 12131,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/candidates_firsttime_oilseed-soy.csv",
+          "positive_count": 74,
+          "positive_keys_exact": true,
+          "sha256": "acdccd4555c30b334ac731344ed7138995015b6cebc0f144776000eaf28a1dd7"
+        }
+      },
+      "sheep": {
+        "a": {
+          "candidate_count": 15153,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/candidates_sheep.csv",
+          "positive_count": 552,
+          "positive_keys_exact": true,
+          "sha256": "84a1b20792abdea98fc601d01c080d4e0f44743b97fabf5307b86d4182bf6674"
+        },
+        "b1": {
+          "candidate_count": 134,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/entries_firsttime_sheep.csv",
+          "positive_count": 20,
+          "positive_keys_exact": true,
+          "sha256": "a430d1146a28593840e544b8b2301891e4ed531d7fd5e36b46c531b2d83dcc06"
+        },
+        "b2": {
+          "candidate_count": 1999,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/destinations_given_entry_sheep.csv",
+          "positive_count": 46,
+          "positive_keys_exact": true,
+          "sha256": "7c4c0280e6bd07689fb0a3680af802fa9d65b04f3bc0389e72db6c65006d401d"
+        },
+        "b_lanes": {
+          "candidate_count": 11072,
+          "candidate_keys_exact": true,
+          "path": "data/processed_v2/candidates_firsttime_sheep.csv",
+          "positive_count": 46,
+          "positive_keys_exact": true,
+          "sha256": "766ee136a8529a39b9302ee0fec75f5839884b920c5ae926c8b2134077a31bca"
+        }
+      }
+    },
+    "requirement": "100 kUSD reconstruction must exactly match all released main A/B1/B2 keys and labels before 50/250 kUSD results are accepted",
+    "status": "PASS"
+  },
+  "config": {
+    "path": "configs/v2_eligibility_threshold_geometry.json",
+    "sha256": "73ccea5f29b10d1d69fb77a2c6f00605c65bff7d311a1111c1aceaef9c0a168e"
+  },
+  "generated_at_utc": "2026-07-16T12:58:59.419642+00:00",
+  "inputs": {
+    "annual_members": [
+      {
+        "crc32": "8fd395a1",
+        "filtered_rows": 350980,
+        "member_name": "BACI_HS92_Y2008_V202401b.csv",
+        "uncompressed_size_bytes": 445022193
+      },
+      {
+        "crc32": "b823244a",
+        "filtered_rows": 338474,
+        "member_name": "BACI_HS92_Y2009_V202401b.csv",
+        "uncompressed_size_bytes": 440520495
+      },
+      {
+        "crc32": "9b7881c6",
+        "filtered_rows": 344435,
+        "member_name": "BACI_HS92_Y2010_V202401b.csv",
+        "uncompressed_size_bytes": 452605760
+      },
+      {
+        "crc32": "bb93c4f4",
+        "filtered_rows": 347889,
+        "member_name": "BACI_HS92_Y2011_V202401b.csv",
+        "uncompressed_size_bytes": 460615869
+      },
+      {
+        "crc32": "ab38c8fc",
+        "filtered_rows": 355181,
+        "member_name": "BACI_HS92_Y2012_V202401b.csv",
+        "uncompressed_size_bytes": 474885752
+      },
+      {
+        "crc32": "b9bbffca",
+        "filtered_rows": 372227,
+        "member_name": "BACI_HS92_Y2018_V202401b.csv",
+        "uncompressed_size_bytes": 517818469
+      },
+      {
+        "crc32": "57dfe8a1",
+        "filtered_rows": 373405,
+        "member_name": "BACI_HS92_Y2019_V202401b.csv",
+        "uncompressed_size_bytes": 522764635
+      },
+      {
+        "crc32": "aa7e93f6",
+        "filtered_rows": 355437,
+        "member_name": "BACI_HS92_Y2020_V202401b.csv",
+        "uncompressed_size_bytes": 504400652
+      },
+      {
+        "crc32": "42a0a4f4",
+        "filtered_rows": 373430,
+        "member_name": "BACI_HS92_Y2021_V202401b.csv",
+        "uncompressed_size_bytes": 527699713
+      },
+      {
+        "crc32": "7f2af3e5",
+        "filtered_rows": 368930,
+        "member_name": "BACI_HS92_Y2022_V202401b.csv",
+        "uncompressed_size_bytes": 516283785
+      }
+    ],
+    "filtered_raw_rows": 3580388,
+    "raw_baci": {
+      "attestation_path": "requirements/raw_source_attestation.json",
+      "attestation_sha256": "99a241cb9aff4ef9d0ab702e288b0341c43207bb5462dbb891fd9769f29f8471",
+      "path": "data/raw/BACI_HS92_V202401b.zip",
+      "sha256": "1dafcfd5b26b2b2c88a69ca11ed67b7067f5c38c5a12c2e1766cf28df159909a",
+      "size_bytes": 2450783074
+    },
+    "registered_hs6_union": 283,
+    "registry_hashes": {
+      "chains/aluminium.json": "4208a43ec676d5a0a6b209d95d1f171c273c8c6138817dc1189dc88f8d4affb4",
+      "chains/cocoa.json": "38b38f994e2a202227e9c945ce5180ada7233b4ed3161788e03eb3f1902d64b4",
+      "chains/cotton.json": "e2f10638f2f6c99ebf5f8d117938fcd0de36d8eb89bbc2d9648da7024fd8c907",
+      "chains/nickel.json": "ea45d8304e726595157b9f1d388bd5dabf6b8887949333ba8c3c428a4f1a3123",
+      "chains/oilseed-soy.json": "4d3d9d930852f644e82917131d6377ffdf7a3467968c578e00b878a01710b752",
+      "chains/sheep.json": "2b8be327d51a1b621c2136f4dae74bba0669935ec90933d14f2ad55f1739af4c"
+    },
+    "source_hashes": {
+      "configs/v2_eligibility_threshold_geometry.json": "73ccea5f29b10d1d69fb77a2c6f00605c65bff7d311a1111c1aceaef9c0a168e",
+      "tools/v2_eligibility_threshold_geometry.py": "cc0bbeda1a80bc32237367d91512c856e1202ffd9c9fef5b1db1689bff8c3446",
+      "tools/v2_product_space_density.py": "45e55290861ddb1b6eb0c1bedc5e96a4e4822c2c7ff934f746954b5584dbbe77"
+    }
+  },
+  "protocol": {
+    "aggregation": "stage_by_year_sum_then_mean_over_all_five_calendar_years",
+    "comparison": "strictly_greater_than_threshold",
+    "early_window": "2008-2012",
+    "late_window": "2018-2022",
+    "model_scores_or_performance_computed": false,
+    "reference_threshold_kusd": 100,
+    "thresholds_kusd": [
+      50,
+      100,
+      250
+    ]
+  },
+  "runtime": {
+    "cpu_model": "AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD",
+    "device": "cpu",
+    "gpu_used": false,
+    "logical_cpu_cores": 16,
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "python": "3.12.13",
+    "wall_elapsed_seconds": 35.57260949999909
+  },
+  "schema_version": "upgrade-bench-v2-eligibility-threshold-geometry/1",
+  "scope": "cohort geometry only; no model scoring, rerun, or performance claim",
+  "status": "complete_verified",
+  "thresholds": {
+    "100": {
+      "chains": {
+        "aluminium": {
+          "a": {
+            "base_rate": 0.042937004383588634,
+            "candidate_count": 81212,
+            "candidate_key_sha256": "1d1424974e0fe791ef1fb38ea39a28a0028f4c2fe76688f52bc0312acc02a9be",
+            "candidate_overlap_vs_100": {
+              "intersection": 81212,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 81212
+            },
+            "positive_count": 3487,
+            "positive_key_sha256": "e01f617e07bd04caa7ebbcc4887a81fd610bac354e6389576ddc073ef5690983",
+            "positive_overlap_vs_100": {
+              "intersection": 3487,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 3487
+            }
+          },
+          "b1": {
+            "base_rate": 0.2011173184357542,
+            "candidate_count": 358,
+            "candidate_key_sha256": "01f30582473197095a0acfb091fb0c0ee3bfcd105174174e6bdd2b3b07bdb7b6",
+            "candidate_overlap_vs_100": {
+              "intersection": 358,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 358
+            },
+            "positive_count": 72,
+            "positive_key_sha256": "fa765282c086b38b5702a45f7e0076c57bb4e34a9efd04439d9d4a5b4b2f1cbb",
+            "positive_overlap_vs_100": {
+              "intersection": 72,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 72
+            }
+          },
+          "b2": {
+            "base_rate": 0.017138528548432914,
+            "candidate_count": 10561,
+            "candidate_key_sha256": "4c9c2b09b1af7f930a58381b52feacf92166a19bfa6ae7c391bbb8e301873d14",
+            "candidate_overlap_vs_100": {
+              "intersection": 10561,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 10561
+            },
+            "positive_count": 181,
+            "positive_key_sha256": "57bb7984377184ab132820ca9a8101e9a6c768fd528b1f962723550481337914",
+            "positive_overlap_vs_100": {
+              "intersection": 181,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 181
+            }
+          }
+        },
+        "cocoa": {
+          "a": {
+            "base_rate": 0.04723651575167512,
+            "candidate_count": 54026,
+            "candidate_key_sha256": "7cba9063cbba721b48d464e5ece43cdabd5792ab6b152d14fad2581942e2dae5",
+            "candidate_overlap_vs_100": {
+              "intersection": 54026,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 54026
+            },
+            "positive_count": 2552,
+            "positive_key_sha256": "0c358a3a9fad8210547d7d7755977c528982dbe3ebc79555288038dd12181783",
+            "positive_overlap_vs_100": {
+              "intersection": 2552,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 2552
+            }
+          },
+          "b1": {
+            "base_rate": 0.15162454873646208,
+            "candidate_count": 277,
+            "candidate_key_sha256": "d59666c14c5015a2aacaab4446e6bf99e6de723d31b2c2adc1fc9277ca242ce1",
+            "candidate_overlap_vs_100": {
+              "intersection": 277,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 277
+            },
+            "positive_count": 42,
+            "positive_key_sha256": "f7be9c5ba2ebcee23c3ada83d8d4a88a65aac6db2e3b9c3b9137682599bede1f",
+            "positive_overlap_vs_100": {
+              "intersection": 42,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 42
+            }
+          },
+          "b2": {
+            "base_rate": 0.012297181895815542,
+            "candidate_count": 5855,
+            "candidate_key_sha256": "0a054a2170f431b8d4b8e5ef1580493ba5926c92f99317717b2eeb3cebe3afa0",
+            "candidate_overlap_vs_100": {
+              "intersection": 5855,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 5855
+            },
+            "positive_count": 72,
+            "positive_key_sha256": "b1ad550768fa13e67a0df0f7d31b6b7d11622ccb18ea36a150cb37e4458326a4",
+            "positive_overlap_vs_100": {
+              "intersection": 72,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 72
+            }
+          }
+        },
+        "cotton": {
+          "a": {
+            "base_rate": 0.028544983339503886,
+            "candidate_count": 108040,
+            "candidate_key_sha256": "6f58246e59689850049a5b35bd31baeb098be2b8255a3d341f899f15fa543e3b",
+            "candidate_overlap_vs_100": {
+              "intersection": 108040,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 108040
+            },
+            "positive_count": 3084,
+            "positive_key_sha256": "7b80a9b5102a5aaa68ce2f9014f9813c7e1d10ecdffb433647a78eac5cac181c",
+            "positive_overlap_vs_100": {
+              "intersection": 3084,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 3084
+            }
+          },
+          "b1": {
+            "base_rate": 0.1125,
+            "candidate_count": 320,
+            "candidate_key_sha256": "50ba9b8510ef6a53685490da709ca50a8fe31ee49883cc508ef3701e69b08220",
+            "candidate_overlap_vs_100": {
+              "intersection": 320,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 320
+            },
+            "positive_count": 36,
+            "positive_key_sha256": "b2f1ca1ee31d678dd8957bee31bebfbce43790c99e8acee1c45fc12272406ab3",
+            "positive_overlap_vs_100": {
+              "intersection": 36,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 36
+            }
+          },
+          "b2": {
+            "base_rate": 0.007929356640836186,
+            "candidate_count": 5549,
+            "candidate_key_sha256": "eebe266356413af02b0fce5ca10e9b27daccccbae0741e2b86f0a9d1ae99613f",
+            "candidate_overlap_vs_100": {
+              "intersection": 5549,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 5549
+            },
+            "positive_count": 44,
+            "positive_key_sha256": "aa987401dea718c3f5a66e32190fae3be256a055160af39280039fac2cdea076",
+            "positive_overlap_vs_100": {
+              "intersection": 44,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 44
+            }
+          }
+        },
+        "nickel": {
+          "a": {
+            "base_rate": 0.0634611483059444,
+            "candidate_count": 24645,
+            "candidate_key_sha256": "a495f6565be1179476ead406bd0e06620fb86eccb911bdbf33a4cce25bc78edf",
+            "candidate_overlap_vs_100": {
+              "intersection": 24645,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 24645
+            },
+            "positive_count": 1564,
+            "positive_key_sha256": "97dddd7abf4eae99c8e4731d4c28c4cd2dd4aaabb03b06c7d07720521339bfd5",
+            "positive_overlap_vs_100": {
+              "intersection": 1564,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 1564
+            }
+          },
+          "b1": {
+            "base_rate": 0.1924198250728863,
+            "candidate_count": 343,
+            "candidate_key_sha256": "fdab4d548887b766d6f079ad4928d6b483497d0f2c70f8f36eb4b3430827cb4d",
+            "candidate_overlap_vs_100": {
+              "intersection": 343,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 343
+            },
+            "positive_count": 66,
+            "positive_key_sha256": "13cf7e64a1f21aa51deda9de02fa466d28a6e8ddbab4c22dea67bdd3b23ba5c9",
+            "positive_overlap_vs_100": {
+              "intersection": 66,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 66
+            }
+          },
+          "b2": {
+            "base_rate": 0.02961858086511826,
+            "candidate_count": 4693,
+            "candidate_key_sha256": "fda8c41cab1e489d78b4edaff1961b4443e62e2a0f6ef5cfef8a0f69580ccb82",
+            "candidate_overlap_vs_100": {
+              "intersection": 4693,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 4693
+            },
+            "positive_count": 139,
+            "positive_key_sha256": "c79cfe75688ea9e807e0d291b077eb56c6dd47993b506d0b27770399c18a1d3d",
+            "positive_overlap_vs_100": {
+              "intersection": 139,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 139
+            }
+          }
+        },
+        "oilseed-soy": {
+          "a": {
+            "base_rate": 0.02992937362510131,
+            "candidate_count": 34548,
+            "candidate_key_sha256": "742049bc086c9dc0296fae5017de54013ad7f650015c302970109f695f5957fc",
+            "candidate_overlap_vs_100": {
+              "intersection": 34548,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 34548
+            },
+            "positive_count": 1034,
+            "positive_key_sha256": "21205a4512791be1d6b6ac70293788b7011ee11771bb6ae74339c347074d636c",
+            "positive_overlap_vs_100": {
+              "intersection": 1034,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 1034
+            }
+          },
+          "b1": {
+            "base_rate": 0.3953488372093023,
+            "candidate_count": 86,
+            "candidate_key_sha256": "d0c6a324e272ecd2bdb756dca11d8dbc2868e62c7487ff2a9564ebe495c125c1",
+            "candidate_overlap_vs_100": {
+              "intersection": 86,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 86
+            },
+            "positive_count": 34,
+            "positive_key_sha256": "e2a3cf37fc0bcd1d2230ca3ebcfe9443a90c4e96db83e3a4690d70742b37090e",
+            "positive_overlap_vs_100": {
+              "intersection": 34,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 34
+            }
+          },
+          "b2": {
+            "base_rate": 0.015494137353433836,
+            "candidate_count": 4776,
+            "candidate_key_sha256": "c929c2fee19cc1ea38a7db3fad67b2c7f24c42458fbf7670f3806d88cc96ec3a",
+            "candidate_overlap_vs_100": {
+              "intersection": 4776,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 4776
+            },
+            "positive_count": 74,
+            "positive_key_sha256": "b58a28adf1c5f88ffdc7e308dafe73f4f2b32812047fc67bb067fa7ad1c0f116",
+            "positive_overlap_vs_100": {
+              "intersection": 74,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 74
+            }
+          }
+        },
+        "sheep": {
+          "a": {
+            "base_rate": 0.03642843001385864,
+            "candidate_count": 15153,
+            "candidate_key_sha256": "26c38d9224dcbf1f37227e79fb36e27857a0e07be87a471d3b5384ae195007da",
+            "candidate_overlap_vs_100": {
+              "intersection": 15153,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 15153
+            },
+            "positive_count": 552,
+            "positive_key_sha256": "55fb7e9d3de277b8ecef3ef56ab3e630ca53955528eb4e39c8e03078df76d073",
+            "positive_overlap_vs_100": {
+              "intersection": 552,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 552
+            }
+          },
+          "b1": {
+            "base_rate": 0.14925373134328357,
+            "candidate_count": 134,
+            "candidate_key_sha256": "8ba0aa940a16f1514ab8be3490453b8de8dd137107b81740260896edfff23113",
+            "candidate_overlap_vs_100": {
+              "intersection": 134,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 134
+            },
+            "positive_count": 20,
+            "positive_key_sha256": "6f6cb478883043e4bf0a7fa8128d0071f171d4d5c94b838e9fc991993a5a849e",
+            "positive_overlap_vs_100": {
+              "intersection": 20,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 20
+            }
+          },
+          "b2": {
+            "base_rate": 0.02301150575287644,
+            "candidate_count": 1999,
+            "candidate_key_sha256": "30f5087a48025d9b1c4aede1698152e0cd8a35214889757c97b2f2d93f0bb154",
+            "candidate_overlap_vs_100": {
+              "intersection": 1999,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 1999
+            },
+            "positive_count": 46,
+            "positive_key_sha256": "1c92fe01a14a45f830b903193c048655ac0685afcadfcf42978177535b4b8079",
+            "positive_overlap_vs_100": {
+              "intersection": 46,
+              "jaccard": 1.0,
+              "left_only": 0,
+              "reference_only": 0,
+              "retention_vs_reference": 1.0,
+              "union": 46
+            }
+          }
+        }
+      },
+      "summary": {
+        "a": {
+          "candidate_count": 317624,
+          "candidate_jaccard_vs_100": 1.0,
+          "candidate_retention_vs_100": 1.0,
+          "positive_count": 12273,
+          "positive_jaccard_vs_100": 1.0,
+          "positive_retention_vs_100": 1.0
+        },
+        "b1": {
+          "candidate_count": 1518,
+          "candidate_jaccard_vs_100": 1.0,
+          "candidate_retention_vs_100": 1.0,
+          "positive_count": 270,
+          "positive_jaccard_vs_100": 1.0,
+          "positive_retention_vs_100": 1.0
+        },
+        "b2": {
+          "candidate_count": 33433,
+          "candidate_jaccard_vs_100": 1.0,
+          "candidate_retention_vs_100": 1.0,
+          "positive_count": 556,
+          "positive_jaccard_vs_100": 1.0,
+          "positive_retention_vs_100": 1.0
+        }
+      }
+    },
+    "250": {
+      "chains": {
+        "aluminium": {
+          "a": {
+            "base_rate": 0.04362173698900016,
+            "candidate_count": 60910,
+            "candidate_key_sha256": "6a0647f15cdd6bf31006cc3b28085d5e9637fa6b3eaf6ded61ef2b625fa183ac",
+            "candidate_overlap_vs_100": {
+              "intersection": 58164,
+              "jaccard": 0.6927749589080254,
+              "left_only": 2746,
+              "reference_only": 23048,
+              "retention_vs_reference": 0.7161995764172783,
+              "union": 83958
+            },
+            "positive_count": 2657,
+            "positive_key_sha256": "2085cbdd4a0f5de27fe21d06fd4e65faaf1ea97fd5771d5956073cc860f57c0f",
+            "positive_overlap_vs_100": {
+              "intersection": 1790,
+              "jaccard": 0.4111162149747359,
+              "left_only": 867,
+              "reference_only": 1697,
+              "retention_vs_reference": 0.5133352451964439,
+              "union": 4354
+            }
+          },
+          "b1": {
+            "base_rate": 0.16863905325443787,
+            "candidate_count": 338,
+            "candidate_key_sha256": "30dae43fb200831cb563378613774c1b15177ae05828d5074f7ec67618719e81",
+            "candidate_overlap_vs_100": {
+              "intersection": 282,
+              "jaccard": 0.6811594202898551,
+              "left_only": 56,
+              "reference_only": 76,
+              "retention_vs_reference": 0.7877094972067039,
+              "union": 414
+            },
+            "positive_count": 57,
+            "positive_key_sha256": "c11e764446d98c093b6c64c88adf0dc6f42ba29442a242c8c16dea9ec47fad5f",
+            "positive_overlap_vs_100": {
+              "intersection": 38,
+              "jaccard": 0.4175824175824176,
+              "left_only": 19,
+              "reference_only": 34,
+              "retention_vs_reference": 0.5277777777777778,
+              "union": 91
+            }
+          },
+          "b2": {
+            "base_rate": 0.02386299831555306,
+            "candidate_count": 7124,
+            "candidate_key_sha256": "8be4877c3ce09c7d54ff9c45998a8f6291fc08aaf01d65d566f3110be6e6b2e2",
+            "candidate_overlap_vs_100": {
+              "intersection": 4784,
+              "jaccard": 0.3708239671343307,
+              "left_only": 2340,
+              "reference_only": 5777,
+              "retention_vs_reference": 0.452987406495597,
+              "union": 12901
+            },
+            "positive_count": 170,
+            "positive_key_sha256": "9360ed8c275a64d240e91bd4367cf30ab130c3460f0ff4e8cc265e8af3d73e5b",
+            "positive_overlap_vs_100": {
+              "intersection": 112,
+              "jaccard": 0.4686192468619247,
+              "left_only": 58,
+              "reference_only": 69,
+              "retention_vs_reference": 0.6187845303867403,
+              "union": 239
+            }
+          }
+        },
+        "cocoa": {
+          "a": {
+            "base_rate": 0.04980179777790185,
+            "candidate_count": 35822,
+            "candidate_key_sha256": "9777130fbc23c479383b591a5feb84bd887929807ac37cc72a306fc971b4848e",
+            "candidate_overlap_vs_100": {
+              "intersection": 34142,
+              "jaccard": 0.6128962768822029,
+              "left_only": 1680,
+              "reference_only": 19884,
+              "retention_vs_reference": 0.6319549846370266,
+              "union": 55706
+            },
+            "positive_count": 1784,
+            "positive_key_sha256": "9639a24946d88a1a2e74b9ed54ee67e50fa1f0f966d68fc89d4dc82298d0f3bc",
+            "positive_overlap_vs_100": {
+              "intersection": 1112,
+              "jaccard": 0.34491315136476425,
+              "left_only": 672,
+              "reference_only": 1440,
+              "retention_vs_reference": 0.43573667711598746,
+              "union": 3224
+            }
+          },
+          "b1": {
+            "base_rate": 0.15302491103202848,
+            "candidate_count": 281,
+            "candidate_key_sha256": "f7ea7e7a04571639afb5cf592f550b192445cd248d1279a25e6efff7d1c2e459",
+            "candidate_overlap_vs_100": {
+              "intersection": 234,
+              "jaccard": 0.7222222222222222,
+              "left_only": 47,
+              "reference_only": 43,
+              "retention_vs_reference": 0.8447653429602888,
+              "union": 324
+            },
+            "positive_count": 43,
+            "positive_key_sha256": "f85549fb0f9e712b8f657ab9b39aa4ee15d7f1e8d957f8d4c9255cf3f85d1cb9",
+            "positive_overlap_vs_100": {
+              "intersection": 17,
+              "jaccard": 0.25,
+              "left_only": 26,
+              "reference_only": 25,
+              "retention_vs_reference": 0.40476190476190477,
+              "union": 68
+            }
+          },
+          "b2": {
+            "base_rate": 0.014553429027113238,
+            "candidate_count": 5016,
+            "candidate_key_sha256": "ff74bfa0dccf1afb04d1060165c29d76719f92320cf04a4247cbc02e5355febe",
+            "candidate_overlap_vs_100": {
+              "intersection": 2072,
+              "jaccard": 0.2354813046937152,
+              "left_only": 2944,
+              "reference_only": 3783,
+              "retention_vs_reference": 0.3538855678906917,
+              "union": 8799
+            },
+            "positive_count": 73,
+            "positive_key_sha256": "b818e75fd1149d4ed3f1d6a6d66890eeaae52909a3e8615b82f67ad59379de2d",
+            "positive_overlap_vs_100": {
+              "intersection": 23,
+              "jaccard": 0.1885245901639344,
+              "left_only": 50,
+              "reference_only": 49,
+              "retention_vs_reference": 0.3194444444444444,
+              "union": 122
+            }
+          }
+        },
+        "cotton": {
+          "a": {
+            "base_rate": 0.028324116943553065,
+            "candidate_count": 84451,
+            "candidate_key_sha256": "065ab1b71723a89ddeca020d630ffafc998d28c36ae6b34b1e01045cf28c8a50",
+            "candidate_overlap_vs_100": {
+              "intersection": 80670,
+              "jaccard": 0.7214208422389354,
+              "left_only": 3781,
+              "reference_only": 27370,
+              "retention_vs_reference": 0.7466679007774898,
+              "union": 111821
+            },
+            "positive_count": 2392,
+            "positive_key_sha256": "58dcd232645bf0e59cdb7af08deeee8b29d4a2f56554555c041e00c415366bdc",
+            "positive_overlap_vs_100": {
+              "intersection": 1345,
+              "jaccard": 0.32558702493343017,
+              "left_only": 1047,
+              "reference_only": 1739,
+              "retention_vs_reference": 0.4361219195849546,
+              "union": 4131
+            }
+          },
+          "b1": {
+            "base_rate": 0.07958477508650519,
+            "candidate_count": 289,
+            "candidate_key_sha256": "02d38421ff4fe0411bc5dba7aa6183b00271d8575de495b2be8576384e568f9f",
+            "candidate_overlap_vs_100": {
+              "intersection": 225,
+              "jaccard": 0.5859375,
+              "left_only": 64,
+              "reference_only": 95,
+              "retention_vs_reference": 0.703125,
+              "union": 384
+            },
+            "positive_count": 23,
+            "positive_key_sha256": "146b5050a1ddd323f4e562e8203e75e426816547f016fdd9e4e82b529183de69",
+            "positive_overlap_vs_100": {
+              "intersection": 8,
+              "jaccard": 0.1568627450980392,
+              "left_only": 15,
+              "reference_only": 28,
+              "retention_vs_reference": 0.2222222222222222,
+              "union": 51
+            }
+          },
+          "b2": {
+            "base_rate": 0.008763693270735524,
+            "candidate_count": 3195,
+            "candidate_key_sha256": "b5569fde6a6c60c2483fe5a87439bc977d3941e1297cc6a0ef925214de3f6486",
+            "candidate_overlap_vs_100": {
+              "intersection": 887,
+              "jaccard": 0.11289296169021255,
+              "left_only": 2308,
+              "reference_only": 4662,
+              "retention_vs_reference": 0.1598486213732204,
+              "union": 7857
+            },
+            "positive_count": 28,
+            "positive_key_sha256": "dd41ee7ef6816572d75220938a21abb83b84fb2729ed6192116129922551a795",
+            "positive_overlap_vs_100": {
+              "intersection": 8,
+              "jaccard": 0.125,
+              "left_only": 20,
+              "reference_only": 36,
+              "retention_vs_reference": 0.18181818181818182,
+              "union": 64
+            }
+          }
+        },
+        "nickel": {
+          "a": {
+            "base_rate": 0.06402158934313275,
+            "candidate_count": 17416,
+            "candidate_key_sha256": "c0bfa1babf0623fffebee29b592ad9a5278d8ee86a20bff6fc7a0571c978a094",
+            "candidate_overlap_vs_100": {
+              "intersection": 16401,
+              "jaccard": 0.639166017147311,
+              "left_only": 1015,
+              "reference_only": 8244,
+              "retention_vs_reference": 0.6654899573950092,
+              "union": 25660
+            },
+            "positive_count": 1115,
+            "positive_key_sha256": "350918ec11674d88742a7e99bc9e039843edf7860060a5f67259a1a0ef509705",
+            "positive_overlap_vs_100": {
+              "intersection": 781,
+              "jaccard": 0.41148577449947316,
+              "left_only": 334,
+              "reference_only": 783,
+              "retention_vs_reference": 0.4993606138107417,
+              "union": 1898
+            }
+          },
+          "b1": {
+            "base_rate": 0.17664670658682635,
+            "candidate_count": 334,
+            "candidate_key_sha256": "733dac3c1bb1df3a566551e354b80f356f47e102b42b7910f2d6c7e6072dcb28",
+            "candidate_overlap_vs_100": {
+              "intersection": 293,
+              "jaccard": 0.7630208333333334,
+              "left_only": 41,
+              "reference_only": 50,
+              "retention_vs_reference": 0.8542274052478134,
+              "union": 384
+            },
+            "positive_count": 59,
+            "positive_key_sha256": "6f08bf629a58f17123e7f9f9f30ed59b39f8bb9c7af66816dec3089f6834f06c",
+            "positive_overlap_vs_100": {
+              "intersection": 40,
+              "jaccard": 0.47058823529411764,
+              "left_only": 19,
+              "reference_only": 26,
+              "retention_vs_reference": 0.6060606060606061,
+              "union": 85
+            }
+          },
+          "b2": {
+            "base_rate": 0.031588183679438435,
+            "candidate_count": 3419,
+            "candidate_key_sha256": "d1dd6f35a78766dfe60789b4e9c1ed57688f4455df9f1e25c30c17828fbb818a",
+            "candidate_overlap_vs_100": {
+              "intersection": 2326,
+              "jaccard": 0.40200483926719666,
+              "left_only": 1093,
+              "reference_only": 2367,
+              "retention_vs_reference": 0.49563179203068397,
+              "union": 5786
+            },
+            "positive_count": 108,
+            "positive_key_sha256": "837c4893e8c4c0cdd654e7e8c2494cc5d12565ad40bc6f667ab48c71a5def9df",
+            "positive_overlap_vs_100": {
+              "intersection": 73,
+              "jaccard": 0.41954022988505746,
+              "left_only": 35,
+              "reference_only": 66,
+              "retention_vs_reference": 0.5251798561151079,
+              "union": 174
+            }
+          }
+        },
+        "oilseed-soy": {
+          "a": {
+            "base_rate": 0.0292646938273629,
+            "candidate_count": 24398,
+            "candidate_key_sha256": "336187004e0d14ab02db6b1e83c3959db939f7d567c2d1cdd48fae6394d3ce01",
+            "candidate_overlap_vs_100": {
+              "intersection": 23956,
+              "jaccard": 0.6846527579308374,
+              "left_only": 442,
+              "reference_only": 10592,
+              "retention_vs_reference": 0.693412064374204,
+              "union": 34990
+            },
+            "positive_count": 714,
+            "positive_key_sha256": "4677a14e17b873c72a4abe74eac2397f1af5418263be01035669353389632f10",
+            "positive_overlap_vs_100": {
+              "intersection": 588,
+              "jaccard": 0.506896551724138,
+              "left_only": 126,
+              "reference_only": 446,
+              "retention_vs_reference": 0.5686653771760155,
+              "union": 1160
+            }
+          },
+          "b1": {
+            "base_rate": 0.4146341463414634,
+            "candidate_count": 82,
+            "candidate_key_sha256": "f834cbd92463d6a025e06d13f928daeff975fa12545ef69457631f033047f351",
+            "candidate_overlap_vs_100": {
+              "intersection": 56,
+              "jaccard": 0.5,
+              "left_only": 26,
+              "reference_only": 30,
+              "retention_vs_reference": 0.6511627906976745,
+              "union": 112
+            },
+            "positive_count": 34,
+            "positive_key_sha256": "5f5e1b8b98ce31ec5695a0d12c5f995ec05f8d57da88c5dc573be3686026fffd",
+            "positive_overlap_vs_100": {
+              "intersection": 17,
+              "jaccard": 0.3333333333333333,
+              "left_only": 17,
+              "reference_only": 17,
+              "retention_vs_reference": 0.5,
+              "union": 51
+            }
+          },
+          "b2": {
+            "base_rate": 0.0187847866419295,
+            "candidate_count": 4312,
+            "candidate_key_sha256": "b43ed6126f9cb50385856021aa1d78698534c3c8b2d658b8a1c8a331df0fb65c",
+            "candidate_overlap_vs_100": {
+              "intersection": 2133,
+              "jaccard": 0.30668583752695905,
+              "left_only": 2179,
+              "reference_only": 2643,
+              "retention_vs_reference": 0.44660804020100503,
+              "union": 6955
+            },
+            "positive_count": 81,
+            "positive_key_sha256": "42e76bc2c9d3025a4e10540b704ab421c9ef808bcfdff170b8cad8569302ab6e",
+            "positive_overlap_vs_100": {
+              "intersection": 35,
+              "jaccard": 0.2916666666666667,
+              "left_only": 46,
+              "reference_only": 39,
+              "retention_vs_reference": 0.47297297297297297,
+              "union": 120
+            }
+          }
+        },
+        "sheep": {
+          "a": {
+            "base_rate": 0.040655666990186565,
+            "candidate_count": 9273,
+            "candidate_key_sha256": "a0a51f8e1654ea1e1e65527738de5510381a9a615067b75b8b2a67061ade31b4",
+            "candidate_overlap_vs_100": {
+              "intersection": 8793,
+              "jaccard": 0.5624640184225677,
+              "left_only": 480,
+              "reference_only": 6360,
+              "retention_vs_reference": 0.58028113244902,
+              "union": 15633
+            },
+            "positive_count": 377,
+            "positive_key_sha256": "34683b0429bc54c2347d1bcce8eb1068018c43943b4503f56a201ec652ec9c6f",
+            "positive_overlap_vs_100": {
+              "intersection": 270,
+              "jaccard": 0.40971168437025796,
+              "left_only": 107,
+              "reference_only": 282,
+              "retention_vs_reference": 0.4891304347826087,
+              "union": 659
+            }
+          },
+          "b1": {
+            "base_rate": 0.125,
+            "candidate_count": 136,
+            "candidate_key_sha256": "8a4c92153127b32bda9fdcbce576bb77208b00f0f804b4048b25e9042fb911f9",
+            "candidate_overlap_vs_100": {
+              "intersection": 108,
+              "jaccard": 0.6666666666666666,
+              "left_only": 28,
+              "reference_only": 26,
+              "retention_vs_reference": 0.8059701492537313,
+              "union": 162
+            },
+            "positive_count": 17,
+            "positive_key_sha256": "65d600f99499bd7f27565584e7d1419654efcbbc81982288cf2739dfadee3d47",
+            "positive_overlap_vs_100": {
+              "intersection": 9,
+              "jaccard": 0.32142857142857145,
+              "left_only": 8,
+              "reference_only": 11,
+              "retention_vs_reference": 0.45,
+              "union": 28
+            }
+          },
+          "b2": {
+            "base_rate": 0.022191400832177532,
+            "candidate_count": 1442,
+            "candidate_key_sha256": "25c429a906c5cff61421f9fe9a9945f10cd81c243cf49ef6b13a15a599c5fcce",
+            "candidate_overlap_vs_100": {
+              "intersection": 801,
+              "jaccard": 0.3034090909090909,
+              "left_only": 641,
+              "reference_only": 1198,
+              "retention_vs_reference": 0.40070035017508754,
+              "union": 2640
+            },
+            "positive_count": 32,
+            "positive_key_sha256": "0c3038ad9954c1defb93fab8860bfc51dffcdc7535540d340003a591158b1e3d",
+            "positive_overlap_vs_100": {
+              "intersection": 17,
+              "jaccard": 0.2786885245901639,
+              "left_only": 15,
+              "reference_only": 29,
+              "retention_vs_reference": 0.3695652173913043,
+              "union": 61
+            }
+          }
+        }
+      },
+      "summary": {
+        "a": {
+          "candidate_count": 232270,
+          "candidate_jaccard_vs_100": 0.6776927582924508,
+          "candidate_retention_vs_100": 0.6993363221922777,
+          "positive_count": 9039,
+          "positive_jaccard_vs_100": 0.38156359393232203,
+          "positive_retention_vs_100": 0.4795893424590565
+        },
+        "b1": {
+          "candidate_count": 1460,
+          "candidate_jaccard_vs_100": 0.6730337078651686,
+          "candidate_retention_vs_100": 0.7891963109354414,
+          "positive_count": 233,
+          "positive_jaccard_vs_100": 0.3449197860962567,
+          "positive_retention_vs_100": 0.4777777777777778
+        },
+        "b2": {
+          "candidate_count": 24508,
+          "candidate_jaccard_vs_100": 0.2893542213716676,
+          "candidate_retention_vs_100": 0.3889271079472378,
+          "positive_count": 492,
+          "positive_jaccard_vs_100": 0.3435897435897436,
+          "positive_retention_vs_100": 0.48201438848920863
+        }
+      }
+    },
+    "50": {
+      "chains": {
+        "aluminium": {
+          "a": {
+            "base_rate": 0.04240293365033951,
+            "candidate_count": 99262,
+            "candidate_key_sha256": "87a8293bfbf7c671483a0bef72f92767eb315f151e64276d70a7ccd13f1b8da1",
+            "candidate_overlap_vs_100": {
+              "intersection": 78774,
+              "jaccard": 0.7745722713864307,
+              "left_only": 20488,
+              "reference_only": 2438,
+              "retention_vs_reference": 0.9699798059400089,
+              "union": 101700
+            },
+            "positive_count": 4209,
+            "positive_key_sha256": "345d019581305ebc09b9bd6124080b10f923bdb29c873ec760bbaa3288a4ce1c",
+            "positive_overlap_vs_100": {
+              "intersection": 2721,
+              "jaccard": 0.5469346733668342,
+              "left_only": 1488,
+              "reference_only": 766,
+              "retention_vs_reference": 0.7803269285919128,
+              "union": 4975
+            }
+          },
+          "b1": {
+            "base_rate": 0.22375690607734808,
+            "candidate_count": 362,
+            "candidate_key_sha256": "b796855d87adfe2f3f9c46b40e388443b8523716e6a18cf73b54f324f6257d37",
+            "candidate_overlap_vs_100": {
+              "intersection": 304,
+              "jaccard": 0.7307692307692307,
+              "left_only": 58,
+              "reference_only": 54,
+              "retention_vs_reference": 0.8491620111731844,
+              "union": 416
+            },
+            "positive_count": 81,
+            "positive_key_sha256": "3385a21db3354bb88a5c5e4e4ba3ddc84f9ad4394102365614480f167ae1127a",
+            "positive_overlap_vs_100": {
+              "intersection": 47,
+              "jaccard": 0.44339622641509435,
+              "left_only": 34,
+              "reference_only": 25,
+              "retention_vs_reference": 0.6527777777777778,
+              "union": 106
+            }
+          },
+          "b2": {
+            "base_rate": 0.015461114132546033,
+            "candidate_count": 12871,
+            "candidate_key_sha256": "ace7f01b04713e372e1235d6869ad7f4c60d7f39dff947d8318b53183a289681",
+            "candidate_overlap_vs_100": {
+              "intersection": 6809,
+              "jaccard": 0.4096131865487577,
+              "left_only": 6062,
+              "reference_only": 3752,
+              "retention_vs_reference": 0.6447306126313797,
+              "union": 16623
+            },
+            "positive_count": 199,
+            "positive_key_sha256": "3ba49f62515b77ad51bf6c91b16a7a7d850156c4eeac830c2ae76b15ff0a54f8",
+            "positive_overlap_vs_100": {
+              "intersection": 127,
+              "jaccard": 0.5019762845849802,
+              "left_only": 72,
+              "reference_only": 54,
+              "retention_vs_reference": 0.7016574585635359,
+              "union": 253
+            }
+          }
+        },
+        "cocoa": {
+          "a": {
+            "base_rate": 0.04532427120864723,
+            "candidate_count": 73272,
+            "candidate_key_sha256": "244ed67c0734715b11c5285b9980f1d181232d9e39a77691b35d26902ffc1ce6",
+            "candidate_overlap_vs_100": {
+              "intersection": 52455,
+              "jaccard": 0.700867148564328,
+              "left_only": 20817,
+              "reference_only": 1571,
+              "retention_vs_reference": 0.9709214082108615,
+              "union": 74843
+            },
+            "positive_count": 3321,
+            "positive_key_sha256": "a935d4917a76a4acfb06dcc891f9490849b74b1d9f449fbaa8d5e198baab9df3",
+            "positive_overlap_vs_100": {
+              "intersection": 1865,
+              "jaccard": 0.4653193612774451,
+              "left_only": 1456,
+              "reference_only": 687,
+              "retention_vs_reference": 0.7307993730407524,
+              "union": 4008
+            }
+          },
+          "b1": {
+            "base_rate": 0.1519434628975265,
+            "candidate_count": 283,
+            "candidate_key_sha256": "51317351a0d749dcc24e683b994cd2276a7594a108dd9f7b018bc72d3e6dab67",
+            "candidate_overlap_vs_100": {
+              "intersection": 234,
+              "jaccard": 0.7177914110429447,
+              "left_only": 49,
+              "reference_only": 43,
+              "retention_vs_reference": 0.8447653429602888,
+              "union": 326
+            },
+            "positive_count": 43,
+            "positive_key_sha256": "69e81f2d6cdd5ae93aa08fdd84b005c3fae626d42329c72451d1a1f41affdae9",
+            "positive_overlap_vs_100": {
+              "intersection": 21,
+              "jaccard": 0.328125,
+              "left_only": 22,
+              "reference_only": 21,
+              "retention_vs_reference": 0.5,
+              "union": 64
+            }
+          },
+          "b2": {
+            "base_rate": 0.012173054778746504,
+            "candidate_count": 6079,
+            "candidate_key_sha256": "1c7722ae6693cb428e5ea6606854a05a9d88744683d0e8cb9a0eb1c9b7bb5c2d",
+            "candidate_overlap_vs_100": {
+              "intersection": 2734,
+              "jaccard": 0.2971739130434783,
+              "left_only": 3345,
+              "reference_only": 3121,
+              "retention_vs_reference": 0.46695132365499575,
+              "union": 9200
+            },
+            "positive_count": 74,
+            "positive_key_sha256": "04fcae396117cb18c359d503477a87663abdefebc8053b5ad430632cc247a7d4",
+            "positive_overlap_vs_100": {
+              "intersection": 29,
+              "jaccard": 0.24786324786324787,
+              "left_only": 45,
+              "reference_only": 43,
+              "retention_vs_reference": 0.4027777777777778,
+              "union": 117
+            }
+          }
+        },
+        "cotton": {
+          "a": {
+            "base_rate": 0.029959114058228594,
+            "candidate_count": 125471,
+            "candidate_key_sha256": "0246b41367f43771f8fddc87208ead36109d279db5c3fc390ce2fb0d604f8b16",
+            "candidate_overlap_vs_100": {
+              "intersection": 104591,
+              "jaccard": 0.8112860688799255,
+              "left_only": 20880,
+              "reference_only": 3449,
+              "retention_vs_reference": 0.9680766382821178,
+              "union": 128920
+            },
+            "positive_count": 3759,
+            "positive_key_sha256": "2ea5a60cbde1b4710fe7372f90e6c04e025b2065b630125796a9c3868323d0e1",
+            "positive_overlap_vs_100": {
+              "intersection": 2094,
+              "jaccard": 0.4409349336702464,
+              "left_only": 1665,
+              "reference_only": 990,
+              "retention_vs_reference": 0.6789883268482491,
+              "union": 4749
+            }
+          },
+          "b1": {
+            "base_rate": 0.16129032258064516,
+            "candidate_count": 341,
+            "candidate_key_sha256": "9b4e8b95aeeed25a32d663a421f20e124473cf6a582b39e16eb094f7de8c1cfa",
+            "candidate_overlap_vs_100": {
+              "intersection": 286,
+              "jaccard": 0.7626666666666667,
+              "left_only": 55,
+              "reference_only": 34,
+              "retention_vs_reference": 0.89375,
+              "union": 375
+            },
+            "positive_count": 55,
+            "positive_key_sha256": "75d1787cd70037043e0eeb2a48ec2794a824ddda560c444496383ad1bbf3fe89",
+            "positive_overlap_vs_100": {
+              "intersection": 24,
+              "jaccard": 0.3582089552238806,
+              "left_only": 31,
+              "reference_only": 12,
+              "retention_vs_reference": 0.6666666666666666,
+              "union": 67
+            }
+          },
+          "b2": {
+            "base_rate": 0.007570977917981073,
+            "candidate_count": 9510,
+            "candidate_key_sha256": "d064432e7f1885617b299fdc4d6e95436b2d2ea8b89353aa29ced06102963b56",
+            "candidate_overlap_vs_100": {
+              "intersection": 3551,
+              "jaccard": 0.30856795272853665,
+              "left_only": 5959,
+              "reference_only": 1998,
+              "retention_vs_reference": 0.6399351234456658,
+              "union": 11508
+            },
+            "positive_count": 72,
+            "positive_key_sha256": "113d45a4a6b21fca253b5add278829811074d67c996cf895e1a705b370a5cd34",
+            "positive_overlap_vs_100": {
+              "intersection": 28,
+              "jaccard": 0.3181818181818182,
+              "left_only": 44,
+              "reference_only": 16,
+              "retention_vs_reference": 0.6363636363636364,
+              "union": 88
+            }
+          }
+        },
+        "nickel": {
+          "a": {
+            "base_rate": 0.06048780487804878,
+            "candidate_count": 32800,
+            "candidate_key_sha256": "c3b8c998416c146e415850f49c936cf2760db89280478402d3a1762805744798",
+            "candidate_overlap_vs_100": {
+              "intersection": 23682,
+              "jaccard": 0.7014187127921097,
+              "left_only": 9118,
+              "reference_only": 963,
+              "retention_vs_reference": 0.9609251369446136,
+              "union": 33763
+            },
+            "positive_count": 1984,
+            "positive_key_sha256": "89749223d448607fda08be5d620007b57753f73195af8838466d59c820faf8c2",
+            "positive_overlap_vs_100": {
+              "intersection": 1225,
+              "jaccard": 0.5273353422298752,
+              "left_only": 759,
+              "reference_only": 339,
+              "retention_vs_reference": 0.7832480818414322,
+              "union": 2323
+            }
+          },
+          "b1": {
+            "base_rate": 0.17714285714285713,
+            "candidate_count": 350,
+            "candidate_key_sha256": "6d2ff412588541033d00b6f2f58a0ac17b80672e61e4c81ca78ac570b63a9ea2",
+            "candidate_overlap_vs_100": {
+              "intersection": 300,
+              "jaccard": 0.7633587786259542,
+              "left_only": 50,
+              "reference_only": 43,
+              "retention_vs_reference": 0.8746355685131195,
+              "union": 393
+            },
+            "positive_count": 62,
+            "positive_key_sha256": "888be395e6a1a3a90224a5feaef5abed2c63932802cdebd8807c84ce35ff8ac5",
+            "positive_overlap_vs_100": {
+              "intersection": 47,
+              "jaccard": 0.5802469135802469,
+              "left_only": 15,
+              "reference_only": 19,
+              "retention_vs_reference": 0.7121212121212122,
+              "union": 81
+            }
+          },
+          "b2": {
+            "base_rate": 0.026621297037630103,
+            "candidate_count": 4996,
+            "candidate_key_sha256": "5772132cdfd23f4b0a838533ae2bfa9a43bc528751a3b87437d2ba59b98880cf",
+            "candidate_overlap_vs_100": {
+              "intersection": 3216,
+              "jaccard": 0.49683299860960917,
+              "left_only": 1780,
+              "reference_only": 1477,
+              "retention_vs_reference": 0.6852759428936714,
+              "union": 6473
+            },
+            "positive_count": 133,
+            "positive_key_sha256": "e69717653aea3f2a2b9dd849c9779785be1e5ba4fceb464cc3df1236f91b9374",
+            "positive_overlap_vs_100": {
+              "intersection": 90,
+              "jaccard": 0.4945054945054945,
+              "left_only": 43,
+              "reference_only": 49,
+              "retention_vs_reference": 0.6474820143884892,
+              "union": 182
+            }
+          }
+        },
+        "oilseed-soy": {
+          "a": {
+            "base_rate": 0.03020597220853454,
+            "candidate_count": 40588,
+            "candidate_key_sha256": "f4af7d14d638fa56b13f420dabf25d663423e355cf9c76c4f6f06217ee6ad38a",
+            "candidate_overlap_vs_100": {
+              "intersection": 34104,
+              "jaccard": 0.831156170793527,
+              "left_only": 6484,
+              "reference_only": 444,
+              "retention_vs_reference": 0.9871483153872872,
+              "union": 41032
+            },
+            "positive_count": 1226,
+            "positive_key_sha256": "a1b8ff9b5990325b5529767d28975a8f6645a60264ed311f0639f365f11515a2",
+            "positive_overlap_vs_100": {
+              "intersection": 913,
+              "jaccard": 0.6778025241276912,
+              "left_only": 313,
+              "reference_only": 121,
+              "retention_vs_reference": 0.8829787234042553,
+              "union": 1347
+            }
+          },
+          "b1": {
+            "base_rate": 0.34444444444444444,
+            "candidate_count": 90,
+            "candidate_key_sha256": "fdba7f03c442856be19321059beff8b85166ba241adf76b9176bc6a7d81edefc",
+            "candidate_overlap_vs_100": {
+              "intersection": 74,
+              "jaccard": 0.7254901960784313,
+              "left_only": 16,
+              "reference_only": 12,
+              "retention_vs_reference": 0.8604651162790697,
+              "union": 102
+            },
+            "positive_count": 31,
+            "positive_key_sha256": "64965ef596725497b5b889b2c92c2fd07595b2a0a54d272bfe2e4989bcc62a8b",
+            "positive_overlap_vs_100": {
+              "intersection": 27,
+              "jaccard": 0.7105263157894737,
+              "left_only": 4,
+              "reference_only": 7,
+              "retention_vs_reference": 0.7941176470588235,
+              "union": 38
+            }
+          },
+          "b2": {
+            "base_rate": 0.014508214209515681,
+            "candidate_count": 4687,
+            "candidate_key_sha256": "c8cdbc5848a584c6aad9c4a0202e70be3f5323189e0a5fde62fb5daf6b8fbd70",
+            "candidate_overlap_vs_100": {
+              "intersection": 3835,
+              "jaccard": 0.6814143567874911,
+              "left_only": 852,
+              "reference_only": 941,
+              "retention_vs_reference": 0.8029731993299832,
+              "union": 5628
+            },
+            "positive_count": 68,
+            "positive_key_sha256": "d5ec69160cb60a43f06f2b32d0127f2008ae0100e5425006b6dc4cb8712c408f",
+            "positive_overlap_vs_100": {
+              "intersection": 52,
+              "jaccard": 0.5777777777777777,
+              "left_only": 16,
+              "reference_only": 22,
+              "retention_vs_reference": 0.7027027027027027,
+              "union": 90
+            }
+          }
+        },
+        "sheep": {
+          "a": {
+            "base_rate": 0.03704085312451703,
+            "candidate_count": 19411,
+            "candidate_key_sha256": "9666c701ba41c846c1897c8e0dba3085e3206f3d5c3575b76e9ae6246a004026",
+            "candidate_overlap_vs_100": {
+              "intersection": 14679,
+              "jaccard": 0.7381946190595926,
+              "left_only": 4732,
+              "reference_only": 474,
+              "retention_vs_reference": 0.9687190655315779,
+              "union": 19885
+            },
+            "positive_count": 719,
+            "positive_key_sha256": "dfc4d7dd0e065eeaf50e565141d97ce797bb1fef048a3d0c736a7120e97d4986",
+            "positive_overlap_vs_100": {
+              "intersection": 410,
+              "jaccard": 0.47619047619047616,
+              "left_only": 309,
+              "reference_only": 142,
+              "retention_vs_reference": 0.7427536231884058,
+              "union": 861
+            }
+          },
+          "b1": {
+            "base_rate": 0.20149253731343283,
+            "candidate_count": 134,
+            "candidate_key_sha256": "512e5cc94342c8543918fc777885ba677c91f28a8ed206c4600abe5f7e671ea2",
+            "candidate_overlap_vs_100": {
+              "intersection": 115,
+              "jaccard": 0.7516339869281046,
+              "left_only": 19,
+              "reference_only": 19,
+              "retention_vs_reference": 0.8582089552238806,
+              "union": 153
+            },
+            "positive_count": 27,
+            "positive_key_sha256": "5e9ad6632f9cb6cf912a70f6d5ab01cac562d1f175f561d41ec5ca403343e75c",
+            "positive_overlap_vs_100": {
+              "intersection": 13,
+              "jaccard": 0.38235294117647056,
+              "left_only": 14,
+              "reference_only": 7,
+              "retention_vs_reference": 0.65,
+              "union": 34
+            }
+          },
+          "b2": {
+            "base_rate": 0.01981132075471698,
+            "candidate_count": 3180,
+            "candidate_key_sha256": "dc37063567d980c9cb2c1096c128af1b882a80c4d7f8024c7e65fff123dac6c7",
+            "candidate_overlap_vs_100": {
+              "intersection": 1403,
+              "jaccard": 0.3715572033898305,
+              "left_only": 1777,
+              "reference_only": 596,
+              "retention_vs_reference": 0.7018509254627313,
+              "union": 3776
+            },
+            "positive_count": 63,
+            "positive_key_sha256": "313cb8956dd1f2a060420e6add67d0b196df85b8143f635fe33970e3192e0f41",
+            "positive_overlap_vs_100": {
+              "intersection": 32,
+              "jaccard": 0.4155844155844156,
+              "left_only": 31,
+              "reference_only": 14,
+              "retention_vs_reference": 0.6956521739130435,
+              "union": 77
+            }
+          }
+        }
+      },
+      "summary": {
+        "a": {
+          "candidate_count": 390804,
+          "candidate_jaccard_vs_100": 0.7704370687479226,
+          "candidate_retention_vs_100": 0.9705973100269502,
+          "positive_count": 15218,
+          "positive_jaccard_vs_100": 0.5052839073536659,
+          "positive_retention_vs_100": 0.7518944023466145
+        },
+        "b1": {
+          "candidate_count": 1560,
+          "candidate_jaccard_vs_100": 0.7439093484419264,
+          "candidate_retention_vs_100": 0.8649538866930171,
+          "positive_count": 299,
+          "positive_jaccard_vs_100": 0.45897435897435895,
+          "positive_retention_vs_100": 0.662962962962963
+        },
+        "b2": {
+          "candidate_count": 41323,
+          "candidate_jaccard_vs_100": 0.4049766952337994,
+          "candidate_retention_vs_100": 0.6445129064098346,
+          "positive_count": 609,
+          "positive_jaccard_vs_100": 0.4436183395291202,
+          "positive_retention_vs_100": 0.6438848920863309
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "upgrade-bench-v2/gpu-run-config/1",
+  "run_id": "v2.1-gpu-rolling-oa-full-20260716-r1",
+  "benchmark_version": "2.1-dev",
+  "execution_status": "FORMAL_RUN_AUTHORIZED",
+  "formal_authorization_value": "FORMAL_RUN_AUTHORIZED",
+  "supersedes_invalid_pilot": "v2-gpu-rolling-strict-registry-20260712-r1",
+  "data_snapshot": "oa-full-dictionary-hs92-v202401b-20260716-r1",
+  "authorization_basis": [
+    "registry audit v3 PASS: 5022 automated regex scans, 610 decision records, 588 unique HS6, 283 active HS6",
+    "lexicon negative control PASS_TESTED_VARIANTS_ONLY; finite empirical support, not completeness proof",
+    "v2.1 validator PASS required: 2 snapshots x 6 chains x 4 released views",
+    "independent raw-label audit PASS required: 24/24 A/B instances, zero mismatches",
+    "B1 candidate-universe audit PASS required: exact lane and entry reconciliation"
+  ],
+  "protocol": "strict_rolling_fold2_to_main",
+  "chains": ["sheep", "cotton", "aluminium", "nickel", "cocoa", "oilseed-soy"],
+  "tracks": ["a", "b1", "b2"],
+  "families": ["kge", "nbfnet"],
+  "expected_selection_count": 36,
+  "selection_orchestration_job_count": 12,
+  "selection_fold": "fold2",
+  "target_fold": "main",
+  "aggregation": "calendar_mean",
+  "selection": {
+    "split_unit": "exporter_stage",
+    "split_salt": "v2-history-0",
+    "primary_metric_by_task": {
+      "a": "lane_average_precision",
+      "b1": "entry_average_precision_max_lane_score",
+      "b2": "positive_entry_macro_recall_at_3"
+    },
+    "selection_seed": 0,
+    "evaluation_seeds": [0, 1, 2, 3, 4]
+  },
+  "kge": {
+    "models": ["TransE", "RotatE", "DistMult", "ComplEx", "RGCN", "CompGCN"],
+    "embedding_dims": [64, 128],
+    "learning_rates": [0.005, 0.01],
+    "epochs": 150,
+    "batch_size": 2048
+  },
+  "nbfnet": {
+    "model": "NBFNet",
+    "layers": [4, 6],
+    "learning_rates": [0.001, 0.005],
+    "epochs": 25,
+    "batch_size": 64,
+    "negatives": 32
+  },
+  "phase_order": [
+    "submit 12 chain-family fold2 jobs; each shared score grid writes A/B1/B2 selections",
+    "verify all selection jobs completed",
+    "run one freeze command to create frozen_manifest.json",
+    "submit 12 chain-family main jobs; each unique selected config is trained once and mapped to A/B1/B2",
+    "never rerun freeze after a main evaluation has started"
+  ],
+  "freeze_command": "python src/v2_gpu_rolling.py freeze --output-root results_v2/gpu_rolling --chains sheep,cotton,aluminium,nickel,cocoa,oilseed-soy --tracks a,b1,b2 --families kge,nbfnet",
+  "dry_run_examples": {
+    "select_chain": "python src/v2_gpu_rolling.py select-chain --chain sheep --family kge --dry-run",
+    "evaluate_chain": "python src/v2_gpu_rolling.py evaluate-chain --chain sheep --family kge --manifest results_v2/gpu_rolling/frozen_manifest.json --dry-run"
+  }
+}

@@ -1,0 +1,894 @@
+{
+  "schema_version": "upgrade-bench/registry-lexicon-negative-control/1",
+  "evidence_id": "observable-attribution-lexicon-negative-control-v1",
+  "status": "PASS_TESTED_VARIANTS_ONLY",
+  "frozen_date": "2026-07-16",
+  "generated_from": {
+    "recall_rule": "chains/evidence/registry_candidate_recall_rule.json",
+    "recall_rule_sha256": "a0c98a68096547e95d88dbdd630fabf68949eebaf7f9bd040d212905b0f430a4",
+    "generator": "tools/build_registry_lexicon_negative_control.py"
+  },
+  "source": {
+    "dataset": "CEPII BACI V202401b",
+    "classification": "HS 1988/1992 (HS92)",
+    "member": "product_codes_HS92_V202401b.csv",
+    "member_sha256": "51bcc9e8946b5efb0a7c7e9756c42e72c35861f32a7a7059e2d768a0f2f61166",
+    "source_rows_automatically_regex_scanned": 5022,
+    "numeric_hs6_rows": 5021,
+    "legacy_non_wco_rows": [
+      "9999AA"
+    ],
+    "manual_row_adjudications_performed_by_this_artifact": 0
+  },
+  "execution_scope": {
+    "operation": "Every one of the 5,022 source descriptions receives every applicable frozen challenge regex and the chain's main recall regex.",
+    "main_pipeline_boundary": "The main recall pipeline is a 5,022-row automated regex scan yielding 576 observable chain-HS6 candidates for row-level ledger adjudication; it is not 5,022 manual reviews.",
+    "ledger_boundary": "This artifact performs no include, exclude, out_of_stage, or stage-fit adjudication. The generated full ledger must separately reproduce all 576 observable-candidate decisions and 34 legacy-only carry-over decisions.",
+    "challenge_set_provenance": "This finite targeted challenge set is frozen in the generator and retained with zero-hit probes. It is a deterministic diagnostic, not an independent or exhaustive vocabulary review.",
+    "external_knowledge_nonuse": "Lexical alternatives are probes only. They never add a candidate, repair missing observable attribution, or supply an include or stage decision."
+  },
+  "claim_boundary": {
+    "supported": "For the frozen tested variants, every description hit in the full BACI dictionary is also recalled by that chain's main lexicon; any counterexample is emitted verbatim by code and official description.",
+    "not_supported": "This does not prove lexicon completeness, does not test every possible synonym or wording, does not constitute manual review of 5,022 rows, and does not validate registry decisions or stage membership.",
+    "zero_hit_interpretation": "A zero-hit probe establishes only that the tested expression is absent from this pinned dictionary member."
+  },
+  "challenge_set": {
+    "case_insensitive": true,
+    "challenge_unit": "chain_id,challenge_id",
+    "challenge_definition_sha256": "6258a0c7ce8006a23751fcdcdb20b1ed3bcd3f7bd915f4eba7be4d816e16f48f",
+    "definitions": [
+      {
+        "chain_id": "sheep",
+        "id": "ovine_word",
+        "class": "lexical_alternative",
+        "regex": "\\bovine\\b",
+        "note": "Tests the standalone adjective without matching the substring in 'bovine'."
+      },
+      {
+        "chain_id": "sheep",
+        "id": "mutton_word",
+        "class": "product_term",
+        "regex": "\\bmutton\\b",
+        "note": "Tests an alternative sheep-meat term."
+      },
+      {
+        "chain_id": "sheep",
+        "id": "sheep_inflection",
+        "class": "morphology",
+        "regex": "\\bsheeps?\\b",
+        "note": "Tests singular and plural morphology of sheep."
+      },
+      {
+        "chain_id": "sheep",
+        "id": "lamb_inflection",
+        "class": "morphology",
+        "regex": "\\blambs?\\b",
+        "note": "Tests singular and plural morphology of lamb."
+      },
+      {
+        "chain_id": "sheep",
+        "id": "wool_inflection",
+        "class": "morphology",
+        "regex": "\\bwools?\\b",
+        "note": "Tests singular and plural morphology of wool."
+      },
+      {
+        "chain_id": "sheep",
+        "id": "woollen_woolen",
+        "class": "spelling_derivative",
+        "regex": "\\bwool(?:len|en)\\b",
+        "note": "Tests British and US adjectival spellings."
+      },
+      {
+        "chain_id": "sheep",
+        "id": "sheepskin_lambskin_compounds",
+        "class": "compound_spelling",
+        "regex": "\\b(?:sheep|lamb)(?:[ -]?skins?)\\b",
+        "note": "Tests closed, spaced, and hyphenated skin compounds."
+      },
+      {
+        "chain_id": "sheep",
+        "id": "fleece_word",
+        "class": "associated_product_term",
+        "regex": "\\bfleeces?\\b",
+        "note": "Tests a wool-associated product term as a possible lexical surrogate."
+      },
+      {
+        "chain_id": "sheep",
+        "id": "lanolin_word",
+        "class": "associated_product_term",
+        "regex": "\\blanolin\\b",
+        "note": "Tests a wool-grease product term as a possible lexical surrogate."
+      },
+      {
+        "chain_id": "sheep",
+        "id": "ewe_ram_inflections",
+        "class": "species_term",
+        "regex": "\\b(?:ewes?|rams?)\\b",
+        "note": "Tests sex-specific sheep terms and their plurals."
+      },
+      {
+        "chain_id": "cotton",
+        "id": "cotton_inflection",
+        "class": "morphology",
+        "regex": "\\bcottons?\\b",
+        "note": "Tests singular and plural morphology of cotton."
+      },
+      {
+        "chain_id": "cotton",
+        "id": "cottonseed_spacing",
+        "class": "compound_spelling",
+        "regex": "\\bcotton(?:[ -]?seeds?)\\b",
+        "note": "Tests closed, spaced, and hyphenated cottonseed forms."
+      },
+      {
+        "chain_id": "cotton",
+        "id": "cotton_linter_spacing",
+        "class": "compound_spelling",
+        "regex": "\\bcotton[ -]?linters?\\b",
+        "note": "Tests closed, spaced, and hyphenated cotton-linter forms."
+      },
+      {
+        "chain_id": "cotton",
+        "id": "gossypium_word",
+        "class": "botanical_term",
+        "regex": "\\bgossypium\\b",
+        "note": "Tests the botanical genus as a possible lexical surrogate."
+      },
+      {
+        "chain_id": "cotton",
+        "id": "denim_word",
+        "class": "associated_product_term",
+        "regex": "\\bdenim\\b",
+        "note": "Tests a fabric term that could otherwise occur without the material token."
+      },
+      {
+        "chain_id": "cotton",
+        "id": "calico_muslin_gingham_words",
+        "class": "associated_product_term",
+        "regex": "\\b(?:calico|muslin|gingham)\\b",
+        "note": "Tests three fabric terms as possible lexical surrogates."
+      },
+      {
+        "chain_id": "aluminium",
+        "id": "aluminium_british_spelling",
+        "class": "spelling",
+        "regex": "\\baluminium\\b",
+        "note": "Tests the British spelling used by the classification."
+      },
+      {
+        "chain_id": "aluminium",
+        "id": "aluminum_us_spelling",
+        "class": "spelling",
+        "regex": "\\baluminum\\b",
+        "note": "Tests the US spelling as an alternative."
+      },
+      {
+        "chain_id": "aluminium",
+        "id": "alumina_word",
+        "class": "morphology",
+        "regex": "\\balumina\\b",
+        "note": "Tests the alumina noun separately from aluminium."
+      },
+      {
+        "chain_id": "aluminium",
+        "id": "aluminous_word",
+        "class": "morphology",
+        "regex": "\\baluminous\\b",
+        "note": "Tests the aluminous adjective."
+      },
+      {
+        "chain_id": "aluminium",
+        "id": "aluminate_compounds",
+        "class": "morphology_and_compound",
+        "regex": "\\b(?:[a-z]+)?aluminates?\\b",
+        "note": "Tests aluminate inflection and prefixed fluoroaluminate compounds."
+      },
+      {
+        "chain_id": "aluminium",
+        "id": "bauxite_inflection",
+        "class": "morphology",
+        "regex": "\\bbauxites?\\b",
+        "note": "Tests singular and plural morphology of bauxite."
+      },
+      {
+        "chain_id": "aluminium",
+        "id": "corundum_word",
+        "class": "lexical_alternative",
+        "regex": "\\bcorundum\\b",
+        "note": "Tests corundum as explicitly frozen in the main lexicon."
+      },
+      {
+        "chain_id": "nickel",
+        "id": "nickel_inflection",
+        "class": "morphology",
+        "regex": "\\bnickels?\\b",
+        "note": "Tests singular and plural morphology of nickel."
+      },
+      {
+        "chain_id": "nickel",
+        "id": "cupronickel_spacing",
+        "class": "compound_spelling",
+        "regex": "\\bcupro[ -]?nickel\\b",
+        "note": "Tests closed, spaced, and hyphenated cupro-nickel forms."
+      },
+      {
+        "chain_id": "nickel",
+        "id": "nickel_silver_spacing",
+        "class": "compound_spelling",
+        "regex": "\\bnickel[ -]?silver\\b",
+        "note": "Tests spaced and hyphenated nickel-silver forms."
+      },
+      {
+        "chain_id": "nickel",
+        "id": "nickelic_nickelous_words",
+        "class": "morphology",
+        "regex": "\\b(?:nickelic|nickelous)\\b",
+        "note": "Tests two chemical adjectival forms."
+      },
+      {
+        "chain_id": "cocoa",
+        "id": "cocoa_inflection",
+        "class": "morphology",
+        "regex": "\\bcocoas?\\b",
+        "note": "Tests singular and plural morphology of cocoa."
+      },
+      {
+        "chain_id": "cocoa",
+        "id": "cacao_word",
+        "class": "spelling_or_lexical_alternative",
+        "regex": "\\bcacao\\b",
+        "note": "Tests cacao as an alternative focal token."
+      },
+      {
+        "chain_id": "cocoa",
+        "id": "chocolate_inflection",
+        "class": "morphology",
+        "regex": "\\bchocolates?\\b",
+        "note": "Tests singular and plural morphology of chocolate."
+      },
+      {
+        "chain_id": "cocoa",
+        "id": "cocoa_butter_phrase",
+        "class": "punctuation_and_phrase",
+        "regex": "\\bcocoa\\b.{0,15}\\bbutter\\b",
+        "note": "Tests the cocoa-butter phrase across intervening classification punctuation."
+      },
+      {
+        "chain_id": "cocoa",
+        "id": "theobroma_word",
+        "class": "botanical_term",
+        "regex": "\\btheobroma\\b",
+        "note": "Tests the botanical genus as a possible lexical surrogate."
+      },
+      {
+        "chain_id": "oilseed-soy",
+        "id": "soy_inflection",
+        "class": "morphology",
+        "regex": "\\bsoys?\\b",
+        "note": "Tests singular and plural morphology of soy."
+      },
+      {
+        "chain_id": "oilseed-soy",
+        "id": "soya_spelling",
+        "class": "spelling",
+        "regex": "\\bsoya\\b",
+        "note": "Tests the soya spelling used by the classification."
+      },
+      {
+        "chain_id": "oilseed-soy",
+        "id": "soybean_closed_inflection",
+        "class": "compound_spelling",
+        "regex": "\\bsoybeans?\\b",
+        "note": "Tests closed soybean forms and number inflection."
+      },
+      {
+        "chain_id": "oilseed-soy",
+        "id": "soy_bean_spacing",
+        "class": "compound_spelling",
+        "regex": "\\bsoy[ -]?beans?\\b",
+        "note": "Tests closed, spaced, and hyphenated soy-bean forms."
+      },
+      {
+        "chain_id": "oilseed-soy",
+        "id": "soya_bean_spacing",
+        "class": "compound_spelling",
+        "regex": "\\bsoya[ -]?beans?\\b",
+        "note": "Tests closed, spaced, and hyphenated soya-bean forms."
+      },
+      {
+        "chain_id": "oilseed-soy",
+        "id": "soja_word",
+        "class": "spelling_or_lexical_alternative",
+        "regex": "\\bsoja\\b",
+        "note": "Tests soja as an alternative spelling."
+      },
+      {
+        "chain_id": "oilseed-soy",
+        "id": "glycine_max_phrase",
+        "class": "botanical_term",
+        "regex": "\\bglycine\\s+max\\b",
+        "note": "Tests the botanical species name as a possible lexical surrogate."
+      }
+    ]
+  },
+  "summary": {
+    "challenge_count": 39,
+    "challenges_with_source_hits": 22,
+    "challenges_with_zero_source_hits": 17,
+    "challenge_hit_events_with_overlap": 639,
+    "unique_chain_hs6_records_hit_by_any_challenge": 576,
+    "unique_hs6_hit_by_any_challenge": 555,
+    "newly_unrecalled_hit_events": 0,
+    "newly_unrecalled_unique_chain_hs6_records": 0
+  },
+  "chains": {
+    "sheep": {
+      "main_lexicon_regex": "\\b(?:sheep|lambs?|wool)\\b",
+      "main_lexicon_candidate_records": 144,
+      "challenge_count": 10,
+      "challenge_hit_events_with_overlap": 169,
+      "unique_source_rows_hit_by_any_challenge": 144,
+      "unique_source_rows_not_recalled_by_main_lexicon": 0,
+      "challenges": [
+        {
+          "id": "ovine_word",
+          "class": "lexical_alternative",
+          "regex": "\\bovine\\b",
+          "note": "Tests the standalone adjective without matching the substring in 'bovine'.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 0,
+          "main_lexicon_recalled_hits": 0,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "no_source_hits",
+          "matched_records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "mutton_word",
+          "class": "product_term",
+          "regex": "\\bmutton\\b",
+          "note": "Tests an alternative sheep-meat term.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 0,
+          "main_lexicon_recalled_hits": 0,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "no_source_hits",
+          "matched_records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "sheep_inflection",
+          "class": "morphology",
+          "regex": "\\bsheeps?\\b",
+          "note": "Tests singular and plural morphology of sheep.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 19,
+          "main_lexicon_recalled_hits": 19,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "all_source_hits_recalled",
+          "matched_records_sha256": "0ef46676ebd795abf3674c7849afadeca4dc0119b03c563ed10f5bb0db2dd64f",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "lamb_inflection",
+          "class": "morphology",
+          "regex": "\\blambs?\\b",
+          "note": "Tests singular and plural morphology of lamb.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 17,
+          "main_lexicon_recalled_hits": 17,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "all_source_hits_recalled",
+          "matched_records_sha256": "329e43ca13436c0beb53b65a7d474a43cd214d7eebeb99fc739b052865b3c7ad",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "wool_inflection",
+          "class": "morphology",
+          "regex": "\\bwools?\\b",
+          "note": "Tests singular and plural morphology of wool.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 130,
+          "main_lexicon_recalled_hits": 130,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "all_source_hits_recalled",
+          "matched_records_sha256": "273c748f00a3a2e718dbfc356511bb5c867dc78592f86d121104ec4a53863c41",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "woollen_woolen",
+          "class": "spelling_derivative",
+          "regex": "\\bwool(?:len|en)\\b",
+          "note": "Tests British and US adjectival spellings.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 0,
+          "main_lexicon_recalled_hits": 0,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "no_source_hits",
+          "matched_records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "sheepskin_lambskin_compounds",
+          "class": "compound_spelling",
+          "regex": "\\b(?:sheep|lamb)(?:[ -]?skins?)\\b",
+          "note": "Tests closed, spaced, and hyphenated skin compounds.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 0,
+          "main_lexicon_recalled_hits": 0,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "no_source_hits",
+          "matched_records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "fleece_word",
+          "class": "associated_product_term",
+          "regex": "\\bfleeces?\\b",
+          "note": "Tests a wool-associated product term as a possible lexical surrogate.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 2,
+          "main_lexicon_recalled_hits": 2,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "all_source_hits_recalled",
+          "matched_records_sha256": "b787033a4e17b18cb34141b24f6962ebf1c32586274c222ae7d76dc68744fcc7",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "lanolin_word",
+          "class": "associated_product_term",
+          "regex": "\\blanolin\\b",
+          "note": "Tests a wool-grease product term as a possible lexical surrogate.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 1,
+          "main_lexicon_recalled_hits": 1,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "all_source_hits_recalled",
+          "matched_records_sha256": "a85c4e3f7ea708d1fe6e865b5c94e720b326cb42b9a663fd6f443356b61682cf",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "ewe_ram_inflections",
+          "class": "species_term",
+          "regex": "\\b(?:ewes?|rams?)\\b",
+          "note": "Tests sex-specific sheep terms and their plurals.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 0,
+          "main_lexicon_recalled_hits": 0,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "no_source_hits",
+          "matched_records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "newly_unrecalled_records": []
+        }
+      ]
+    },
+    "cotton": {
+      "main_lexicon_regex": "\\bcotton\\b",
+      "main_lexicon_candidate_records": 314,
+      "challenge_count": 6,
+      "challenge_hit_events_with_overlap": 325,
+      "unique_source_rows_hit_by_any_challenge": 314,
+      "unique_source_rows_not_recalled_by_main_lexicon": 0,
+      "challenges": [
+        {
+          "id": "cotton_inflection",
+          "class": "morphology",
+          "regex": "\\bcottons?\\b",
+          "note": "Tests singular and plural morphology of cotton.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 314,
+          "main_lexicon_recalled_hits": 314,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "all_source_hits_recalled",
+          "matched_records_sha256": "9fb23cba5f4ce35dc27a7ce2146cc015f38ea931d0695852fc1149b6e0375df3",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "cottonseed_spacing",
+          "class": "compound_spelling",
+          "regex": "\\bcotton(?:[ -]?seeds?)\\b",
+          "note": "Tests closed, spaced, and hyphenated cottonseed forms.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 4,
+          "main_lexicon_recalled_hits": 4,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "all_source_hits_recalled",
+          "matched_records_sha256": "8a1e609e3abae287efebb10060b060c9f880e3ea07f5c1a93a259fc5c6ef473c",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "cotton_linter_spacing",
+          "class": "compound_spelling",
+          "regex": "\\bcotton[ -]?linters?\\b",
+          "note": "Tests closed, spaced, and hyphenated cotton-linter forms.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 5,
+          "main_lexicon_recalled_hits": 5,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "all_source_hits_recalled",
+          "matched_records_sha256": "39f669f2f2bf46ebfbcc2968377e56cd789dfacc8275b1b2a721c36b84b09177",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "gossypium_word",
+          "class": "botanical_term",
+          "regex": "\\bgossypium\\b",
+          "note": "Tests the botanical genus as a possible lexical surrogate.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 0,
+          "main_lexicon_recalled_hits": 0,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "no_source_hits",
+          "matched_records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "denim_word",
+          "class": "associated_product_term",
+          "regex": "\\bdenim\\b",
+          "note": "Tests a fabric term that could otherwise occur without the material token.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 2,
+          "main_lexicon_recalled_hits": 2,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "all_source_hits_recalled",
+          "matched_records_sha256": "3a6ed989498f544fe8ce60e8483a6c0f391e8e5862f080588f78153b466a8043",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "calico_muslin_gingham_words",
+          "class": "associated_product_term",
+          "regex": "\\b(?:calico|muslin|gingham)\\b",
+          "note": "Tests three fabric terms as possible lexical surrogates.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 0,
+          "main_lexicon_recalled_hits": 0,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "no_source_hits",
+          "matched_records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "newly_unrecalled_records": []
+        }
+      ]
+    },
+    "aluminium": {
+      "main_lexicon_regex": "(?:alumin|corundum|bauxite)",
+      "main_lexicon_candidate_records": 55,
+      "challenge_count": 7,
+      "challenge_hit_events_with_overlap": 57,
+      "unique_source_rows_hit_by_any_challenge": 55,
+      "unique_source_rows_not_recalled_by_main_lexicon": 0,
+      "challenges": [
+        {
+          "id": "aluminium_british_spelling",
+          "class": "spelling",
+          "regex": "\\baluminium\\b",
+          "note": "Tests the British spelling used by the classification.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 47,
+          "main_lexicon_recalled_hits": 47,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "all_source_hits_recalled",
+          "matched_records_sha256": "d042a00760d1264fd5793ff36085ad8655d8529a6b6dfa91307dbb127b545926",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "aluminum_us_spelling",
+          "class": "spelling",
+          "regex": "\\baluminum\\b",
+          "note": "Tests the US spelling as an alternative.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 0,
+          "main_lexicon_recalled_hits": 0,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "no_source_hits",
+          "matched_records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "alumina_word",
+          "class": "morphology",
+          "regex": "\\balumina\\b",
+          "note": "Tests the alumina noun separately from aluminium.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 2,
+          "main_lexicon_recalled_hits": 2,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "all_source_hits_recalled",
+          "matched_records_sha256": "c5693bc5d7c65d8fb50f8a313e5a6380bcd2769c5e33f8cb4a1575fc84deb73e",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "aluminous_word",
+          "class": "morphology",
+          "regex": "\\baluminous\\b",
+          "note": "Tests the aluminous adjective.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 1,
+          "main_lexicon_recalled_hits": 1,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "all_source_hits_recalled",
+          "matched_records_sha256": "92464761fdd59070f37db8e6b6c4d280f262bdf3907eca9fb254110f40b31d1b",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "aluminate_compounds",
+          "class": "morphology_and_compound",
+          "regex": "\\b(?:[a-z]+)?aluminates?\\b",
+          "note": "Tests aluminate inflection and prefixed fluoroaluminate compounds.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 3,
+          "main_lexicon_recalled_hits": 3,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "all_source_hits_recalled",
+          "matched_records_sha256": "fc315901e8a687c2e9e49d723aa23207aff3bd72ae9ea7ec6d789890416d3613",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "bauxite_inflection",
+          "class": "morphology",
+          "regex": "\\bbauxites?\\b",
+          "note": "Tests singular and plural morphology of bauxite.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 0,
+          "main_lexicon_recalled_hits": 0,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "no_source_hits",
+          "matched_records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "corundum_word",
+          "class": "lexical_alternative",
+          "regex": "\\bcorundum\\b",
+          "note": "Tests corundum as explicitly frozen in the main lexicon.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 4,
+          "main_lexicon_recalled_hits": 4,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "all_source_hits_recalled",
+          "matched_records_sha256": "b24d2f8e52e0fb407b1a7f86ce741b27be7ba9e41798ff357490c850e1d77d4d",
+          "newly_unrecalled_records": []
+        }
+      ]
+    },
+    "nickel": {
+      "main_lexicon_regex": "\\bnickel\\b",
+      "main_lexicon_candidate_records": 34,
+      "challenge_count": 4,
+      "challenge_hit_events_with_overlap": 46,
+      "unique_source_rows_hit_by_any_challenge": 34,
+      "unique_source_rows_not_recalled_by_main_lexicon": 0,
+      "challenges": [
+        {
+          "id": "nickel_inflection",
+          "class": "morphology",
+          "regex": "\\bnickels?\\b",
+          "note": "Tests singular and plural morphology of nickel.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 34,
+          "main_lexicon_recalled_hits": 34,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "all_source_hits_recalled",
+          "matched_records_sha256": "9b465a76dc16cb4387d70f5408ac0fe018004fde30f5a907b584d9979e816cb6",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "cupronickel_spacing",
+          "class": "compound_spelling",
+          "regex": "\\bcupro[ -]?nickel\\b",
+          "note": "Tests closed, spaced, and hyphenated cupro-nickel forms.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 6,
+          "main_lexicon_recalled_hits": 6,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "all_source_hits_recalled",
+          "matched_records_sha256": "23f808a004537db88171c5fcdc669e572a4c267f1a24cf35a5cedb9d818e324e",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "nickel_silver_spacing",
+          "class": "compound_spelling",
+          "regex": "\\bnickel[ -]?silver\\b",
+          "note": "Tests spaced and hyphenated nickel-silver forms.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 6,
+          "main_lexicon_recalled_hits": 6,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "all_source_hits_recalled",
+          "matched_records_sha256": "23f808a004537db88171c5fcdc669e572a4c267f1a24cf35a5cedb9d818e324e",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "nickelic_nickelous_words",
+          "class": "morphology",
+          "regex": "\\b(?:nickelic|nickelous)\\b",
+          "note": "Tests two chemical adjectival forms.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 0,
+          "main_lexicon_recalled_hits": 0,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "no_source_hits",
+          "matched_records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "newly_unrecalled_records": []
+        }
+      ]
+    },
+    "cocoa": {
+      "main_lexicon_regex": "\\b(?:cocoa|chocolate)\\b",
+      "main_lexicon_candidate_records": 22,
+      "challenge_count": 5,
+      "challenge_hit_events_with_overlap": 29,
+      "unique_source_rows_hit_by_any_challenge": 22,
+      "unique_source_rows_not_recalled_by_main_lexicon": 0,
+      "challenges": [
+        {
+          "id": "cocoa_inflection",
+          "class": "morphology",
+          "regex": "\\bcocoas?\\b",
+          "note": "Tests singular and plural morphology of cocoa.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 22,
+          "main_lexicon_recalled_hits": 22,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "all_source_hits_recalled",
+          "matched_records_sha256": "e0cd30a79833a11f7c6490bb713aa999f15edca399c3f5b50c2e11848fe83a32",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "cacao_word",
+          "class": "spelling_or_lexical_alternative",
+          "regex": "\\bcacao\\b",
+          "note": "Tests cacao as an alternative focal token.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 0,
+          "main_lexicon_recalled_hits": 0,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "no_source_hits",
+          "matched_records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "chocolate_inflection",
+          "class": "morphology",
+          "regex": "\\bchocolates?\\b",
+          "note": "Tests singular and plural morphology of chocolate.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 6,
+          "main_lexicon_recalled_hits": 6,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "all_source_hits_recalled",
+          "matched_records_sha256": "b398b0889b05c8921c166536bad488a06287e5310097344b2b2674559ddad54a",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "cocoa_butter_phrase",
+          "class": "punctuation_and_phrase",
+          "regex": "\\bcocoa\\b.{0,15}\\bbutter\\b",
+          "note": "Tests the cocoa-butter phrase across intervening classification punctuation.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 1,
+          "main_lexicon_recalled_hits": 1,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "all_source_hits_recalled",
+          "matched_records_sha256": "31019f1a6ddc05d40daa84e1cb24273af63c631e339e2e01e51208caa4a63d33",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "theobroma_word",
+          "class": "botanical_term",
+          "regex": "\\btheobroma\\b",
+          "note": "Tests the botanical genus as a possible lexical surrogate.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 0,
+          "main_lexicon_recalled_hits": 0,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "no_source_hits",
+          "matched_records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "newly_unrecalled_records": []
+        }
+      ]
+    },
+    "oilseed-soy": {
+      "main_lexicon_regex": "\\b(?:soy|soya|soybean|soybeans)\\b",
+      "main_lexicon_candidate_records": 7,
+      "challenge_count": 7,
+      "challenge_hit_events_with_overlap": 13,
+      "unique_source_rows_hit_by_any_challenge": 7,
+      "unique_source_rows_not_recalled_by_main_lexicon": 0,
+      "challenges": [
+        {
+          "id": "soy_inflection",
+          "class": "morphology",
+          "regex": "\\bsoys?\\b",
+          "note": "Tests singular and plural morphology of soy.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 0,
+          "main_lexicon_recalled_hits": 0,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "no_source_hits",
+          "matched_records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "soya_spelling",
+          "class": "spelling",
+          "regex": "\\bsoya\\b",
+          "note": "Tests the soya spelling used by the classification.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 7,
+          "main_lexicon_recalled_hits": 7,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "all_source_hits_recalled",
+          "matched_records_sha256": "7c0b7380f0ed97d6325862a467c147245d8da6dd5a573fe691fcbff419822a55",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "soybean_closed_inflection",
+          "class": "compound_spelling",
+          "regex": "\\bsoybeans?\\b",
+          "note": "Tests closed soybean forms and number inflection.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 0,
+          "main_lexicon_recalled_hits": 0,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "no_source_hits",
+          "matched_records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "soy_bean_spacing",
+          "class": "compound_spelling",
+          "regex": "\\bsoy[ -]?beans?\\b",
+          "note": "Tests closed, spaced, and hyphenated soy-bean forms.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 0,
+          "main_lexicon_recalled_hits": 0,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "no_source_hits",
+          "matched_records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "soya_bean_spacing",
+          "class": "compound_spelling",
+          "regex": "\\bsoya[ -]?beans?\\b",
+          "note": "Tests closed, spaced, and hyphenated soya-bean forms.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 6,
+          "main_lexicon_recalled_hits": 6,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "all_source_hits_recalled",
+          "matched_records_sha256": "bb211f73f88bf401d49e83e8a273326c7b9106fcccc6477dca2dd33e694a1134",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "soja_word",
+          "class": "spelling_or_lexical_alternative",
+          "regex": "\\bsoja\\b",
+          "note": "Tests soja as an alternative spelling.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 0,
+          "main_lexicon_recalled_hits": 0,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "no_source_hits",
+          "matched_records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "newly_unrecalled_records": []
+        },
+        {
+          "id": "glycine_max_phrase",
+          "class": "botanical_term",
+          "regex": "\\bglycine\\s+max\\b",
+          "note": "Tests the botanical species name as a possible lexical surrogate.",
+          "case_insensitive": true,
+          "full_dictionary_hits": 0,
+          "main_lexicon_recalled_hits": 0,
+          "newly_unrecalled_hits": 0,
+          "main_lexicon_recall_status": "no_source_hits",
+          "matched_records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "newly_unrecalled_records": []
+        }
+      ]
+    }
+  }
+}

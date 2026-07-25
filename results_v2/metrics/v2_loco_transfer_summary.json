@@ -1,0 +1,891 @@
+{
+  "claim_scope": "matched_tier_abstracted_descriptive_transfer_diagnostic",
+  "design": {
+    "chains": [
+      "sheep",
+      "cotton",
+      "aluminium",
+      "nickel",
+      "cocoa",
+      "oilseed-soy"
+    ],
+    "comparison_definition": "in_domain_minus_loco",
+    "expected_component_count": 60,
+    "modes": [
+      "loco",
+      "in_domain"
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "verified_component_count": 60
+  },
+  "limitations": [
+    "This is a descriptive matched diagnostic over six fixed chains, not population inference.",
+    "The target chain's early graph is visible in both modes; this is not graph-free cold-start transfer.",
+    "Training-edge volume is not equalized: each mode uses every export edge in its prescribed source set, so the gap jointly reflects source set and volume.",
+    "Only in_domain minus loco under the same tier/dedup graph contract is valid.",
+    "Results under a different relation-resolution graph must not be used as the matched transfer baseline.",
+    "The profile, chains, modes, and seeds were fixed; no outcome-based mode, seed, or chain selection is permitted."
+  ],
+  "metric_records": [
+    {
+      "A.lane_average_precision": 0.09186388364162573,
+      "B1.entry_average_precision": 0.1679622189354686,
+      "B2.conditional_recall_at_3": 0.27777777777777773,
+      "chain": "sheep",
+      "component_id": "sheep|loco|seed0",
+      "mode": "loco",
+      "seed": 0
+    },
+    {
+      "A.lane_average_precision": 0.08326750554566834,
+      "B1.entry_average_precision": 0.1369742095607127,
+      "B2.conditional_recall_at_3": 0.19999999999999998,
+      "chain": "sheep",
+      "component_id": "sheep|loco|seed1",
+      "mode": "loco",
+      "seed": 1
+    },
+    {
+      "A.lane_average_precision": 0.09888257638844786,
+      "B1.entry_average_precision": 0.1540487212343986,
+      "B2.conditional_recall_at_3": 0.2333333333333333,
+      "chain": "sheep",
+      "component_id": "sheep|loco|seed2",
+      "mode": "loco",
+      "seed": 2
+    },
+    {
+      "A.lane_average_precision": 0.07113160296751465,
+      "B1.entry_average_precision": 0.17663196420876118,
+      "B2.conditional_recall_at_3": 0.26388888888888884,
+      "chain": "sheep",
+      "component_id": "sheep|loco|seed3",
+      "mode": "loco",
+      "seed": 3
+    },
+    {
+      "A.lane_average_precision": 0.08364259048051771,
+      "B1.entry_average_precision": 0.17800564348573555,
+      "B2.conditional_recall_at_3": 0.23055555555555554,
+      "chain": "sheep",
+      "component_id": "sheep|loco|seed4",
+      "mode": "loco",
+      "seed": 4
+    },
+    {
+      "A.lane_average_precision": 0.12230198704210177,
+      "B1.entry_average_precision": 0.16406723929410008,
+      "B2.conditional_recall_at_3": 0.3222222222222222,
+      "chain": "sheep",
+      "component_id": "sheep|in_domain|seed0",
+      "mode": "in_domain",
+      "seed": 0
+    },
+    {
+      "A.lane_average_precision": 0.11777324983782565,
+      "B1.entry_average_precision": 0.18510560694872338,
+      "B2.conditional_recall_at_3": 0.25555555555555554,
+      "chain": "sheep",
+      "component_id": "sheep|in_domain|seed1",
+      "mode": "in_domain",
+      "seed": 1
+    },
+    {
+      "A.lane_average_precision": 0.11598827975135029,
+      "B1.entry_average_precision": 0.21830344055132406,
+      "B2.conditional_recall_at_3": 0.18055555555555555,
+      "chain": "sheep",
+      "component_id": "sheep|in_domain|seed2",
+      "mode": "in_domain",
+      "seed": 2
+    },
+    {
+      "A.lane_average_precision": 0.11704649426858384,
+      "B1.entry_average_precision": 0.1502948955030669,
+      "B2.conditional_recall_at_3": 0.19999999999999998,
+      "chain": "sheep",
+      "component_id": "sheep|in_domain|seed3",
+      "mode": "in_domain",
+      "seed": 3
+    },
+    {
+      "A.lane_average_precision": 0.11039008332992613,
+      "B1.entry_average_precision": 0.2048838216588114,
+      "B2.conditional_recall_at_3": 0.25,
+      "chain": "sheep",
+      "component_id": "sheep|in_domain|seed4",
+      "mode": "in_domain",
+      "seed": 4
+    },
+    {
+      "A.lane_average_precision": 0.062362860605419276,
+      "B1.entry_average_precision": 0.1926297280507151,
+      "B2.conditional_recall_at_3": 0.412037037037037,
+      "chain": "cotton",
+      "component_id": "cotton|loco|seed0",
+      "mode": "loco",
+      "seed": 0
+    },
+    {
+      "A.lane_average_precision": 0.09404811960093083,
+      "B1.entry_average_precision": 0.17679596811443954,
+      "B2.conditional_recall_at_3": 0.5185185185185185,
+      "chain": "cotton",
+      "component_id": "cotton|loco|seed1",
+      "mode": "loco",
+      "seed": 1
+    },
+    {
+      "A.lane_average_precision": 0.050625236770252234,
+      "B1.entry_average_precision": 0.12492390333882138,
+      "B2.conditional_recall_at_3": 0.37037037037037035,
+      "chain": "cotton",
+      "component_id": "cotton|loco|seed2",
+      "mode": "loco",
+      "seed": 2
+    },
+    {
+      "A.lane_average_precision": 0.059093723262887816,
+      "B1.entry_average_precision": 0.2693749990789441,
+      "B2.conditional_recall_at_3": 0.35648148148148145,
+      "chain": "cotton",
+      "component_id": "cotton|loco|seed3",
+      "mode": "loco",
+      "seed": 3
+    },
+    {
+      "A.lane_average_precision": 0.052556327559344924,
+      "B1.entry_average_precision": 0.15726827980093566,
+      "B2.conditional_recall_at_3": 0.3796296296296296,
+      "chain": "cotton",
+      "component_id": "cotton|loco|seed4",
+      "mode": "loco",
+      "seed": 4
+    },
+    {
+      "A.lane_average_precision": 0.11120157365447482,
+      "B1.entry_average_precision": 0.18043763914804514,
+      "B2.conditional_recall_at_3": 0.2824074074074074,
+      "chain": "cotton",
+      "component_id": "cotton|in_domain|seed0",
+      "mode": "in_domain",
+      "seed": 0
+    },
+    {
+      "A.lane_average_precision": 0.11604487140798392,
+      "B1.entry_average_precision": 0.16619958199753326,
+      "B2.conditional_recall_at_3": 0.3935185185185185,
+      "chain": "cotton",
+      "component_id": "cotton|in_domain|seed1",
+      "mode": "in_domain",
+      "seed": 1
+    },
+    {
+      "A.lane_average_precision": 0.09637553047906822,
+      "B1.entry_average_precision": 0.14426866167096736,
+      "B2.conditional_recall_at_3": 0.3935185185185185,
+      "chain": "cotton",
+      "component_id": "cotton|in_domain|seed2",
+      "mode": "in_domain",
+      "seed": 2
+    },
+    {
+      "A.lane_average_precision": 0.1182633538461866,
+      "B1.entry_average_precision": 0.12321911165134763,
+      "B2.conditional_recall_at_3": 0.34259259259259256,
+      "chain": "cotton",
+      "component_id": "cotton|in_domain|seed3",
+      "mode": "in_domain",
+      "seed": 3
+    },
+    {
+      "A.lane_average_precision": 0.1237466060605956,
+      "B1.entry_average_precision": 0.14587857053143727,
+      "B2.conditional_recall_at_3": 0.287037037037037,
+      "chain": "cotton",
+      "component_id": "cotton|in_domain|seed4",
+      "mode": "in_domain",
+      "seed": 4
+    },
+    {
+      "A.lane_average_precision": 0.10445568646883815,
+      "B1.entry_average_precision": 0.24465704929573517,
+      "B2.conditional_recall_at_3": 0.10913686675180928,
+      "chain": "aluminium",
+      "component_id": "aluminium|loco|seed0",
+      "mode": "loco",
+      "seed": 0
+    },
+    {
+      "A.lane_average_precision": 0.11317821201694425,
+      "B1.entry_average_precision": 0.2616859890362999,
+      "B2.conditional_recall_at_3": 0.17385855683269477,
+      "chain": "aluminium",
+      "component_id": "aluminium|loco|seed1",
+      "mode": "loco",
+      "seed": 1
+    },
+    {
+      "A.lane_average_precision": 0.09183552092497912,
+      "B1.entry_average_precision": 0.2506714482372988,
+      "B2.conditional_recall_at_3": 0.1445375691783738,
+      "chain": "aluminium",
+      "component_id": "aluminium|loco|seed2",
+      "mode": "loco",
+      "seed": 2
+    },
+    {
+      "A.lane_average_precision": 0.08595290924822617,
+      "B1.entry_average_precision": 0.27636726476498763,
+      "B2.conditional_recall_at_3": 0.19896764580672627,
+      "chain": "aluminium",
+      "component_id": "aluminium|loco|seed3",
+      "mode": "loco",
+      "seed": 3
+    },
+    {
+      "A.lane_average_precision": 0.10777854306457299,
+      "B1.entry_average_precision": 0.2687572272714116,
+      "B2.conditional_recall_at_3": 0.2567608556832695,
+      "chain": "aluminium",
+      "component_id": "aluminium|loco|seed4",
+      "mode": "loco",
+      "seed": 4
+    },
+    {
+      "A.lane_average_precision": 0.13528356690643478,
+      "B1.entry_average_precision": 0.22850512115552435,
+      "B2.conditional_recall_at_3": 0.26517134951043,
+      "chain": "aluminium",
+      "component_id": "aluminium|in_domain|seed0",
+      "mode": "in_domain",
+      "seed": 0
+    },
+    {
+      "A.lane_average_precision": 0.1434395526552219,
+      "B1.entry_average_precision": 0.3200142314742287,
+      "B2.conditional_recall_at_3": 0.23762505321413366,
+      "chain": "aluminium",
+      "component_id": "aluminium|in_domain|seed1",
+      "mode": "in_domain",
+      "seed": 1
+    },
+    {
+      "A.lane_average_precision": 0.16266006491152632,
+      "B1.entry_average_precision": 0.2638843218699974,
+      "B2.conditional_recall_at_3": 0.28932258407833117,
+      "chain": "aluminium",
+      "component_id": "aluminium|in_domain|seed2",
+      "mode": "in_domain",
+      "seed": 2
+    },
+    {
+      "A.lane_average_precision": 0.16089230069406948,
+      "B1.entry_average_precision": 0.22443386804568682,
+      "B2.conditional_recall_at_3": 0.2696306939123031,
+      "chain": "aluminium",
+      "component_id": "aluminium|in_domain|seed3",
+      "mode": "in_domain",
+      "seed": 3
+    },
+    {
+      "A.lane_average_precision": 0.1593865476026255,
+      "B1.entry_average_precision": 0.27272952333302636,
+      "B2.conditional_recall_at_3": 0.29779427415921667,
+      "chain": "aluminium",
+      "component_id": "aluminium|in_domain|seed4",
+      "mode": "in_domain",
+      "seed": 4
+    },
+    {
+      "A.lane_average_precision": 0.17176148518486314,
+      "B1.entry_average_precision": 0.21748642245064484,
+      "B2.conditional_recall_at_3": 0.356497668997669,
+      "chain": "nickel",
+      "component_id": "nickel|loco|seed0",
+      "mode": "loco",
+      "seed": 0
+    },
+    {
+      "A.lane_average_precision": 0.1368846866066853,
+      "B1.entry_average_precision": 0.2521556906422492,
+      "B2.conditional_recall_at_3": 0.2913461538461538,
+      "chain": "nickel",
+      "component_id": "nickel|loco|seed1",
+      "mode": "loco",
+      "seed": 1
+    },
+    {
+      "A.lane_average_precision": 0.14911081762827066,
+      "B1.entry_average_precision": 0.2660728081704994,
+      "B2.conditional_recall_at_3": 0.3224067599067599,
+      "chain": "nickel",
+      "component_id": "nickel|loco|seed2",
+      "mode": "loco",
+      "seed": 2
+    },
+    {
+      "A.lane_average_precision": 0.11136683339537268,
+      "B1.entry_average_precision": 0.263255023972853,
+      "B2.conditional_recall_at_3": 0.24222999222999222,
+      "chain": "nickel",
+      "component_id": "nickel|loco|seed3",
+      "mode": "loco",
+      "seed": 3
+    },
+    {
+      "A.lane_average_precision": 0.15513787426700482,
+      "B1.entry_average_precision": 0.24191507147340519,
+      "B2.conditional_recall_at_3": 0.33743201243201243,
+      "chain": "nickel",
+      "component_id": "nickel|loco|seed4",
+      "mode": "loco",
+      "seed": 4
+    },
+    {
+      "A.lane_average_precision": 0.15924986147029932,
+      "B1.entry_average_precision": 0.35692896301207344,
+      "B2.conditional_recall_at_3": 0.3368006993006993,
+      "chain": "nickel",
+      "component_id": "nickel|in_domain|seed0",
+      "mode": "in_domain",
+      "seed": 0
+    },
+    {
+      "A.lane_average_precision": 0.1681990581546624,
+      "B1.entry_average_precision": 0.31470123685156765,
+      "B2.conditional_recall_at_3": 0.25978049728049724,
+      "chain": "nickel",
+      "component_id": "nickel|in_domain|seed1",
+      "mode": "in_domain",
+      "seed": 1
+    },
+    {
+      "A.lane_average_precision": 0.15879397740470036,
+      "B1.entry_average_precision": 0.2911212697253315,
+      "B2.conditional_recall_at_3": 0.3171328671328671,
+      "chain": "nickel",
+      "component_id": "nickel|in_domain|seed2",
+      "mode": "in_domain",
+      "seed": 2
+    },
+    {
+      "A.lane_average_precision": 0.1583830137142107,
+      "B1.entry_average_precision": 0.2763023627119478,
+      "B2.conditional_recall_at_3": 0.2472513597513597,
+      "chain": "nickel",
+      "component_id": "nickel|in_domain|seed3",
+      "mode": "in_domain",
+      "seed": 3
+    },
+    {
+      "A.lane_average_precision": 0.1658039537923213,
+      "B1.entry_average_precision": 0.256177672652896,
+      "B2.conditional_recall_at_3": 0.320483682983683,
+      "chain": "nickel",
+      "component_id": "nickel|in_domain|seed4",
+      "mode": "in_domain",
+      "seed": 4
+    },
+    {
+      "A.lane_average_precision": 0.10012159860620509,
+      "B1.entry_average_precision": 0.37279930273880024,
+      "B2.conditional_recall_at_3": 0.13452380952380955,
+      "chain": "cocoa",
+      "component_id": "cocoa|loco|seed0",
+      "mode": "loco",
+      "seed": 0
+    },
+    {
+      "A.lane_average_precision": 0.12227181568032347,
+      "B1.entry_average_precision": 0.4727243400180119,
+      "B2.conditional_recall_at_3": 0.1880952380952381,
+      "chain": "cocoa",
+      "component_id": "cocoa|loco|seed1",
+      "mode": "loco",
+      "seed": 1
+    },
+    {
+      "A.lane_average_precision": 0.11495099932487134,
+      "B1.entry_average_precision": 0.4110546730317495,
+      "B2.conditional_recall_at_3": 0.3047619047619048,
+      "chain": "cocoa",
+      "component_id": "cocoa|loco|seed2",
+      "mode": "loco",
+      "seed": 2
+    },
+    {
+      "A.lane_average_precision": 0.08409261814326577,
+      "B1.entry_average_precision": 0.4137051250905092,
+      "B2.conditional_recall_at_3": 0.09880952380952382,
+      "chain": "cocoa",
+      "component_id": "cocoa|loco|seed3",
+      "mode": "loco",
+      "seed": 3
+    },
+    {
+      "A.lane_average_precision": 0.10946944109300061,
+      "B1.entry_average_precision": 0.18270732713479063,
+      "B2.conditional_recall_at_3": 0.09880952380952382,
+      "chain": "cocoa",
+      "component_id": "cocoa|loco|seed4",
+      "mode": "loco",
+      "seed": 4
+    },
+    {
+      "A.lane_average_precision": 0.13010133691013734,
+      "B1.entry_average_precision": 0.25062078690437317,
+      "B2.conditional_recall_at_3": 0.29404761904761906,
+      "chain": "cocoa",
+      "component_id": "cocoa|in_domain|seed0",
+      "mode": "in_domain",
+      "seed": 0
+    },
+    {
+      "A.lane_average_precision": 0.11485167543978185,
+      "B1.entry_average_precision": 0.22039173673658496,
+      "B2.conditional_recall_at_3": 0.2690476190476191,
+      "chain": "cocoa",
+      "component_id": "cocoa|in_domain|seed1",
+      "mode": "in_domain",
+      "seed": 1
+    },
+    {
+      "A.lane_average_precision": 0.1533469323437512,
+      "B1.entry_average_precision": 0.23655261423409285,
+      "B2.conditional_recall_at_3": 0.32301587301587303,
+      "chain": "cocoa",
+      "component_id": "cocoa|in_domain|seed2",
+      "mode": "in_domain",
+      "seed": 2
+    },
+    {
+      "A.lane_average_precision": 0.1368967075780382,
+      "B1.entry_average_precision": 0.25188760403311644,
+      "B2.conditional_recall_at_3": 0.28531746031746036,
+      "chain": "cocoa",
+      "component_id": "cocoa|in_domain|seed3",
+      "mode": "in_domain",
+      "seed": 3
+    },
+    {
+      "A.lane_average_precision": 0.12817422393433053,
+      "B1.entry_average_precision": 0.32849251639168175,
+      "B2.conditional_recall_at_3": 0.24126984126984125,
+      "chain": "cocoa",
+      "component_id": "cocoa|in_domain|seed4",
+      "mode": "in_domain",
+      "seed": 4
+    },
+    {
+      "A.lane_average_precision": 0.096332272045859,
+      "B1.entry_average_precision": 0.42950665442400743,
+      "B2.conditional_recall_at_3": 0.28774509803921566,
+      "chain": "oilseed-soy",
+      "component_id": "oilseed-soy|loco|seed0",
+      "mode": "loco",
+      "seed": 0
+    },
+    {
+      "A.lane_average_precision": 0.1034188494018354,
+      "B1.entry_average_precision": 0.39043028643845007,
+      "B2.conditional_recall_at_3": 0.12859477124183005,
+      "chain": "oilseed-soy",
+      "component_id": "oilseed-soy|loco|seed1",
+      "mode": "loco",
+      "seed": 1
+    },
+    {
+      "A.lane_average_precision": 0.09439979630847697,
+      "B1.entry_average_precision": 0.4982192749000121,
+      "B2.conditional_recall_at_3": 0.20277777777777775,
+      "chain": "oilseed-soy",
+      "component_id": "oilseed-soy|loco|seed2",
+      "mode": "loco",
+      "seed": 2
+    },
+    {
+      "A.lane_average_precision": 0.09843478114201056,
+      "B1.entry_average_precision": 0.48787372582946664,
+      "B2.conditional_recall_at_3": 0.18970588235294117,
+      "chain": "oilseed-soy",
+      "component_id": "oilseed-soy|loco|seed3",
+      "mode": "loco",
+      "seed": 3
+    },
+    {
+      "A.lane_average_precision": 0.09402431051747336,
+      "B1.entry_average_precision": 0.5174488454368956,
+      "B2.conditional_recall_at_3": 0.12622549019607843,
+      "chain": "oilseed-soy",
+      "component_id": "oilseed-soy|loco|seed4",
+      "mode": "loco",
+      "seed": 4
+    },
+    {
+      "A.lane_average_precision": 0.12001918364000978,
+      "B1.entry_average_precision": 0.46794774343838125,
+      "B2.conditional_recall_at_3": 0.21233660130718957,
+      "chain": "oilseed-soy",
+      "component_id": "oilseed-soy|in_domain|seed0",
+      "mode": "in_domain",
+      "seed": 0
+    },
+    {
+      "A.lane_average_precision": 0.11769037984265868,
+      "B1.entry_average_precision": 0.4245080984545374,
+      "B2.conditional_recall_at_3": 0.22851307189542483,
+      "chain": "oilseed-soy",
+      "component_id": "oilseed-soy|in_domain|seed1",
+      "mode": "in_domain",
+      "seed": 1
+    },
+    {
+      "A.lane_average_precision": 0.12008987631640507,
+      "B1.entry_average_precision": 0.4086206632619571,
+      "B2.conditional_recall_at_3": 0.24485294117647058,
+      "chain": "oilseed-soy",
+      "component_id": "oilseed-soy|in_domain|seed2",
+      "mode": "in_domain",
+      "seed": 2
+    },
+    {
+      "A.lane_average_precision": 0.1193418914927997,
+      "B1.entry_average_precision": 0.48983493434468334,
+      "B2.conditional_recall_at_3": 0.21356209150326796,
+      "chain": "oilseed-soy",
+      "component_id": "oilseed-soy|in_domain|seed3",
+      "mode": "in_domain",
+      "seed": 3
+    },
+    {
+      "A.lane_average_precision": 0.12427791947335542,
+      "B1.entry_average_precision": 0.508087352149921,
+      "B2.conditional_recall_at_3": 0.17883986928104575,
+      "chain": "oilseed-soy",
+      "component_id": "oilseed-soy|in_domain|seed4",
+      "mode": "in_domain",
+      "seed": 4
+    }
+  ],
+  "metrics": {
+    "A.lane_average_precision": {
+      "by_chain": {
+        "aluminium": {
+          "in_domain": {
+            "mean": 0.1523324065539756,
+            "n": 5,
+            "population_std": 0.01094932878825261
+          },
+          "loco": {
+            "mean": 0.10064017434471213,
+            "n": 5,
+            "population_std": 0.010158292250929025
+          }
+        },
+        "cocoa": {
+          "in_domain": {
+            "mean": 0.13267417524120784,
+            "n": 5,
+            "population_std": 0.012567443841690779
+          },
+          "loco": {
+            "mean": 0.10618129456953325,
+            "n": 5,
+            "population_std": 0.013200409388384104
+          }
+        },
+        "cotton": {
+          "in_domain": {
+            "mean": 0.11312638708966183,
+            "n": 5,
+            "population_std": 0.009295064637897449
+          },
+          "loco": {
+            "mean": 0.06373725355976702,
+            "n": 5,
+            "population_std": 0.01574254121983999
+          }
+        },
+        "nickel": {
+          "in_domain": {
+            "mean": 0.1620859729072388,
+            "n": 5,
+            "population_std": 0.004093552549090104
+          },
+          "loco": {
+            "mean": 0.14485233941643932,
+            "n": 5,
+            "population_std": 0.02016329137126572
+          }
+        },
+        "oilseed-soy": {
+          "in_domain": {
+            "mean": 0.12028385015304573,
+            "n": 5,
+            "population_std": 0.0021759429365833323
+          },
+          "loco": {
+            "mean": 0.09732200188313106,
+            "n": 5,
+            "population_std": 0.0034293861334000614
+          }
+        },
+        "sheep": {
+          "in_domain": {
+            "mean": 0.11670001884595753,
+            "n": 5,
+            "population_std": 0.003820360621885548
+          },
+          "loco": {
+            "mean": 0.08575763180475486,
+            "n": 5,
+            "population_std": 0.009318211523221678
+          }
+        }
+      },
+      "by_mode": {
+        "in_domain": {
+          "mean": 0.1328671351318479,
+          "n": 30,
+          "population_std": 0.020175893523344944
+        },
+        "loco": {
+          "mean": 0.09974844926305627,
+          "n": 30,
+          "population_std": 0.027704968877582888
+        }
+      },
+      "matched_gap": {
+        "definition": "in_domain_minus_loco",
+        "mean": 0.03311868586879162,
+        "n": 30,
+        "population_std": 0.020751891780893927
+      }
+    },
+    "B1.entry_average_precision": {
+      "by_chain": {
+        "aluminium": {
+          "in_domain": {
+            "mean": 0.2619134131756927,
+            "n": 5,
+            "population_std": 0.03469123256914735
+          },
+          "loco": {
+            "mean": 0.2604277957211466,
+            "n": 5,
+            "population_std": 0.011566606354576292
+          }
+        },
+        "cocoa": {
+          "in_domain": {
+            "mean": 0.2575890516599698,
+            "n": 5,
+            "population_std": 0.03724120424150988
+          },
+          "loco": {
+            "mean": 0.3705981536027723,
+            "n": 5,
+            "population_std": 0.09922953858122316
+          }
+        },
+        "cotton": {
+          "in_domain": {
+            "mean": 0.15200071299986612,
+            "n": 5,
+            "population_std": 0.0196769533816158
+          },
+          "loco": {
+            "mean": 0.18419857567677117,
+            "n": 5,
+            "population_std": 0.04820712322757319
+          }
+        },
+        "nickel": {
+          "in_domain": {
+            "mean": 0.29904630099076324,
+            "n": 5,
+            "population_std": 0.03467936482704941
+          },
+          "loco": {
+            "mean": 0.24817700334193032,
+            "n": 5,
+            "population_std": 0.017575892781950354
+          }
+        },
+        "oilseed-soy": {
+          "in_domain": {
+            "mean": 0.45979975832989606,
+            "n": 5,
+            "population_std": 0.03785497115367066
+          },
+          "loco": {
+            "mean": 0.4646957574057664,
+            "n": 5,
+            "population_std": 0.04732349498698349
+          }
+        },
+        "sheep": {
+          "in_domain": {
+            "mean": 0.18453100079120516,
+            "n": 5,
+            "population_std": 0.025083945530027265
+          },
+          "loco": {
+            "mean": 0.16272455148501533,
+            "n": 5,
+            "population_std": 0.015444812731015124
+          }
+        }
+      },
+      "by_mode": {
+        "in_domain": {
+          "mean": 0.2691467063245655,
+          "n": 30,
+          "population_std": 0.10372552418147106
+        },
+        "loco": {
+          "mean": 0.2818036395389003,
+          "n": 30,
+          "population_std": 0.11670434827262632
+        }
+      },
+      "matched_gap": {
+        "definition": "in_domain_minus_loco",
+        "mean": -0.012656933214334826,
+        "n": 30,
+        "population_std": 0.08628474653779289
+      }
+    },
+    "B2.conditional_recall_at_3": {
+      "by_chain": {
+        "aluminium": {
+          "in_domain": {
+            "mean": 0.2719087909748829,
+            "n": 5,
+            "population_std": 0.020972629537077205
+          },
+          "loco": {
+            "mean": 0.1766522988505747,
+            "n": 5,
+            "population_std": 0.050025693429385926
+          }
+        },
+        "cocoa": {
+          "in_domain": {
+            "mean": 0.28253968253968254,
+            "n": 5,
+            "population_std": 0.027069193646025128
+          },
+          "loco": {
+            "mean": 0.165,
+            "n": 5,
+            "population_std": 0.07714653136458763
+          }
+        },
+        "cotton": {
+          "in_domain": {
+            "mean": 0.3398148148148148,
+            "n": 5,
+            "population_std": 0.04869701404557299
+          },
+          "loco": {
+            "mean": 0.40740740740740733,
+            "n": 5,
+            "population_std": 0.05848745073093984
+          }
+        },
+        "nickel": {
+          "in_domain": {
+            "mean": 0.2962898212898213,
+            "n": 5,
+            "population_std": 0.03577319720283956
+          },
+          "loco": {
+            "mean": 0.3099825174825175,
+            "n": 5,
+            "population_std": 0.04002302992267588
+          }
+        },
+        "oilseed-soy": {
+          "in_domain": {
+            "mean": 0.21562091503267972,
+            "n": 5,
+            "population_std": 0.021856760320785838
+          },
+          "loco": {
+            "mean": 0.1870098039215686,
+            "n": 5,
+            "population_std": 0.05917862140580972
+          }
+        },
+        "sheep": {
+          "in_domain": {
+            "mean": 0.24166666666666664,
+            "n": 5,
+            "population_std": 0.04944132324730441
+          },
+          "loco": {
+            "mean": 0.2411111111111111,
+            "n": 5,
+            "population_std": 0.02729581888119609
+          }
+        }
+      },
+      "by_mode": {
+        "in_domain": {
+          "mean": 0.274640115219758,
+          "n": 30,
+          "population_std": 0.053389612756887875
+        },
+        "loco": {
+          "mean": 0.2478605231288632,
+          "n": 30,
+          "population_std": 0.10224410792796641
+        }
+      },
+      "matched_gap": {
+        "definition": "in_domain_minus_loco",
+        "mean": 0.026779592090894772,
+        "n": 30,
+        "population_std": 0.08134151286410454
+      }
+    }
+  },
+  "paper_eligibility_scope": "descriptive matched tier-abstracted in_domain-minus-loco diagnostic only",
+  "paper_eligible": true,
+  "promotion_attestation": {
+    "aggregate_source": "60_sanitized_component_metric_records",
+    "component_metric_source": "60_controller_verified_component_files",
+    "gate": "canonical_live_formal_verify_summary",
+    "receipt_role": "operational_log_only_not_a_trust_anchor"
+  },
+  "protocol": "upgrade-bench-v2/loco-tier-matched/1",
+  "provenance": {
+    "config_sha256": "e8ed359ce8144f152f1577c31edb5ab3c2f7027015a16881302c28f39f4b67f6",
+    "freeze_manifest_artifact_role": "results_v2/loco_formal/frozen_manifest.json",
+    "freeze_manifest_file_sha256": "b28d4864e8682f00e81b42665db06bba7ff273f27bbc7c61ae05629e674c87a7",
+    "freeze_sha256": "a9414c9762ff7faf23fa855b6f1305c777359e6c74bd9ef17a94ebbc5f37d187",
+    "main_start_marker_artifact_role": "results_v2/loco_formal/MAIN_EVALUATION_STARTED.json",
+    "main_start_marker_sha256": "e574210de335ea185b6de0803243febb7f8c9d78f21da7d6230e3a60a01d235b"
+  },
+  "run_id": "loco-tier-matched-oa-full-20260717-r2",
+  "schema_version": "upgrade-bench-v2/loco-transfer-public-summary/1",
+  "source_artifacts": {
+    "formal_summary": {
+      "artifact_role": "results_v2/loco_formal/summary.json",
+      "sha256": "c98f7aeb57adbe94543854ceb878eadb8990b07dc38ce154c1bc70c131284164"
+    },
+    "verification_receipt": {
+      "artifact_role": "results_v2/loco_formal/verification_receipt.json",
+      "sha256": "139be54b3375cf21728b668ee00b7b0f439897fe29a54c169fde098d87c15c3a"
+    }
+  },
+  "status": "complete"
+}

@@ -1,0 +1,1738 @@
+{
+  "schema_version": "raw-label-audit/v2",
+  "generated_at_utc": "2026-07-16T11:46:10.939821+00:00",
+  "candidate_root": "data/processed_v2",
+  "raw_source": {
+    "path": "BACI_HS92_V202401b.zip",
+    "archive_name": "BACI_HS92_V202401b.zip",
+    "size_bytes": 2450783074,
+    "sha256": "1dafcfd5b26b2b2c88a69ca11ed67b7067f5c38c5a12c2e1766cf28df159909a"
+  },
+  "selection": {
+    "chains": [
+      "sheep",
+      "cotton",
+      "aluminium",
+      "nickel",
+      "cocoa",
+      "oilseed-soy"
+    ],
+    "snapshots": [
+      "main",
+      "fold2"
+    ],
+    "tracks": [
+      "A",
+      "B"
+    ]
+  },
+  "definition": {
+    "unit": "exporter-importer-stage lane",
+    "raw_value_unit": "kUSD",
+    "aggregation": "sum HS6 within each stage-year, sum five annual values, divide by 5",
+    "missing_stage_year_value": 0.0,
+    "window_length_years": 5,
+    "positive_rule": "raw_late_calendar_mean_kusd > 100",
+    "candidate_early_absence_rule": "raw_early_calendar_mean_kusd <= 100",
+    "stored_lateval_rule": "raw late calendar mean for positives; zero for negatives"
+  },
+  "tolerances": {
+    "lateval_atol_kusd": 1e-06,
+    "lateval_rtol": 1e-09
+  },
+  "raw_read": {
+    "chunk_size": 1000000,
+    "years": {
+      "1998": {
+        "source_rows": 5847753,
+        "retained_chain_hs6_rows": 251235,
+        "candidate_stage_year_rows": 40112,
+        "elapsed_seconds": 3.805
+      },
+      "1999": {
+        "source_rows": 5994574,
+        "retained_chain_hs6_rows": 259110,
+        "candidate_stage_year_rows": 41532,
+        "elapsed_seconds": 3.437
+      },
+      "2000": {
+        "source_rows": 7272734,
+        "retained_chain_hs6_rows": 301912,
+        "candidate_stage_year_rows": 51689,
+        "elapsed_seconds": 4.056
+      },
+      "2001": {
+        "source_rows": 7517477,
+        "retained_chain_hs6_rows": 308954,
+        "candidate_stage_year_rows": 53532,
+        "elapsed_seconds": 4.304
+      },
+      "2002": {
+        "source_rows": 7726196,
+        "retained_chain_hs6_rows": 317960,
+        "candidate_stage_year_rows": 55471,
+        "elapsed_seconds": 4.195
+      },
+      "2008": {
+        "source_rows": 9312331,
+        "retained_chain_hs6_rows": 351956,
+        "candidate_stage_year_rows": 69241,
+        "elapsed_seconds": 5.565
+      },
+      "2009": {
+        "source_rows": 9219206,
+        "retained_chain_hs6_rows": 339208,
+        "candidate_stage_year_rows": 68071,
+        "elapsed_seconds": 5.214
+      },
+      "2010": {
+        "source_rows": 9471403,
+        "retained_chain_hs6_rows": 345039,
+        "candidate_stage_year_rows": 70563,
+        "elapsed_seconds": 5.241
+      },
+      "2011": {
+        "source_rows": 9639156,
+        "retained_chain_hs6_rows": 347890,
+        "candidate_stage_year_rows": 72049,
+        "elapsed_seconds": 5.381
+      },
+      "2012": {
+        "source_rows": 9937047,
+        "retained_chain_hs6_rows": 355181,
+        "candidate_stage_year_rows": 74813,
+        "elapsed_seconds": 5.524
+      },
+      "2018": {
+        "source_rows": 10833941,
+        "retained_chain_hs6_rows": 372228,
+        "candidate_stage_year_rows": 84537,
+        "elapsed_seconds": 6.171
+      },
+      "2019": {
+        "source_rows": 10937355,
+        "retained_chain_hs6_rows": 373405,
+        "candidate_stage_year_rows": 85637,
+        "elapsed_seconds": 5.722
+      },
+      "2020": {
+        "source_rows": 10553000,
+        "retained_chain_hs6_rows": 355437,
+        "candidate_stage_year_rows": 83838,
+        "elapsed_seconds": 5.511
+      },
+      "2021": {
+        "source_rows": 11040285,
+        "retained_chain_hs6_rows": 373430,
+        "candidate_stage_year_rows": 89002,
+        "elapsed_seconds": 5.788
+      },
+      "2022": {
+        "source_rows": 10802419,
+        "retained_chain_hs6_rows": 368930,
+        "candidate_stage_year_rows": 87162,
+        "elapsed_seconds": 5.746
+      }
+    }
+  },
+  "elapsed_seconds": 79.213,
+  "summary": {
+    "audit_instances": 24,
+    "passing_instances": 24,
+    "failing_instances": 0,
+    "candidate_rows": 888121,
+    "stored_positive_rows": 29095,
+    "raw_positive_rows": 29095,
+    "y_mismatches": 0,
+    "lateval_mismatches": 0,
+    "early_absence_violations": 0,
+    "negative_class_lateval_violations": 0,
+    "all_pass": true
+  },
+  "audits": [
+    {
+      "chain": "sheep",
+      "snapshot": "main",
+      "track": "A",
+      "track_description": "destination extension lane",
+      "candidate_file": "data/processed_v2/candidates_sheep.csv",
+      "candidate_sha256": "84a1b20792abdea98fc601d01c080d4e0f44743b97fabf5307b86d4182bf6674",
+      "rows": 15153,
+      "stored_positive_rows": 552,
+      "raw_positive_rows": 552,
+      "raw_observed_late_value_kusd": 339969.3738,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "2008-2012",
+            "late_window": "2018-2022"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "2008-2012"
+            ],
+            "late_window": [
+              "2018-2022"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 4.547473508864641e-13,
+          "max_relative_error": 3.0585203501003156e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 99.99659999999999,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 14601,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "cotton",
+      "snapshot": "main",
+      "track": "A",
+      "track_description": "destination extension lane",
+      "candidate_file": "data/processed_v2/candidates_cotton.csv",
+      "candidate_sha256": "4e7b9724d34ab830a06cc356feaecb24db8f5fa9081401fe46c1cfbfe9a22373",
+      "rows": 108040,
+      "stored_positive_rows": 3084,
+      "raw_positive_rows": 3084,
+      "raw_observed_late_value_kusd": 1953483.006,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "2008-2012",
+            "late_window": "2018-2022"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "2008-2012"
+            ],
+            "late_window": [
+              "2018-2022"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 3.637978807091713e-12,
+          "max_relative_error": 2.48971014670221e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 99.9814,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 104956,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "aluminium",
+      "snapshot": "main",
+      "track": "A",
+      "track_description": "destination extension lane",
+      "candidate_file": "data/processed_v2/candidates_aluminium.csv",
+      "candidate_sha256": "9c1f76f8e19f792f6bcc6d3b7f25a184236cd025aac238cfbe2f7fd17d0972df",
+      "rows": 81212,
+      "stored_positive_rows": 3487,
+      "raw_positive_rows": 3487,
+      "raw_observed_late_value_kusd": 6557097.3946,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "2008-2012",
+            "late_window": "2018-2022"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "2008-2012"
+            ],
+            "late_window": [
+              "2018-2022"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 1.4551915228366852e-11,
+          "max_relative_error": 2.742915792184416e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 99.95759999999999,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 77725,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "nickel",
+      "snapshot": "main",
+      "track": "A",
+      "track_description": "destination extension lane",
+      "candidate_file": "data/processed_v2/candidates_nickel.csv",
+      "candidate_sha256": "0ebad7822622a459de3367181b93c9c65ba6daa87e51743b107134e5003c516f",
+      "rows": 24645,
+      "stored_positive_rows": 1564,
+      "raw_positive_rows": 1564,
+      "raw_observed_late_value_kusd": 3760049.1788,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "2008-2012",
+            "late_window": "2018-2022"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "2008-2012"
+            ],
+            "late_window": [
+              "2018-2022"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 5.820766091346741e-11,
+          "max_relative_error": 2.184940761869927e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 99.9714,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 23081,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "cocoa",
+      "snapshot": "main",
+      "track": "A",
+      "track_description": "destination extension lane",
+      "candidate_file": "data/processed_v2/candidates_cocoa.csv",
+      "candidate_sha256": "bc888a0e93a5e6720361d2250960c198e4ccccbe302a7f3409df708304dec2ad",
+      "rows": 54026,
+      "stored_positive_rows": 2552,
+      "raw_positive_rows": 2552,
+      "raw_observed_late_value_kusd": 1644646.4612,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "2008-2012",
+            "late_window": "2018-2022"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "2008-2012"
+            ],
+            "late_window": [
+              "2018-2022"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 1.8189894035458565e-12,
+          "max_relative_error": 2.756758300612523e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 99.9756,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 51474,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "oilseed-soy",
+      "snapshot": "main",
+      "track": "A",
+      "track_description": "destination extension lane",
+      "candidate_file": "data/processed_v2/candidates_oilseed-soy.csv",
+      "candidate_sha256": "98ee13bb3538e1ef97e6d42df7b11297c0cf7a6fd52acc32e3a8f48b9e24d944",
+      "rows": 34548,
+      "stored_positive_rows": 1034,
+      "raw_positive_rows": 1034,
+      "raw_observed_late_value_kusd": 2606893.9164,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "2008-2012",
+            "late_window": "2018-2022"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "2008-2012"
+            ],
+            "late_window": [
+              "2018-2022"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 7.275957614183426e-12,
+          "max_relative_error": 2.479444621269316e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 99.97819999999999,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 33514,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "sheep",
+      "snapshot": "main",
+      "track": "B",
+      "track_description": "first-time processed-export candidate lane",
+      "candidate_file": "data/processed_v2/candidates_firsttime_sheep.csv",
+      "candidate_sha256": "766ee136a8529a39b9302ee0fec75f5839884b920c5ae926c8b2134077a31bca",
+      "rows": 11072,
+      "stored_positive_rows": 46,
+      "raw_positive_rows": 46,
+      "raw_observed_late_value_kusd": 25916.4388,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "2008-2012",
+            "late_window": "2018-2022"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "2008-2012"
+            ],
+            "late_window": [
+              "2018-2022"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 5.684341886080802e-14,
+          "max_relative_error": 2.600953329368141e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 96.946,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 11026,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "cotton",
+      "snapshot": "main",
+      "track": "B",
+      "track_description": "first-time processed-export candidate lane",
+      "candidate_file": "data/processed_v2/candidates_firsttime_cotton.csv",
+      "candidate_sha256": "09cf7fb3d24e0b8a5241ed92d19c0531f3d1560d39e72ee64100d4a4fe70fa9d",
+      "rows": 50725,
+      "stored_positive_rows": 44,
+      "raw_positive_rows": 44,
+      "raw_observed_late_value_kusd": 47343.41879999999,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "2008-2012",
+            "late_window": "2018-2022"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "2008-2012"
+            ],
+            "late_window": [
+              "2018-2022"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 5.684341886080802e-14,
+          "max_relative_error": 1.9630448593284615e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 99.0298,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 50681,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "aluminium",
+      "snapshot": "main",
+      "track": "B",
+      "track_description": "first-time processed-export candidate lane",
+      "candidate_file": "data/processed_v2/candidates_firsttime_aluminium.csv",
+      "candidate_sha256": "3022bd78b4f689c4235632cb3974fb22ca1021a48df94f8ecb00c433d2b4d5ed",
+      "rows": 49559,
+      "stored_positive_rows": 181,
+      "raw_positive_rows": 181,
+      "raw_observed_late_value_kusd": 818307.7895999999,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "2008-2012",
+            "late_window": "2018-2022"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "2008-2012"
+            ],
+            "late_window": [
+              "2018-2022"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 3.637978807091713e-12,
+          "max_relative_error": 2.1226200069663612e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 98.3572,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 49378,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "nickel",
+      "snapshot": "main",
+      "track": "B",
+      "track_description": "first-time processed-export candidate lane",
+      "candidate_file": "data/processed_v2/candidates_firsttime_nickel.csv",
+      "candidate_sha256": "77b0e4a0aeb8e7839e6aee399c32137ac8d4f568f1afc27532efab8f9737e5a2",
+      "rows": 25003,
+      "stored_positive_rows": 139,
+      "raw_positive_rows": 139,
+      "raw_observed_late_value_kusd": 516519.5624,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "2008-2012",
+            "late_window": "2018-2022"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "2008-2012"
+            ],
+            "late_window": [
+              "2018-2022"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 3.637978807091713e-12,
+          "max_relative_error": 2.5133716621923923e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 97.7644,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 24864,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "cocoa",
+      "snapshot": "main",
+      "track": "B",
+      "track_description": "first-time processed-export candidate lane",
+      "candidate_file": "data/processed_v2/candidates_firsttime_cocoa.csv",
+      "candidate_sha256": "d876f6646165dc4895f7cf27f370426c608e80b53c7b6ac46427e0969a1073e5",
+      "rows": 36885,
+      "stored_positive_rows": 72,
+      "raw_positive_rows": 72,
+      "raw_observed_late_value_kusd": 42406.216,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "2008-2012",
+            "late_window": "2018-2022"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "2008-2012"
+            ],
+            "late_window": [
+              "2018-2022"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 2.2737367544323206e-13,
+          "max_relative_error": 1.376823354325349e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 99.75840000000001,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 36813,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "oilseed-soy",
+      "snapshot": "main",
+      "track": "B",
+      "track_description": "first-time processed-export candidate lane",
+      "candidate_file": "data/processed_v2/candidates_firsttime_oilseed-soy.csv",
+      "candidate_sha256": "acdccd4555c30b334ac731344ed7138995015b6cebc0f144776000eaf28a1dd7",
+      "rows": 12131,
+      "stored_positive_rows": 74,
+      "raw_positive_rows": 74,
+      "raw_observed_late_value_kusd": 172978.33860000002,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "2008-2012",
+            "late_window": "2018-2022"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "2008-2012"
+            ],
+            "late_window": [
+              "2018-2022"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 3.637978807091713e-12,
+          "max_relative_error": 2.1882701439029468e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 98.7936,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 12057,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "sheep",
+      "snapshot": "fold2",
+      "track": "A",
+      "track_description": "destination extension lane",
+      "candidate_file": "data/processed_v2/candidates_sheep_fold2.csv",
+      "candidate_sha256": "b10bba638f60fbac6f2b35992a13122affbb50fe785060ba1f20be96d00e540c",
+      "rows": 11144,
+      "stored_positive_rows": 621,
+      "raw_positive_rows": 621,
+      "raw_observed_late_value_kusd": 437266.9076,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "1998-2002",
+            "late_window": "2008-2012"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "1998-2002"
+            ],
+            "late_window": [
+              "2008-2012"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 3.637978807091713e-12,
+          "max_relative_error": 2.2137011784721554e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 99.9096,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 10523,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "cotton",
+      "snapshot": "fold2",
+      "track": "A",
+      "track_description": "destination extension lane",
+      "candidate_file": "data/processed_v2/candidates_cotton_fold2.csv",
+      "candidate_sha256": "3334b9bd03803cae1b05c37f74380e97be46309a899a65a8ad9ce20f2afbbabe",
+      "rows": 100986,
+      "stored_positive_rows": 5080,
+      "raw_positive_rows": 5080,
+      "raw_observed_late_value_kusd": 4895191.3398,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "1998-2002",
+            "late_window": "2008-2012"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "1998-2002"
+            ],
+            "late_window": [
+              "2008-2012"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 7.275957614183426e-12,
+          "max_relative_error": 2.680984776318576e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 99.9248,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 95906,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "aluminium",
+      "snapshot": "fold2",
+      "track": "A",
+      "track_description": "destination extension lane",
+      "candidate_file": "data/processed_v2/candidates_aluminium_fold2.csv",
+      "candidate_sha256": "6f8eb34a81e8f509a1126cc60c8a18b077b6f3920a32f383e591513cd2f9f649",
+      "rows": 57401,
+      "stored_positive_rows": 4666,
+      "raw_positive_rows": 4666,
+      "raw_observed_late_value_kusd": 7611218.292000001,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "1998-2002",
+            "late_window": "2008-2012"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "1998-2002"
+            ],
+            "late_window": [
+              "2008-2012"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 7.275957614183426e-12,
+          "max_relative_error": 2.691579110492669e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 99.9962,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 52735,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "nickel",
+      "snapshot": "fold2",
+      "track": "A",
+      "track_description": "destination extension lane",
+      "candidate_file": "data/processed_v2/candidates_nickel_fold2.csv",
+      "candidate_sha256": "16cf742cfd226819684cc2b9895a70ac8c449a1ff55ea27904fe0a534425d62f",
+      "rows": 12922,
+      "stored_positive_rows": 1616,
+      "raw_positive_rows": 1616,
+      "raw_observed_late_value_kusd": 2464654.9847999997,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "1998-2002",
+            "late_window": "2008-2012"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "1998-2002"
+            ],
+            "late_window": [
+              "2008-2012"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 3.637978807091713e-12,
+          "max_relative_error": 2.7664315792633294e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 99.917,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 11306,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "cocoa",
+      "snapshot": "fold2",
+      "track": "A",
+      "track_description": "destination extension lane",
+      "candidate_file": "data/processed_v2/candidates_cocoa_fold2.csv",
+      "candidate_sha256": "3242df52635d1857d3cdabd0284ea16c75bcef21f88823752e35704e7319c834",
+      "rows": 30403,
+      "stored_positive_rows": 2594,
+      "raw_positive_rows": 2594,
+      "raw_observed_late_value_kusd": 2056464.5189999999,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "1998-2002",
+            "late_window": "2008-2012"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "1998-2002"
+            ],
+            "late_window": [
+              "2008-2012"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 7.275957614183426e-12,
+          "max_relative_error": 2.717037768607197e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 99.9914,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 27809,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "oilseed-soy",
+      "snapshot": "fold2",
+      "track": "A",
+      "track_description": "destination extension lane",
+      "candidate_file": "data/processed_v2/candidates_oilseed-soy_fold2.csv",
+      "candidate_sha256": "6870445537ca404c4500e01efe5a3a68fcaeeb93821cee2058d741d51b81743a",
+      "rows": 25320,
+      "stored_positive_rows": 1050,
+      "raw_positive_rows": 1050,
+      "raw_observed_late_value_kusd": 2378093.4787999997,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "1998-2002",
+            "late_window": "2008-2012"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "1998-2002"
+            ],
+            "late_window": [
+              "2008-2012"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 7.275957614183426e-12,
+          "max_relative_error": 2.172714233434548e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 99.90299999999999,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 24270,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "sheep",
+      "snapshot": "fold2",
+      "track": "B",
+      "track_description": "first-time processed-export candidate lane",
+      "candidate_file": "data/processed_v2/candidates_firsttime_sheep_fold2.csv",
+      "candidate_sha256": "a8c29cad8557a74e796201edcc6c2c24490fe07a0fd79dd6572474e1dd386ffe",
+      "rows": 7488,
+      "stored_positive_rows": 44,
+      "raw_positive_rows": 44,
+      "raw_observed_late_value_kusd": 37624.966799999995,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "1998-2002",
+            "late_window": "2008-2012"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "1998-2002"
+            ],
+            "late_window": [
+              "2008-2012"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 4.547473508864641e-13,
+          "max_relative_error": 1.5719450366914822e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 98.27380000000001,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 7444,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "cotton",
+      "snapshot": "fold2",
+      "track": "B",
+      "track_description": "first-time processed-export candidate lane",
+      "candidate_file": "data/processed_v2/candidates_firsttime_cotton_fold2.csv",
+      "candidate_sha256": "3396df9922af8447cacdcd3994e5053fdee0fe2ee870c4ab8aba532ad5767a71",
+      "rows": 44533,
+      "stored_positive_rows": 113,
+      "raw_positive_rows": 113,
+      "raw_observed_late_value_kusd": 86251.18239999999,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "1998-2002",
+            "late_window": "2008-2012"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "1998-2002"
+            ],
+            "late_window": [
+              "2008-2012"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 1.8189894035458565e-12,
+          "max_relative_error": 2.2286168463462485e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 99.70360000000001,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 44420,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "aluminium",
+      "snapshot": "fold2",
+      "track": "B",
+      "track_description": "first-time processed-export candidate lane",
+      "candidate_file": "data/processed_v2/candidates_firsttime_aluminium_fold2.csv",
+      "candidate_sha256": "475b561b7c0eada0d4c60b38a60f1a4566979350b100c88035a3b55f591b5422",
+      "rows": 43278,
+      "stored_positive_rows": 214,
+      "raw_positive_rows": 214,
+      "raw_observed_late_value_kusd": 775110.6689999999,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "1998-2002",
+            "late_window": "2008-2012"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "1998-2002"
+            ],
+            "late_window": [
+              "2008-2012"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 5.820766091346741e-11,
+          "max_relative_error": 2.2025750777890797e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 99.0,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 43064,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "nickel",
+      "snapshot": "fold2",
+      "track": "B",
+      "track_description": "first-time processed-export candidate lane",
+      "candidate_file": "data/processed_v2/candidates_firsttime_nickel_fold2.csv",
+      "candidate_sha256": "182d002e10bfd4bb20d8ff0f552aed2eef65163f399540b2e0b2b3b3ad53a1ec",
+      "rows": 13434,
+      "stored_positive_rows": 95,
+      "raw_positive_rows": 95,
+      "raw_observed_late_value_kusd": 939866.4077999999,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "1998-2002",
+            "late_window": "2008-2012"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "1998-2002"
+            ],
+            "late_window": [
+              "2008-2012"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 4.547473508864641e-13,
+          "max_relative_error": 2.2119645476877732e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 98.35940000000001,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 13339,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "cocoa",
+      "snapshot": "fold2",
+      "track": "B",
+      "track_description": "first-time processed-export candidate lane",
+      "candidate_file": "data/processed_v2/candidates_firsttime_cocoa_fold2.csv",
+      "candidate_sha256": "1afd4735b8e880b80d8f732cd3a3963cb776e6022f6cb60ebe558a1267fe9e3d",
+      "rows": 26165,
+      "stored_positive_rows": 104,
+      "raw_positive_rows": 104,
+      "raw_observed_late_value_kusd": 58362.2826,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "1998-2002",
+            "late_window": "2008-2012"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "1998-2002"
+            ],
+            "late_window": [
+              "2008-2012"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 3.637978807091713e-12,
+          "max_relative_error": 1.8977730213789358e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 91.57419999999999,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 26061,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    },
+    {
+      "chain": "oilseed-soy",
+      "snapshot": "fold2",
+      "track": "B",
+      "track_description": "first-time processed-export candidate lane",
+      "candidate_file": "data/processed_v2/candidates_firsttime_oilseed-soy_fold2.csv",
+      "candidate_sha256": "c4d387c765d37cdf989719d99460a2433eac18f3b297c34bcc03344d5c770908",
+      "rows": 12048,
+      "stored_positive_rows": 69,
+      "raw_positive_rows": 69,
+      "raw_observed_late_value_kusd": 112483.335,
+      "checks": {
+        "metadata": {
+          "pass": true,
+          "expected": {
+            "aggregation": "calendar_mean",
+            "early_window": "1998-2002",
+            "late_window": "2008-2012"
+          },
+          "observed": {
+            "aggregation": [
+              "calendar_mean"
+            ],
+            "early_window": [
+              "1998-2002"
+            ],
+            "late_window": [
+              "2008-2012"
+            ]
+          }
+        },
+        "y_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "agreement": 1.0,
+          "invalid_stored_y": 0,
+          "examples": []
+        },
+        "lateval_reconciliation": {
+          "pass": true,
+          "mismatches": 0,
+          "max_absolute_error_kusd": 4.547473508864641e-13,
+          "max_relative_error": 1.940700182614503e-16,
+          "atol_kusd": 1e-06,
+          "rtol": 1e-09,
+          "examples": []
+        },
+        "early_absence": {
+          "pass": true,
+          "violations_above_100_kusd": 0,
+          "max_raw_early_mean_kusd": 97.6928,
+          "examples": []
+        },
+        "negative_class_lateval_zero": {
+          "pass": true,
+          "negative_rows": 11979,
+          "violations": 0,
+          "examples": []
+        },
+        "lateval_nonnegative": {
+          "pass": true,
+          "violations": 0
+        }
+      },
+      "all_pass": true
+    }
+  ]
+}

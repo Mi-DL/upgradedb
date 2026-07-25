@@ -1,0 +1,170 @@
+{
+  "id": "nickel",
+  "description": "Nickel ore -> nickel matte/other nickel-metallurgy intermediates or ferronickel -> unwrought nickel -> nickel semis, articles, and nickel salts. Generic stainless-steel HS92 codes are excluded. Indonesia ore-export-ban setting (mining-metal; non-causal benchmark framing).",
+  "stages": {
+    "exp_nickel_ore": [
+      "260400"
+    ],
+    "exp_nickel_matte": [
+      "750110"
+    ],
+    "exp_nickel_intermediate": [
+      "750120"
+    ],
+    "exp_ferronickel": [
+      "720260"
+    ],
+    "exp_unwrought": [
+      "740323",
+      "750210",
+      "750220"
+    ],
+    "exp_powder": [
+      "750400"
+    ],
+    "exp_bars_wire": [
+      "740722",
+      "740822",
+      "750511",
+      "750512",
+      "750521",
+      "750522"
+    ],
+    "exp_plates_foil": [
+      "740940",
+      "750610",
+      "750620"
+    ],
+    "exp_tubes": [
+      "741122",
+      "750711",
+      "750712",
+      "750720"
+    ],
+    "exp_other": [
+      "750800"
+    ],
+    "exp_nickel_salts": [
+      "282735",
+      "283324"
+    ]
+  },
+  "upstream": [
+    "exp_nickel_ore"
+  ],
+  "upstream_map": {
+    "exp_nickel_matte": [
+      "exp_nickel_ore"
+    ],
+    "exp_nickel_intermediate": [
+      "exp_nickel_ore"
+    ],
+    "exp_ferronickel": [
+      "exp_nickel_ore"
+    ],
+    "exp_unwrought": [
+      "exp_ferronickel",
+      "exp_nickel_intermediate",
+      "exp_nickel_matte",
+      "exp_nickel_ore"
+    ],
+    "exp_powder": [
+      "exp_ferronickel",
+      "exp_nickel_intermediate",
+      "exp_nickel_matte",
+      "exp_nickel_ore",
+      "exp_unwrought"
+    ],
+    "exp_bars_wire": [
+      "exp_ferronickel",
+      "exp_nickel_intermediate",
+      "exp_nickel_matte",
+      "exp_nickel_ore",
+      "exp_unwrought"
+    ],
+    "exp_plates_foil": [
+      "exp_ferronickel",
+      "exp_nickel_intermediate",
+      "exp_nickel_matte",
+      "exp_nickel_ore",
+      "exp_unwrought"
+    ],
+    "exp_tubes": [
+      "exp_ferronickel",
+      "exp_nickel_intermediate",
+      "exp_nickel_matte",
+      "exp_nickel_ore",
+      "exp_plates_foil",
+      "exp_unwrought"
+    ],
+    "exp_other": [
+      "exp_ferronickel",
+      "exp_nickel_intermediate",
+      "exp_nickel_matte",
+      "exp_nickel_ore",
+      "exp_unwrought"
+    ],
+    "exp_nickel_salts": [
+      "exp_ferronickel",
+      "exp_nickel_intermediate",
+      "exp_nickel_matte",
+      "exp_nickel_ore",
+      "exp_unwrought"
+    ]
+  },
+  "derived_from": {
+    "exp_nickel_matte": [
+      "260400"
+    ],
+    "exp_nickel_intermediate": [
+      "260400"
+    ],
+    "exp_ferronickel": [
+      "260400"
+    ],
+    "exp_unwrought": [
+      "720260",
+      "750110",
+      "750120"
+    ],
+    "exp_powder": [
+      "750210"
+    ],
+    "exp_bars_wire": [
+      "750210",
+      "750220"
+    ],
+    "exp_plates_foil": [
+      "750210",
+      "750220"
+    ],
+    "exp_tubes": [
+      "750210",
+      "750610"
+    ],
+    "exp_other": [
+      "750210"
+    ],
+    "exp_nickel_salts": [
+      "750110",
+      "750120",
+      "750210"
+    ]
+  },
+  "derived_from_hs": {},
+  "produces": {},
+  "form_of": [],
+  "named_sources": {},
+  "assumption_strength": {
+    "exp_nickel_matte": "clean",
+    "exp_nickel_intermediate": "clean",
+    "exp_ferronickel": "clean",
+    "exp_unwrought": "clean",
+    "exp_powder": "moderate",
+    "exp_bars_wire": "clean",
+    "exp_plates_foil": "clean",
+    "exp_tubes": "clean",
+    "exp_other": "moderate",
+    "exp_nickel_salts": "assumed"
+  }
+}

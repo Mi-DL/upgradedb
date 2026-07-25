@@ -1,0 +1,1098 @@
+{
+  "benchmark_version": "2.1-dev",
+  "claim_scope": "reviewer-motivated post-hoc B1-only descriptive domain reference; not part of the original prespecified reference set",
+  "cohorts": {
+    "historical": {
+      "aluminium": {
+        "input": {
+          "early_window": "1998-2002",
+          "exporters": 99,
+          "late_window": "2008-2012",
+          "path": "data/processed_v2/entries_firsttime_aluminium_fold2.csv",
+          "positives": 81,
+          "rows": 362,
+          "sha256": "3c14742d58fa78d297379c294d528f891b10343161deb8128938d6cd30faead8",
+          "stages": 9
+        },
+        "metrics": {
+          "average_precision": 0.3852159022673044,
+          "average_precision_ci95": [
+            0.3169394954426899,
+            0.4893716531812536
+          ],
+          "base_rate": 0.22375690607734808,
+          "budgets": {
+            "k_50": {
+              "effective_k": 50,
+              "hits": 20,
+              "observed_late_value_kusd": 19506.879200000003,
+              "precision": 0.4,
+              "recall": 0.24691358024691357,
+              "requested_k": 50,
+              "value_capture": 0.02516657295553237
+            }
+          },
+          "n": 362,
+          "positives": 81,
+          "roc_auc": 0.672641799569439,
+          "total_observed_late_value_kusd": 775110.669,
+          "uncertainty": {
+            "ap_only": true,
+            "cluster_unit": "exporter",
+            "draws": 200,
+            "interval": "percentile_95",
+            "method": "nonparametric_cluster_bootstrap",
+            "n_clusters": 99,
+            "seed": 3043544742
+          }
+        },
+        "score_audit": {
+          "candidate_rows": 362,
+          "candidate_target_hs6_pairs": 1016,
+          "candidate_target_hs6_rca_memberships": 15,
+          "candidates_with_any_target_hs6_rca_membership": 15,
+          "exporter_dictionary_coverage": 1.0,
+          "exporter_dictionary_covered_rows": 362,
+          "score_max": 0.3282388362726189,
+          "score_min": 0.007168369473963939,
+          "self_diagonal_exclusion_material": true,
+          "unique_scores": 362,
+          "zero_score_rows": 0
+        }
+      },
+      "cocoa": {
+        "input": {
+          "early_window": "1998-2002",
+          "exporters": 64,
+          "late_window": "2008-2012",
+          "path": "data/processed_v2/entries_firsttime_cocoa_fold2.csv",
+          "positives": 46,
+          "rows": 260,
+          "sha256": "077d3324f64ddf5aa952be7a879834ba58adfd24c1bcb2754df481c129156f13",
+          "stages": 7
+        },
+        "metrics": {
+          "average_precision": 0.44373260085205785,
+          "average_precision_ci95": [
+            0.306223860355445,
+            0.6353779007045942
+          ],
+          "base_rate": 0.17692307692307693,
+          "budgets": {
+            "k_50": {
+              "effective_k": 50,
+              "hits": 24,
+              "observed_late_value_kusd": 24640.5398,
+              "precision": 0.48,
+              "recall": 0.5217391304347826,
+              "requested_k": 50,
+              "value_capture": 0.4221997273286909
+            }
+          },
+          "n": 260,
+          "positives": 46,
+          "roc_auc": 0.7993701747257212,
+          "total_observed_late_value_kusd": 58362.2826,
+          "uncertainty": {
+            "ap_only": true,
+            "cluster_unit": "exporter",
+            "draws": 200,
+            "interval": "percentile_95",
+            "method": "nonparametric_cluster_bootstrap",
+            "n_clusters": 64,
+            "seed": 4041406049
+          }
+        },
+        "score_audit": {
+          "candidate_rows": 260,
+          "candidate_target_hs6_pairs": 333,
+          "candidate_target_hs6_rca_memberships": 11,
+          "candidates_with_any_target_hs6_rca_membership": 11,
+          "exporter_dictionary_coverage": 1.0,
+          "exporter_dictionary_covered_rows": 260,
+          "score_max": 0.33278597322146974,
+          "score_min": 0.0028910257097281796,
+          "self_diagonal_exclusion_material": true,
+          "unique_scores": 260,
+          "zero_score_rows": 0
+        }
+      },
+      "cotton": {
+        "input": {
+          "early_window": "1998-2002",
+          "exporters": 100,
+          "late_window": "2008-2012",
+          "path": "data/processed_v2/entries_firsttime_cotton_fold2.csv",
+          "positives": 66,
+          "rows": 309,
+          "sha256": "5b9205cf38a28fe9094dc2a33d9942a79befcdf8d7150a77c88818bcb3a4eb5c",
+          "stages": 7
+        },
+        "metrics": {
+          "average_precision": 0.33691893275536544,
+          "average_precision_ci95": [
+            0.2645527223621545,
+            0.4417195416388619
+          ],
+          "base_rate": 0.21359223300970873,
+          "budgets": {
+            "k_50": {
+              "effective_k": 50,
+              "hits": 17,
+              "observed_late_value_kusd": 33725.417,
+              "precision": 0.34,
+              "recall": 0.25757575757575757,
+              "requested_k": 50,
+              "value_capture": 0.3910139671314234
+            }
+          },
+          "n": 309,
+          "positives": 66,
+          "roc_auc": 0.6602444195036787,
+          "total_observed_late_value_kusd": 86251.18239999999,
+          "uncertainty": {
+            "ap_only": true,
+            "cluster_unit": "exporter",
+            "draws": 200,
+            "interval": "percentile_95",
+            "method": "nonparametric_cluster_bootstrap",
+            "n_clusters": 100,
+            "seed": 2062290036
+          }
+        },
+        "score_audit": {
+          "candidate_rows": 309,
+          "candidate_target_hs6_pairs": 5146,
+          "candidate_target_hs6_rca_memberships": 127,
+          "candidates_with_any_target_hs6_rca_membership": 58,
+          "exporter_dictionary_coverage": 1.0,
+          "exporter_dictionary_covered_rows": 309,
+          "score_max": 0.31445576626240884,
+          "score_min": 0.009763715403597452,
+          "self_diagonal_exclusion_material": true,
+          "unique_scores": 309,
+          "zero_score_rows": 0
+        }
+      },
+      "nickel": {
+        "input": {
+          "early_window": "1998-2002",
+          "exporters": 52,
+          "late_window": "2008-2012",
+          "path": "data/processed_v2/entries_firsttime_nickel_fold2.csv",
+          "positives": 48,
+          "rows": 242,
+          "sha256": "334877b3c1176a94f9a4cb2897edaec6ac6ad88d3fd9b74ca8283d2108191639",
+          "stages": 10
+        },
+        "metrics": {
+          "average_precision": 0.4083809076902871,
+          "average_precision_ci95": [
+            0.3040370239245992,
+            0.5979864735113403
+          ],
+          "base_rate": 0.19834710743801653,
+          "budgets": {
+            "k_50": {
+              "effective_k": 50,
+              "hits": 25,
+              "observed_late_value_kusd": 623524.6638,
+              "precision": 0.5,
+              "recall": 0.5208333333333334,
+              "requested_k": 50,
+              "value_capture": 0.6634183950243743
+            }
+          },
+          "n": 242,
+          "positives": 48,
+          "roc_auc": 0.748926116838488,
+          "total_observed_late_value_kusd": 939866.4077999999,
+          "uncertainty": {
+            "ap_only": true,
+            "cluster_unit": "exporter",
+            "draws": 200,
+            "interval": "percentile_95",
+            "method": "nonparametric_cluster_bootstrap",
+            "n_clusters": 52,
+            "seed": 2104139558
+          }
+        },
+        "score_audit": {
+          "candidate_rows": 242,
+          "candidate_target_hs6_pairs": 629,
+          "candidate_target_hs6_rca_memberships": 12,
+          "candidates_with_any_target_hs6_rca_membership": 12,
+          "exporter_dictionary_coverage": 1.0,
+          "exporter_dictionary_covered_rows": 242,
+          "score_max": 0.335140013533693,
+          "score_min": 0.006015556490748599,
+          "self_diagonal_exclusion_material": true,
+          "unique_scores": 242,
+          "zero_score_rows": 0
+        }
+      },
+      "oilseed-soy": {
+        "input": {
+          "early_window": "1998-2002",
+          "exporters": 51,
+          "late_window": "2008-2012",
+          "path": "data/processed_v2/entries_firsttime_oilseed-soy_fold2.csv",
+          "positives": 38,
+          "rows": 100,
+          "sha256": "4fc8cc326ebc4cf887aa391fb5bb42f0c790a673b5ece11fb98463297c8f6ae3",
+          "stages": 4
+        },
+        "metrics": {
+          "average_precision": 0.5286377946528029,
+          "average_precision_ci95": [
+            0.3976161729580972,
+            0.6605127399656119
+          ],
+          "base_rate": 0.38,
+          "budgets": {
+            "k_50": {
+              "effective_k": 50,
+              "hits": 25,
+              "observed_late_value_kusd": 48892.926400000004,
+              "precision": 0.5,
+              "recall": 0.6578947368421053,
+              "requested_k": 50,
+              "value_capture": 0.43466817906848165
+            }
+          },
+          "n": 100,
+          "positives": 38,
+          "roc_auc": 0.666383701188455,
+          "total_observed_late_value_kusd": 112483.33499999999,
+          "uncertainty": {
+            "ap_only": true,
+            "cluster_unit": "exporter",
+            "draws": 200,
+            "interval": "percentile_95",
+            "method": "nonparametric_cluster_bootstrap",
+            "n_clusters": 51,
+            "seed": 2379791430
+          }
+        },
+        "score_audit": {
+          "candidate_rows": 100,
+          "candidate_target_hs6_pairs": 100,
+          "candidate_target_hs6_rca_memberships": 5,
+          "candidates_with_any_target_hs6_rca_membership": 5,
+          "exporter_dictionary_coverage": 1.0,
+          "exporter_dictionary_covered_rows": 100,
+          "score_max": 0.31422754487017174,
+          "score_min": 0.013801351107333703,
+          "self_diagonal_exclusion_material": true,
+          "unique_scores": 100,
+          "zero_score_rows": 0
+        }
+      },
+      "sheep": {
+        "input": {
+          "early_window": "1998-2002",
+          "exporters": 64,
+          "late_window": "2008-2012",
+          "path": "data/processed_v2/entries_firsttime_sheep_fold2.csv",
+          "positives": 19,
+          "rows": 119,
+          "sha256": "ee9bd4b03de3358a4b7747c65724cbb67e9b345c7a0bd93d96f868168385ddd6",
+          "stages": 4
+        },
+        "metrics": {
+          "average_precision": 0.34072556591570813,
+          "average_precision_ci95": [
+            0.18186369263986038,
+            0.564245014575211
+          ],
+          "base_rate": 0.15966386554621848,
+          "budgets": {
+            "k_50": {
+              "effective_k": 50,
+              "hits": 10,
+              "observed_late_value_kusd": 21087.8814,
+              "precision": 0.2,
+              "recall": 0.5263157894736842,
+              "requested_k": 50,
+              "value_capture": 0.560475747715477
+            }
+          },
+          "n": 119,
+          "positives": 19,
+          "roc_auc": 0.6799999999999999,
+          "total_observed_late_value_kusd": 37624.966799999995,
+          "uncertainty": {
+            "ap_only": true,
+            "cluster_unit": "exporter",
+            "draws": 200,
+            "interval": "percentile_95",
+            "method": "nonparametric_cluster_bootstrap",
+            "n_clusters": 64,
+            "seed": 1607864723
+          }
+        },
+        "score_audit": {
+          "candidate_rows": 119,
+          "candidate_target_hs6_pairs": 280,
+          "candidate_target_hs6_rca_memberships": 5,
+          "candidates_with_any_target_hs6_rca_membership": 5,
+          "exporter_dictionary_coverage": 1.0,
+          "exporter_dictionary_covered_rows": 119,
+          "score_max": 0.2776585000847025,
+          "score_min": 0.0011328475737032487,
+          "self_diagonal_exclusion_material": true,
+          "unique_scores": 119,
+          "zero_score_rows": 0
+        }
+      }
+    },
+    "main": {
+      "aluminium": {
+        "input": {
+          "early_window": "2008-2012",
+          "exporters": 107,
+          "late_window": "2018-2022",
+          "path": "data/processed_v2/entries_firsttime_aluminium.csv",
+          "positives": 72,
+          "rows": 358,
+          "sha256": "13d858d19a0b7ba67369b7bf2346fa425e379e835b4ea6e83703340c719aa547",
+          "stages": 9
+        },
+        "metrics": {
+          "average_precision": 0.3392874349457532,
+          "average_precision_ci95": [
+            0.22962666231616669,
+            0.4639309154361062
+          ],
+          "base_rate": 0.2011173184357542,
+          "budgets": {
+            "k_50": {
+              "effective_k": 50,
+              "hits": 22,
+              "observed_late_value_kusd": 505587.9798,
+              "precision": 0.44,
+              "recall": 0.3055555555555556,
+              "requested_k": 50,
+              "value_capture": 0.61784573753983
+            }
+          },
+          "n": 358,
+          "positives": 72,
+          "roc_auc": 0.6426282051282052,
+          "total_observed_late_value_kusd": 818307.7896,
+          "uncertainty": {
+            "ap_only": true,
+            "cluster_unit": "exporter",
+            "draws": 200,
+            "interval": "percentile_95",
+            "method": "nonparametric_cluster_bootstrap",
+            "n_clusters": 107,
+            "seed": 3651446872
+          }
+        },
+        "score_audit": {
+          "candidate_rows": 358,
+          "candidate_target_hs6_pairs": 975,
+          "candidate_target_hs6_rca_memberships": 6,
+          "candidates_with_any_target_hs6_rca_membership": 6,
+          "exporter_dictionary_coverage": 1.0,
+          "exporter_dictionary_covered_rows": 358,
+          "score_max": 0.3453766230304296,
+          "score_min": 0.0015585433621362395,
+          "self_diagonal_exclusion_material": true,
+          "unique_scores": 358,
+          "zero_score_rows": 0
+        }
+      },
+      "cocoa": {
+        "input": {
+          "early_window": "2008-2012",
+          "exporters": 74,
+          "late_window": "2018-2022",
+          "path": "data/processed_v2/entries_firsttime_cocoa.csv",
+          "positives": 42,
+          "rows": 277,
+          "sha256": "4512f9e666db960df7cc75fb30eed882435d67645b4c4b6ace72b88e0d3db3f1",
+          "stages": 7
+        },
+        "metrics": {
+          "average_precision": 0.304362966454102,
+          "average_precision_ci95": [
+            0.18046931263370594,
+            0.44593399454805593
+          ],
+          "base_rate": 0.15162454873646208,
+          "budgets": {
+            "k_50": {
+              "effective_k": 50,
+              "hits": 15,
+              "observed_late_value_kusd": 20472.1332,
+              "precision": 0.3,
+              "recall": 0.35714285714285715,
+              "requested_k": 50,
+              "value_capture": 0.48276255537631557
+            }
+          },
+          "n": 277,
+          "positives": 42,
+          "roc_auc": 0.6480243161094225,
+          "total_observed_late_value_kusd": 42406.216,
+          "uncertainty": {
+            "ap_only": true,
+            "cluster_unit": "exporter",
+            "draws": 200,
+            "interval": "percentile_95",
+            "method": "nonparametric_cluster_bootstrap",
+            "n_clusters": 74,
+            "seed": 1125991947
+          }
+        },
+        "score_audit": {
+          "candidate_rows": 277,
+          "candidate_target_hs6_pairs": 356,
+          "candidate_target_hs6_rca_memberships": 16,
+          "candidates_with_any_target_hs6_rca_membership": 15,
+          "exporter_dictionary_coverage": 1.0,
+          "exporter_dictionary_covered_rows": 277,
+          "score_max": 0.2921762474874424,
+          "score_min": 0.001843874964295823,
+          "self_diagonal_exclusion_material": true,
+          "unique_scores": 277,
+          "zero_score_rows": 0
+        }
+      },
+      "cotton": {
+        "input": {
+          "early_window": "2008-2012",
+          "exporters": 107,
+          "late_window": "2018-2022",
+          "path": "data/processed_v2/entries_firsttime_cotton.csv",
+          "positives": 36,
+          "rows": 320,
+          "sha256": "a3fb8b89d0359bb60bf452519ea865bfd177f8098de9f5595ded51b18d3cbe52",
+          "stages": 7
+        },
+        "metrics": {
+          "average_precision": 0.3328425810435813,
+          "average_precision_ci95": [
+            0.22407229105599785,
+            0.47661282543704464
+          ],
+          "base_rate": 0.1125,
+          "budgets": {
+            "k_50": {
+              "effective_k": 50,
+              "hits": 15,
+              "observed_late_value_kusd": 4607.106400000001,
+              "precision": 0.3,
+              "recall": 0.4166666666666667,
+              "requested_k": 50,
+              "value_capture": 0.0973124991133932
+            }
+          },
+          "n": 320,
+          "positives": 36,
+          "roc_auc": 0.7280907668231613,
+          "total_observed_late_value_kusd": 47343.41879999998,
+          "uncertainty": {
+            "ap_only": true,
+            "cluster_unit": "exporter",
+            "draws": 200,
+            "interval": "percentile_95",
+            "method": "nonparametric_cluster_bootstrap",
+            "n_clusters": 107,
+            "seed": 3609944638
+          }
+        },
+        "score_audit": {
+          "candidate_rows": 320,
+          "candidate_target_hs6_pairs": 4942,
+          "candidate_target_hs6_rca_memberships": 80,
+          "candidates_with_any_target_hs6_rca_membership": 31,
+          "exporter_dictionary_coverage": 1.0,
+          "exporter_dictionary_covered_rows": 320,
+          "score_max": 0.30527401419130645,
+          "score_min": 0.0017106814268511613,
+          "self_diagonal_exclusion_material": true,
+          "unique_scores": 320,
+          "zero_score_rows": 0
+        }
+      },
+      "nickel": {
+        "input": {
+          "early_window": "2008-2012",
+          "exporters": 74,
+          "late_window": "2018-2022",
+          "path": "data/processed_v2/entries_firsttime_nickel.csv",
+          "positives": 66,
+          "rows": 343,
+          "sha256": "89f5b937f9b0a20fe79834a1bd1c98425b83db549a1f4059d1e147dfa5bdad2d",
+          "stages": 10
+        },
+        "metrics": {
+          "average_precision": 0.462045528801577,
+          "average_precision_ci95": [
+            0.3348813085891669,
+            0.5835708926125541
+          ],
+          "base_rate": 0.1924198250728863,
+          "budgets": {
+            "k_50": {
+              "effective_k": 50,
+              "hits": 26,
+              "observed_late_value_kusd": 136944.16000000003,
+              "precision": 0.52,
+              "recall": 0.3939393939393939,
+              "requested_k": 50,
+              "value_capture": 0.26512869979927023
+            }
+          },
+          "n": 343,
+          "positives": 66,
+          "roc_auc": 0.7509572256864675,
+          "total_observed_late_value_kusd": 516519.56240000005,
+          "uncertainty": {
+            "ap_only": true,
+            "cluster_unit": "exporter",
+            "draws": 200,
+            "interval": "percentile_95",
+            "method": "nonparametric_cluster_bootstrap",
+            "n_clusters": 74,
+            "seed": 1218123861
+          }
+        },
+        "score_audit": {
+          "candidate_rows": 343,
+          "candidate_target_hs6_pairs": 869,
+          "candidate_target_hs6_rca_memberships": 1,
+          "candidates_with_any_target_hs6_rca_membership": 1,
+          "exporter_dictionary_coverage": 1.0,
+          "exporter_dictionary_covered_rows": 343,
+          "score_max": 0.3748459052306891,
+          "score_min": 0.0010685089055660537,
+          "self_diagonal_exclusion_material": true,
+          "unique_scores": 343,
+          "zero_score_rows": 0
+        }
+      },
+      "oilseed-soy": {
+        "input": {
+          "early_window": "2008-2012",
+          "exporters": 51,
+          "late_window": "2018-2022",
+          "path": "data/processed_v2/entries_firsttime_oilseed-soy.csv",
+          "positives": 34,
+          "rows": 86,
+          "sha256": "5c02bd2ec03d831793091f9227bf7d35860f183d89ef70c9c37bb36ae606b4c9",
+          "stages": 4
+        },
+        "metrics": {
+          "average_precision": 0.6360194426897003,
+          "average_precision_ci95": [
+            0.49338804881718745,
+            0.7869049759054145
+          ],
+          "base_rate": 0.3953488372093023,
+          "budgets": {
+            "k_50": {
+              "effective_k": 50,
+              "hits": 24,
+              "observed_late_value_kusd": 107702.55780000001,
+              "precision": 0.48,
+              "recall": 0.7058823529411765,
+              "requested_k": 50,
+              "value_capture": 0.62263609809003
+            }
+          },
+          "n": 86,
+          "positives": 34,
+          "roc_auc": 0.6600678733031674,
+          "total_observed_late_value_kusd": 172978.3386,
+          "uncertainty": {
+            "ap_only": true,
+            "cluster_unit": "exporter",
+            "draws": 200,
+            "interval": "percentile_95",
+            "method": "nonparametric_cluster_bootstrap",
+            "n_clusters": 51,
+            "seed": 3699873089
+          }
+        },
+        "score_audit": {
+          "candidate_rows": 86,
+          "candidate_target_hs6_pairs": 86,
+          "candidate_target_hs6_rca_memberships": 1,
+          "candidates_with_any_target_hs6_rca_membership": 1,
+          "exporter_dictionary_coverage": 1.0,
+          "exporter_dictionary_covered_rows": 86,
+          "score_max": 0.30501420831881104,
+          "score_min": 0.009453257902412377,
+          "self_diagonal_exclusion_material": true,
+          "unique_scores": 86,
+          "zero_score_rows": 0
+        }
+      },
+      "sheep": {
+        "input": {
+          "early_window": "2008-2012",
+          "exporters": 74,
+          "late_window": "2018-2022",
+          "path": "data/processed_v2/entries_firsttime_sheep.csv",
+          "positives": 20,
+          "rows": 134,
+          "sha256": "a430d1146a28593840e544b8b2301891e4ed531d7fd5e36b46c531b2d83dcc06",
+          "stages": 4
+        },
+        "metrics": {
+          "average_precision": 0.24247924069518917,
+          "average_precision_ci95": [
+            0.10882949771813305,
+            0.4621659440592599
+          ],
+          "base_rate": 0.14925373134328357,
+          "budgets": {
+            "k_50": {
+              "effective_k": 50,
+              "hits": 11,
+              "observed_late_value_kusd": 17137.499600000003,
+              "precision": 0.22,
+              "recall": 0.55,
+              "requested_k": 50,
+              "value_capture": 0.6612598178419483
+            }
+          },
+          "n": 134,
+          "positives": 20,
+          "roc_auc": 0.5780701754385965,
+          "total_observed_late_value_kusd": 25916.4388,
+          "uncertainty": {
+            "ap_only": true,
+            "cluster_unit": "exporter",
+            "draws": 200,
+            "interval": "percentile_95",
+            "method": "nonparametric_cluster_bootstrap",
+            "n_clusters": 74,
+            "seed": 2502330487
+          }
+        },
+        "score_audit": {
+          "candidate_rows": 134,
+          "candidate_target_hs6_pairs": 376,
+          "candidate_target_hs6_rca_memberships": 4,
+          "candidates_with_any_target_hs6_rca_membership": 4,
+          "exporter_dictionary_coverage": 1.0,
+          "exporter_dictionary_covered_rows": 134,
+          "score_max": 0.30536813120067463,
+          "score_min": 0.0010721265949472276,
+          "self_diagonal_exclusion_material": true,
+          "unique_scores": 134,
+          "zero_score_rows": 0
+        }
+      }
+    }
+  },
+  "config": {
+    "path": "configs/v2_product_space_density.json",
+    "sha256": "9704b972d3c33904afcb818f87ccd461d988fd30910e9788031d4176df032cd0"
+  },
+  "generated_at_utc": "2026-07-16T12:57:54.763327+00:00",
+  "inputs": {
+    "chain_registries": {
+      "chains/aluminium.json": "4208a43ec676d5a0a6b209d95d1f171c273c8c6138817dc1189dc88f8d4affb4",
+      "chains/cocoa.json": "38b38f994e2a202227e9c945ce5180ada7233b4ed3161788e03eb3f1902d64b4",
+      "chains/cotton.json": "e2f10638f2f6c99ebf5f8d117938fcd0de36d8eb89bbc2d9648da7024fd8c907",
+      "chains/nickel.json": "ea45d8304e726595157b9f1d388bd5dabf6b8887949333ba8c3c428a4f1a3123",
+      "chains/oilseed-soy.json": "4d3d9d930852f644e82917131d6377ffdf7a3467968c578e00b878a01710b752",
+      "chains/sheep.json": "2b8be327d51a1b621c2136f4dae74bba0669935ec90933d14f2ad55f1739af4c"
+    },
+    "public_sources": {
+      "configs/v2_product_space_density.json": "9704b972d3c33904afcb818f87ccd461d988fd30910e9788031d4176df032cd0",
+      "requirements/raw_source_attestation.json": "99a241cb9aff4ef9d0ab702e288b0341c43207bb5462dbb891fd9769f29f8471",
+      "tools/v2_product_space_density.py": "45e55290861ddb1b6eb0c1bedc5e96a4e4822c2c7ff934f746954b5584dbbe77",
+      "tools/v2_rolling_cpu_baselines.py": "33744764057db851da0c1faddb6f6cd08fd6c581434a0b7eba8102c5fe05163d"
+    },
+    "raw_baci": {
+      "attestation_path": "requirements/raw_source_attestation.json",
+      "attestation_sha256": "99a241cb9aff4ef9d0ab702e288b0341c43207bb5462dbb891fd9769f29f8471",
+      "hash_verification": "direct SHA-256 over current archive bytes",
+      "path": "data/raw/BACI_HS92_V202401b.zip",
+      "required_members": [
+        {
+          "compressed_size_bytes": 96543,
+          "crc32": "2af34823",
+          "member_name": "product_codes_HS92_V202401b.csv",
+          "uncompressed_size_bytes": 525748
+        },
+        {
+          "compressed_size_bytes": 3114,
+          "crc32": "93c6c9c2",
+          "member_name": "country_codes_V202401b.csv",
+          "uncompressed_size_bytes": 5338
+        },
+        {
+          "compressed_size_bytes": 59085181,
+          "crc32": "cfe0ba60",
+          "member_name": "BACI_HS92_Y1998_V202401b.csv",
+          "uncompressed_size_bytes": 279524362
+        },
+        {
+          "compressed_size_bytes": 60603093,
+          "crc32": "e0866d7f",
+          "member_name": "BACI_HS92_Y1999_V202401b.csv",
+          "uncompressed_size_bytes": 286562399
+        },
+        {
+          "compressed_size_bytes": 71939863,
+          "crc32": "0a7e97a7",
+          "member_name": "BACI_HS92_Y2000_V202401b.csv",
+          "uncompressed_size_bytes": 347618411
+        },
+        {
+          "compressed_size_bytes": 74124867,
+          "crc32": "42dfe43a",
+          "member_name": "BACI_HS92_Y2001_V202401b.csv",
+          "uncompressed_size_bytes": 359324734
+        },
+        {
+          "compressed_size_bytes": 76197276,
+          "crc32": "93cc845b",
+          "member_name": "BACI_HS92_Y2002_V202401b.csv",
+          "uncompressed_size_bytes": 369301076
+        },
+        {
+          "compressed_size_bytes": 93542916,
+          "crc32": "8fd395a1",
+          "member_name": "BACI_HS92_Y2008_V202401b.csv",
+          "uncompressed_size_bytes": 445022193
+        },
+        {
+          "compressed_size_bytes": 91453525,
+          "crc32": "b823244a",
+          "member_name": "BACI_HS92_Y2009_V202401b.csv",
+          "uncompressed_size_bytes": 440520495
+        },
+        {
+          "compressed_size_bytes": 94195240,
+          "crc32": "9b7881c6",
+          "member_name": "BACI_HS92_Y2010_V202401b.csv",
+          "uncompressed_size_bytes": 452605760
+        },
+        {
+          "compressed_size_bytes": 96233582,
+          "crc32": "bb93c4f4",
+          "member_name": "BACI_HS92_Y2011_V202401b.csv",
+          "uncompressed_size_bytes": 460615869
+        },
+        {
+          "compressed_size_bytes": 98778039,
+          "crc32": "ab38c8fc",
+          "member_name": "BACI_HS92_Y2012_V202401b.csv",
+          "uncompressed_size_bytes": 474885752
+        }
+      ],
+      "sha256": "1dafcfd5b26b2b2c88a69ca11ed67b7067f5c38c5a12c2e1766cf28df159909a",
+      "size_bytes": 2450783074
+    }
+  },
+  "limitations": [
+    "association-only product relatedness is not a causal capability estimate",
+    "the score cannot rank destinations and is therefore not an A or B2 baseline",
+    "RCA and proximity can be unstable for small trade baskets",
+    "the six fixed chains do not define a population for chain-level inference"
+  ],
+  "macro_summary": {
+    "historical": {
+      "aggregation": "unweighted_mean_over_six_fixed_chains",
+      "chain_level_ci95": null,
+      "chain_registry": [
+        "sheep",
+        "cotton",
+        "aluminium",
+        "nickel",
+        "cocoa",
+        "oilseed-soy"
+      ],
+      "headline": {
+        "macro_mean": 0.40726861735558767,
+        "per_chain": {
+          "aluminium": 0.3852159022673044,
+          "cocoa": 0.44373260085205785,
+          "cotton": 0.33691893275536544,
+          "nickel": 0.4083809076902871,
+          "oilseed-soy": 0.5286377946528029,
+          "sheep": 0.34072556591570813
+        },
+        "std_across_chains": 0.06573268408367913
+      },
+      "headline_metric": "average_precision",
+      "inference_note": "descriptive over the six fixed chains; no chain-population interval",
+      "realized_value": {
+        "macro_mean": 0.4161570982039966,
+        "per_chain": {
+          "aluminium": 0.02516657295553237,
+          "cocoa": 0.4221997273286909,
+          "cotton": 0.3910139671314234,
+          "nickel": 0.6634183950243743,
+          "oilseed-soy": 0.43466817906848165,
+          "sheep": 0.560475747715477
+        },
+        "std_across_chains": 0.19826369765955015
+      },
+      "value_metric": "global_observed_late_value_capture_at_50"
+    },
+    "main": {
+      "aggregation": "unweighted_mean_over_six_fixed_chains",
+      "chain_level_ci95": null,
+      "chain_registry": [
+        "sheep",
+        "cotton",
+        "aluminium",
+        "nickel",
+        "cocoa",
+        "oilseed-soy"
+      ],
+      "headline": {
+        "macro_mean": 0.38617286577165055,
+        "per_chain": {
+          "aluminium": 0.3392874349457532,
+          "cocoa": 0.304362966454102,
+          "cotton": 0.3328425810435813,
+          "nickel": 0.462045528801577,
+          "oilseed-soy": 0.6360194426897003,
+          "sheep": 0.24247924069518917
+        },
+        "std_across_chains": 0.1294623841120068
+      },
+      "headline_metric": "average_precision",
+      "inference_note": "descriptive over the six fixed chains; no chain-population interval",
+      "realized_value": {
+        "macro_mean": 0.45782423462679794,
+        "per_chain": {
+          "aluminium": 0.61784573753983,
+          "cocoa": 0.48276255537631557,
+          "cotton": 0.0973124991133932,
+          "nickel": 0.26512869979927023,
+          "oilseed-soy": 0.62263609809003,
+          "sheep": 0.6612598178419483
+        },
+        "std_across_chains": 0.20891707632376408
+      },
+      "value_metric": "global_observed_late_value_capture_at_50"
+    }
+  },
+  "protocol": {
+    "all_scorers_and_registry_mappings_frozen_before_any_outcome_read": true,
+    "freeze_sha256": "3f504e0bc00e47e2d3674e97ef03bed09c060383c94ac723bd7c7c9e56fa4a85",
+    "full_product_universe": "complete HS92 product dictionary, not the six-chain registry union",
+    "historical_labels_used_for_selection": false,
+    "historical_transition": "1998-2002 -> 2008-2012",
+    "main_labels_used_for_selection_or_calibration": false,
+    "main_transition": "2008-2012 -> 2018-2022",
+    "ranking": {
+      "average_precision_ties": "threshold_block_invariant",
+      "budget_tie_break": "canonical_candidate_order_ascending",
+      "canonical_candidate_order": [
+        "i_iso",
+        "stage",
+        "entry_id"
+      ],
+      "score_direction": "higher_is_better"
+    },
+    "read_gate": "build_and_freeze_both_full_economy_early_scorers_and_all_six_registry_stage_mappings_before_opening_any_b1_outcome_table",
+    "selection_mode": "none_single_predeclared_formula",
+    "target_self_relation": "exclude q=p from numerator and denominator",
+    "task": "B1 processed exporter-stage entry only",
+    "uncertainty": {
+      "ap_only": true,
+      "cluster_unit": "exporter",
+      "draws": 200,
+      "interval": "percentile_95",
+      "method": "nonparametric_cluster_bootstrap",
+      "rng_seed": 20260715
+    }
+  },
+  "runtime": {
+    "cpu_model": "AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD",
+    "device": "cpu",
+    "gpu_used": false,
+    "logical_cpu_cores": 16,
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.13",
+    "scikit_learn": "1.9.0",
+    "wall_elapsed_seconds": 23.976757700002054
+  },
+  "schema_version": "upgrade-bench-v2-product-space-density/1",
+  "score_artifact": {
+    "canonical_order": {
+      "chain": [
+        "sheep",
+        "cotton",
+        "aluminium",
+        "nickel",
+        "cocoa",
+        "oilseed-soy"
+      ],
+      "cohort": [
+        "historical",
+        "main"
+      ],
+      "within_chain": [
+        "i_iso",
+        "stage",
+        "entry_id"
+      ]
+    },
+    "columns": [
+      "cohort",
+      "chain",
+      "i_iso",
+      "stage",
+      "entry_id",
+      "density",
+      "z",
+      "entry_lateval",
+      "early_window",
+      "late_window",
+      "candidate_source_sha256",
+      "config_sha256",
+      "freeze_sha256"
+    ],
+    "config_sha256": "9704b972d3c33904afcb818f87ccd461d988fd30910e9788031d4176df032cd0",
+    "freeze_sha256": "3f504e0bc00e47e2d3674e97ef03bed09c060383c94ac723bd7c7c9e56fa4a85",
+    "path": "results_v2/scores/v2_product_space_density_scores.csv",
+    "purpose": "public metric recomputation without requiring the raw BACI archive",
+    "rows": 2910,
+    "sha256": "a32f68c30d415c9af05dfaeec8a3ac214ed4fa28baf79a4e0e4f85c89dbdda16"
+  },
+  "scorers": {
+    "historical": {
+      "annual_members": [
+        {
+          "compressed_size_bytes": 59085181,
+          "crc32": "cfe0ba60",
+          "member_name": "BACI_HS92_Y1998_V202401b.csv",
+          "rows_read": 5847753,
+          "uncompressed_size_bytes": 279524362
+        },
+        {
+          "compressed_size_bytes": 60603093,
+          "crc32": "e0866d7f",
+          "member_name": "BACI_HS92_Y1999_V202401b.csv",
+          "rows_read": 5994574,
+          "uncompressed_size_bytes": 286562399
+        },
+        {
+          "compressed_size_bytes": 71939863,
+          "crc32": "0a7e97a7",
+          "member_name": "BACI_HS92_Y2000_V202401b.csv",
+          "rows_read": 7272734,
+          "uncompressed_size_bytes": 347618411
+        },
+        {
+          "compressed_size_bytes": 74124867,
+          "crc32": "42dfe43a",
+          "member_name": "BACI_HS92_Y2001_V202401b.csv",
+          "rows_read": 7517477,
+          "uncompressed_size_bytes": 359324734
+        },
+        {
+          "compressed_size_bytes": 76197276,
+          "crc32": "93cc845b",
+          "member_name": "BACI_HS92_Y2002_V202401b.csv",
+          "rows_read": 7726196,
+          "uncompressed_size_bytes": 369301076
+        }
+      ],
+      "matrix_audit": {
+        "cohort": "historical",
+        "countries": 235,
+        "countries_with_positive_exports": 224,
+        "country_iso3_identities": 235,
+        "country_vocabulary_sha256": "82b54107c257c1ad29f8880a967144b2b600b63737bcab6c9ede164005677dbb",
+        "export_matrix_sha256": "fe748e06aa86837322245a2c5ad15e1833c3ecf9fb0836faa37734bde9894a75",
+        "formula": "prospective_hidalgo_density_target_diagonal_excluded",
+        "numeric_products": 5021,
+        "positive_country_product_cells": 640777,
+        "product_vocabulary_sha256": "bf7afe6fe96c9b7b6ba3463858de731712960cee8068d4f73b54706724b082ca",
+        "products": 5022,
+        "rca_membership_sha256": "4c37e9ff9801ea005ba66ffe0c30bb37335d1ed85ea85221a65ed7f5e2dd8940",
+        "rca_memberships": 111291,
+        "target_density_sha256": "c74ae0ae64b43eee4e256d5d6d80793ec8efe1fb0354264ee19d8f99cfe5d074",
+        "target_diagonal_max_after_exclusion": 0.0,
+        "target_diagonal_nonzero_before_exclusion": 262,
+        "target_product_vocabulary_sha256": "107d85512c5c266c74af05ac56c1ad4d658abb0975009384b63faf2399c10a5d",
+        "target_products": 262,
+        "target_products_with_positive_ubiquity": 262,
+        "total_early_exports_kusd": 30149084271.874,
+        "zero_density_denominator_targets": 0,
+        "zero_export_products_retained": 4
+      }
+    },
+    "main": {
+      "annual_members": [
+        {
+          "compressed_size_bytes": 93542916,
+          "crc32": "8fd395a1",
+          "member_name": "BACI_HS92_Y2008_V202401b.csv",
+          "rows_read": 9312331,
+          "uncompressed_size_bytes": 445022193
+        },
+        {
+          "compressed_size_bytes": 91453525,
+          "crc32": "b823244a",
+          "member_name": "BACI_HS92_Y2009_V202401b.csv",
+          "rows_read": 9219206,
+          "uncompressed_size_bytes": 440520495
+        },
+        {
+          "compressed_size_bytes": 94195240,
+          "crc32": "9b7881c6",
+          "member_name": "BACI_HS92_Y2010_V202401b.csv",
+          "rows_read": 9471403,
+          "uncompressed_size_bytes": 452605760
+        },
+        {
+          "compressed_size_bytes": 96233582,
+          "crc32": "bb93c4f4",
+          "member_name": "BACI_HS92_Y2011_V202401b.csv",
+          "rows_read": 9639156,
+          "uncompressed_size_bytes": 460615869
+        },
+        {
+          "compressed_size_bytes": 98778039,
+          "crc32": "ab38c8fc",
+          "member_name": "BACI_HS92_Y2012_V202401b.csv",
+          "rows_read": 9937047,
+          "uncompressed_size_bytes": 474885752
+        }
+      ],
+      "matrix_audit": {
+        "cohort": "main",
+        "countries": 235,
+        "countries_with_positive_exports": 227,
+        "country_iso3_identities": 235,
+        "country_vocabulary_sha256": "82b54107c257c1ad29f8880a967144b2b600b63737bcab6c9ede164005677dbb",
+        "export_matrix_sha256": "cb921b79c2d1fa9598c7a0960eef65999d916ba2c293fb315329afda1baf9c0d",
+        "formula": "prospective_hidalgo_density_target_diagonal_excluded",
+        "numeric_products": 5021,
+        "positive_country_product_cells": 698518,
+        "product_vocabulary_sha256": "bf7afe6fe96c9b7b6ba3463858de731712960cee8068d4f73b54706724b082ca",
+        "products": 5022,
+        "rca_membership_sha256": "dc267e497a689e9536b392cc3c90efd594f417b144ed41c568fb8015a341025e",
+        "rca_memberships": 111297,
+        "target_density_sha256": "d1923a707a92e79e54961af89a84cfc21e1bcb3260f43ce2c81a7631128ce24a",
+        "target_diagonal_max_after_exclusion": 0.0,
+        "target_diagonal_nonzero_before_exclusion": 262,
+        "target_product_vocabulary_sha256": "107d85512c5c266c74af05ac56c1ad4d658abb0975009384b63faf2399c10a5d",
+        "target_products": 262,
+        "target_products_with_positive_ubiquity": 262,
+        "total_early_exports_kusd": 78448144877.475,
+        "zero_density_denominator_targets": 0,
+        "zero_export_products_retained": 66
+      }
+    }
+  },
+  "status": "complete_verified"
+}

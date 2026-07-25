@@ -1,0 +1,55 @@
+{
+  "all_source_trees_match": true,
+  "claim_boundary": {
+    "not_supported": "Equality between the external selection tree and a frozen main snapshot does not turn the earlier selection observation into a contemporaneous freeze; the main snapshot can be genuinely pre-main frozen separately.",
+    "supported": "The listed retrospectively observed source trees have identical complete included-file inventories and byte hashes exactly when all_source_trees_match is true."
+  },
+  "receipt_count": 4,
+  "receipts": [
+    {
+      "file_count": 25,
+      "inventory_sha256": "fcb1f9e00364daa7c660f2aef2acd130e098677a4ad4004fd5e54b41987e0925",
+      "private_receipt_sha256": "88b844f2160007f8b24d275c9dee06cee1363bbba5024ea34ba15d717ebce7a2",
+      "receipt_role": "main-host-a",
+      "total_bytes": 146744,
+      "tree_sha256": "6f3abb8d1f83f58cf768d087b41881b85b53b35f63c4937d87f440d0b48c9ad2"
+    },
+    {
+      "file_count": 25,
+      "inventory_sha256": "fcb1f9e00364daa7c660f2aef2acd130e098677a4ad4004fd5e54b41987e0925",
+      "private_receipt_sha256": "44db93553e0449127ef3d7c217c5874894c4d402a64cfe8a72cd1edc0d63a3c9",
+      "receipt_role": "main-host-b",
+      "total_bytes": 146744,
+      "tree_sha256": "6f3abb8d1f83f58cf768d087b41881b85b53b35f63c4937d87f440d0b48c9ad2"
+    },
+    {
+      "file_count": 25,
+      "inventory_sha256": "fcb1f9e00364daa7c660f2aef2acd130e098677a4ad4004fd5e54b41987e0925",
+      "private_receipt_sha256": "0d8aefe1ae270da2402753398c19bf7760c51adc3bcff7e5c1e91ae1516ae382",
+      "receipt_role": "selection-host-a",
+      "total_bytes": 146744,
+      "tree_sha256": "6f3abb8d1f83f58cf768d087b41881b85b53b35f63c4937d87f440d0b48c9ad2"
+    },
+    {
+      "file_count": 25,
+      "inventory_sha256": "fcb1f9e00364daa7c660f2aef2acd130e098677a4ad4004fd5e54b41987e0925",
+      "private_receipt_sha256": "399e85d76efe29e8bdec0099d0554ebab5393cfcb02d6b0697c62bbfac10faf4",
+      "receipt_role": "selection-host-b",
+      "total_bytes": 146744,
+      "tree_sha256": "6f3abb8d1f83f58cf768d087b41881b85b53b35f63c4937d87f440d0b48c9ad2"
+    }
+  ],
+  "run_identity": {
+    "frozen_manifest": {
+      "role": "results_v2/gpu_rolling/frozen_manifest.json",
+      "sha256": "99db18daeb5cb4680c5f4a610c08bd3ec29b63644ad9a98022f36fd541b1647c"
+    },
+    "run_id": "v2.1-gpu-rolling-oa-full-20260716-r1",
+    "step3_sync_manifest": {
+      "role": "results_v2/gpu_rolling/runs/v2.1-gpu-rolling-oa-full-20260716-r1/STEP3_SYNC_MANIFEST.sha256",
+      "sha256": "55bda1a886304ae06795f2254339ee868e8f5105b95590f2390d2786b6e5a348"
+    }
+  },
+  "schema_version": "upgrade-bench-v2/nbfnet-source-tree-comparison/1",
+  "status": "PASS"
+}

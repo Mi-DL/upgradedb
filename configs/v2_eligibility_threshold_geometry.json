@@ -1,0 +1,63 @@
+{
+  "schema_version": "upgrade-bench-v2-eligibility-threshold-geometry-config/1",
+  "status": "frozen_before_threshold_geometry_rebuild",
+  "frozen_at_utc": "2026-07-14T17:16:38Z",
+  "chains": [
+    "sheep",
+    "cotton",
+    "aluminium",
+    "nickel",
+    "cocoa",
+    "oilseed-soy"
+  ],
+  "thresholds_kusd": [
+    50.0,
+    100.0,
+    250.0
+  ],
+  "reference_threshold_kusd": 100.0,
+  "window": {
+    "early_years": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2012
+    ],
+    "late_years": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022
+    ],
+    "aggregation": "stage_by_year_sum_then_mean_over_all_five_calendar_years",
+    "comparison": "strictly_greater_than_threshold"
+  },
+  "tasks": {
+    "a": "destination-extension lane candidates and materialized lanes",
+    "b1": "eligible-market exporter-stage candidates and positive entries",
+    "b2": "destination lanes within positive B1 entries and materialized lanes"
+  },
+  "overlap": {
+    "reference": "same-chain same-task keys at 100 kUSD",
+    "candidate_metrics": [
+      "intersection",
+      "left_only",
+      "reference_only",
+      "union",
+      "jaccard",
+      "retention_vs_reference"
+    ],
+    "positive_metrics": [
+      "intersection",
+      "left_only",
+      "reference_only",
+      "union",
+      "jaccard",
+      "retention_vs_reference"
+    ]
+  },
+  "scope": "cohort geometry only; no model scoring, rerun, or performance claim",
+  "canonical_gate": "100 kUSD reconstruction must exactly match all released main A/B1/B2 keys and labels before 50/250 kUSD results are accepted"
+}

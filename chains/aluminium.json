@@ -1,0 +1,145 @@
+{
+  "id": "aluminium",
+  "description": "Aluminium ores/concentrates -> aluminium hydroxide -> aluminium oxide (alumina)/corundum -> unwrought aluminium -> semis, with aluminium scrap retained as a source stage (mining-metal)",
+  "stages": {
+    "exp_aluminium_ore": [
+      "260600"
+    ],
+    "exp_scrap": [
+      "760200"
+    ],
+    "exp_aluminium_hydroxide": [
+      "281830"
+    ],
+    "exp_aluminium_oxide": [
+      "281820"
+    ],
+    "exp_corundum": [
+      "281810"
+    ],
+    "exp_unwrought": [
+      "760110",
+      "760120"
+    ],
+    "exp_semis_barrod": [
+      "760410",
+      "760421",
+      "760429"
+    ],
+    "exp_semis_wire": [
+      "760511",
+      "760519",
+      "760521",
+      "760529"
+    ],
+    "exp_semis_plate": [
+      "760611",
+      "760612",
+      "760691",
+      "760692"
+    ],
+    "exp_semis_foil": [
+      "760711",
+      "760719",
+      "760720"
+    ],
+    "exp_semis_tube": [
+      "760810",
+      "760820",
+      "760900"
+    ]
+  },
+  "upstream": [
+    "exp_aluminium_ore",
+    "exp_scrap"
+  ],
+  "upstream_map": {
+    "exp_aluminium_hydroxide": [
+      "exp_aluminium_ore"
+    ],
+    "exp_aluminium_oxide": [
+      "exp_aluminium_hydroxide",
+      "exp_aluminium_ore"
+    ],
+    "exp_corundum": [
+      "exp_aluminium_hydroxide",
+      "exp_aluminium_ore",
+      "exp_aluminium_oxide"
+    ],
+    "exp_unwrought": [
+      "exp_aluminium_hydroxide",
+      "exp_aluminium_ore",
+      "exp_aluminium_oxide"
+    ],
+    "exp_semis_barrod": [
+      "exp_aluminium_hydroxide",
+      "exp_aluminium_ore",
+      "exp_aluminium_oxide",
+      "exp_unwrought"
+    ],
+    "exp_semis_wire": [
+      "exp_aluminium_hydroxide",
+      "exp_aluminium_ore",
+      "exp_aluminium_oxide",
+      "exp_unwrought"
+    ],
+    "exp_semis_plate": [
+      "exp_aluminium_hydroxide",
+      "exp_aluminium_ore",
+      "exp_aluminium_oxide",
+      "exp_unwrought"
+    ],
+    "exp_semis_foil": [
+      "exp_aluminium_hydroxide",
+      "exp_aluminium_ore",
+      "exp_aluminium_oxide",
+      "exp_semis_plate",
+      "exp_unwrought"
+    ],
+    "exp_semis_tube": [
+      "exp_aluminium_hydroxide",
+      "exp_aluminium_ore",
+      "exp_aluminium_oxide",
+      "exp_unwrought"
+    ]
+  },
+  "derived_from": {
+    "exp_aluminium_hydroxide": [
+      "260600"
+    ],
+    "exp_aluminium_oxide": [
+      "260600",
+      "281830"
+    ],
+    "exp_corundum": [
+      "281820"
+    ],
+    "exp_unwrought": [
+      "281820"
+    ],
+    "exp_semis_barrod": [
+      "760110",
+      "760120"
+    ],
+    "exp_semis_wire": [
+      "760110",
+      "760120"
+    ],
+    "exp_semis_plate": [
+      "760110",
+      "760120"
+    ],
+    "exp_semis_foil": [
+      "760611",
+      "760612"
+    ],
+    "exp_semis_tube": [
+      "760110",
+      "760120"
+    ]
+  },
+  "derived_from_hs": {},
+  "produces": {},
+  "form_of": [],
+  "named_sources": {}
+}

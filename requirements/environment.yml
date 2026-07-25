@@ -1,0 +1,29 @@
+# Conda equivalent of the broader requirements.txt analysis/KGE environment.
+# This is not the recorded v2 rolling CPU-results environment; see
+# v2-cpu-results-lock.txt and verify_v2_cpu_results_env.py.
+#   conda env create -f requirements/environment.yml
+#   conda activate upgrade-bench
+# For NBFNet's separate env see nbfnet-setup.md.
+name: upgrade-bench
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.12.8
+  - pip
+  - pip:
+      # torch cu126 from the PyTorch wheel index
+      - --extra-index-url https://download.pytorch.org/whl/cu126
+      - torch==2.6.0
+      - torch-geometric==2.7.0
+      - pykeen==1.11.1
+      - scikit-learn==1.9.0
+      - pandas==3.0.3
+      - numpy==2.4.6
+      - scipy==1.17.1
+      - networkx==3.6.1
+      - matplotlib==3.11.0
+      - pycountry==26.2.16
+      - requests==2.34.2
+      - tqdm==4.68.2

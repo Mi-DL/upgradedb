@@ -1,0 +1,32 @@
+# UPGRADE-BENCH development and graph-reference environment.
+# Python 3.12. This environment supports cohort construction, validation,
+# rolling CPU references, PyKEEN references, and the released audit tools.
+#
+#   python -m venv .venv && source .venv/bin/activate
+#   pip install -r requirements/requirements.txt
+#
+# Install a torch build matching the host first. For example, CPU-only:
+#   pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+# or use the appropriate CUDA wheel index on a validated GPU host.
+#
+# This is not the byte-bound environment record for the released rolling CPU artifact.
+# For that result use v2-cpu-results-lock.txt and verify_v2_cpu_results_env.py.
+# requirements-lock.txt is a full archived
+# GPU-capable snapshot, not a promise of byte-identical numerical output across
+# platforms or binary wheel builds.
+#
+# NBFNet runs in a separate environment because it needs an external checkout
+# and a JIT-compiled CUDA extension. See nbfnet-setup.md.
+
+torch==2.6.0
+torch-geometric==2.7.0
+pykeen==1.11.1
+scikit-learn==1.9.0
+pandas==3.0.3
+numpy==2.4.6
+scipy==1.17.1
+networkx==3.6.1
+matplotlib==3.11.0
+pycountry==26.2.16
+requests==2.34.2
+tqdm==4.68.2

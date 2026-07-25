@@ -1,0 +1,109 @@
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.venv_cuda/
+.venv-gpu/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+tmp/
+private/
+.private/
+dist/
+output/
+outputs/
+
+# --- Private raw-derived caches: never stage or publish ---
+**/private/
+**/.private/
+**/baci-filtered-cache*/
+**/baci_filtered_cache*/
+
+# --- Per-machine config (copy env.sh.example -> env.sh; never commit env.sh) ---
+env.sh
+
+# --- Private GPU orchestration / host inventory (scientific summaries live in
+#     results_v2/metrics/v2_gpu_rolling_summary.{json,csv}) ---
+configs/v2_gpu_hosts.json
+requirements/v2-gpu-local-plan.md
+results_v2/gpu_rolling/
+results_v2/gpu_smoke/
+# Private formal LOCO/ULTRA components, verifier receipts, scores, and operational provenance.
+# The sanitized public artifacts live in results_v2/metrics/.
+results_v2/loco_formal/
+results_v2/ultra_formal/
+# Invalidated run archives and adversarial/smoke trees are internal diagnostics only.
+results_v2/archive/
+results_v2/loco_smoke/
+results_v2/loco_smoke_redteam/
+
+# Internal release/review progress, not a public artifact.
+PROJECT_CHECKLIST.md
+
+# --- Raw input archives: obtain per requirements/DATA.md; bulk redistribution restricted ---
+data/raw/
+*.zip
+
+# data/processed_v2 is intentionally not ignored: it is selected as versioned
+# public release-asset payload (not silently dropped from distribution).
+
+# --- External dependency: clone NBFNet-PyG / ULTRA here per requirements/nbfnet-setup.md ---
+third_party/
+
+# --- OS / editor ---
+.DS_Store
+.claude/
+
+# --- Reproduction scratch (machine-specific) ---
+jobs/.gcc12shim/
+
+# --- Legacy v1 compatibility staging ---
+# Per-chain legacy candidates/scores may remain tracked in this private staging checkout so an
+# explicitly labelled v1-multichain compatibility Release asset can be built. They are excluded
+# from the fresh-history public Git manifest. Permission-gated tariff/SPS extracts are never public.
+data/processed/candidates_all.csv
+data/processed/baselines_*.json
+data/processed/frontier_*.json
+data/processed/loco_transfer.json
+data/processed/tariffs_*.csv
+data/processed/sps_*.csv
+benchmark/upgrade-bench-v1/data/tariffs.csv
+benchmark/upgrade-bench-v1/data/sps_measures.csv
+data/processed/institutional_*.json
+# rotate/first-time score tables are retained only for the optional legacy compatibility asset;
+# they are not current-paper results and are not selected into the public Git repository.
+# Oversized permission-gated SPS raw (142MB > GitHub limit; regenerate via src/sps_ntm.py).
+data/processed/sps_ntm_sheep_raw.csv
+
+# --- Internal review material: NEVER publish ---
+KDD_DB_REVIEW.md
+KDD_DB_DEBATE.md
+result1/
+
+# --- Run outputs / scratch (regenerable; committed audit copies live in results/) ---
+jobs/*.log
+data/processed/*.bak
+data/processed/loco_transfer_*.json
+
+# ULTRA metric-JSON mirrors of results/metrics/ultra_<chain>.json (byte-identical) stay ignored
+data/processed/ultra_*.json
+
+# local-only (never commit): packaged conversation/memory, local run logs, package readme
+CLAUDE_CONVERSATION/
+local_logs/
+PACKAGE_README.md
+
+# --- LaTeX build intermediates and review-workstation output ---
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
+paper/*.synctex.gz
+paper/*.toc
+paper/main-acm.pdf

@@ -1,0 +1,82 @@
+{
+  "schema_version": "upgrade-bench/registry-full-scan-receipt/1",
+  "status": "PASS",
+  "rule_id": "observable-attribution-full-dictionary-v1",
+  "source_member": "product_codes_HS92_V202401b.csv",
+  "source_member_sha256": "51bcc9e8946b5efb0a7c7e9756c42e72c35861f32a7a7059e2d768a0f2f61166",
+  "source_rows_automated_regex_scanned": 5022,
+  "source_rows_manually_reviewed": 0,
+  "numeric_hs6_rows": 5021,
+  "observable_candidate_records_adjudicated": 576,
+  "legacy_only_records_adjudicated": 34,
+  "decision_records": 610,
+  "unique_hs6": 588,
+  "observable_decision_counts": {
+    "include": 283,
+    "exclude": 194,
+    "out_of_stage": 99
+  },
+  "full_ledger_decision_counts": {
+    "include": 283,
+    "exclude": 228,
+    "out_of_stage": 99
+  },
+  "human_review_status": "not_performed",
+  "semantic_double_check": {
+    "status": "PASS_AFTER_CORRECTIONS",
+    "review_type": "Separate partitioned AI-assisted read-only checks; not independent replication and not human review",
+    "records_checked": 610,
+    "corrected_records": [
+      {
+        "chain_id": "sheep",
+        "code": "430130",
+        "from": "out_of_stage",
+        "to": "include"
+      },
+      {
+        "chain_id": "cotton",
+        "code": "580126",
+        "from": "include",
+        "to": "out_of_stage"
+      },
+      {
+        "chain_id": "cotton",
+        "code": "580310",
+        "from": "include",
+        "to": "out_of_stage"
+      },
+      {
+        "chain_id": "aluminium",
+        "code": "282690",
+        "from": "out_of_stage",
+        "to": "exclude"
+      },
+      {
+        "chain_id": "aluminium",
+        "code": "690320",
+        "from": "exclude",
+        "to": "out_of_stage"
+      },
+      {
+        "chain_id": "cocoa",
+        "code": "843820",
+        "from": "out_of_stage",
+        "to": "exclude"
+      }
+    ]
+  },
+  "lexicon_limit": "Exhaustive source-table application of frozen regexes is not proof that their lexicons contain every possible synonym. See registry_lexicon_negative_control.json.",
+  "historical_active_records_lacking_focal_match": 0,
+  "active_membership_delta": {
+    "historical": 131,
+    "retained": 131,
+    "removed": [],
+    "added_count": 152,
+    "revised": 283
+  },
+  "replacement_cohort_required": true,
+  "benchmark_identity": {
+    "benchmark_version": "2.1-dev",
+    "data_snapshot": "oa-full-dictionary-hs92-v202401b-20260716-r1"
+  }
+}

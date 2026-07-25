@@ -1,0 +1,115 @@
+{
+  "schema_version": "upgrade-bench-v2-product-space-density-config/1",
+  "protocol": "early-full-economy-scorer-freeze-then-b1-evaluation-v1",
+  "status": "frozen_before_first_product_space_main_evaluation",
+  "frozen_at_utc": "2026-07-14T16:56:44Z",
+  "chains": [
+    "sheep",
+    "cotton",
+    "aluminium",
+    "nickel",
+    "cocoa",
+    "oilseed-soy"
+  ],
+  "task": {
+    "id": "b1",
+    "name": "processed_export_stage_entry",
+    "unit": "exporter_stage",
+    "directly_applicable_to": [
+      "b1"
+    ],
+    "not_reported_for": {
+      "a": "exporter-stage density is constant across destination lanes",
+      "b2": "exporter-stage density is constant within a realized entry"
+    }
+  },
+  "source": {
+    "dataset": "CEPII BACI HS92",
+    "release": "V202401b",
+    "archive_role": "data/raw/BACI_HS92_V202401b.zip",
+    "raw_attestation_role": "requirements/raw_source_attestation.json",
+    "product_dictionary_member": "product_codes_HS92_V202401b.csv",
+    "country_dictionary_member": "country_codes_V202401b.csv",
+    "annual_member_template": "BACI_HS92_Y{year}_V202401b.csv",
+    "historical_early_years": [
+      1998,
+      1999,
+      2000,
+      2001,
+      2002
+    ],
+    "main_early_years": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2012
+    ],
+    "country_universe": "all dictionary countries with a nonempty ISO3 code",
+    "product_universe": "complete HS92 product dictionary, not the six-chain registry union",
+    "destination_aggregation": "sum BACI v over all destinations",
+    "year_aggregation": "sum over the five declared calendar years",
+    "flow_unit": "BACI v (thousand current USD)",
+    "nonfinite_flow_policy": "reject",
+    "negative_flow_policy": "reject",
+    "zero_flow_policy": "implicit zero"
+  },
+  "formula": {
+    "export_matrix": "X_cp=sum_{year,destination} v_cpdy",
+    "rca": "RCA_cp=(X_cp/sum_q X_cq)/(sum_d X_dp/sum_dq X_dq)",
+    "rca_threshold": 1.0,
+    "rca_comparison": "greater_than_or_equal",
+    "membership": "M_cp=1[RCA_cp>=1]",
+    "proximity": "phi_pq=sum_c M_cp M_cq/max(sum_c M_cp,sum_c M_cq)",
+    "prospective_target_self_relation": "exclude q=p from numerator and denominator",
+    "product_density": "omega_cp=sum_{q!=p} phi_pq M_cq/sum_{q!=p} phi_pq",
+    "stage_aggregation": "equal_weight_mean_over_all_declared_target_stage_hs6",
+    "target_stages": "keys of each chain registry upstream_map",
+    "missing_exporter_policy": "score_zero",
+    "missing_target_product_policy": "score_zero_and_retain_in_stage_mean",
+    "zero_proximity_denominator_policy": "score_zero"
+  },
+  "selection": {
+    "mode": "none_single_predeclared_formula",
+    "candidate_formulas": 1,
+    "historical_labels_used_for_selection": false,
+    "historical_cohort_role": "diagnostic forward replication only",
+    "main_labels_used_for_selection_or_calibration": false
+  },
+  "evaluation": {
+    "historical_transition": "1998-2002 -> 2008-2012",
+    "main_transition": "2008-2012 -> 2018-2022",
+    "candidate_file_template": "data/processed_v2/entries_firsttime_{chain}{suffix}.csv",
+    "historical_suffix": "_fold2",
+    "read_gate": "build_and_freeze_both_full_economy_early_scorers_and_all_six_registry_stage_mappings_before_opening_any_b1_outcome_table",
+    "target_access": "one_complete_main_cohort_evaluation_after_global_scorer_freeze",
+    "headline_metric": "average_precision",
+    "value_budget": 50,
+    "secondary_metric": "roc_auc"
+  },
+  "uncertainty": {
+    "method": "nonparametric_cluster_bootstrap",
+    "cluster_unit": "exporter",
+    "draws": 200,
+    "rng_seed": 20260715,
+    "interval": "percentile_95",
+    "ap_only": true
+  },
+  "ranking": {
+    "score_direction": "higher_is_better",
+    "canonical_candidate_order": [
+      "i_iso",
+      "stage",
+      "entry_id"
+    ],
+    "budget_tie_break": "canonical_candidate_order_ascending",
+    "average_precision_ties": "threshold_block_invariant"
+  },
+  "claim_scope": "reviewer-motivated post-hoc B1-only descriptive domain reference; not part of the original prespecified reference set",
+  "limitations": [
+    "association-only product relatedness is not a causal capability estimate",
+    "the score cannot rank destinations and is therefore not an A or B2 baseline",
+    "RCA and proximity can be unstable for small trade baskets",
+    "the six fixed chains do not define a population for chain-level inference"
+  ]
+}

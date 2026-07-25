@@ -1,0 +1,155 @@
+name: release-artifact
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      require_full_payload:
+        description: Fail unless the complete external v2 payload is already present
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-artifact-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          # The size gate audits reachable blobs, not only the tip commit.
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: benchmark/upgrade-bench-v2/requirements.txt
+      - name: Enforce repository and Git-object size policy
+        run: python tools/repository_size_gate.py --history
+      - name: Detect active invalidation hold
+        id: release_state
+        shell: bash
+        run: |
+          python -c "import json, os, pathlib; p=pathlib.Path('results_v2/metrics/INVALIDATED.json'); active=p.is_file() and json.loads(p.read_text(encoding='utf-8')).get('status') == 'INVALIDATED_REGISTRY_AUDIT'; open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8').write(f'active={str(active).lower()}\n')"
+      - name: Reject requested full-payload mode during an active hold
+        if: github.event_name == 'workflow_dispatch' && inputs.require_full_payload && steps.release_state.outputs.active == 'true'
+        shell: bash
+        run: |
+          echo "Full-payload verification was requested, but the invalidation hold is active." >&2
+          exit 1
+      - name: Detect external v2 payload
+        if: steps.release_state.outputs.active != 'true'
+        id: v2_payload
+        shell: bash
+        run: |
+          if [[ -f data/processed_v2/dataset_summary.json ]]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "External v2 payload absent; hosted CI runs the repository profile only"
+          fi
+      - name: Reject requested full-payload mode when payload is absent
+        if: github.event_name == 'workflow_dispatch' && inputs.require_full_payload && steps.v2_payload.outputs.present != 'true'
+        shell: bash
+        run: |
+          echo "Full-payload verification was requested, but data/processed_v2/dataset_summary.json is absent." >&2
+          echo "The workflow input is an assertion and does not download or install external payloads." >&2
+          exit 1
+      - name: Verify external-data catalog (payloads may live in release assets)
+        if: steps.release_state.outputs.active != 'true'
+        run: python tools/artifact_bundles.py verify-index --allow-missing
+      - name: Verify active-hold DB snapshot boundary
+        if: steps.release_state.outputs.active == 'true'
+        shell: bash
+        run: |
+          test ! -e release/DATA_ARTIFACT_INDEX.json
+          python tools/public_release_audit.py --planned-only
+          python tools/release_manifest.py --verify --scope all
+      - name: Install minimal benchmark dependencies
+        run: python -m pip install -r benchmark/upgrade-bench-v2/requirements.txt scikit-learn==1.9.0
+      - name: Install CPU-only test dependencies
+        run: |
+          python -m pip install pycountry==26.2.16
+          python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install torch-geometric==2.7.0
+      - name: Run repository unit tests
+        if: steps.release_state.outputs.active != 'true'
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Run active-hold DB snapshot tests
+        if: steps.release_state.outputs.active == 'true'
+        run: >-
+          python -m unittest
+          tests.test_release_distribution.PublicReleaseAuditTests
+          tests.test_release_distribution.RepositorySizeGateTests
+          tests.test_release_distribution.ArtifactBundleTests.test_clean_repository_recovers_current_external_selectors_from_frozen_index
+          tests.test_upgrade_bench_v2_package
+          tests.test_chain_registry_audit
+          tests.test_registry_curation_protocol
+          tests.test_registry_revision
+          tests.test_registry_lexicon_negative_control -v
+      - name: Rebuild strict-registry evidence when the raw BACI dictionary is mounted
+        if: hashFiles('data/raw/BACI_HS92_V202401b.zip') != ''
+        run: python tools/build_registry_evidence.py --check
+      - name: Verify strict-registry audit reports
+        run: python tools/audit_chain_registry.py --check
+      - name: Run official split invariants
+        run: python tools/test_split.py
+      - name: Verify public release boundary
+        if: steps.release_state.outputs.active != 'true'
+        run: python tools/public_release_audit.py
+      - name: Verify release manifests
+        run: python tools/release_manifest.py --verify --scope all
+      - name: Run read-only repository release smoke
+        if: steps.release_state.outputs.active != 'true'
+        run: python tools/release_smoke.py --profile repository
+      - name: Verify benchmark scale/compute profile without external payload
+        if: steps.release_state.outputs.active != 'true'
+        run: python tools/generate_v2_benchmark_profile.py --verify --profile repository
+      - name: Verify final numerical and manuscript alignment
+        if: steps.release_state.outputs.active != 'true'
+        run: python tools/verify_v2_number_alignment.py --mode release --profile repository
+      - name: Validate complete v2 payload
+        if: steps.v2_payload.outputs.present == 'true'
+        run: python tools/validate_v2.py
+      - name: Recompute full-payload paper-number unit contracts
+        if: steps.v2_payload.outputs.present == 'true'
+        env:
+          UPGRADE_BENCH_FULL_PAYLOAD_TESTS: "1"
+        run: >-
+          python -m unittest
+          tests.test_generate_v2_paper_numbers
+          tests.test_v2_benchmark_profile
+          tests.test_v2_eligibility_threshold_geometry
+          tests.test_v2_gpu_metrics
+          tests.test_v2_gbdt_baselines
+          tests.test_v2_product_space_density
+          tests.test_step3_sync_manifest
+          tests.test_release_distribution -v
+      - name: Verify formal GBDT reference artifact
+        if: steps.v2_payload.outputs.present == 'true'
+        run: python tools/v2_gbdt_baselines.py --verify-output
+      - name: Verify paper-number JSON and TeX interface
+        if: steps.v2_payload.outputs.present == 'true'
+        run: python tools/generate_v2_paper_numbers.py --verify
+      - name: Verify benchmark scale/compute profile with full payload
+        if: steps.v2_payload.outputs.present == 'true'
+        run: python tools/generate_v2_benchmark_profile.py --verify --profile full
+      - name: Smoke standalone v2 loader against real tables
+        if: steps.v2_payload.outputs.present == 'true'
+        run: python benchmark/upgrade-bench-v2/loader.py
+      - name: Run full artifact smoke
+        if: steps.v2_payload.outputs.present == 'true'
+        run: python tools/release_smoke.py --profile full
+      - name: TeX build policy
+        run: >-
+          echo "TeX compilation is release-workstation QA, not mandatory in this minimal CI;
+          generated paper-number drift is verified above when the v2 payload is present."

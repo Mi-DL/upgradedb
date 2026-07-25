@@ -1,0 +1,367 @@
+{
+  "abstract_rule": {
+    "abstract_should_mention_ultra": true,
+    "tasks": {
+      "A": {
+        "eligible_for_abstract_mention": true,
+        "reference_mean_interval_closed": [
+          0.15012323008705655,
+          0.17967922490959512
+        ],
+        "same_side_of_both_chain_count": 6,
+        "side": "lower",
+        "ultra_mean": 0.059251727441747525
+      },
+      "B1": {
+        "eligible_for_abstract_mention": false,
+        "reference_mean_interval_closed": [
+          0.282938095488117,
+          0.3952045522890784
+        ],
+        "same_side_of_both_chain_count": 0,
+        "side": "inside_reference_mean_interval",
+        "ultra_mean": 0.35108939943350226
+      },
+      "B2": {
+        "eligible_for_abstract_mention": true,
+        "reference_mean_interval_closed": [
+          0.21468176659691196,
+          0.3757435277777006
+        ],
+        "same_side_of_both_chain_count": 6,
+        "side": "lower",
+        "ultra_mean": 0.04952594969075699
+      }
+    }
+  },
+  "claim_boundaries": {
+    "causal_interpretation": false,
+    "checkpoint_or_result_selected_on_target_outcomes": false,
+    "checkpoint_training_steps": 400000,
+    "disclosed_pretraining_list_contains_benchmark_sources": false,
+    "inference_seed": 1024,
+    "inference_seed_is_not_checkpoint_training_seed_evidence": true,
+    "not_valid_for": [
+      "fair-compute comparison",
+      "champion claim",
+      "statistical significance claim",
+      "causal industrial-upgrading interpretation",
+      "population inference beyond the six fixed chains"
+    ],
+    "pretraining_graphs": [
+      "FB15k237",
+      "WN18RR",
+      "CoDExMedium",
+      "NELL995"
+    ],
+    "result_type": "descriptive external-pretrained zero-shot reference",
+    "trained_reference_comparison_is_descriptive": true,
+    "valid_uses": [
+      "six-chain task-specific benchmark comparison",
+      "reproducibility check of the fixed public checkpoint reference"
+    ]
+  },
+  "design": {
+    "aggregate": "unweighted mean of six unrounded chain values for each task",
+    "chains": [
+      "sheep",
+      "cotton",
+      "aluminium",
+      "nickel",
+      "cocoa",
+      "oilseed-soy"
+    ],
+    "checkpoint_count": 1,
+    "expected_chain_task_records": 18,
+    "shared_B_scores_for_B1_and_B2": true,
+    "target_early_graph_used": true,
+    "target_labels_used_for_training_or_selection": false,
+    "tasks": [
+      "A",
+      "B1",
+      "B2"
+    ]
+  },
+  "metric_records": [
+    {
+      "chain": "sheep",
+      "headline_metric": "lane_average_precision",
+      "headline_value": 0.05505914490310754,
+      "task": "A",
+      "value_metric": "value_capture_at_500",
+      "value_value": 0.0938642591340385
+    },
+    {
+      "chain": "cotton",
+      "headline_metric": "lane_average_precision",
+      "headline_value": 0.03412085124088325,
+      "task": "A",
+      "value_metric": "value_capture_at_500",
+      "value_value": 0.005684393447956107
+    },
+    {
+      "chain": "aluminium",
+      "headline_metric": "lane_average_precision",
+      "headline_value": 0.05998156042739031,
+      "task": "A",
+      "value_metric": "value_capture_at_500",
+      "value_value": 0.0010739626661332496
+    },
+    {
+      "chain": "nickel",
+      "headline_metric": "lane_average_precision",
+      "headline_value": 0.08841032617351088,
+      "task": "A",
+      "value_metric": "value_capture_at_500",
+      "value_value": 0.017767501014792842
+    },
+    {
+      "chain": "cocoa",
+      "headline_metric": "lane_average_precision",
+      "headline_value": 0.056297515340479304,
+      "task": "A",
+      "value_metric": "value_capture_at_500",
+      "value_value": 0.007759458157766413
+    },
+    {
+      "chain": "oilseed-soy",
+      "headline_metric": "lane_average_precision",
+      "headline_value": 0.061640966565113836,
+      "task": "A",
+      "value_metric": "value_capture_at_500",
+      "value_value": 0.04296286185464205
+    },
+    {
+      "chain": "sheep",
+      "headline_metric": "entry_average_precision",
+      "headline_value": 0.4432193845303368,
+      "task": "B1",
+      "value_metric": "entry_value_capture_at_50",
+      "value_value": 0.7150727591477576
+    },
+    {
+      "chain": "cotton",
+      "headline_metric": "entry_average_precision",
+      "headline_value": 0.1551747028484469,
+      "task": "B1",
+      "value_metric": "entry_value_capture_at_50",
+      "value_value": 0.06767142469229538
+    },
+    {
+      "chain": "aluminium",
+      "headline_metric": "entry_average_precision",
+      "headline_value": 0.2695273481718472,
+      "task": "B1",
+      "value_metric": "entry_value_capture_at_50",
+      "value_value": 0.6406788343738871
+    },
+    {
+      "chain": "nickel",
+      "headline_metric": "entry_average_precision",
+      "headline_value": 0.3592936808695291,
+      "task": "B1",
+      "value_metric": "entry_value_capture_at_50",
+      "value_value": 0.25506982114642945
+    },
+    {
+      "chain": "cocoa",
+      "headline_metric": "entry_average_precision",
+      "headline_value": 0.39658314798549354,
+      "task": "B1",
+      "value_metric": "entry_value_capture_at_50",
+      "value_value": 0.5549926972970189
+    },
+    {
+      "chain": "oilseed-soy",
+      "headline_metric": "entry_average_precision",
+      "headline_value": 0.48273813219535977,
+      "task": "B1",
+      "value_metric": "entry_value_capture_at_50",
+      "value_value": 0.7452677210532533
+    },
+    {
+      "chain": "sheep",
+      "headline_metric": "conditional_recall_at_3",
+      "headline_value": 0.016666666666666666,
+      "task": "B2",
+      "value_metric": "conditional_value_capture_at_3",
+      "value_value": 0.020465049112881308
+    },
+    {
+      "chain": "cotton",
+      "headline_metric": "conditional_recall_at_3",
+      "headline_value": 0.027777777777777776,
+      "task": "B2",
+      "value_metric": "conditional_value_capture_at_3",
+      "value_value": 0.027777777777777776
+    },
+    {
+      "chain": "aluminium",
+      "headline_metric": "conditional_recall_at_3",
+      "headline_value": 0.03936781609195402,
+      "task": "B2",
+      "value_metric": "conditional_value_capture_at_3",
+      "value_value": 0.03748055841225907
+    },
+    {
+      "chain": "nickel",
+      "headline_metric": "conditional_recall_at_3",
+      "headline_value": 0.0963966588966589,
+      "task": "B2",
+      "value_metric": "conditional_value_capture_at_3",
+      "value_value": 0.09067058925005288
+    },
+    {
+      "chain": "cocoa",
+      "headline_metric": "conditional_recall_at_3",
+      "headline_value": 0.023809523809523808,
+      "task": "B2",
+      "value_metric": "conditional_value_capture_at_3",
+      "value_value": 0.023809523809523808
+    },
+    {
+      "chain": "oilseed-soy",
+      "headline_metric": "conditional_recall_at_3",
+      "headline_value": 0.09313725490196079,
+      "task": "B2",
+      "value_metric": "conditional_value_capture_at_3",
+      "value_value": 0.0899630393944803
+    }
+  ],
+  "model": {
+    "checkpoint_count": 1,
+    "checkpoint_fixed_before_target_scoring": true,
+    "checkpoint_name": "ultra_4g",
+    "checkpoint_training_seed_disclosed": false,
+    "fine_tuning_performed": false,
+    "label": "external pretrained zero-shot",
+    "result_selection_performed": false,
+    "training_performed": false
+  },
+  "protocol": "upgrade-bench-v2/ultra-4g-zero-shot/2",
+  "provenance": {
+    "chain_metric_artifact_sha256": {
+      "aluminium": "525da8b0b55ac021086eccc27f141cd769dbee2c43d70c16c3e9cbd13d047488",
+      "cocoa": "35ea4b43fb6020386d349c11fe49cfba17648a84edac8586de3ce56e6f55505b",
+      "cotton": "99a6015f2f5597930c78bd9ab033333a0f6cb18b7555848c4d16276b3335a394",
+      "nickel": "a063878796f48f035e0f681c7cf56d7e9ec692ce342a8ebd57069ac6b79d9584",
+      "oilseed-soy": "e58a5ddeea022f8b6d36e683772162299132aa7f76a09cca6ec69f79ddf15a07",
+      "sheep": "194294e277bf88b301623e2cfe2b07ac3134b8c08b50661fdccc940f41e5311c"
+    },
+    "checkpoint_sha256": "48a046e708adf5632d87c30eacae01f5f51466b2301effdc2cb42358d22854e0",
+    "config_sha256": "69fb32eb4693a76dffa1c0ea0aafc2d055d624c8a6e9c1cb23ebb7381007efb9",
+    "evaluation_sha256": "9b5f4937ad1fb2751ff75cd21e6fe0d78f6ac62e2766a9c6d82849cedcff0fc8",
+    "evaluation_start_marker_sha256": "d16fe10c095b85c6b78bd7c5de57c40c814273171f88e153fa3b97ab02b12695",
+    "formal_controller_sha256": "91e7341beb19dca34ab927dbfd27f6cbcc68c1afa823d0143ab8b4f66d846636",
+    "formal_receipt_set_sha256": "2d6a22f48865eb3a1fc33e92a6ce972223cf1df01a86206af37cc40998da6bfa",
+    "frozen_manifest_sha256": "c5a4016322d1af8e09d45225629af9b221fd58afd61d34c30f97a64f5d3b7834",
+    "generator_tool_sha256": "84ec9fa5b5f4d16273bd9adf3eaa3caa23090b4d491674f789ef900b1bfe4e4f",
+    "native_runtime_sha256": "3610246ace56198ec66ca58cc1d3d4b2b021d975446cf3a877762af394bf59bb",
+    "score_seal_sha256": "d8cf236bebbae1f45979b202db5855758b7d122c6ef823c4460c715b8924cd92",
+    "scoring_started_sha256": "2be4844d07ffbd37020aec56d5021422deb62a85b541e9e7bea4de593fa06e82",
+    "trained_reference_summary_sha256": "5978ca62462f68ffc93054fd1c448ee768646ec82a8b61b5d843d56559193acd"
+  },
+  "reference_comparisons": {
+    "A": {
+      "kge": {
+        "counts": {
+          "equal": 0,
+          "higher": 0,
+          "lower": 6
+        },
+        "reference_unweighted_six_chain_mean": 0.17967922490959512
+      },
+      "nbfnet": {
+        "counts": {
+          "equal": 0,
+          "higher": 0,
+          "lower": 6
+        },
+        "reference_unweighted_six_chain_mean": 0.15012323008705655
+      }
+    },
+    "B1": {
+      "kge": {
+        "counts": {
+          "equal": 0,
+          "higher": 1,
+          "lower": 5
+        },
+        "reference_unweighted_six_chain_mean": 0.3952045522890784
+      },
+      "nbfnet": {
+        "counts": {
+          "equal": 0,
+          "higher": 4,
+          "lower": 2
+        },
+        "reference_unweighted_six_chain_mean": 0.282938095488117
+      }
+    },
+    "B2": {
+      "kge": {
+        "counts": {
+          "equal": 0,
+          "higher": 0,
+          "lower": 6
+        },
+        "reference_unweighted_six_chain_mean": 0.21468176659691196
+      },
+      "nbfnet": {
+        "counts": {
+          "equal": 0,
+          "higher": 0,
+          "lower": 6
+        },
+        "reference_unweighted_six_chain_mean": 0.3757435277777006
+      }
+    }
+  },
+  "run_id": "ultra-4g-zero-shot-fixed-20260717-r4",
+  "schema_version": "upgrade-bench-v2/ultra-zero-shot-public-summary/1",
+  "sheep_exact_repeat": {
+    "A_score_file_bytes_equal": true,
+    "B_score_file_bytes_equal": true,
+    "max_absolute_score_delta": 0.0,
+    "mean_absolute_score_delta": 0.0,
+    "metric_absolute_delta_max": 1e-10,
+    "metric_absolute_deltas": {
+      "A.lane_average_precision": 0.0,
+      "A.value_capture_at_500": 0.0,
+      "B1.entry_average_precision": 0.0,
+      "B1.entry_value_capture_at_50": 0.0,
+      "B2.conditional_recall_at_3": 0.0,
+      "B2.conditional_value_capture_at_3": 0.0
+    },
+    "metric_gate_pass": true,
+    "primary_run_fixed": true,
+    "runs": 2,
+    "same_device": true,
+    "same_model_instance": true,
+    "same_process": true,
+    "score_gate_pass": true,
+    "score_vector_hash_equal": true,
+    "sentinel_chain": "sheep"
+  },
+  "status": "complete_verified_sanitized",
+  "task_summaries": {
+    "A": {
+      "headline_metric": "lane_average_precision",
+      "unweighted_six_chain_headline_mean": 0.059251727441747525,
+      "unweighted_six_chain_value_mean": 0.028185406045888192,
+      "value_metric": "value_capture_at_500"
+    },
+    "B1": {
+      "headline_metric": "entry_average_precision",
+      "unweighted_six_chain_headline_mean": 0.35108939943350226,
+      "unweighted_six_chain_value_mean": 0.496458876285107,
+      "value_metric": "entry_value_capture_at_50"
+    },
+    "B2": {
+      "headline_metric": "conditional_recall_at_3",
+      "unweighted_six_chain_headline_mean": 0.04952594969075699,
+      "unweighted_six_chain_value_mean": 0.04836108962616253,
+      "value_metric": "conditional_value_capture_at_3"
+    }
+  }
+}

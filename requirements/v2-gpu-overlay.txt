@@ -1,0 +1,5 @@
+# Isolated overlay for strict rolling KGE jobs on a host that already provides
+# the pinned CUDA Torch/PyG stack. Install with --target <run-root>/python_packages
+# so the old project environment is not modified.
+pykeen==1.11.1
+

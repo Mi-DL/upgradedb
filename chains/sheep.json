@@ -1,0 +1,124 @@
+{
+  "id": "sheep",
+  "description": "Strict sheep-meat and wool chain: live sheep -> sheep meat; raw wool -> wool grease, wool tops/combed wool, and wool yarn. Raw sheep/lamb skins are retained as a source stage. Mixed-species and unresolved-material HS92 codes are excluded; commodity-explicit blends remain eligible under the published HS6-basket rule.",
+  "stages": {
+    "exp_live": [
+      "010410"
+    ],
+    "exp_meat": [
+      "020410",
+      "020421",
+      "020422",
+      "020423",
+      "020430",
+      "020441",
+      "020442",
+      "020443"
+    ],
+    "exp_rawskin": [
+      "410210",
+      "410221",
+      "410229",
+      "430130"
+    ],
+    "exp_woolraw": [
+      "510111",
+      "510119",
+      "510121",
+      "510129",
+      "510130"
+    ],
+    "exp_woolgrease": [
+      "150590"
+    ],
+    "exp_wooltop": [
+      "510521",
+      "510529"
+    ],
+    "exp_woolyarn": [
+      "510610",
+      "510620",
+      "510710",
+      "510720"
+    ]
+  },
+  "upstream": [
+    "exp_live",
+    "exp_rawskin",
+    "exp_woolraw"
+  ],
+  "upstream_map": {
+    "exp_meat": [
+      "exp_live"
+    ],
+    "exp_woolgrease": [
+      "exp_woolraw"
+    ],
+    "exp_wooltop": [
+      "exp_woolraw"
+    ],
+    "exp_woolyarn": [
+      "exp_woolraw",
+      "exp_wooltop"
+    ]
+  },
+  "derived_from": {
+    "exp_woolgrease": [
+      "510111",
+      "510121"
+    ],
+    "exp_wooltop": [
+      "510111",
+      "510121"
+    ]
+  },
+  "derived_from_hs": {
+    "510620": [
+      "510111",
+      "510121"
+    ],
+    "510710": [
+      "510521",
+      "510529"
+    ],
+    "510720": [
+      "510521",
+      "510529"
+    ],
+    "510610": [
+      "510111",
+      "510121"
+    ]
+  },
+  "produces": {
+    "976": "010410",
+    "977": "020410"
+  },
+  "form_of": [
+    [
+      "exp_live",
+      "exp_meat"
+    ]
+  ],
+  "named_sources": {
+    "MEAT_SRC": [
+      "020442",
+      "020443"
+    ],
+    "WOOL_SRC": [
+      "510111",
+      "510121"
+    ],
+    "SKIN_SRC": [
+      "410210"
+    ],
+    "YARN_SRC": [
+      "510620",
+      "510710"
+    ],
+    "WOOLTOP_SRC": [
+      "510521",
+      "510529"
+    ]
+  }
+}

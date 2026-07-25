@@ -1,0 +1,23 @@
+# Minimal Python package lock for the committed v2 rolling CPU result artifact.
+#
+# v2_cpu_results_python: 3.12.13
+# v2_cpu_results_implementation: CPython
+# v2_cpu_results_platform: Windows-11-10.0.26200-SP0
+# v2_cpu_results_artifact: results_v2/metrics/rolling_cpu_baselines.json
+#
+# These are the versions actually loaded when that artifact was generated. This
+# lock is intentionally smaller than a full analysis/GPU environment: it covers
+# tools/v2_rolling_cpu_baselines.py and its numerical/runtime dependencies only.
+# Exact pins improve reproducibility, but do not promise byte-identical output
+# across operating systems, CPU instruction sets, BLAS/OpenMP implementations,
+# or wheel builds. Use verify_v2_cpu_results_env.py to check an environment and
+# to make any platform mismatch explicit.
+
+numpy==2.3.5
+pandas==3.0.1
+scipy==1.18.0
+scikit-learn==1.9.0
+joblib==1.5.3
+threadpoolctl==3.6.0
+python-dateutil==2.9.0.post0
+tzdata==2026.2

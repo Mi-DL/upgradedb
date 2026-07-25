@@ -1,0 +1,254 @@
+{
+  "benchmark_version": "2.1-dev",
+  "chains": [
+    {
+      "chain": "sheep",
+      "graph": {
+        "countries": 187,
+        "duplicate_forward_rows": 16,
+        "duplicate_rows_by_relation": {
+          "hs_parent": 16
+        },
+        "early_trade_edges": 3390,
+        "forward_relations": 12,
+        "graph_sha256": "579c8a39f8e9be8421ea5449ae1f5b05851db41bac42f425a637c7a56d880127",
+        "hs2_products": 6,
+        "hs4_products": 9,
+        "hs6_products": 25,
+        "nodes": 227,
+        "products": 40,
+        "serialized_forward_triples": 6288,
+        "unique_forward_facts": 6272
+      },
+      "samples": {
+        "b1_candidate_entries": 134,
+        "b1_positive_entries": 20,
+        "b2_candidate_lanes": 1999,
+        "b2_positive_entry_groups": 20,
+        "b2_positive_lanes": 46
+      }
+    },
+    {
+      "chain": "cotton",
+      "graph": {
+        "countries": 215,
+        "duplicate_forward_rows": 162,
+        "duplicate_rows_by_relation": {
+          "hs_parent": 162
+        },
+        "early_trade_edges": 18395,
+        "forward_relations": 14,
+        "graph_sha256": "e029018be96b709a0dd3050848402db15d4e737424615e7ecdd2d4ea94573cc0",
+        "hs2_products": 8,
+        "hs4_products": 32,
+        "hs6_products": 194,
+        "nodes": 449,
+        "products": 234,
+        "serialized_forward_triples": 44393,
+        "unique_forward_facts": 44231
+      },
+      "samples": {
+        "b1_candidate_entries": 320,
+        "b1_positive_entries": 36,
+        "b2_candidate_lanes": 5549,
+        "b2_positive_entry_groups": 36,
+        "b2_positive_lanes": 44
+      }
+    },
+    {
+      "chain": "aluminium",
+      "graph": {
+        "countries": 204,
+        "duplicate_forward_rows": 14,
+        "duplicate_rows_by_relation": {
+          "hs_parent": 14
+        },
+        "early_trade_edges": 15418,
+        "forward_relations": 15,
+        "graph_sha256": "8eaae0ada183cec72c324f3b0f514495378a1f88b5d39d55cb2427b53bd9798b",
+        "hs2_products": 3,
+        "hs4_products": 10,
+        "hs6_products": 24,
+        "nodes": 241,
+        "products": 37,
+        "serialized_forward_triples": 20740,
+        "unique_forward_facts": 20726
+      },
+      "samples": {
+        "b1_candidate_entries": 358,
+        "b1_positive_entries": 72,
+        "b2_candidate_lanes": 10561,
+        "b2_positive_entry_groups": 72,
+        "b2_positive_lanes": 181
+      }
+    },
+    {
+      "chain": "nickel",
+      "graph": {
+        "countries": 144,
+        "duplicate_forward_rows": 8,
+        "duplicate_rows_by_relation": {
+          "hs_parent": 8
+        },
+        "early_trade_edges": 4682,
+        "forward_relations": 15,
+        "graph_sha256": "97c4850a3fa5eff7d607313e8fecb83edf6317fbfa16a90363545c35a1eb0dad",
+        "hs2_products": 5,
+        "hs4_products": 16,
+        "hs6_products": 24,
+        "nodes": 189,
+        "products": 45,
+        "serialized_forward_triples": 7157,
+        "unique_forward_facts": 7149
+      },
+      "samples": {
+        "b1_candidate_entries": 343,
+        "b1_positive_entries": 66,
+        "b2_candidate_lanes": 4693,
+        "b2_positive_entry_groups": 66,
+        "b2_positive_lanes": 139
+      }
+    },
+    {
+      "chain": "cocoa",
+      "graph": {
+        "countries": 203,
+        "duplicate_forward_rows": 5,
+        "duplicate_rows_by_relation": {
+          "hs_parent": 5
+        },
+        "early_trade_edges": 8093,
+        "forward_relations": 13,
+        "graph_sha256": "abebdfde3003ba37cbdabfa4936cafeb79e02613bacfbac3957860ec1548adc5",
+        "hs2_products": 1,
+        "hs4_products": 6,
+        "hs6_products": 11,
+        "nodes": 221,
+        "products": 18,
+        "serialized_forward_triples": 10414,
+        "unique_forward_facts": 10409
+      },
+      "samples": {
+        "b1_candidate_entries": 277,
+        "b1_positive_entries": 42,
+        "b2_candidate_lanes": 5855,
+        "b2_positive_entry_groups": 42,
+        "b2_positive_lanes": 72
+      }
+    },
+    {
+      "chain": "oilseed-soy",
+      "graph": {
+        "countries": 193,
+        "duplicate_forward_rows": 1,
+        "duplicate_rows_by_relation": {
+          "hs_parent": 1
+        },
+        "early_trade_edges": 3501,
+        "forward_relations": 9,
+        "graph_sha256": "53e9828de3e279f787ecffb65f7c2680643812bb32378c1cac06c7704bce0a1f",
+        "hs2_products": 3,
+        "hs4_products": 4,
+        "hs6_products": 5,
+        "nodes": 205,
+        "products": 12,
+        "serialized_forward_triples": 4711,
+        "unique_forward_facts": 4710
+      },
+      "samples": {
+        "b1_candidate_entries": 86,
+        "b1_positive_entries": 34,
+        "b2_candidate_lanes": 4776,
+        "b2_positive_entry_groups": 34,
+        "b2_positive_lanes": 74
+      }
+    }
+  ],
+  "compute": {
+    "fitted_references": {
+      "hardware": {
+        "gpu_memory_gb_reported": 23,
+        "gpu_memory_mib": 23034,
+        "gpu_model": "NVIDIA L4",
+        "physical_gpu_count": 4
+      },
+      "historical_selection": {
+        "nbfnet_cache_deduplicated_fits": 80,
+        "pykeen_cache_deduplicated_fits": 480,
+        "wall_time_retained": false
+      },
+      "main_refit_and_evaluation": {
+        "duration_semantics": "summed one-GPU worker wall-clock",
+        "nbfnet": {
+          "chain_jobs": 6,
+          "representations": 70,
+          "worker_seconds": 12959
+        },
+        "pykeen_global_graph": {
+          "chain_jobs": 6,
+          "representations": 90,
+          "worker_seconds": 3443
+        },
+        "total_worker_hours": 4.56,
+        "total_worker_seconds": 16402
+      }
+    },
+    "ultra_zero_shot": {
+      "benchmark_training_or_fine_tuning": false,
+      "external_pretraining_compute_known": false,
+      "gpu_model": "NVIDIA L4",
+      "physical_gpu_count": 4,
+      "primary_kernel_seconds": 14.728,
+      "sheep_repeat_kernel_seconds": 0.326,
+      "six_chain_scoring_wall_minutes": 7,
+      "six_chain_scoring_wall_seconds": 474
+    }
+  },
+  "evaluation_contract": {
+    "b1_unit": "exporter-stage entry",
+    "b2_lane_rows_independent": false,
+    "b2_macro_unit": "realized B1 exporter-stage entry group"
+  },
+  "graph_contract": {
+    "aggregation": "calendar_mean",
+    "early_window": "2008-2012",
+    "edge_definition": "serialized directed forward triples before model-specific inverse expansion",
+    "fold": "main",
+    "node_definition": "ISO3 countries plus registered HS6, HS4, and HS2 products",
+    "stage_definition": "processing stages are relation labels, not nodes",
+    "unique_fact_definition": "exact duplicate forward triples removed"
+  },
+  "provenance": {
+    "formal_evidence_sha256": {
+      "early_graph_freeze_sha256": "c5a4016322d1af8e09d45225629af9b221fd58afd61d34c30f97a64f5d3b7834",
+      "gpu_inventory_sha256": "8372ab326e6449c9c2999963585d19d5d9a256147df51b5b621a036c40d64c60",
+      "main_worker_claim_set_sha256": "bc2f768690f47ef378f1d655b12e1b3197dbd48de51781d154fe12a26ce568ee",
+      "ultra_component_set_sha256": "01708ba4e776c5be0dc2f647dc6b1c22d59847d5cebd08998b083d1221b2a727",
+      "ultra_receipt_set_sha256": "1d347a49ae11de07b79cd234286a9cfc591d5443402f30483ec31e561ddb2274",
+      "ultra_score_seal_sha256": "d8cf236bebbae1f45979b202db5855758b7d122c6ef823c4460c715b8924cd92",
+      "ultra_score_start_sha256": "2be4844d07ffbd37020aec56d5021422deb62a85b541e9e7bea4de593fa06e82"
+    },
+    "privacy_policy": "aggregate values and receipt digests only; no private paths or raw logs",
+    "public_sources": {
+      "chains/aluminium.json": "4208a43ec676d5a0a6b209d95d1f171c273c8c6138817dc1189dc88f8d4affb4",
+      "chains/cocoa.json": "38b38f994e2a202227e9c945ce5180ada7233b4ed3161788e03eb3f1902d64b4",
+      "chains/cotton.json": "e2f10638f2f6c99ebf5f8d117938fcd0de36d8eb89bbc2d9648da7024fd8c907",
+      "chains/nickel.json": "ea45d8304e726595157b9f1d388bd5dabf6b8887949333ba8c3c428a4f1a3123",
+      "chains/oilseed-soy.json": "4d3d9d930852f644e82917131d6377ffdf7a3467968c578e00b878a01710b752",
+      "chains/sheep.json": "2b8be327d51a1b621c2136f4dae74bba0669935ec90933d14f2ad55f1739af4c",
+      "data/processed_v2/dataset_summary.json": "a5cdb9cf3868a340cf3135bba0ab6168b39bbe3aa2e610f3da5c24feacfd434f",
+      "tools/generate_v2_benchmark_profile.py": "9c92de3294bd7335771874cbdc7b65ff28366077c1d4bd0bad07ed02c5809c0b"
+    }
+  },
+  "schema_version": "upgrade-bench-v2/benchmark-profile/2",
+  "status": "complete_verified_sanitized",
+  "totals": {
+    "b1_candidate_entries": 1518,
+    "b1_positive_entries": 270,
+    "b2_candidate_lanes": 33433,
+    "b2_max_entry_groups_per_chain": 72,
+    "b2_min_entry_groups_per_chain": 20,
+    "b2_positive_entry_groups": 270,
+    "b2_positive_lanes": 556
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "attestation_type": "retrospective_supplemental_nbfnet_source_tree_evidence",
+  "claim_boundary": {
+    "not_supported": "Because this receipt is retrospective, it does not by itself prove that the observed tree was unchanged since selection or main execution; it is supplemental evidence, not a replacement for a contemporaneous freeze. Runtime artifacts support an execution-binary claim only when explicitly provided, and cross-host equality requires compare-runtime.",
+    "supported": "At the recorded observation time, the tree named by NBFNET_PATH had the listed relative files and exact byte hashes and was bound to the stated frozen run and Step-3 manifest identities."
+  },
+  "filesystem_timestamps": {
+    "earliest_included_file_mtime_utc": "2026-06-19T08:36:45+00:00",
+    "latest_included_file_mtime_utc": "2026-06-19T08:36:45+00:00",
+    "mtime_semantics": "recorded as retrospective filesystem evidence; mtimes are not a content identity and are not used as the verification trust anchor"
+  },
+  "git": {
+    "absence_semantics": null,
+    "dirty_tracked_paths": [
+      "data/fb15k237_entity.txt",
+      "nbfnet/layers.py",
+      "nbfnet/rspmm/source/rspmm.h"
+    ],
+    "head": "0c2d262e1d0175c174f62367d08ce4060b0d7b89",
+    "head_author_timestamp_utc": "2022-08-25T18:53:50+00:00",
+    "head_committer_timestamp_utc": "2022-08-25T18:53:50+00:00",
+    "repository_detected": true,
+    "source_tracked_file_count": 26,
+    "tracked_dirty": true
+  },
+  "observed_at_utc": "2026-07-16T15:07:44+00:00",
+  "private_evidence": {
+    "receipt_sha256": "44db93553e0449127ef3d7c217c5874894c4d402a64cfe8a72cd1edc0d63a3c9",
+    "retained_outside_public_bundle": true
+  },
+  "run_identity": {
+    "frozen_manifest": {
+      "role": "results_v2/gpu_rolling/frozen_manifest.json",
+      "sha256": "99db18daeb5cb4680c5f4a610c08bd3ec29b63644ad9a98022f36fd541b1647c"
+    },
+    "run_id": "v2.1-gpu-rolling-oa-full-20260716-r1",
+    "step3_sync_manifest": {
+      "role": "results_v2/gpu_rolling/runs/v2.1-gpu-rolling-oa-full-20260716-r1/STEP3_SYNC_MANIFEST.sha256",
+      "sha256": "55bda1a886304ae06795f2254339ee868e8f5105b95590f2390d2786b6e5a348"
+    }
+  },
+  "runtime": {
+    "artifacts": [
+      {
+        "expected_sha256": "6ff53d6aa101c862e7f765e639e97072d52650018fe0583756d0a4f5790d9a02",
+        "matches_expected_sha256": true,
+        "mtime_utc": "2026-07-16T14:22:33+00:00",
+        "resolved_path_redacted": true,
+        "role": "rspmm-extension",
+        "sha256": "6ff53d6aa101c862e7f765e639e97072d52650018fe0583756d0a4f5790d9a02",
+        "size_bytes": 843352
+      }
+    ],
+    "cross_host_match_semantics": "one receipt records one host; compare-runtime must compare at least two host receipts before any cross-host equality claim",
+    "host_role": "main-host-b",
+    "observed_hostname_redacted": true
+  },
+  "schema_version": "upgrade-bench-v2/nbfnet-source-public-attestation/1",
+  "selection_timing": {
+    "interpretation": "no externally recorded selection-start timestamp was supplied",
+    "latest_source_mtime_not_after_selection_start": null,
+    "seconds_from_latest_source_mtime_to_selection_start": null,
+    "selection_started_at_utc": null
+  },
+  "source": {
+    "environment_binding_verified": true,
+    "inventory": {
+      "exclusion_policy": {
+        "all_other_regular_files_hashed": true,
+        "directory_basenames": [
+          ".git",
+          ".mypy_cache",
+          ".pytest_cache",
+          ".ruff_cache",
+          ".tox",
+          ".venv",
+          "__pycache__",
+          "build",
+          "cache",
+          "checkpoints",
+          "data",
+          "dataset_cache",
+          "datasets",
+          "dist",
+          "logs",
+          "outputs",
+          "runs",
+          "temp",
+          "tmp",
+          "venv"
+        ],
+        "excluded_content_semantics": "runtime caches, generated data/model payloads, build products, logs, and editor/OS debris are intentionally outside the source-tree trust boundary",
+        "file_basenames": [
+          ".DS_Store",
+          "Thumbs.db"
+        ],
+        "file_suffixes_case_insensitive": [
+          ".ckpt",
+          ".log",
+          ".npy",
+          ".npz",
+          ".parquet",
+          ".pickle",
+          ".pkl",
+          ".pt",
+          ".pth",
+          ".pyc",
+          ".pyo",
+          ".swp",
+          ".tmp"
+        ],
+        "included_symlink_policy": "refuse",
+        "version": 1
+      },
+      "file_count": 25,
+      "files": [
+        {
+          "path": ".gitignore",
+          "sha256": "88783f0a5fbb37b29e2d5aa8d07e967c07cc0551e7c60ad1edbf14db619e9b90",
+          "size_bytes": 104
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "dd7a51d504752bbe2d896685390c9c6495a38d8a0c377a31d5f22c5b6aabc8f3",
+          "size_bytes": 1065
+        },
+        {
+          "path": "README.md",
+          "sha256": "79324177da7007dc2a0250a56e0826c1ecf87af0327428b906bb506bb175ef8b",
+          "size_bytes": 6105
+        },
+        {
+          "path": "asset/nbfnet.svg",
+          "sha256": "2e6e072796535c6cf5780a8ebd8faa29d417ea7ce7dfc37ee5eb018c486856a1",
+          "size_bytes": 29087
+        },
+        {
+          "path": "config/inductive/fb15k237.yaml",
+          "sha256": "c19b4aac5d94014bd760f5355830c9946184ef11b5bb7961fe48b4cd42e2743d",
+          "size_bytes": 585
+        },
+        {
+          "path": "config/inductive/wn18rr.yaml",
+          "sha256": "8ff79733829570d70580d5ceb60a8bb9224fe9d8dd8337e497eb5ff27cdcf5eb",
+          "size_bytes": 557
+        },
+        {
+          "path": "config/transductive/fb15k237.yaml",
+          "sha256": "2ebf295edbac4e6d9fd1f8b7a00f044eb32b40b4c22b3ecdc629eff903df90b1",
+          "size_bytes": 537
+        },
+        {
+          "path": "config/transductive/fb15k237_visualize.yaml",
+          "sha256": "1747ffb2040dc754032ebad921a06574e52ffb248dfaffd57f4bd3306b930697",
+          "size_bytes": 462
+        },
+        {
+          "path": "config/transductive/wn18rr.yaml",
+          "sha256": "a521ccd9cf00289a0afd7d2b737ff444407a3c62455bece0b5848866eb28f526",
+          "size_bytes": 509
+        },
+        {
+          "path": "nbfnet/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        {
+          "path": "nbfnet/datasets.py",
+          "sha256": "aa1309178b1cd81f13cc9a2fdc6e79baa5fac00bc3629722c347a087e6aa6f94",
+          "size_bytes": 6341
+        },
+        {
+          "path": "nbfnet/layers.py",
+          "sha256": "4ea0a8810c1d39b59c7244890fffaf7302833420998393d041453e4383757524",
+          "size_bytes": 10566
+        },
+        {
+          "path": "nbfnet/models.py",
+          "sha256": "ff4a86a919aa5435f066208460e7757962d0087ce8714d31a3fac77fa2c3f680",
+          "size_bytes": 15565
+        },
+        {
+          "path": "nbfnet/rspmm/__init__.py",
+          "sha256": "bfc17ff9a568eaa11f62ae31d4bf6d1ecda7f119ed9b7300316a85f05f420498",
+          "size_bytes": 37
+        },
+        {
+          "path": "nbfnet/rspmm/rspmm.py",
+          "sha256": "e67561d35f64a190cdc2b3fc1a328cc9d7014865456eaa924af69b1e0936c857",
+          "size_bytes": 8049
+        },
+        {
+          "path": "nbfnet/rspmm/source/operator.cuh",
+          "sha256": "5a4255123a2c9fd62f18e8663eb531bdada06cd98b11e553a52cb7d052e3f118",
+          "size_bytes": 1841
+        },
+        {
+          "path": "nbfnet/rspmm/source/rspmm.cpp",
+          "sha256": "992a4bfbc95f689e4148fa3f276fe092981e31ca9822966627f0d892cda4cbde",
+          "size_bytes": 14098
+        },
+        {
+          "path": "nbfnet/rspmm/source/rspmm.cu",
+          "sha256": "ce8e612631299794e3bece7994c980a3d27bc20dda04fdc05c7c92bd92f8b998",
+          "size_bytes": 17752
+        },
+        {
+          "path": "nbfnet/rspmm/source/rspmm.h",
+          "sha256": "790d8da47fbd3a317998fae2d3689c9640571cc8b0da736b79dba5752dd3dea5",
+          "size_bytes": 6118
+        },
+        {
+          "path": "nbfnet/rspmm/source/util.cuh",
+          "sha256": "eb6f48c7f40955a608d461c9bfb2cc9362a830cae5162fc1c360235eed963a98",
+          "size_bytes": 623
+        },
+        {
+          "path": "nbfnet/tasks.py",
+          "sha256": "d721d5cd133cc30a7e15d00871c9ffb428308a645c8dc9d746013d09e4282548",
+          "size_bytes": 6422
+        },
+        {
+          "path": "nbfnet/util.py",
+          "sha256": "a1ce4a4b935ba90432002189d0055e551b364b309165783d3c85b9ff7f8e3129",
+          "size_bytes": 6923
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "0c20b000c130bedccf1f482fa3e6dfa682ee4d2a62e1a6124cbe20c6dda29399",
+          "size_bytes": 99
+        },
+        {
+          "path": "script/run.py",
+          "sha256": "282800fbcdc5831838cf499894d02af3b085f897ddbe1952d6c22a9df352d4f5",
+          "size_bytes": 9006
+        },
+        {
+          "path": "script/visualize.py",
+          "sha256": "816f53435714eb2be9517f82d0cd55d58ec731c656ae621a8779bca54c09900a",
+          "size_bytes": 4293
+        }
+      ],
+      "inventory_sha256": "fcb1f9e00364daa7c660f2aef2acd130e098677a4ad4004fd5e54b41987e0925",
+      "total_bytes": 146744,
+      "tree_digest_algorithm": "sha256 over sorted UTF-8 records: relative_posix_path + NUL + decimal_size + NUL + file_sha256 + LF",
+      "tree_sha256": "6f3abb8d1f83f58cf768d087b41881b85b53b35f63c4937d87f440d0b48c9ad2"
+    },
+    "resolved_path_redacted": true,
+    "selector": "NBFNET_PATH"
+  },
+  "status": "PASS"
+}

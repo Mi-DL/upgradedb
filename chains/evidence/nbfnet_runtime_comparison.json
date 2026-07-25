@@ -1,0 +1,55 @@
+{
+  "all_runtime_artifacts_match": true,
+  "all_source_trees_match": true,
+  "claim_boundary": {
+    "not_supported": "Cross-host byte equality does not prove that the compiled extension was loaded by every earlier worker unless contemporaneous execution evidence independently identifies that artifact.",
+    "supported": "The listed retrospective host receipts bind identical source/runtime bytes exactly when the two all_*_match fields are true."
+  },
+  "host_count": 2,
+  "host_roles": [
+    "main-host-a",
+    "main-host-b"
+  ],
+  "hosts": [
+    {
+      "host_role": "main-host-a",
+      "private_receipt_sha256": "88b844f2160007f8b24d275c9dee06cee1363bbba5024ea34ba15d717ebce7a2",
+      "runtime_artifacts": [
+        {
+          "role": "rspmm-extension",
+          "sha256": "6ff53d6aa101c862e7f765e639e97072d52650018fe0583756d0a4f5790d9a02",
+          "size_bytes": 843352
+        }
+      ],
+      "source_tree_sha256": "6f3abb8d1f83f58cf768d087b41881b85b53b35f63c4937d87f440d0b48c9ad2"
+    },
+    {
+      "host_role": "main-host-b",
+      "private_receipt_sha256": "44db93553e0449127ef3d7c217c5874894c4d402a64cfe8a72cd1edc0d63a3c9",
+      "runtime_artifacts": [
+        {
+          "role": "rspmm-extension",
+          "sha256": "6ff53d6aa101c862e7f765e639e97072d52650018fe0583756d0a4f5790d9a02",
+          "size_bytes": 843352
+        }
+      ],
+      "source_tree_sha256": "6f3abb8d1f83f58cf768d087b41881b85b53b35f63c4937d87f440d0b48c9ad2"
+    }
+  ],
+  "run_identity": {
+    "frozen_manifest": {
+      "role": "results_v2/gpu_rolling/frozen_manifest.json",
+      "sha256": "99db18daeb5cb4680c5f4a610c08bd3ec29b63644ad9a98022f36fd541b1647c"
+    },
+    "run_id": "v2.1-gpu-rolling-oa-full-20260716-r1",
+    "step3_sync_manifest": {
+      "role": "results_v2/gpu_rolling/runs/v2.1-gpu-rolling-oa-full-20260716-r1/STEP3_SYNC_MANIFEST.sha256",
+      "sha256": "55bda1a886304ae06795f2254339ee868e8f5105b95590f2390d2786b6e5a348"
+    }
+  },
+  "runtime_artifact_roles": [
+    "rspmm-extension"
+  ],
+  "schema_version": "upgrade-bench-v2/nbfnet-cross-host-runtime-comparison/1",
+  "status": "PASS"
+}

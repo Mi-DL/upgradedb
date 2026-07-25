@@ -1,0 +1,110 @@
+{
+  "id": "cocoa",
+  "description": "Cocoa beans -> paste/butter/powder -> chocolate or other cocoa-containing food preparations (agri-food)",
+  "stages": {
+    "exp_cocoabean": [
+      "180100"
+    ],
+    "exp_cocoawaste": [
+      "180200"
+    ],
+    "exp_cocoapaste": [
+      "180310",
+      "180320"
+    ],
+    "exp_cocoabutter": [
+      "180400"
+    ],
+    "exp_cocoapowder_unsw": [
+      "180500"
+    ],
+    "exp_cocoapowder_sw": [
+      "180610"
+    ],
+    "exp_cocoa_prep_bulk": [
+      "180620"
+    ],
+    "exp_cocoa_prep_blocks_bars": [
+      "180631",
+      "180632"
+    ],
+    "exp_cocoa_prep_other": [
+      "180690"
+    ]
+  },
+  "upstream": [
+    "exp_cocoabean",
+    "exp_cocoawaste"
+  ],
+  "upstream_map": {
+    "exp_cocoapaste": [
+      "exp_cocoabean"
+    ],
+    "exp_cocoabutter": [
+      "exp_cocoabean",
+      "exp_cocoapaste"
+    ],
+    "exp_cocoapowder_unsw": [
+      "exp_cocoabean",
+      "exp_cocoapaste"
+    ],
+    "exp_cocoapowder_sw": [
+      "exp_cocoabean",
+      "exp_cocoapaste",
+      "exp_cocoapowder_unsw"
+    ],
+    "exp_cocoa_prep_bulk": [
+      "exp_cocoabean",
+      "exp_cocoabutter",
+      "exp_cocoapaste",
+      "exp_cocoapowder_unsw"
+    ],
+    "exp_cocoa_prep_blocks_bars": [
+      "exp_cocoabean",
+      "exp_cocoabutter",
+      "exp_cocoapaste",
+      "exp_cocoapowder_unsw"
+    ],
+    "exp_cocoa_prep_other": [
+      "exp_cocoabean",
+      "exp_cocoabutter",
+      "exp_cocoapaste",
+      "exp_cocoapowder_unsw"
+    ]
+  },
+  "derived_from": {
+    "exp_cocoapaste": [
+      "180100"
+    ],
+    "exp_cocoabutter": [
+      "180100",
+      "180310"
+    ],
+    "exp_cocoapowder_unsw": [
+      "180100",
+      "180310"
+    ],
+    "exp_cocoapowder_sw": [
+      "180500"
+    ],
+    "exp_cocoa_prep_bulk": [
+      "180310",
+      "180400",
+      "180500"
+    ],
+    "exp_cocoa_prep_blocks_bars": [
+      "180310",
+      "180400",
+      "180500"
+    ],
+    "exp_cocoa_prep_other": [
+      "180310",
+      "180400",
+      "180500"
+    ]
+  },
+  "derived_from_hs": {},
+  "produces": {},
+  "form_of": [],
+  "named_sources": {}
+}

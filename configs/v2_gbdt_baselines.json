@@ -1,0 +1,112 @@
+{
+  "schema_version": "upgrade-bench-v2-gbdt-config/1",
+  "protocol": "historical-group-select-then-frozen-main-v1",
+  "status": "frozen_before_first_gbdt_main_evaluation",
+  "frozen_at_utc": "2026-07-14T14:17:51Z",
+  "chains": [
+    "sheep",
+    "cotton",
+    "aluminium",
+    "nickel",
+    "cocoa",
+    "oilseed-soy"
+  ],
+  "tracks": [
+    "a",
+    "b1",
+    "b2"
+  ],
+  "estimator": {
+    "class": "sklearn.ensemble.HistGradientBoostingClassifier",
+    "loss": "log_loss",
+    "learning_rate": 0.05,
+    "l2_regularization": 1.0,
+    "class_weight": "balanced",
+    "early_stopping": false,
+    "max_bins": 255,
+    "random_state": 20260715
+  },
+  "grid": [
+    {
+      "config_id": "leaf3_iter100",
+      "max_leaf_nodes": 3,
+      "max_iter": 100
+    },
+    {
+      "config_id": "leaf7_iter100",
+      "max_leaf_nodes": 7,
+      "max_iter": 100
+    },
+    {
+      "config_id": "leaf7_iter200",
+      "max_leaf_nodes": 7,
+      "max_iter": 200
+    },
+    {
+      "config_id": "leaf15_iter200",
+      "max_leaf_nodes": 15,
+      "max_iter": 200
+    }
+  ],
+  "min_samples_leaf": {
+    "a": 20,
+    "b1": 5,
+    "b2": 20
+  },
+  "features": {
+    "a": [
+      "size",
+      "log_gravity"
+    ],
+    "b1": [
+      "log_upstream_capacity",
+      "log_candidate_destinations",
+      "max_log_importer_demand",
+      "mean_log_importer_demand",
+      "max_log_gravity",
+      "mean_log_gravity",
+      "logsum_gravity",
+      "gravity_coverage"
+    ],
+    "b2": [
+      "log_importer_demand",
+      "log_gravity"
+    ]
+  },
+  "historical_selection": {
+    "a": {
+      "group_unit": "exporter",
+      "objective": "grouped_average_precision"
+    },
+    "b1": {
+      "group_unit": "exporter",
+      "objective": "grouped_average_precision"
+    },
+    "b2": {
+      "group_unit": "positive_exporter_stage_entry",
+      "objective": "macro_recall_at_3"
+    },
+    "maximum_group_folds": 5,
+    "selection_tie_break": "first_config_in_declared_grid_order",
+    "refit": "complete_historical_fold"
+  },
+  "main_evaluation": {
+    "read_gate": "freeze_all_18_chain_task_models_before_opening_any_main_candidate_table",
+    "target_access": "one_complete_main_cohort_evaluation_per_frozen_model",
+    "a_value_budget": 500,
+    "b1_value_budget": 50,
+    "b2_k": 3
+  },
+  "uncertainty": {
+    "method": "nonparametric_cluster_bootstrap",
+    "draws": 200,
+    "rng_seed": 20260715,
+    "interval": "percentile_95",
+    "cluster_unit": {
+      "a": "exporter",
+      "b1": "exporter",
+      "b2": "positive_exporter_stage_entry"
+    }
+  },
+  "claim_scope": "reviewer-motivated protocol-conforming tabular reference; not part of the original prespecified reference set"
+}

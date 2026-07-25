@@ -1,0 +1,27 @@
+# Release manifests hash file bytes, so text checkouts must be stable across OSes.
+* text=auto eol=lf
+
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.zip binary
+*.pth binary
+*.pt binary
+*.npy binary
+*.npz binary
+
+# CSV tables are immutable machine artifacts whose byte sizes and hashes appear
+# in release indexes. Never let checkout settings rewrite their line endings.
+*.csv -text
+
+# These Windows-produced result artifacts are bound by raw-byte SHA-256 values in
+# results_v2/metrics/INVALIDATED.json. Preserve their canonical CRLF bytes in
+# every fresh clone instead of applying Git's text clean/smudge conversion.
+results_v2/metrics/rolling_cpu_baselines.csv -text
+results_v2/metrics/rolling_cpu_baselines.json -text
+results_v2/metrics/v2_robustness.csv -text
+results_v2/metrics/v2_robustness.json -text
+results_v2/metrics/b1_candidate_coverage.json -text
+results_v2/metrics/v2_score_robustness_r5.json -text
+results_v2/metrics/v2_value_diagnostics.csv -text

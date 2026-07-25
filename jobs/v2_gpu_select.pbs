@@ -1,0 +1,37 @@
+#!/bin/bash
+#PBS -N v2_gpu_select
+#PBS -l select=1:ngpus=1:ncpus=4:mem=32gb
+#PBS -l walltime=24:00:00
+#PBS -j oe
+
+# Fold2-only shared-score selection. Submit one job per CHAIN x FAMILY; each
+# job trains a config once and writes independent A/B1/B2 selections.
+#   qsub -q <gpu-queue> -v CHAIN=cocoa,FAMILY=kge \
+#     -N v2sel_cocoa_kge jobs/v2_gpu_select.pbs
+# Do not submit main evaluation jobs until all 36 task artifacts are frozen.
+# Load any site-specific CUDA/compiler modules before submission; this portable
+# template deliberately does not name a queue or module hierarchy.
+set -euo pipefail
+
+ROOT="${ROOT:?set ROOT to the isolated v2 run root}"
+PYTHON="${PYTHON:-$ROOT/.venv/bin/python}"
+CHAIN="${CHAIN:?set CHAIN}"
+FAMILY="${FAMILY:?set FAMILY to kge or nbfnet}"
+SEEDS="${SEEDS:-0,1,2,3,4}"
+
+cd "$ROOT"
+export NBFNET_PATH="${NBFNET_PATH:-$ROOT/third_party/NBFNet-PyG}"
+export VCU_RAW="${VCU_RAW:-$ROOT/data/raw}"
+export PYTHONPATH="$ROOT/python_packages_nodeps:$NBFNET_PATH:${PYTHONPATH:-}"
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+export PYTHONHASHSEED=0
+
+if [[ "$FAMILY" == "nbfnet" ]]; then
+  export TORCH_CUDA_ARCH_LIST="${TORCH_CUDA_ARCH_LIST:-8.9}"
+fi
+
+echo "phase=select-chain fold=fold2 chain=$CHAIN tasks=a,b1,b2 family=$FAMILY node=$(hostname) date=$(date -Is)"
+nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
+"$PYTHON" src/v2_gpu_rolling.py select-chain \
+  --chain "$CHAIN" --family "$FAMILY" \
+  --seeds "$SEEDS" --require-cuda

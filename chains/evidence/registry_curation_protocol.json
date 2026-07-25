@@ -1,0 +1,84 @@
+{
+  "schema_version": "upgrade-bench/registry-curation-protocol/4",
+  "issued_date": "2026-07-23",
+  "registry_evidence_file": "chains/evidence/registry_evidence.json",
+  "registry_evidence_sha256": "3187a5b6adb06e08d458538336cb88588137aaa7540df5e88022051534a40f51",
+  "human_review_receipt_file": "chains/evidence/registry_human_review_receipt.json",
+  "human_review_receipt_sha256": "95bb2c9022b5958e183a6da56d950b4f0db26e0141499a6b71e36b0da0c56a43",
+  "curation": {
+    "curator_count": 2,
+    "independent_second_review": true,
+    "inter_annotator_agreement_available": true,
+    "completion_status": "sampled_complete",
+    "retained_row_level_review_record": true,
+    "scope": "Completed human validation used two independent reviewers on the frozen outcome-blind stratified probability sample of 212 decision records from the 610-record machine-assigned frame, followed by discussion-based final adjudication; all 53 stage definitions were accepted as a separate census. Original decision verdicts agreed on 192/212 records (90.6%; Cohen's kappa 0.595). The final adjudication retained every frozen proposal and accepted no construct change. The remaining 398 decision records are not claimed as human-reviewed.",
+    "decision_validation_sampling": {
+      "plan_file": "chains/evidence/registry_human_validation_sample.json",
+      "plan_sha256": "66cc810392ba35254f5a3093a0709bd8e42226339cf4ba2c770fe386262fe48c",
+      "plan_id": "UB-HS92-610-STRATIFIED-SAMPLE-212-20260719-R1",
+      "sampling_frame_records": 610,
+      "sampled_decision_records": 212,
+      "unsampled_decision_records": 398,
+      "stage_definition_census_records": 53,
+      "design": "outcome-blind stratified probability sample without replacement with declared certainty units",
+      "estimator": "design-weighted Horvitz-Thompson discrepancy estimate using stored inclusion probabilities",
+      "completion_claim": "sampled human validation; not full-ledger human review"
+    },
+    "decision_basis": [
+      "Official HS92 descriptions distributed with CEPII BACI V202401b.",
+      "Exact membership and official descriptions in the hash-pinned CEPII BACI V202401b HS92 product dictionary; no new UNSD API membership check is claimed.",
+      "A written canonical definition and observable-attribution rule for every active stage.",
+      "The operational interpretations in docs/REGISTRY_REVIEW_CODEBOOK.md: commodity-explicit blends and residual categories may be retained, while generic or material-ambiguous categories are excluded; stages are analytical product families.",
+      "Basket-level wording is preserved in the evidence: nickel-explicit copper-nickel products are not relabelled as nickel-only products, cotton-explicit mixed yarn is not relabelled as pure or cotton-primary yarn, and deliberately omitted wool forms remain out of stage."
+    ],
+    "workflow": [
+      "Declare the canonical stage definition before judging individual code fit.",
+      "Include a code only when its official description itself identifies the registered commodity, material, species, processing form, or end use required by that stage.",
+      "Treat commodity-explicit blends and residual categories as eligible at the complete HS6-basket level, without inferring within-code composition; exclude descriptions that do not isolate the focal commodity or material.",
+      "Allow closely related HS6 forms to share a declared analytical product family, with entry and incumbency interpreted at that family level.",
+      "Freeze the 610-record sampling frame and the deterministic 212-record stratified probability sample before human validation.",
+      "Record sampled include, exclude, out_of_stage, and reassignment judgments with the source description, specificity finding, rationale, candidate source, and stage-fit status; review all 53 stage definitions.",
+      "Preserve both reviewers' original verdicts, resolve every No or Uncertain verdict by discussion, and record final adjudication separately from the original columns.",
+      "Run full-source regex, ledger-coverage, relation-integrity, pinned-dictionary, and semantic regression checks over the frozen decisions."
+    ]
+  },
+  "chain_selection": {
+    "sampling_design": "Purposive coverage set; not a random or representative sample of value chains.",
+    "criteria": [
+      "A defensible multi-stage HS92 construction with at least one explicit directed upstream-to-processed relation.",
+      "Official descriptions that permit strict observable attribution instead of inferred feedstock or processing claims.",
+      "Nonempty historical and main benchmark cohorts under the common aggregation and eligibility rules.",
+      "Coverage across livestock, textiles, mining/metals, and agri-food domains."
+    ],
+    "excluded_selection_signal": "Formal main-cohort model performance and model-family ordering were not chain inclusion criteria.",
+    "interpretation": "Results describe these six fixed chains and do not support population inference over all products, sectors, or value chains."
+  },
+  "quality_controls": {
+    "source_rows_automatically_regex_scanned": 5022,
+    "source_rows_manually_reviewed": 0,
+    "reviewed_codes": 610,
+    "reviewed_codes_semantics": "Legacy compatibility label for 610 chain-HS6 decision records, not 610 unique codes and not a count of completed human row reviews.",
+    "unique_reviewed_hs6": 588,
+    "observable_candidate_records": 576,
+    "legacy_only_records": 34,
+    "completed_human_code_reviews": 212,
+    "completed_human_stage_definition_reviews": 53,
+    "planned_human_code_reviews": 212,
+    "planned_human_stage_definition_reviews": 53,
+    "unsampled_human_code_records": 398,
+    "included_codes": 283,
+    "excluded_codes": 228,
+    "out_of_stage_codes": 99,
+    "historical_active_codes": 131,
+    "historical_active_retained": 131,
+    "historical_active_removed": 0,
+    "new_active_added": 152,
+    "reassigned_included_codes": 19,
+    "semantic_regression_gates": 35,
+    "pinned_baci_dictionary_membership": "588/588 unique selected HS6 codes are numeric rows in the pinned BACI HS92 dictionary",
+    "lexicon_negative_control": "PASS_TESTED_VARIANTS_ONLY; finite tested variants support but do not prove lexicon completeness",
+    "scope_of_automation": "LLM assistance was used to develop supporting code, the frozen lexicons, and decision proposals. Automated checks reproduce full-source regex application, ledger coverage, source text, relations, and mappings. They do not establish independent semantic agreement, do not constitute 5,022 manual reviews, and do not prove lexicon completeness or that every curatorial judgment is correct."
+  },
+  "revision_policy": "A later independent review may propose corrections through a versioned registry change. Any accepted code decision, stage membership or assignment, stage definition, or semantic upstream, upstream_map, derived_from, derived_from_hs, produces, form_of, or named_sources change requires a new benchmark identifier, rebuilt cohorts and metrics, and a new hash-bound manifest; earlier releases remain immutable.",
+  "known_limitation": "Completed dual-review human validation is limited to the frozen 212-record stratified probability sample from the 610 machine-assigned decisions; the 398 unsampled decisions are not individually human-verified. All 53 stage definitions were accepted as a census, and discussion-based adjudication accepted no registry construct change. Agreement statistics describe the sampled decisions only and do not establish full-ledger validity. Lexicon completeness has finite negative-control support, not proof. The registry remains LLM-assisted and evidence-backed rather than an error-free or universally exhaustive product ontology."
+}
