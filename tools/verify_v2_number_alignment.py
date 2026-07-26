@@ -53,7 +53,7 @@ PUBLIC_STATUS_DOCS = (
     Path("README.md"),
     Path("results_v2/README.md"),
     Path("results_v2/CLAIM_LEDGER.md"),
-    Path("docs/REGISTRY_REVIEW_CODEBOOK.md"),
+    Path("docs/REGISTRY_REVIEW_COMPLETION_ADDENDUM.md"),
 )
 PUBLIC_CHRONOLOGY_DOCS = (
     Path("README.md"),
@@ -63,6 +63,7 @@ PUBLIC_CHRONOLOGY_DOCS = (
     Path("results_v2/README.md"),
     Path("results_v2/CLAIM_LEDGER.md"),
     Path("docs/V2_RELEASE_WORKFLOW.md"),
+    Path("docs/REGISTRY_REVIEW_COMPLETION_ADDENDUM.md"),
     Path("benchmark/upgrade-bench-v2/README.md"),
     Path("benchmark/upgrade-bench-v2/DATASHEET.md"),
     Path("paper/body.tex"),

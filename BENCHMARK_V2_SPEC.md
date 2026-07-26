@@ -126,7 +126,9 @@ may be pooled when the analytical family is the intended benchmark unit; distinc
 split when pooling would change that unit or make the entry/incumbency condition misleading. Entry
 and incumbency are then measured at the declared family level and may mask first entry into one
 constituent form. The operational boundary cases and minimal review fields are fixed in
-`docs/REGISTRY_REVIEW_CODEBOOK.md`.
+the immutable pre-review `docs/REGISTRY_REVIEW_CODEBOOK.md`. Post-review completion status,
+agreement statistics, and the unsampled-record boundary are reported in
+`docs/REGISTRY_REVIEW_COMPLETION_ADDENDUM.md`.
 
 The cotton apparel and homeware stages preserve the pre-audit, precision-oriented form ontology
 around representative basic forms: five knitted and three non-knitted apparel HS6s, plus bed and

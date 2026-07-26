@@ -465,14 +465,14 @@ class ArtifactBundleTests(unittest.TestCase):
             - public_policy.V2_PAPER_SCHEMA7_SOURCE_PATHS,
             additions,
         )
-        self.assertEqual(public_policy.V2_PAPER_SCHEMA8_FINAL_NUMBER_KEY_COUNT, 857)
+        self.assertEqual(public_policy.V2_PAPER_SCHEMA8_FINAL_NUMBER_KEY_COUNT, 863)
         self.assertEqual(
             public_policy.V2_PAPER_SCHEMA8_FINAL_NUMBER_KEYS_SHA256,
-            "bcd64e94804bea64fb66d5e73e8d463597d68a8d88a46b7d7230c42a2dfd4dda",
+            "518c25a273c3367361819bc83226581a2027c006392d62f2cf3f2bbeae409a5e",
         )
         self.assertEqual(
             public_policy.V2_PAPER_SCHEMA8_FINAL_NUMBER_VALUES_SHA256,
-            "152048039fd1482e069139f113745c2987796fd15b74fa4822e65f4dd357ef04",
+            "c567fda74caf250f2e59e382308cf9557ddf51a31d592301716d694be39335c6",
         )
 
     def test_unresolved_v2_invalidation_blocks_final_index(self) -> None:

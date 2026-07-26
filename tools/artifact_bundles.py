@@ -312,6 +312,7 @@ def bundle_specs(root: Path = ROOT) -> tuple[BundleSpec, ...]:
         "docs/DATA_DISTRIBUTION.md",
         "docs/PUBLIC_RELEASE_POLICY.md",
         "docs/REGISTRY_REVIEW_CODEBOOK.md",
+        "docs/REGISTRY_REVIEW_COMPLETION_ADDENDUM.md",
     )
 
     return (

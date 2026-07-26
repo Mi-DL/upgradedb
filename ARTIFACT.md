@@ -195,8 +195,8 @@ full profile checks, among other invariants:
 - the hash-bound LLM-assistance disclosure, outcome-blind sampled human-validation contract and
   release-eligible receipt, including the 212-of-610 decision sample, all 53 stage definitions,
   exact design weights, and explicit 398-record unsampled boundary; chain-selection criteria,
-  operational review codebook, automated controls, and correction policy, without treating semantic
-  regression tests or a single curator as independent agreement;
+  immutable pre-review codebook, post-review completion addendum, automated controls, and correction
+  policy, without treating semantic regression tests or a single curator as independent agreement;
 - both temporal snapshots across all six chains and every released A/B lane and entry view;
 - calendar aggregation metadata, key uniqueness, labels, values, group splits, and event identities;
 - forward CPU protocol flags and all recorded candidate-table hashes;

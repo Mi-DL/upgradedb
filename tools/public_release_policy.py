@@ -194,12 +194,12 @@ V2_PAPER_TEX_PATH = "paper/generated/v2_numbers.tex"
 # schema-5/6/7 identities remain frozen below for migration and regression
 # tests.
 V2_PAPER_CURRENT_NUMBERS_SCHEMA = "upgrade-bench-v2-paper-numbers-8"
-V2_PAPER_CURRENT_NUMBER_KEY_COUNT = 857
+V2_PAPER_CURRENT_NUMBER_KEY_COUNT = 863
 V2_PAPER_CURRENT_NUMBER_KEYS_SHA256 = (
-    "bcd64e94804bea64fb66d5e73e8d463597d68a8d88a46b7d7230c42a2dfd4dda"
+    "518c25a273c3367361819bc83226581a2027c006392d62f2cf3f2bbeae409a5e"
 )
 V2_PAPER_CURRENT_NUMBER_VALUES_SHA256 = (
-    "152048039fd1482e069139f113745c2987796fd15b74fa4822e65f4dd357ef04"
+    "c567fda74caf250f2e59e382308cf9557ddf51a31d592301716d694be39335c6"
 )
 
 V2_PAPER_FINAL_NUMBERS_SCHEMA = "upgrade-bench-v2-paper-numbers-8"
@@ -317,12 +317,12 @@ V2_PAPER_SCHEMA7_FINAL_NUMBER_VALUES_SHA256: str | None = (
     "d618c970e9caa547563879cbec64fc9ee259f50a36931e8d3d741941692aab43"
 )
 # Frozen schema-8 contract reviewed against the complete r5-backed interface.
-V2_PAPER_SCHEMA8_FINAL_NUMBER_KEY_COUNT: int | None = 857
+V2_PAPER_SCHEMA8_FINAL_NUMBER_KEY_COUNT: int | None = 863
 V2_PAPER_SCHEMA8_FINAL_NUMBER_KEYS_SHA256: str | None = (
-    "bcd64e94804bea64fb66d5e73e8d463597d68a8d88a46b7d7230c42a2dfd4dda"
+    "518c25a273c3367361819bc83226581a2027c006392d62f2cf3f2bbeae409a5e"
 )
 V2_PAPER_SCHEMA8_FINAL_NUMBER_VALUES_SHA256: str | None = (
-    "152048039fd1482e069139f113745c2987796fd15b74fa4822e65f4dd357ef04"
+    "c567fda74caf250f2e59e382308cf9557ddf51a31d592301716d694be39335c6"
 )
 # These inputs are distributed as indexed release assets rather than Git
 # objects.  Repository-profile verification never opens them, even when they

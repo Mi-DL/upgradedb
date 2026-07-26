@@ -48,7 +48,8 @@ hashes as final. The deterministic layout contains:
 | `v2-history` | six-chain historical selection-fold equivalents |
 | `v2-results` | exact-name allowlisted metrics/audits and sanitized public summaries; never raw GPU trees |
 
-Every bundle carries `DATA_LICENSE.md`, `ARTIFACT.md`, and this runbook;
+Every bundle carries `DATA_LICENSE.md`, `ARTIFACT.md`, this runbook, the immutable pre-review
+registry codebook, and its post-review completion addendum;
 the internal `PROJECT_CHECKLIST.md` is deliberately excluded. V2 bundles also carry
 `BENCHMARK_V2_SPEC.md`. The v2-results bundle carries the paper-facing generated
 macro file as well. ZIP members use repository-relative paths, so the archives

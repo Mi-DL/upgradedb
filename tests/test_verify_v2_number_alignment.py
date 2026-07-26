@@ -322,6 +322,16 @@ class ManuscriptNumberLintTests(unittest.TestCase):
                 path.write_text("complete and verified\n", encoding="utf-8")
             alignment._reject_stale_public_status_docs(root)
 
+    def test_completion_addendum_is_current_status_source(self) -> None:
+        self.assertIn(
+            Path("docs/REGISTRY_REVIEW_COMPLETION_ADDENDUM.md"),
+            alignment.PUBLIC_STATUS_DOCS,
+        )
+        self.assertNotIn(
+            Path("docs/REGISTRY_REVIEW_CODEBOOK.md"),
+            alignment.PUBLIC_STATUS_DOCS,
+        )
+
     @staticmethod
     def _write_chronology_docs(root: Path, text: str = "Independent release gates.\n") -> None:
         for relative in alignment.PUBLIC_CHRONOLOGY_DOCS:

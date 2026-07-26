@@ -17,6 +17,8 @@ and its audited evaluation contract, not a proposed model.
 > Authorship, venue metadata, DOI registration, and a final archival release remain separate
 > publication obligations.
 
+Current reviewer snapshot: [`v2.1.0-rc.4`](https://github.com/Mi-DL/upgradedb/releases/tag/v2.1.0-rc.4).
+
 The machine-readable claim boundary is documented in
 [`results_v2/CLAIM_LEDGER.md`](results_v2/CLAIM_LEDGER.md). Some machine-interface paths retain
 versioned identifiers for provenance, but the scientific artifact is one UpgradeBench project.
@@ -137,9 +139,12 @@ private formal receipts remain excluded.
   chain-selection criteria, controls, and revision policy.
 - [chains/evidence/registry_human_validation_sample.json](chains/evidence/registry_human_validation_sample.json)
   — frozen 212-record stratified sample, exact inclusion probabilities, and stage-definition census.
-- [docs/REGISTRY_REVIEW_CODEBOOK.md](docs/REGISTRY_REVIEW_CODEBOOK.md) — operational inclusion,
-  analytical-family, and sampled-validation rules for the 610-record machine ledger
-  (588 unique HS6 codes).
+- [docs/REGISTRY_REVIEW_CODEBOOK.md](docs/REGISTRY_REVIEW_CODEBOOK.md) — immutable pre-review
+  operational inclusion, analytical-family, and sampled-validation rules for the 610-record machine
+  ledger (588 unique HS6 codes).
+- [docs/REGISTRY_REVIEW_COMPLETION_ADDENDUM.md](docs/REGISTRY_REVIEW_COMPLETION_ADDENDUM.md) —
+  post-review completion status, three-verdict agreement statistic, and the explicit 398-record
+  unreviewed coverage boundary.
 - [docs/V2_RELEASE_WORKFLOW.md](docs/V2_RELEASE_WORKFLOW.md) — fail-closed dependency graph for
   formal result replacement, outcome-blind review branching, paper-interface review, and release
   sealing.

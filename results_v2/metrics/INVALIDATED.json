@@ -14,7 +14,7 @@
     "receipt_sha256": "95bb2c9022b5958e183a6da56d950b4f0db26e0141499a6b71e36b0da0c56a43"
   },
   "replacement_sha256": {
-    "paper/generated/v2_numbers.tex": "47dc08c78e9cb2d4b9aaec2272d21b54abdbe1ae84c05f8e1950abcfe8508238",
+    "paper/generated/v2_numbers.tex": "748764a452be7bc2346c0ee61c7bffd19d10965f5119c14c02ea2b50d4aca5e9",
     "results_v2/metrics/b1_candidate_coverage.json": "260e0c4e64d9640810b7b0cb45cf8a3b38cd91e914647e28fe7bafddc8e19733",
     "results_v2/metrics/raw_label_audit.json": "9bb93976254589eeeda46633e599114316676bba3d830c3e6bd1ab619f705854",
     "results_v2/metrics/rolling_cpu_baselines.csv": "67aa37f65c137cbf7a1d22fe1376970b2afce7a021a60df0a6068fac744d4cec",
@@ -23,7 +23,7 @@
     "results_v2/metrics/v2_gpu_rolling_summary.json": "940174a8f06f0d33b29efc949f385730f8d4d9380990e4556bfab8ac41c12aee",
     "results_v2/metrics/v2_robustness.csv": "14f08cd4efca869dc79a5653baf9aaf867fd1543a3c576961bbb17814546625e",
     "results_v2/metrics/v2_robustness.json": "86291f381700b01ed9f24cf27b96902593f9e724f5058f5eb8a2bbdb65b85d5b",
-    "results_v2/paper_numbers.json": "d0cd417537ebad08da82bb984375810b4b4045887b62567bb8773a3e61403e5f"
+    "results_v2/paper_numbers.json": "1b5cd08b19c2ad56a1569697e6078ea43dc0b3611e200da691d22c686e1d5137"
   },
   "resolution": "Correct registries, rebuild both temporal cohorts, quantify the B1 eligible-market coverage boundary, and rerun independent audit, CPU baselines, robustness, GPU rolling evaluation, and paper-number generation.",
   "resolution_gate_sha256": "933d76ad3830993f167fc7a2baa9720cd3e4f7d9021bfb9a9f650f52bffb286f",
@@ -72,8 +72,8 @@
     "tools/audit_v2.py": "87b2ac148d1cf4c2a64d925b40daf962693e5f7e3adcf2d0bb1f86f353ee27b6",
     "tools/build_gpu_step3_postfreeze_attestation.py": "e3a4732eed14fcfb9ecb51c3ab230cc7329d9d85c198b4ef2ce2e10347117b2c",
     "tools/build_nbfnet_source_attestation.py": "88a2d0543264d9ce4b562063840eafc87fb611066eff0618c7755f04a8ca9510",
-    "tools/generate_v2_paper_numbers.py": "3e46bcb47f112e293ea7f83465505c13a7864c904d7e0709b10f8bcbb9326b22",
-    "tools/public_release_policy.py": "fcb70fde9e872df33d5574c9ddd51bcd0ebcb995ebbef65e55dc18e37f83f42d",
+    "tools/generate_v2_paper_numbers.py": "9d6c8b9caff88a61ab9e5db6581d3dfb8f363488c122f5d0452a264af4ea8c4b",
+    "tools/public_release_policy.py": "5d11960b2431b0190ddcc817a3d5e2a923a2ced4fbd543315091229f26a71ba0",
     "tools/registry_human_review_receipt.py": "16feee1ee790371e581ec5931df515bff12e6ceab22c7cb3aba2388e2598fab0",
     "tools/resolve_v2_invalidation.py": "933d76ad3830993f167fc7a2baa9720cd3e4f7d9021bfb9a9f650f52bffb286f",
     "tools/summarize_v2_gpu_results.py": "b90f81706ef2a5b901fcfb90d1b10d311e8ec428ea535fb54ab93253c5deb5f2",
@@ -88,7 +88,7 @@
     "tools/v2_score_robustness_r5.py": "e45b7dd645cca301e92d13204da9e9091715e1e8285b816bd8608b44cdfd8621",
     "tools/verify_registry_curation_protocol.py": "417be06ec551665d06e241b9c258c96821a231d8029296437e6954bceeb20d6d"
   },
-  "resolved_at": "2026-07-23T10:16:01Z",
+  "resolved_at": "2026-07-26T10:12:44Z",
   "schema_version": "upgrade-bench-v2/result-invalidation/1",
   "scope": [
     "raw_label_audit.json",

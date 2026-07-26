@@ -1460,6 +1460,46 @@ class GPUInterfaceTests(unittest.TestCase):
     def test_complete_six_by_three_by_two_summary_is_accepted(self):
         _validate_gpu_summary(synthetic_gpu_summary())
 
+    def test_decision_weighted_gpu_macros_use_declared_task_units(self):
+        summary_by_chain = {
+            chain: {
+                "track_a_candidates": chain_index + 1,
+                "track_b_unique_entries": (chain_index + 1) * 2,
+                "track_b_positive_entries": (chain_index + 1) * 3,
+            }
+            for chain_index, chain in enumerate(CHAINS)
+        }
+        gpu = synthetic_gpu_summary()
+        records = {
+            (row["chain"], row["track"], row["family"]): row["primary_mean"]
+            for row in gpu["records"]
+        }
+        numbers: dict[str, str] = {}
+        generator._add_gpu_numbers(numbers, gpu, summary_by_chain)
+        expected = sum(
+            records[(chain, "a", "kge")] * (chain_index + 1)
+            for chain_index, chain in enumerate(CHAINS)
+        ) / sum(range(1, len(CHAINS) + 1))
+        self.assertEqual(
+            numbers["VTwoDecisionWeightedAKGE"],
+            _decimal(expected),
+        )
+        self.assertEqual(
+            {
+                key
+                for key in numbers
+                if key.startswith("VTwoDecisionWeighted")
+            },
+            {
+                "VTwoDecisionWeightedAKGE",
+                "VTwoDecisionWeightedANBFNet",
+                "VTwoDecisionWeightedBOneKGE",
+                "VTwoDecisionWeightedBOneNBFNet",
+                "VTwoDecisionWeightedBTwoKGE",
+                "VTwoDecisionWeightedBTwoNBFNet",
+            },
+        )
+
     def test_incomplete_gpu_summary_fails_closed(self):
         payload = synthetic_gpu_summary()
         payload["records"].pop()

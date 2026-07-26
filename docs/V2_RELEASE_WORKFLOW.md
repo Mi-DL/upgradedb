@@ -340,8 +340,11 @@ Release mode additionally requires the release-eligible human-review and
 invalidation receipts and rejects stale/pending manuscript status language.
 It also rejects unfinished replacement/review claims in `README.md`,
 `results_v2/README.md`, `results_v2/CLAIM_LEDGER.md`, and
-`docs/REGISTRY_REVIEW_CODEBOOK.md`, including pending claim-ledger rows or
-unchecked release items.
+`docs/REGISTRY_REVIEW_COMPLETION_ADDENDUM.md`, including pending claim-ledger
+rows or unchecked release items. The codebook is intentionally excluded from
+this current-status lint because its bytes are preserved as the hash-bound
+pre-review instrument; the completion addendum and human-review receipt
+report the post-review state.
 
 Release sealing follows this order:
 

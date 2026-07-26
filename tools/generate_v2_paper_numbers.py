@@ -4275,7 +4275,11 @@ def _add_robustness_numbers(numbers: dict[str, str], robustness: Mapping[str, An
     )
 
 
-def _add_gpu_numbers(numbers: dict[str, str], gpu: Mapping[str, Any] | None) -> None:
+def _add_gpu_numbers(
+    numbers: dict[str, str],
+    gpu: Mapping[str, Any] | None,
+    summary_by_chain: Mapping[str, Mapping[str, Any]],
+) -> None:
     if gpu is None:
         numbers["VTwoGPUStatus"] = "PENDING"
         return
@@ -4299,6 +4303,39 @@ def _add_gpu_numbers(numbers: dict[str, str], gpu: Mapping[str, Any] | None) -> 
         numbers[f"{prefix}StdAcrossSeeds"] = _decimal(
             row["primary_std_across_seeds"]
         )
+
+    record_map = {
+        (row["chain"], row["track"], row["family"]): row["primary_mean"]
+        for row in gpu["records"]
+    }
+    weight_fields = {
+        "a": "track_a_candidates",
+        "b1": "track_b_unique_entries",
+        "b2": "track_b_positive_entries",
+    }
+    decision_track_tags = {"a": "A", "b1": "BOne", "b2": "BTwo"}
+    for track, weight_field in weight_fields.items():
+        weights = {
+            chain: _integer(
+                summary_by_chain[chain][weight_field],
+                f"decision-weighted GPU/{track}/{chain}/{weight_field}",
+                minimum=1,
+            )
+            for chain in CHAINS
+        }
+        denominator = sum(weights.values())
+        for family, family_tag in family_tags.items():
+            weighted_mean = sum(
+                _finite(
+                    record_map[(chain, track, family)],
+                    f"decision-weighted GPU/{track}/{family}/{chain}",
+                )
+                * weights[chain]
+                for chain in CHAINS
+            ) / denominator
+            numbers[
+                f"VTwoDecisionWeighted{decision_track_tags[track]}{family_tag}"
+            ] = _decimal(weighted_mean)
 
 
 def _add_value_diagnostic_numbers(
@@ -4817,7 +4854,7 @@ def collect_numbers(
     _add_registry_numbers(numbers, registry_info)
     _add_coverage_numbers(numbers, coverage)
     _add_robustness_numbers(numbers, robustness)
-    _add_gpu_numbers(numbers, gpu)
+    _add_gpu_numbers(numbers, gpu, summary_by_chain)
     _add_value_diagnostic_numbers(numbers, value_info)
     _add_loco_numbers(numbers, loco_info)
     _add_ultra_numbers(numbers, ultra_info)

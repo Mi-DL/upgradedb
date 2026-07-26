@@ -5,17 +5,17 @@
     {
       "archive": "upgrade-bench-v2-standalone.zip",
       "description": "Dependency-light UpgradeBench loader, evaluator, protocol examples, and package manifest.",
-      "file_count": 17,
+      "file_count": 18,
       "files": [
         {
-          "bytes": 19132,
+          "bytes": 19167,
           "path": "ARTIFACT.md",
-          "sha256": "d5d54e3a23c2d848e118576d2fb92591c46d815d311ce51772e79fd8d659d969"
+          "sha256": "f40b564867a28a34c3588fb3b0b8dafc90538a642e8c7fdd764513c4a6ba0f4b"
         },
         {
-          "bytes": 22367,
+          "bytes": 22542,
           "path": "BENCHMARK_V2_SPEC.md",
-          "sha256": "5f2b013be98e128472dbcc67067e0c0c38578ebb4e8e1c0d414c787c8e00a557"
+          "sha256": "03254fc35edf25f15ae4093e0aba93cc2fd623703e9f5422f8ef3c8f8f904bee"
         },
         {
           "bytes": 7567,
@@ -78,9 +78,9 @@
           "sha256": "a08c53daadb0be28b3968c036a12b6a5d394a9680611c459a311194ccf854cde"
         },
         {
-          "bytes": 18360,
+          "bytes": 18441,
           "path": "docs/DATA_DISTRIBUTION.md",
-          "sha256": "a30bcaaf78bbad5582b410fc728c9e2cf30285e39ee9a81a84d6ea9a9d708248"
+          "sha256": "be96cb7df8d2036b10b84394292bd404b0a6ea3953992662bf2f17bff6c05956"
         },
         {
           "bytes": 20661,
@@ -91,26 +91,31 @@
           "bytes": 12734,
           "path": "docs/REGISTRY_REVIEW_CODEBOOK.md",
           "sha256": "bedf60655823b24f917df77ba35086567cb87baa961bcd11f610be9e8d76618b"
+        },
+        {
+          "bytes": 1935,
+          "path": "docs/REGISTRY_REVIEW_COMPLETION_ADDENDUM.md",
+          "sha256": "5cddd901dc23b663de04f40734d0273f5a08ea34d34db1fd7833416f6ef3154c"
         }
       ],
       "id": "v2-standalone",
-      "payload_sha256": "05a7855b381f5bdacd2f242719c66cd5e579ac31df1e91e98e8cf85aae1f5ddc",
-      "uncompressed_bytes": 187174
+      "payload_sha256": "2a5ff650b1ad843d232c0a85b6e2382324d65e647e3f5faa4c8bf9348eb5a92f",
+      "uncompressed_bytes": 189400
     },
     {
       "archive": "upgrade-bench-v2-main-window.zip",
       "description": "Six-chain main-window lane, entry, destination, and summary tables.",
-      "file_count": 32,
+      "file_count": 33,
       "files": [
         {
-          "bytes": 19132,
+          "bytes": 19167,
           "path": "ARTIFACT.md",
-          "sha256": "d5d54e3a23c2d848e118576d2fb92591c46d815d311ce51772e79fd8d659d969"
+          "sha256": "f40b564867a28a34c3588fb3b0b8dafc90538a642e8c7fdd764513c4a6ba0f4b"
         },
         {
-          "bytes": 22367,
+          "bytes": 22542,
           "path": "BENCHMARK_V2_SPEC.md",
-          "sha256": "5f2b013be98e128472dbcc67067e0c0c38578ebb4e8e1c0d414c787c8e00a557"
+          "sha256": "03254fc35edf25f15ae4093e0aba93cc2fd623703e9f5422f8ef3c8f8f904bee"
         },
         {
           "bytes": 7567,
@@ -248,9 +253,9 @@
           "sha256": "a430d1146a28593840e544b8b2301891e4ed531d7fd5e36b46c531b2d83dcc06"
         },
         {
-          "bytes": 18360,
+          "bytes": 18441,
           "path": "docs/DATA_DISTRIBUTION.md",
-          "sha256": "a30bcaaf78bbad5582b410fc728c9e2cf30285e39ee9a81a84d6ea9a9d708248"
+          "sha256": "be96cb7df8d2036b10b84394292bd404b0a6ea3953992662bf2f17bff6c05956"
         },
         {
           "bytes": 20661,
@@ -261,26 +266,31 @@
           "bytes": 12734,
           "path": "docs/REGISTRY_REVIEW_CODEBOOK.md",
           "sha256": "bedf60655823b24f917df77ba35086567cb87baa961bcd11f610be9e8d76618b"
+        },
+        {
+          "bytes": 1935,
+          "path": "docs/REGISTRY_REVIEW_COMPLETION_ADDENDUM.md",
+          "sha256": "5cddd901dc23b663de04f40734d0273f5a08ea34d34db1fd7833416f6ef3154c"
         }
       ],
       "id": "v2-main",
-      "payload_sha256": "e6cf50b54bd365c9f72c162bae378b6cd9b80e072447dfd38f05395385e37b7a",
-      "uncompressed_bytes": 165739628
+      "payload_sha256": "634238560ccc749b6f66404f634c4424cd1ba387f021f32fc36254e65b2207be",
+      "uncompressed_bytes": 165741854
     },
     {
       "archive": "upgrade-bench-v2-historical-fold.zip",
       "description": "Six-chain historical selection-fold lane, entry, destination, and summary tables.",
-      "file_count": 32,
+      "file_count": 33,
       "files": [
         {
-          "bytes": 19132,
+          "bytes": 19167,
           "path": "ARTIFACT.md",
-          "sha256": "d5d54e3a23c2d848e118576d2fb92591c46d815d311ce51772e79fd8d659d969"
+          "sha256": "f40b564867a28a34c3588fb3b0b8dafc90538a642e8c7fdd764513c4a6ba0f4b"
         },
         {
-          "bytes": 22367,
+          "bytes": 22542,
           "path": "BENCHMARK_V2_SPEC.md",
-          "sha256": "5f2b013be98e128472dbcc67067e0c0c38578ebb4e8e1c0d414c787c8e00a557"
+          "sha256": "03254fc35edf25f15ae4093e0aba93cc2fd623703e9f5422f8ef3c8f8f904bee"
         },
         {
           "bytes": 7567,
@@ -418,9 +428,9 @@
           "sha256": "ee9bd4b03de3358a4b7747c65724cbb67e9b345c7a0bd93d96f868168385ddd6"
         },
         {
-          "bytes": 18360,
+          "bytes": 18441,
           "path": "docs/DATA_DISTRIBUTION.md",
-          "sha256": "a30bcaaf78bbad5582b410fc728c9e2cf30285e39ee9a81a84d6ea9a9d708248"
+          "sha256": "be96cb7df8d2036b10b84394292bd404b0a6ea3953992662bf2f17bff6c05956"
         },
         {
           "bytes": 20661,
@@ -431,26 +441,31 @@
           "bytes": 12734,
           "path": "docs/REGISTRY_REVIEW_CODEBOOK.md",
           "sha256": "bedf60655823b24f917df77ba35086567cb87baa961bcd11f610be9e8d76618b"
+        },
+        {
+          "bytes": 1935,
+          "path": "docs/REGISTRY_REVIEW_COMPLETION_ADDENDUM.md",
+          "sha256": "5cddd901dc23b663de04f40734d0273f5a08ea34d34db1fd7833416f6ef3154c"
         }
       ],
       "id": "v2-history",
-      "payload_sha256": "d01ed0b9b9f07eb1b1b628c4c69c36adc899b6a83d20b2c95b3f243b37f76c7a",
-      "uncompressed_bytes": 130665043
+      "payload_sha256": "9366e86b06d9dc55b0794fd1402cdfd076bbf95ae5f3456b3f9e401abbbda09b",
+      "uncompressed_bytes": 130667269
     },
     {
       "archive": "upgrade-bench-v2-results-and-audits.zip",
       "description": "Allowlisted metrics, audits, sanitized summaries, and benchmark specification.",
-      "file_count": 39,
+      "file_count": 40,
       "files": [
         {
-          "bytes": 19132,
+          "bytes": 19167,
           "path": "ARTIFACT.md",
-          "sha256": "d5d54e3a23c2d848e118576d2fb92591c46d815d311ce51772e79fd8d659d969"
+          "sha256": "f40b564867a28a34c3588fb3b0b8dafc90538a642e8c7fdd764513c4a6ba0f4b"
         },
         {
-          "bytes": 22367,
+          "bytes": 22542,
           "path": "BENCHMARK_V2_SPEC.md",
-          "sha256": "5f2b013be98e128472dbcc67067e0c0c38578ebb4e8e1c0d414c787c8e00a557"
+          "sha256": "03254fc35edf25f15ae4093e0aba93cc2fd623703e9f5422f8ef3c8f8f904bee"
         },
         {
           "bytes": 7567,
@@ -458,9 +473,9 @@
           "sha256": "a9a4f060d124f28a08a254b21bb7988d344a2237d8cfc85ef3daa181572194fa"
         },
         {
-          "bytes": 18360,
+          "bytes": 18441,
           "path": "docs/DATA_DISTRIBUTION.md",
-          "sha256": "a30bcaaf78bbad5582b410fc728c9e2cf30285e39ee9a81a84d6ea9a9d708248"
+          "sha256": "be96cb7df8d2036b10b84394292bd404b0a6ea3953992662bf2f17bff6c05956"
         },
         {
           "bytes": 20661,
@@ -471,6 +486,11 @@
           "bytes": 12734,
           "path": "docs/REGISTRY_REVIEW_CODEBOOK.md",
           "sha256": "bedf60655823b24f917df77ba35086567cb87baa961bcd11f610be9e8d76618b"
+        },
+        {
+          "bytes": 1935,
+          "path": "docs/REGISTRY_REVIEW_COMPLETION_ADDENDUM.md",
+          "sha256": "5cddd901dc23b663de04f40734d0273f5a08ea34d34db1fd7833416f6ef3154c"
         },
         {
           "bytes": 4719,
@@ -483,9 +503,9 @@
           "sha256": "128685c04f807757de4f9764fb762241df2d3e2da1c59a3645df8e8bd1cc2471"
         },
         {
-          "bytes": 58214,
+          "bytes": 58517,
           "path": "paper/generated/v2_numbers.tex",
-          "sha256": "47dc08c78e9cb2d4b9aaec2272d21b54abdbe1ae84c05f8e1950abcfe8508238"
+          "sha256": "748764a452be7bc2346c0ee61c7bffd19d10965f5119c14c02ea2b50d4aca5e9"
         },
         {
           "bytes": 10526,
@@ -500,7 +520,7 @@
         {
           "bytes": 9477,
           "path": "results_v2/metrics/INVALIDATED.json",
-          "sha256": "6615441b07d78c412d7f8119ab0e1c2985fcfb0eec14145cf4ea670a60b34242"
+          "sha256": "ea4db4867bb0290b45119bf1f0b2aa92c3634c110ff6ea33b4bf2807c37cd21e"
         },
         {
           "bytes": 139499,
@@ -628,9 +648,9 @@
           "sha256": "49a101ce6f0cd7d83cda5024549e02e793e605f8ae08c986cf8e7980bb734325"
         },
         {
-          "bytes": 54448,
+          "bytes": 54721,
           "path": "results_v2/paper_numbers.json",
-          "sha256": "d0cd417537ebad08da82bb984375810b4b4045887b62567bb8773a3e61403e5f"
+          "sha256": "1b5cd08b19c2ad56a1569697e6078ea43dc0b3611e200da691d22c686e1d5137"
         },
         {
           "bytes": 873109,
@@ -639,8 +659,8 @@
         }
       ],
       "id": "v2-results",
-      "payload_sha256": "f10b5bfc0f8c9c14ee3f8d363022ae52f8bca0688d2accb6d97a3e427eeb2229",
-      "uncompressed_bytes": 7398477
+      "payload_sha256": "29fc449078a5553fb100d034adcccbbf7eb428908ff516cc814a81579d3c3d77",
+      "uncompressed_bytes": 7401279
     }
   ],
   "github_release_asset_limit_bytes": 2147483648,
@@ -964,9 +984,9 @@
       "results_v2/paper_numbers.json",
       "results_v2/scores/v2_product_space_density_scores.csv"
     ],
-    "v2_paper_current_number_key_count": 857,
-    "v2_paper_current_number_keys_sha256": "bcd64e94804bea64fb66d5e73e8d463597d68a8d88a46b7d7230c42a2dfd4dda",
-    "v2_paper_current_number_values_sha256": "152048039fd1482e069139f113745c2987796fd15b74fa4822e65f4dd357ef04",
+    "v2_paper_current_number_key_count": 863,
+    "v2_paper_current_number_keys_sha256": "518c25a273c3367361819bc83226581a2027c006392d62f2cf3f2bbeae409a5e",
+    "v2_paper_current_number_values_sha256": "c567fda74caf250f2e59e382308cf9557ddf51a31d592301716d694be39335c6",
     "v2_paper_current_numbers_schema": "upgrade-bench-v2-paper-numbers-8",
     "v2_paper_current_source_paths": [
       "chains/evidence/registry_evidence.json",
@@ -1079,9 +1099,9 @@
     "v2_paper_schema7_final_number_key_count": 694,
     "v2_paper_schema7_final_number_keys_sha256": "fdbd7453ac32c2719d62f6de3594b52810dd7b54b49ad3dd1c8aee3555a3d84c",
     "v2_paper_schema7_final_number_values_sha256": "d618c970e9caa547563879cbec64fc9ee259f50a36931e8d3d741941692aab43",
-    "v2_paper_schema8_final_number_key_count": 857,
-    "v2_paper_schema8_final_number_keys_sha256": "bcd64e94804bea64fb66d5e73e8d463597d68a8d88a46b7d7230c42a2dfd4dda",
-    "v2_paper_schema8_final_number_values_sha256": "152048039fd1482e069139f113745c2987796fd15b74fa4822e65f4dd357ef04",
+    "v2_paper_schema8_final_number_key_count": 863,
+    "v2_paper_schema8_final_number_keys_sha256": "518c25a273c3367361819bc83226581a2027c006392d62f2cf3f2bbeae409a5e",
+    "v2_paper_schema8_final_number_values_sha256": "c567fda74caf250f2e59e382308cf9557ddf51a31d592301716d694be39335c6",
     "v2_public_receipt_profiles": {
       "full": "verify-all-public-git-and-external-source-bytes",
       "repository": "verify-public-git-bytes-without-opening-external-processed-v2-sources"
